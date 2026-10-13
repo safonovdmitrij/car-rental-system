@@ -1,0 +1,73 @@
+@startgantt
+title Календарний план проєкту прокату автомобілів
+
+Project starts 2026-10-19
+printscale weekly with week numbering from 1
+Label on first column and left aligned
+
+' Етап 1: тижні 1-2
+[1. Вимоги та задум] as [E1] starts D+0
+[E1] ends D+8
+
+[G-SPEC] happens at [E1]'s end
+
+' Етап 2: фіналізація плану на тижні 2
+[2. Погодження плану] as [E2] starts D+8
+[E2] ends D+11
+
+[G-PLAN] happens at [E2]'s end
+
+' Етап 3: тижні 2-4
+[3. Тести та проєктування] as [E3] starts D+12
+[E3] ends D+22
+
+[G-READY] happens at [E3]'s end
+
+' Етап 4: тижні 4-8
+[4. Реалізація] as [E4] starts D+23
+[E4] ends D+53
+
+' Етап 5: тижні 7-9, за готовністю компонентів
+[5. Верифікація] as [E5] starts D+42
+[E5] ends D+60
+
+' Етап 6: тиждень 10
+[6. Документація та валідація] as [E6] starts D+63
+[E6] ends D+67
+
+[G-ACCEPT] happens at [E6]'s end
+
+' Основні залежності
+[E1] -> [G-SPEC]
+[G-SPEC] -> [E2]
+[E2] -> [G-PLAN]
+[G-PLAN] -> [E3]
+[E3] -> [G-READY]
+[G-READY] -> [E4]
+[E4] -> [E6]
+[E5] -> [E6]
+[E6] -> [G-ACCEPT]
+
+[E1] is colored in LightBlue
+[E2] is colored in LightBlue
+[E3] is colored in LightBlue
+[E4] is colored in LightGreen
+[E5] is colored in LightGreen
+[E6] is colored in LightBlue
+
+[G-SPEC] is colored in Orange
+[G-PLAN] is colored in Orange
+[G-READY] is colored in Orange
+[G-ACCEPT] is colored in Orange
+
+legend
+  Смуги - календарні інтервали етапів.
+  Ромби - заплановані рішення людини, GO ще не надано.
+  Верифікація починається після готовності потрібного коду
+  та перекривається із завершенням іншої реалізації.
+  Студент: максимум 4 год/тиждень.
+  Агент: припущення 20 год/тиждень.
+  Резервний сценарій: 12-14 тижнів.
+end legend
+
+@endgantt
