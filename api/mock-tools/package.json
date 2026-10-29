@@ -1,0 +1,15 @@
+{
+  "name": "car-rental-api-mock-tools",
+  "version": "0.1.0",
+  "private": true,
+  "description": "Local OpenAPI mock tooling; no application server implementation",
+  "engines": {
+    "node": ">=24.18.0"
+  },
+  "dependencies": {
+    "@stoplight/prism-cli": "5.16.0"
+  },
+  "scripts": {
+    "start": "prism mock ../openapi.yaml --host 127.0.0.1 --port 4011"
+  }
+}
