@@ -1,0 +1,3724 @@
+openapi: 3.1.0
+jsonSchemaDialect: https://spec.openapis.org/oas/3.1/dialect/base
+info:
+  title: REST API системи прокату автомобілів
+  version: 0.1.0-draft
+  description: >-
+    Робоча специфікація на основі api/*.md та spec/srs.md, functional-requirements.md, acceptance-criteria.md, glossary.md,
+    bdd-scenarios.md. Контракт не оголошено остаточно погодженим; не засвідчує реалізацію чи тестування. Усі приклади
+    демонстраційні: відносні до поточного часу умови перевіряє сервер, дати прикладів не є обмеженням. HTTPS у робочому
+    середовищі. Усі відповіді з тілом — application/json; 204 без тіла. Автентифікація й роль перевіряються до існування
+    захищеного ресурсу. Для чужого/відсутнього бронювання однаковий 404. Помилки не розкривають паролі/хеші, токени
+    сесій, чужі контакти, службові причини, особисті дані адміністратора чи внутрішні технічні деталі; priceConfirmationToken
+    дозволений лише у PRICE_CHANGED Quote. Невідомі поля запитів заборонені. Окремі параметри query не виражають
+    залежність двох меж: цю залежність CatalogQuery додатково перевіряє сервер. 405 для непідтримуваних методів
+    та 404 невідомих URI не створюють додаткових операцій. Погоджені уточнення ADD-001: Сесія чинна рівно 86 400
+    секунд від входу, без автоматичного продовження. Від точної межі або після успішної зміни пароля старий токен
+    дає 401 AUTHENTICATION_REQUIRED з WWW-Authenticate: Bearer. Успішна зміна пароля повертає 204 без тіла й анулює
+    всі сесії цього запису, включно з поточною; наступний захищений запит вимагає повторного входу. Невдала зміна
+    не анулює сесій, якщо їх початковий строк ще не завершився. За ADD-001 кожну обчислену календарну межу визначають
+    від початкової місцевої опори Europe/Kyiv: неіснуючу переносять вперед на величину переходу, для неоднозначної
+    вибирають пізніший момент. Перенесення не накопичуються. Це діє для меж 1/30 діб, оплачуваних діб та горизонту
+    90 днів; введені проблемні години як і раніше відхиляються з 422, правило дедлайну скасування збережено. Mock
+    не перевіряє реальне завершення сесій, анулювання токенів чи календарні обчислення; API-GATE не виконано.
+x-contract-status: draft-pending-api-gate
+servers:
+- url: /api/v1
+  description: Відносний базовий URI; paths не повторюють префікс. Продуктивний транспорт — HTTPS.
+security:
+- BearerAuth: []
+tags:
+- name: Каталог
+- name: Обліковий запис
+- name: Профіль
+- name: Бронювання
+- name: Автопарк
+- name: Службова недоступність
+paths:
+  /cars:
+    get:
+      operationId: listCars
+      x-op-id: OP-01
+      x-req-ids:
+      - REQ-F-001
+      - REQ-F-002
+      - REQ-F-003
+      - REQ-F-004
+      - REQ-F-005
+      - REQ-F-007
+      - REQ-F-008
+      - REQ-F-027
+      - REQ-F-028
+      - REQ-F-029
+      - REQ-F-030
+      - REQ-F-061
+      - REQ-F-068
+      - REQ-F-069
+      - REQ-F-071
+      - REQ-F-087
+      - REQ-F-088
+      - REQ-F-089
+      - REQ-F-092
+      tags:
+      - Каталог
+      summary: Публічний каталог і пошук на весь період; перетини й приховування виключають авто, суміжність і скасовані
+        записи не блокують
+      description: >-
+        Без обов’язкового входу: Г/К — PublicCar, А — AdminCar, лише неприховані авто. Для отримання адміністративних
+        полів сервер перевіряє роль Bearer-сесії. Обидві query-межі разом або обидві відсутні; невідомі query-поля
+        відхиляються. Без періоду немає твердження про доступність. Сервер перевіряє існування календарної дати,
+        однозначність часу Europe/Kyiv і endsAt > startsAt; шаблону LocalHour недостатньо. Для пошуку не застосовуються
+        майбутність, 1–30 діб і горизонт 90 днів. Доступність на весь напіввідкритий період [startsAt, endsAt):
+        приховане авто, підтверджені/активні бронювання й службові періоди блокують; суміжність дозволена, скасовані
+        бронювання не блокують. Читання/розрахунок не резервують авто. Публічна вимога входу відсутня; за наданою
+        чинною Bearer-сесією А отримує адміністративну проєкцію.
+      security:
+      - {}
+      - BearerAuth: []
+      parameters:
+      - $ref: '#/components/parameters/startsAtOptional'
+      - $ref: '#/components/parameters/endsAtOptional'
+      responses:
+        '200':
+          $ref: '#/components/responses/Catalog'
+        '400':
+          $ref: '#/components/responses/BadRequest'
+        '422':
+          $ref: '#/components/responses/ValidationError'
+        '405':
+          $ref: '#/components/responses/MethodNotAllowedGetPost'
+        '500':
+          $ref: '#/components/responses/InternalError'
+        '503':
+          $ref: '#/components/responses/ServiceUnavailable'
+    post:
+      operationId: createCar
+      x-op-id: OP-15
+      x-req-ids:
+      - REQ-F-065
+      - REQ-F-087
+      - REQ-F-088
+      - REQ-F-089
+      - REQ-F-093
+      - REQ-F-094
+      - REQ-F-095
+      - REQ-F-096
+      tags:
+      - Автопарк
+      summary: Додавання конкретного авто; лише А, з однаковими правами для всіх адміністраторів і перевіркою прямого
+        API-запиту
+      description: >-
+        Лише А, роль перевіряє сервер. Додавання конкретного авто з characteristics та додатним тарифом; hidden
+        типово false. Валюту й ідентифікатор визначає сервер. Сесія чинна рівно 86 400 секунд від входу, без автоматичного
+        продовження. Від точної межі або після успішної зміни пароля старий токен дає 401 AUTHENTICATION_REQUIRED
+        з WWW-Authenticate: Bearer. Після невдалої зміни пароля чинна сесія залишається прийнятною до первинної
+        межі.
+      requestBody:
+        required: true
+        content:
+          application/json:
+            schema:
+              $ref: '#/components/schemas/CarCreateRequest'
+            examples:
+              CarCreateRequest:
+                $ref: '#/components/examples/CarCreateRequest'
+      responses:
+        '201':
+          $ref: '#/components/responses/CarCreated'
+        '400':
+          $ref: '#/components/responses/BadRequest'
+        '401':
+          $ref: '#/components/responses/Unauthorized'
+        '403':
+          $ref: '#/components/responses/Forbidden'
+        '422':
+          $ref: '#/components/responses/ValidationError'
+        '405':
+          $ref: '#/components/responses/MethodNotAllowedGetPost'
+        '500':
+          $ref: '#/components/responses/InternalError'
+        '503':
+          $ref: '#/components/responses/ServiceUnavailable'
+  /cars/{carId}:
+    get:
+      operationId: getCar
+      x-op-id: OP-02
+      x-req-ids:
+      - REQ-F-001
+      - REQ-F-002
+      - REQ-F-068
+      - REQ-F-069
+      - REQ-F-071
+      - REQ-F-087
+      - REQ-F-088
+      - REQ-F-089
+      - REQ-F-092
+      tags:
+      - Каталог
+      summary: 'Проєктна деталізація каталогу: характеристики й тариф; приховане авто не розкривається Г/К'
+      description: >-
+        Без обов’язкового входу. Г/К читають лише неприховане авто; приховане дає NOT_FOUND. А читає також приховане
+        й отримує hidden/futureBookingsCount; роль і вибір проєкції перевіряє сервер. Лічильник дозволяє попередити
+        перед приховуванням. Публічна вимога входу відсутня; за наданою чинною Bearer-сесією А отримує адміністративну
+        проєкцію.
+      security:
+      - {}
+      - BearerAuth: []
+      parameters:
+      - $ref: '#/components/parameters/carId'
+      responses:
+        '200':
+          $ref: '#/components/responses/Car'
+        '400':
+          $ref: '#/components/responses/BadRequest'
+        '404':
+          $ref: '#/components/responses/NotFound'
+        '405':
+          $ref: '#/components/responses/MethodNotAllowedGetPatchDelete'
+        '500':
+          $ref: '#/components/responses/InternalError'
+        '503':
+          $ref: '#/components/responses/ServiceUnavailable'
+    patch:
+      operationId: updateCar
+      x-op-id: OP-16
+      x-req-ids:
+      - REQ-F-039
+      - REQ-F-044
+      - REQ-F-066
+      - REQ-F-067
+      - REQ-F-068
+      - REQ-F-069
+      - REQ-F-070
+      - REQ-F-071
+      - REQ-F-087
+      - REQ-F-088
+      - REQ-F-089
+      - REQ-F-093
+      - REQ-F-094
+      - REQ-F-095
+      - REQ-F-096
+      tags:
+      - Автопарк
+      summary: А редагує характеристики/тариф, приховує або повертає авто; попереджається про майбутні бронювання
+      description: >-
+        Лише А; сервер перевіряє роль. Принаймні одне дозволене поле, characteristics повністю замінюється. Зміна
+        тарифу не змінює зафіксованих цін бронювань. При приховуванні наявні бронювання зберігаються без скасування;
+        якщо є майбутні confirmed, warnings містить FUTURE_BOOKINGS_EXIST з актуальним лічильником, інакше []. Лічильник
+        збігається з car.futureBookingsCount; попередження не блокує операцію. Повернення авто зберігає бронювання
+        й службові періоди. Сесія чинна рівно 86 400 секунд від входу, без автоматичного продовження. Від точної
+        межі або після успішної зміни пароля старий токен дає 401 AUTHENTICATION_REQUIRED з WWW-Authenticate: Bearer.
+        Після невдалої зміни пароля чинна сесія залишається прийнятною до первинної межі.
+      parameters:
+      - $ref: '#/components/parameters/carId'
+      requestBody:
+        required: true
+        content:
+          application/json:
+            schema:
+              $ref: '#/components/schemas/CarPatch'
+            examples:
+              CarPatch:
+                $ref: '#/components/examples/CarPatch'
+              CarDetailsPatch:
+                $ref: '#/components/examples/CarDetailsPatch'
+              CarRestoreRequest:
+                $ref: '#/components/examples/CarRestoreRequest'
+      responses:
+        '200':
+          $ref: '#/components/responses/CarUpdated'
+        '400':
+          $ref: '#/components/responses/BadRequest'
+        '401':
+          $ref: '#/components/responses/Unauthorized'
+        '403':
+          $ref: '#/components/responses/Forbidden'
+        '404':
+          $ref: '#/components/responses/NotFound'
+        '422':
+          $ref: '#/components/responses/ValidationError'
+        '405':
+          $ref: '#/components/responses/MethodNotAllowedGetPatchDelete'
+        '500':
+          $ref: '#/components/responses/InternalError'
+        '503':
+          $ref: '#/components/responses/ServiceUnavailable'
+    delete:
+      operationId: deleteCar
+      x-op-id: OP-17
+      x-req-ids:
+      - REQ-F-072
+      - REQ-F-087
+      - REQ-F-088
+      - REQ-F-089
+      - REQ-F-093
+      - REQ-F-094
+      - REQ-F-095
+      - REQ-F-096
+      tags:
+      - Автопарк
+      summary: Лише А; фізичне видалення можливе без будь-яких пов’язаних бронювань і службових періодів, включно
+        з історичними
+      description: >-
+        Лише А; сервер перевіряє роль та атомарно відсутність будь-яких пов’язаних бронювань і службових періодів,
+        включно зі скасованими/історичними. За їх наявності 409, інакше фізичне видалення. Сесія чинна рівно 86
+        400 секунд від входу, без автоматичного продовження. Від точної межі або після успішної зміни пароля старий
+        токен дає 401 AUTHENTICATION_REQUIRED з WWW-Authenticate: Bearer. Після невдалої зміни пароля чинна сесія
+        залишається прийнятною до первинної межі.
+      parameters:
+      - $ref: '#/components/parameters/carId'
+      responses:
+        '204':
+          $ref: '#/components/responses/NoContent'
+        '400':
+          $ref: '#/components/responses/BadRequest'
+        '401':
+          $ref: '#/components/responses/Unauthorized'
+        '403':
+          $ref: '#/components/responses/Forbidden'
+        '404':
+          $ref: '#/components/responses/NotFound'
+        '409':
+          $ref: '#/components/responses/CarRelatedRecords'
+        '405':
+          $ref: '#/components/responses/MethodNotAllowedGetPatchDelete'
+        '500':
+          $ref: '#/components/responses/InternalError'
+        '503':
+          $ref: '#/components/responses/ServiceUnavailable'
+  /cars/{carId}/availability:
+    get:
+      operationId: getCarAvailability
+      x-op-id: OP-03
+      x-req-ids:
+      - REQ-F-006
+      - REQ-F-007
+      - REQ-F-008
+      - REQ-F-027
+      - REQ-F-028
+      - REQ-F-029
+      - REQ-F-030
+      - REQ-F-061
+      - REQ-F-092
+      tags:
+      - Каталог
+      summary: Перевірка конкретного авто; приховування й перетини дають false, суміжність і скасовані бронювання
+        не блокують
+      description: >-
+        Без обов’язкового входу, обидві query-межі обов’язкові; невідомі query-поля відхиляються. Для відомого прихованого
+        авто available=false без характеристик/причини. Сервер перевіряє існування календарної дати, однозначність
+        часу Europe/Kyiv і endsAt > startsAt; шаблону LocalHour недостатньо. Майбутність, 1–30 діб і горизонт 90
+        днів не застосовуються. Доступність на весь напіввідкритий період [startsAt, endsAt): приховане авто, підтверджені/активні
+        бронювання й службові періоди блокують; суміжність дозволена, скасовані бронювання не блокують. Читання/розрахунок
+        не резервують авто.
+      security: []
+      parameters:
+      - $ref: '#/components/parameters/carId'
+      - $ref: '#/components/parameters/startsAtRequired'
+      - $ref: '#/components/parameters/endsAtRequired'
+      responses:
+        '200':
+          $ref: '#/components/responses/Availability'
+        '400':
+          $ref: '#/components/responses/BadRequest'
+        '404':
+          $ref: '#/components/responses/NotFound'
+        '422':
+          $ref: '#/components/responses/ValidationError'
+        '405':
+          $ref: '#/components/responses/MethodNotAllowedGet'
+        '500':
+          $ref: '#/components/responses/InternalError'
+        '503':
+          $ref: '#/components/responses/ServiceUnavailable'
+  /clients:
+    post:
+      operationId: registerClient
+      x-op-id: OP-04
+      x-req-ids:
+      - REQ-F-009
+      - REQ-F-010
+      - REQ-F-011
+      - REQ-F-014
+      - REQ-F-082
+      - REQ-F-089
+      tags:
+      - Обліковий запис
+      summary: Реєстраційні поля, нормалізація й унікальність пошти, довжина нового пароля
+      description: >-
+        Публічна реєстрація лише клієнта; role не приймається. Сервер обрізає крайні пробіли email перед перевіркою
+        формату й порівнює адреси без регістру, перевіряє унікальність. Новий пароль від 8 символів без обрізання.
+        201 без Location та автоматичного входу; для входу OP-05.
+      security: []
+      requestBody:
+        required: true
+        content:
+          application/json:
+            schema:
+              $ref: '#/components/schemas/RegistrationRequest'
+            examples:
+              RegistrationRequest:
+                $ref: '#/components/examples/RegistrationRequest'
+      responses:
+        '201':
+          $ref: '#/components/responses/RegisteredClient'
+        '400':
+          $ref: '#/components/responses/BadRequest'
+        '409':
+          $ref: '#/components/responses/EmailConflict'
+        '422':
+          $ref: '#/components/responses/ValidationError'
+        '405':
+          $ref: '#/components/responses/MethodNotAllowedPost'
+        '500':
+          $ref: '#/components/responses/InternalError'
+        '503':
+          $ref: '#/components/responses/ServiceUnavailable'
+  /sessions:
+    post:
+      operationId: createSession
+      x-op-id: OP-05
+      x-req-ids:
+      - REQ-F-010
+      - REQ-F-012
+      - REQ-F-013
+      - REQ-F-015
+      - REQ-F-016
+      - REQ-F-017
+      - REQ-F-018
+      - REQ-F-019
+      - REQ-F-020
+      - REQ-F-093
+      tags:
+      - Обліковий запис
+      summary: >-
+        Вхід обох ролей за нормалізованою поштою й паролем; окремі лічильники, блокування на п’ятій помилці, незмінність
+        його межі та автоматичне скидання
+      description: >-
+        Публічний вхід клієнта або адміністратора. Нормалізація email за SRS; пароль без обрізання. Сервер перевіряє
+        облікові дані й окремий лічильник запису: п’ята послідовна помилка блокує на 15 хвилин, повторні спроби
+        не подовжують межу, успіх або сплив блокування скидає лічильник. INVALID_CREDENTIALS не повідомляє існування
+        адреси. Сесія чинна рівно 86 400 секунд від входу, без автоматичного продовження. Від точної межі або після
+        успішної зміни пароля старий токен дає 401 AUTHENTICATION_REQUIRED з WWW-Authenticate: Bearer.
+      security: []
+      requestBody:
+        required: true
+        content:
+          application/json:
+            schema:
+              $ref: '#/components/schemas/LoginRequest'
+            examples:
+              LoginRequest:
+                $ref: '#/components/examples/LoginRequest'
+              LoginAdminRequest:
+                $ref: '#/components/examples/LoginAdminRequest'
+      responses:
+        '201':
+          $ref: '#/components/responses/SessionCreated'
+        '400':
+          $ref: '#/components/responses/BadRequest'
+        '401':
+          $ref: '#/components/responses/InvalidCredentials'
+        '422':
+          $ref: '#/components/responses/ValidationError'
+        '429':
+          $ref: '#/components/responses/LoginBlocked'
+        '405':
+          $ref: '#/components/responses/MethodNotAllowedPost'
+        '500':
+          $ref: '#/components/responses/InternalError'
+        '503':
+          $ref: '#/components/responses/ServiceUnavailable'
+  /profile:
+    get:
+      operationId: getOwnProfile
+      x-op-id: OP-06
+      x-req-ids:
+      - REQ-F-021
+      - REQ-F-089
+      - REQ-F-093
+      - REQ-F-094
+      - REQ-F-095
+      - REQ-F-096
+      tags:
+      - Профіль
+      summary: Допоміжне читання власних контактів для редагування й повторного перегляду (AC-F-021-01); клієнт
+        визначається чинною сесією
+      description: >-
+        Лише К: власний профіль визначається Bearer-сесією, не параметром clientId; А не має права на цю операцію.
+        Сесія чинна рівно 86 400 секунд від входу, без автоматичного продовження. Від точної межі або після успішної
+        зміни пароля старий токен дає 401 AUTHENTICATION_REQUIRED з WWW-Authenticate: Bearer. Після невдалої зміни
+        пароля чинна сесія залишається прийнятною до первинної межі.
+      responses:
+        '200':
+          $ref: '#/components/responses/Profile'
+        '401':
+          $ref: '#/components/responses/Unauthorized'
+        '403':
+          $ref: '#/components/responses/Forbidden'
+        '405':
+          $ref: '#/components/responses/MethodNotAllowedGetPatch'
+        '500':
+          $ref: '#/components/responses/InternalError'
+        '503':
+          $ref: '#/components/responses/ServiceUnavailable'
+    patch:
+      operationId: updateOwnProfile
+      x-op-id: OP-07
+      x-req-ids:
+      - REQ-F-021
+      - REQ-F-023
+      - REQ-F-024
+      - REQ-F-025
+      - REQ-F-086
+      - REQ-F-089
+      - REQ-F-093
+      - REQ-F-094
+      - REQ-F-095
+      - REQ-F-096
+      tags:
+      - Профіль
+      summary: Зміна лише власних дозволених контактів, без зміни пошти; контакти в бронюваннях актуалізуються,
+        авто/період/ціна не змінюються
+      description: >-
+        Лише К, власний профіль із сесії. Дозволені лише firstName, lastName, phone; email/role/clientId заборонені.
+        Контакти в раніше створених бронюваннях актуальні, їх авто/період/зафіксовані ціни не змінюються. Сервер
+        перевіряє права; принаймні одне поле. Сесія чинна рівно 86 400 секунд від входу, без автоматичного продовження.
+        Від точної межі або після успішної зміни пароля старий токен дає 401 AUTHENTICATION_REQUIRED з WWW-Authenticate:
+        Bearer. Після невдалої зміни пароля чинна сесія залишається прийнятною до первинної межі.
+      requestBody:
+        required: true
+        content:
+          application/json:
+            schema:
+              $ref: '#/components/schemas/ProfilePatch'
+            examples:
+              ProfilePatch:
+                $ref: '#/components/examples/ProfilePatch'
+      responses:
+        '200':
+          $ref: '#/components/responses/ProfileUpdated'
+        '400':
+          $ref: '#/components/responses/BadRequest'
+        '401':
+          $ref: '#/components/responses/Unauthorized'
+        '403':
+          $ref: '#/components/responses/Forbidden'
+        '422':
+          $ref: '#/components/responses/ValidationError'
+        '405':
+          $ref: '#/components/responses/MethodNotAllowedGetPatch'
+        '500':
+          $ref: '#/components/responses/InternalError'
+        '503':
+          $ref: '#/components/responses/ServiceUnavailable'
+  /profile/password:
+    put:
+      operationId: changeOwnPassword
+      x-op-id: OP-08
+      x-req-ids:
+      - REQ-F-014
+      - REQ-F-022
+      - REQ-F-086
+      - REQ-F-089
+      - REQ-F-093
+      - REQ-F-094
+      - REQ-F-095
+      - REQ-F-096
+      tags:
+      - Профіль
+      summary: Зміна власного пароля після перевірки поточного, новий — від 8 символів; через API неможливо вибрати
+        чужий профіль
+      description: >-
+        Лише К, власний профіль із сесії. Сервер перевіряє currentPassword; невірний — 422 з полем currentPassword
+        без значення. Новий пароль від 8 символів; жоден пароль не змінюється й не обрізається. Успішна зміна пароля
+        повертає 204 без тіла й анулює всі сесії цього запису, включно з поточною; наступний захищений запит вимагає
+        повторного входу. Невдала зміна не анулює сесій, якщо їх початковий строк ще не завершився. Новий токен
+        у відповіді не видається. Сесія чинна рівно 86 400 секунд від входу, без автоматичного продовження. Від
+        точної межі або після успішної зміни пароля старий токен дає 401 AUTHENTICATION_REQUIRED з WWW-Authenticate:
+        Bearer. Після невдалої зміни пароля чинна сесія залишається прийнятною до первинної межі.
+      requestBody:
+        required: true
+        content:
+          application/json:
+            schema:
+              $ref: '#/components/schemas/PasswordChangeRequest'
+            examples:
+              PasswordChangeRequest:
+                $ref: '#/components/examples/PasswordChangeRequest'
+      responses:
+        '204':
+          $ref: '#/components/responses/NoContent'
+        '400':
+          $ref: '#/components/responses/BadRequest'
+        '401':
+          $ref: '#/components/responses/Unauthorized'
+        '403':
+          $ref: '#/components/responses/Forbidden'
+        '422':
+          $ref: '#/components/responses/ValidationError'
+        '405':
+          $ref: '#/components/responses/MethodNotAllowedPut'
+        '500':
+          $ref: '#/components/responses/InternalError'
+        '503':
+          $ref: '#/components/responses/ServiceUnavailable'
+  /booking-quotes:
+    post:
+      operationId: calculateBookingQuote
+      x-op-id: OP-09
+      x-req-ids:
+      - REQ-F-007
+      - REQ-F-008
+      - REQ-F-027
+      - REQ-F-028
+      - REQ-F-029
+      - REQ-F-030
+      - REQ-F-031
+      - REQ-F-032
+      - REQ-F-033
+      - REQ-F-034
+      - REQ-F-035
+      - REQ-F-036
+      - REQ-F-037
+      - REQ-F-038
+      - REQ-F-061
+      - REQ-F-089
+      - REQ-F-092
+      - REQ-F-093
+      - REQ-F-094
+      - REQ-F-095
+      - REQ-F-096
+      tags:
+      - Бронювання
+      summary: 'Показ суми до підтвердження: валідність і доступність періоду, календарні оплачувані доби й тариф
+        у гривнях'
+      description: >-
+        Лише К; права перевіряє сервер. Сервер перевіряє існування календарної дати, однозначність часу Europe/Kyiv
+        і endsAt > startsAt; шаблону LocalHour недостатньо. Початок строго в майбутньому, не пізніше зараз + 90
+        календарних днів; тривалість 1–30 календарних діб. Календарна доба не дорівнює завжди 24 годинам; залишок
+        оплачується як доба. За ADD-001 кожну обчислену календарну межу визначають від початкової місцевої опори
+        Europe/Kyiv: неіснуючу переносять вперед на величину переходу, для неоднозначної вибирають пізніший момент.
+        Перенесення не накопичуються. Це діє для меж 1/30 діб, оплачуваних діб та горизонту 90 днів; введені проблемні
+        години як і раніше відхиляються з 422, правило дедлайну скасування збережено. Доступність на весь напіввідкритий
+        період [startsAt, endsAt): приховане авто, підтверджені/активні бронювання й службові періоди блокують;
+        суміжність дозволена, скасовані бронювання не блокують. Читання/розрахунок не резервують авто. Сервер обчислює
+        billableDays і totalPrice = dailyRate × billableDays точно у гривнях, показує ціну та токен до підтвердження;
+        без резервування. Сесія чинна рівно 86 400 секунд від входу, без автоматичного продовження. Від точної межі
+        або після успішної зміни пароля старий токен дає 401 AUTHENTICATION_REQUIRED з WWW-Authenticate: Bearer.
+        Після невдалої зміни пароля чинна сесія залишається прийнятною до первинної межі.
+      requestBody:
+        required: true
+        content:
+          application/json:
+            schema:
+              $ref: '#/components/schemas/QuoteRequest'
+            examples:
+              QuoteRequest:
+                $ref: '#/components/examples/QuoteRequest'
+              QuoteCalendarGapRequest:
+                $ref: '#/components/examples/QuoteCalendarGapRequest'
+              QuoteCalendarNoDriftRequest:
+                $ref: '#/components/examples/QuoteCalendarNoDriftRequest'
+              QuoteCalendarFoldRequest:
+                $ref: '#/components/examples/QuoteCalendarFoldRequest'
+              QuoteCalendarMaximumRequest:
+                $ref: '#/components/examples/QuoteCalendarMaximumRequest'
+              QuoteCalendarHorizonRequest:
+                $ref: '#/components/examples/QuoteCalendarHorizonRequest'
+      responses:
+        '200':
+          $ref: '#/components/responses/Quote'
+        '400':
+          $ref: '#/components/responses/BadRequest'
+        '401':
+          $ref: '#/components/responses/Unauthorized'
+        '403':
+          $ref: '#/components/responses/Forbidden'
+        '404':
+          $ref: '#/components/responses/NotFound'
+        '409':
+          $ref: '#/components/responses/CarUnavailable'
+        '422':
+          $ref: '#/components/responses/ValidationError'
+        '405':
+          $ref: '#/components/responses/MethodNotAllowedPost'
+        '500':
+          $ref: '#/components/responses/InternalError'
+        '503':
+          $ref: '#/components/responses/ServiceUnavailable'
+  /bookings:
+    post:
+      operationId: createBooking
+      x-op-id: OP-10
+      x-req-ids:
+      - REQ-F-007
+      - REQ-F-008
+      - REQ-F-026
+      - REQ-F-027
+      - REQ-F-028
+      - REQ-F-029
+      - REQ-F-030
+      - REQ-F-031
+      - REQ-F-032
+      - REQ-F-033
+      - REQ-F-034
+      - REQ-F-035
+      - REQ-F-036
+      - REQ-F-037
+      - REQ-F-039
+      - REQ-F-040
+      - REQ-F-041
+      - REQ-F-042
+      - REQ-F-043
+      - REQ-F-044
+      - REQ-F-045
+      - REQ-F-051
+      - REQ-F-052
+      - REQ-F-053
+      - REQ-F-061
+      - REQ-F-083
+      - REQ-F-089
+      - REQ-F-090
+      - REQ-F-092
+      - REQ-F-093
+      - REQ-F-094
+      - REQ-F-095
+      - REQ-F-096
+      tags:
+      - Бронювання
+      summary: >-
+        Лише К для себе: атомарна перевірка періоду, доступності й актуальної ціни, автоматичне підтвердження та
+        фіксація авто/періоду/вартості
+      description: >-
+        Лише К для себе: власник із сесії, clientId не приймається, А та гість не можуть створювати бронювання.
+        Сервер перевіряє існування календарної дати, однозначність часу Europe/Kyiv і endsAt > startsAt; шаблону
+        LocalHour недостатньо. Початок строго в майбутньому, не пізніше зараз + 90 календарних днів; тривалість
+        1–30 календарних діб. Календарна доба не дорівнює завжди 24 годинам; залишок оплачується як доба. За ADD-001
+        кожну обчислену календарну межу визначають від початкової місцевої опори Europe/Kyiv: неіснуючу переносять
+        вперед на величину переходу, для неоднозначної вибирають пізніший момент. Перенесення не накопичуються.
+        Це діє для меж 1/30 діб, оплачуваних діб та горизонту 90 днів; введені проблемні години як і раніше відхиляються
+        з 422, правило дедлайну скасування збережено. Доступність на весь напіввідкритий період [startsAt, endsAt):
+        приховане авто, підтверджені/активні бронювання й службові періоди блокують; суміжність дозволена, скасовані
+        бронювання не блокують. Читання/розрахунок не резервують авто. Сервер атомарно повторно перевіряє доступність,
+        версію тарифу та відповідність токена клієнту/авто/періоду. При конкурентних перетинних запитах створюється
+        не більше одного бронювання; решта — CAR_UNAVAILABLE. Перевірка узгоджена також із паралельними службовими
+        змінами. Змінений тариф (навіть змінений і повернутий назад) — PRICE_CHANGED з новим Quote і токеном, без
+        створення до повторного підтвердження. Успіх автоматично confirmed; фіксуються тариф/сума/авто/період. Межа
+        К — той самий місцевий час попередньої доби Europe/Kyiv включно; обчислений неіснуючий час переноситься
+        вперед на величину зсуву, повторюваний — у пізніше входження. Сесія чинна рівно 86 400 секунд від входу,
+        без автоматичного продовження. Від точної межі або після успішної зміни пароля старий токен дає 401 AUTHENTICATION_REQUIRED
+        з WWW-Authenticate: Bearer. Після невдалої зміни пароля чинна сесія залишається прийнятною до первинної
+        межі.
+      requestBody:
+        required: true
+        content:
+          application/json:
+            schema:
+              $ref: '#/components/schemas/BookingCreateRequest'
+            examples:
+              BookingCreateRequest:
+                $ref: '#/components/examples/BookingCreateRequest'
+      responses:
+        '201':
+          $ref: '#/components/responses/BookingCreated'
+        '400':
+          $ref: '#/components/responses/BadRequest'
+        '401':
+          $ref: '#/components/responses/Unauthorized'
+        '403':
+          $ref: '#/components/responses/Forbidden'
+        '404':
+          $ref: '#/components/responses/NotFound'
+        '409':
+          $ref: '#/components/responses/BookingConflict'
+        '422':
+          $ref: '#/components/responses/ValidationError'
+        '405':
+          $ref: '#/components/responses/MethodNotAllowedGetPost'
+        '500':
+          $ref: '#/components/responses/InternalError'
+        '503':
+          $ref: '#/components/responses/ServiceUnavailable'
+    get:
+      operationId: listBookings
+      x-op-id: OP-11
+      x-req-ids:
+      - REQ-F-024
+      - REQ-F-025
+      - REQ-F-043
+      - REQ-F-044
+      - REQ-F-045
+      - REQ-F-046
+      - REQ-F-047
+      - REQ-F-048
+      - REQ-F-049
+      - REQ-F-050
+      - REQ-F-051
+      - REQ-F-052
+      - REQ-F-053
+      - REQ-F-060
+      - REQ-F-062
+      - REQ-F-063
+      - REQ-F-064
+      - REQ-F-084
+      - REQ-F-087
+      - REQ-F-088
+      - REQ-F-089
+      - REQ-F-091
+      - REQ-F-093
+      - REQ-F-094
+      - REQ-F-095
+      - REQ-F-096
+      tags:
+      - Бронювання
+      summary: К бачить власні записи, А — усі з актуальними контактами
+      description: >-
+        К — лише власні записи; А — усі з актуальним Profile клієнта. Роль і власність перевіряє сервер; К не бачить
+        authorAccountId чи особистих даних адміністратора. Історія скасування зберігається. Стан визначає сервер
+        за запланованим часом: від початку включно active, від завершення включно completed, якщо не скасовано;
+        фізична видача/повернення не підтверджуються. Тариф, сума, авто й період бронювання незмінні; контакти читаються
+        актуальними. Межа К — той самий місцевий час попередньої доби Europe/Kyiv включно; обчислений неіснуючий
+        час переноситься вперед на величину зсуву, повторюваний — у пізніше входження. Сесія чинна рівно 86 400
+        секунд від входу, без автоматичного продовження. Від точної межі або після успішної зміни пароля старий
+        токен дає 401 AUTHENTICATION_REQUIRED з WWW-Authenticate: Bearer. Після невдалої зміни пароля чинна сесія
+        залишається прийнятною до первинної межі.
+      responses:
+        '200':
+          $ref: '#/components/responses/Bookings'
+        '401':
+          $ref: '#/components/responses/Unauthorized'
+        '403':
+          $ref: '#/components/responses/Forbidden'
+        '405':
+          $ref: '#/components/responses/MethodNotAllowedGetPost'
+        '500':
+          $ref: '#/components/responses/InternalError'
+        '503':
+          $ref: '#/components/responses/ServiceUnavailable'
+  /bookings/{bookingId}:
+    get:
+      operationId: getBooking
+      x-op-id: OP-12
+      x-req-ids:
+      - REQ-F-024
+      - REQ-F-025
+      - REQ-F-043
+      - REQ-F-044
+      - REQ-F-045
+      - REQ-F-046
+      - REQ-F-047
+      - REQ-F-048
+      - REQ-F-049
+      - REQ-F-050
+      - REQ-F-051
+      - REQ-F-052
+      - REQ-F-053
+      - REQ-F-060
+      - REQ-F-062
+      - REQ-F-063
+      - REQ-F-064
+      - REQ-F-084
+      - REQ-F-087
+      - REQ-F-088
+      - REQ-F-089
+      - REQ-F-091
+      - REQ-F-093
+      - REQ-F-094
+      - REQ-F-095
+      - REQ-F-096
+      tags:
+      - Бронювання
+      summary: Ті самі дані й правила приватності для одного запису; для К чуже й відсутнє бронювання мають однаковий
+        404
+      description: >-
+        К — лише власне бронювання; А — будь-яке з актуальними контактами клієнта. Для чужого й відсутнього бронювання
+        однаковий NOT_FOUND. К не отримує обліковий запис автора-адміністратора. Стан визначає сервер за запланованим
+        часом: від початку включно active, від завершення включно completed, якщо не скасовано; фізична видача/повернення
+        не підтверджуються. Тариф, сума, авто й період бронювання незмінні; контакти читаються актуальними. Межа
+        К — той самий місцевий час попередньої доби Europe/Kyiv включно; обчислений неіснуючий час переноситься
+        вперед на величину зсуву, повторюваний — у пізніше входження. Сесія чинна рівно 86 400 секунд від входу,
+        без автоматичного продовження. Від точної межі або після успішної зміни пароля старий токен дає 401 AUTHENTICATION_REQUIRED
+        з WWW-Authenticate: Bearer. Після невдалої зміни пароля чинна сесія залишається прийнятною до первинної
+        межі.
+      parameters:
+      - $ref: '#/components/parameters/bookingId'
+      responses:
+        '200':
+          $ref: '#/components/responses/Booking'
+        '400':
+          $ref: '#/components/responses/BadRequest'
+        '401':
+          $ref: '#/components/responses/Unauthorized'
+        '403':
+          $ref: '#/components/responses/Forbidden'
+        '404':
+          $ref: '#/components/responses/NotFound'
+        '405':
+          $ref: '#/components/responses/MethodNotAllowedGet'
+        '500':
+          $ref: '#/components/responses/InternalError'
+        '503':
+          $ref: '#/components/responses/ServiceUnavailable'
+  /bookings/{bookingId}/cancellation:
+    post:
+      operationId: cancelBooking
+      x-op-id: OP-13
+      x-req-ids:
+      - REQ-F-045
+      - REQ-F-048
+      - REQ-F-049
+      - REQ-F-050
+      - REQ-F-051
+      - REQ-F-052
+      - REQ-F-053
+      - REQ-F-054
+      - REQ-F-055
+      - REQ-F-056
+      - REQ-F-057
+      - REQ-F-058
+      - REQ-F-059
+      - REQ-F-060
+      - REQ-F-061
+      - REQ-F-062
+      - REQ-F-063
+      - REQ-F-064
+      - REQ-F-085
+      - REQ-F-087
+      - REQ-F-088
+      - REQ-F-089
+      - REQ-F-091
+      - REQ-F-093
+      - REQ-F-094
+      - REQ-F-095
+      - REQ-F-096
+      tags:
+      - Бронювання
+      summary: 'Перевіряє актуальний стан і часові межі: К — власне до межі включно без причини, А — до початку
+        з причиною'
+      description: >-
+        К — лише власне підтверджене бронювання до клієнтської межі включно, тіло можна пропустити або передати
+        {}; reason не приймається. А — будь-яке підтверджене до початку з обов’язковою непробільною reason. Тіло
+        oneOf не визначає роль: відповідність варіанта чинній ролі перевіряє сервер; А без тіла — 422, К з reason
+        — 422. Чуже бронювання К — той самий 404, що відсутнє. Стан визначає сервер за запланованим часом: від початку
+        включно active, від завершення включно completed, якщо не скасовано; фізична видача/повернення не підтверджуються.
+        Тариф, сума, авто й період бронювання незмінні; контакти читаються актуальними. Межа К — той самий місцевий
+        час попередньої доби Europe/Kyiv включно; обчислений неіснуючий час переноситься вперед на величину зсуву,
+        повторюваний — у пізніше входження. Активне/завершене не скасовується; повторне скасування — ALREADY_CANCELLED.
+        Перевірки стану/часу/прав, зміна стану, запис автора/часу й звільнення періоду атомарні. А отримує authorAccountId,
+        К — ні. Сесія чинна рівно 86 400 секунд від входу, без автоматичного продовження. Від точної межі або після
+        успішної зміни пароля старий токен дає 401 AUTHENTICATION_REQUIRED з WWW-Authenticate: Bearer. Після невдалої
+        зміни пароля чинна сесія залишається прийнятною до первинної межі.
+      parameters:
+      - $ref: '#/components/parameters/bookingId'
+      requestBody:
+        required: false
+        description: 'К: без тіла або {}; А: обов’язкове тіло з reason. Відповідність фактичній ролі, включно з
+          обов’язковістю тіла А, перевіряє сервер.'
+        content:
+          application/json:
+            schema:
+              oneOf:
+              - $ref: '#/components/schemas/ClientCancellationRequest'
+              - $ref: '#/components/schemas/AdminCancellationRequest'
+            examples:
+              ClientCancellationRequest:
+                $ref: '#/components/examples/ClientCancellationRequest'
+              AdminCancellationRequest:
+                $ref: '#/components/examples/AdminCancellationRequest'
+      responses:
+        '201':
+          $ref: '#/components/responses/CancellationCreated'
+        '400':
+          $ref: '#/components/responses/BadRequest'
+        '401':
+          $ref: '#/components/responses/Unauthorized'
+        '403':
+          $ref: '#/components/responses/Forbidden'
+        '404':
+          $ref: '#/components/responses/NotFound'
+        '409':
+          $ref: '#/components/responses/CancellationConflict'
+        '422':
+          $ref: '#/components/responses/ValidationError'
+        '405':
+          $ref: '#/components/responses/MethodNotAllowedPost'
+        '500':
+          $ref: '#/components/responses/InternalError'
+        '503':
+          $ref: '#/components/responses/ServiceUnavailable'
+  /admin/cars:
+    get:
+      operationId: listAdminCars
+      x-op-id: OP-14
+      x-req-ids:
+      - REQ-F-066
+      - REQ-F-068
+      - REQ-F-069
+      - REQ-F-071
+      - REQ-F-087
+      - REQ-F-088
+      - REQ-F-089
+      - REQ-F-093
+      - REQ-F-094
+      - REQ-F-095
+      - REQ-F-096
+      tags:
+      - Автопарк
+      summary: >-
+        Допоміжний адміністративний перелік для вибору авто, редагування, приховування й повернення; включає приховані
+        авто та futureBookingsCount для попередження
+      description: >-
+        Лише А з однаковими повноваженнями для всіх адміністраторів; сервер перевіряє роль. Увесь автопарк включно
+        з прихованими, futureBookingsCount — для попередження перед приховуванням. Це допоміжне читання для керування,
+        без фільтрів публічного каталогу. Сесія чинна рівно 86 400 секунд від входу, без автоматичного продовження.
+        Від точної межі або після успішної зміни пароля старий токен дає 401 AUTHENTICATION_REQUIRED з WWW-Authenticate:
+        Bearer. Після невдалої зміни пароля чинна сесія залишається прийнятною до первинної межі.
+      responses:
+        '200':
+          $ref: '#/components/responses/AdminCars'
+        '401':
+          $ref: '#/components/responses/Unauthorized'
+        '403':
+          $ref: '#/components/responses/Forbidden'
+        '405':
+          $ref: '#/components/responses/MethodNotAllowedGet'
+        '500':
+          $ref: '#/components/responses/InternalError'
+        '503':
+          $ref: '#/components/responses/ServiceUnavailable'
+  /cars/{carId}/service-unavailabilities:
+    get:
+      operationId: listServicePeriods
+      x-op-id: OP-18
+      x-req-ids:
+      - REQ-F-073
+      - REQ-F-074
+      - REQ-F-075
+      - REQ-F-076
+      - REQ-F-081
+      - REQ-F-087
+      - REQ-F-088
+      - REQ-F-089
+      - REQ-F-092
+      - REQ-F-093
+      - REQ-F-094
+      - REQ-F-095
+      - REQ-F-096
+      tags:
+      - Службова недоступність
+      summary: Допоміжне читання майбутніх періодів для керування та збереженої історії після початку; службову
+        причину бачить лише А
+      description: >-
+        Лише А; перевірка ролі на сервері. Майбутні й історичні періоди конкретного авто; службові причини не доступні
+        Г/К. Історія після початку залишається доступною. Сесія чинна рівно 86 400 секунд від входу, без автоматичного
+        продовження. Від точної межі або після успішної зміни пароля старий токен дає 401 AUTHENTICATION_REQUIRED
+        з WWW-Authenticate: Bearer. Після невдалої зміни пароля чинна сесія залишається прийнятною до первинної
+        межі.
+      parameters:
+      - $ref: '#/components/parameters/carId'
+      responses:
+        '200':
+          $ref: '#/components/responses/ServicePeriods'
+        '400':
+          $ref: '#/components/responses/BadRequest'
+        '401':
+          $ref: '#/components/responses/Unauthorized'
+        '403':
+          $ref: '#/components/responses/Forbidden'
+        '404':
+          $ref: '#/components/responses/NotFound'
+        '405':
+          $ref: '#/components/responses/MethodNotAllowedGetPost'
+        '500':
+          $ref: '#/components/responses/InternalError'
+        '503':
+          $ref: '#/components/responses/ServiceUnavailable'
+    post:
+      operationId: createServicePeriod
+      x-op-id: OP-20
+      x-req-ids:
+      - REQ-F-073
+      - REQ-F-074
+      - REQ-F-077
+      - REQ-F-078
+      - REQ-F-079
+      - REQ-F-080
+      - REQ-F-087
+      - REQ-F-088
+      - REQ-F-089
+      - REQ-F-092
+      - REQ-F-093
+      - REQ-F-094
+      - REQ-F-095
+      - REQ-F-096
+      tags:
+      - Службова недоступність
+      summary: А створює майбутній період із межами й причиною
+      description: >-
+        Лише А; роль і існування авто перевіряє сервер, службова причина недоступна Г/К. Сервер перевіряє існування
+        календарної дати, однозначність часу Europe/Kyiv і endsAt > startsAt; шаблону LocalHour недостатньо. Створення/підсумковий
+        новий початок редагування — у майбутньому. Чинний період редагується/видаляється лише до його початку; після
+        початку історія зберігається. Обмеження оренди 1–30 діб і 90 днів не застосовуються. Сервер атомарно перевіряє
+        конфлікти, також щодо паралельних бронювань: перетини з підтвердженими/активними бронюваннями чи іншими
+        службовими періодами відхиляються без скасування бронювань; суміжність дозволена; при редагуванні запис
+        не конфліктує із собою. Сесія чинна рівно 86 400 секунд від входу, без автоматичного продовження. Від точної
+        межі або після успішної зміни пароля старий токен дає 401 AUTHENTICATION_REQUIRED з WWW-Authenticate: Bearer.
+        Після невдалої зміни пароля чинна сесія залишається прийнятною до первинної межі.
+      parameters:
+      - $ref: '#/components/parameters/carId'
+      requestBody:
+        required: true
+        content:
+          application/json:
+            schema:
+              $ref: '#/components/schemas/ServicePeriodCreateRequest'
+            examples:
+              ServicePeriodCreateRequest:
+                $ref: '#/components/examples/ServicePeriodCreateRequest'
+      responses:
+        '201':
+          $ref: '#/components/responses/ServicePeriodCreated'
+        '400':
+          $ref: '#/components/responses/BadRequest'
+        '401':
+          $ref: '#/components/responses/Unauthorized'
+        '403':
+          $ref: '#/components/responses/Forbidden'
+        '404':
+          $ref: '#/components/responses/NotFound'
+        '409':
+          $ref: '#/components/responses/ServiceConflict'
+        '422':
+          $ref: '#/components/responses/ValidationError'
+        '405':
+          $ref: '#/components/responses/MethodNotAllowedGetPost'
+        '500':
+          $ref: '#/components/responses/InternalError'
+        '503':
+          $ref: '#/components/responses/ServiceUnavailable'
+  /cars/{carId}/service-unavailabilities/{periodId}:
+    get:
+      operationId: getServicePeriod
+      x-op-id: OP-19
+      x-req-ids:
+      - REQ-F-074
+      - REQ-F-075
+      - REQ-F-081
+      - REQ-F-087
+      - REQ-F-088
+      - REQ-F-089
+      - REQ-F-092
+      - REQ-F-093
+      - REQ-F-094
+      - REQ-F-095
+      - REQ-F-096
+      tags:
+      - Службова недоступність
+      summary: 'Деталі конкретного періоду для перегляду/редагування та історії: обидві межі й причина; лише А,
+        із перевіркою належності авто'
+      description: >-
+        Лише А; сервер перевіряє роль і належність periodId до carId; невідповідність — NOT_FOUND. Службова причина
+        не розкривається Г/К; історичний запис доступний без можливості зміни. Сесія чинна рівно 86 400 секунд від
+        входу, без автоматичного продовження. Від точної межі або після успішної зміни пароля старий токен дає 401
+        AUTHENTICATION_REQUIRED з WWW-Authenticate: Bearer. Після невдалої зміни пароля чинна сесія залишається
+        прийнятною до первинної межі.
+      parameters:
+      - $ref: '#/components/parameters/carId'
+      - $ref: '#/components/parameters/periodId'
+      responses:
+        '200':
+          $ref: '#/components/responses/ServicePeriod'
+        '400':
+          $ref: '#/components/responses/BadRequest'
+        '401':
+          $ref: '#/components/responses/Unauthorized'
+        '403':
+          $ref: '#/components/responses/Forbidden'
+        '404':
+          $ref: '#/components/responses/NotFound'
+        '405':
+          $ref: '#/components/responses/MethodNotAllowedGetPatchDelete'
+        '500':
+          $ref: '#/components/responses/InternalError'
+        '503':
+          $ref: '#/components/responses/ServiceUnavailable'
+    patch:
+      operationId: updateServicePeriod
+      x-op-id: OP-21
+      x-req-ids:
+      - REQ-F-074
+      - REQ-F-075
+      - REQ-F-077
+      - REQ-F-078
+      - REQ-F-079
+      - REQ-F-080
+      - REQ-F-081
+      - REQ-F-087
+      - REQ-F-088
+      - REQ-F-089
+      - REQ-F-092
+      - REQ-F-093
+      - REQ-F-094
+      - REQ-F-095
+      - REQ-F-096
+      tags:
+      - Службова недоступність
+      summary: 'Лише А й до чинного початку: підсумковий період має межі та причину й проходить перевірку перетинів
+        без скасування бронювань'
+      description: >-
+        Лише А; роль і належність periodId до carId перевіряє сервер. Принаймні одне поле; підсумковий об’єкт перевіряється
+        після PATCH. Сервер перевіряє існування календарної дати, однозначність часу Europe/Kyiv і endsAt > startsAt;
+        шаблону LocalHour недостатньо. Створення/підсумковий новий початок редагування — у майбутньому. Чинний період
+        редагується/видаляється лише до його початку; після початку історія зберігається. Обмеження оренди 1–30
+        діб і 90 днів не застосовуються. Сервер атомарно перевіряє конфлікти, також щодо паралельних бронювань:
+        перетини з підтвердженими/активними бронюваннями чи іншими службовими періодами відхиляються без скасування
+        бронювань; суміжність дозволена; при редагуванні запис не конфліктує із собою. Сесія чинна рівно 86 400
+        секунд від входу, без автоматичного продовження. Від точної межі або після успішної зміни пароля старий
+        токен дає 401 AUTHENTICATION_REQUIRED з WWW-Authenticate: Bearer. Після невдалої зміни пароля чинна сесія
+        залишається прийнятною до первинної межі.
+      parameters:
+      - $ref: '#/components/parameters/carId'
+      - $ref: '#/components/parameters/periodId'
+      requestBody:
+        required: true
+        content:
+          application/json:
+            schema:
+              $ref: '#/components/schemas/ServicePeriodPatch'
+            examples:
+              ServicePeriodPatch:
+                $ref: '#/components/examples/ServicePeriodPatch'
+      responses:
+        '200':
+          $ref: '#/components/responses/ServicePeriodUpdated'
+        '400':
+          $ref: '#/components/responses/BadRequest'
+        '401':
+          $ref: '#/components/responses/Unauthorized'
+        '403':
+          $ref: '#/components/responses/Forbidden'
+        '404':
+          $ref: '#/components/responses/NotFound'
+        '409':
+          $ref: '#/components/responses/ServiceUpdateConflict'
+        '422':
+          $ref: '#/components/responses/ValidationError'
+        '405':
+          $ref: '#/components/responses/MethodNotAllowedGetPatchDelete'
+        '500':
+          $ref: '#/components/responses/InternalError'
+        '503':
+          $ref: '#/components/responses/ServiceUnavailable'
+    delete:
+      operationId: deleteServicePeriod
+      x-op-id: OP-22
+      x-req-ids:
+      - REQ-F-076
+      - REQ-F-081
+      - REQ-F-087
+      - REQ-F-088
+      - REQ-F-089
+      - REQ-F-092
+      - REQ-F-093
+      - REQ-F-094
+      - REQ-F-095
+      - REQ-F-096
+      tags:
+      - Службова недоступність
+      summary: Лише А; видалення до початку, збереження історії після початку
+      description: >-
+        Лише А; сервер перевіряє роль і належність periodId до carId; невідповідність — NOT_FOUND. Видалення строго
+        до чинного початку; від початку включно 409 SERVICE_PERIOD_ALREADY_STARTED, історія зберігається. Службова
+        причина не розкривається Г/К. Сесія чинна рівно 86 400 секунд від входу, без автоматичного продовження.
+        Від точної межі або після успішної зміни пароля старий токен дає 401 AUTHENTICATION_REQUIRED з WWW-Authenticate:
+        Bearer. Після невдалої зміни пароля чинна сесія залишається прийнятною до первинної межі.
+      parameters:
+      - $ref: '#/components/parameters/carId'
+      - $ref: '#/components/parameters/periodId'
+      responses:
+        '204':
+          $ref: '#/components/responses/NoContent'
+        '400':
+          $ref: '#/components/responses/BadRequest'
+        '401':
+          $ref: '#/components/responses/Unauthorized'
+        '403':
+          $ref: '#/components/responses/Forbidden'
+        '404':
+          $ref: '#/components/responses/NotFound'
+        '409':
+          $ref: '#/components/responses/ServiceStarted'
+        '405':
+          $ref: '#/components/responses/MethodNotAllowedGetPatchDelete'
+        '500':
+          $ref: '#/components/responses/InternalError'
+        '503':
+          $ref: '#/components/responses/ServiceUnavailable'
+components:
+  securitySchemes:
+    BearerAuth:
+      type: http
+      scheme: bearer
+      description: >-
+        Непрозорий accessToken; JWT не вимагається. Ролі й власність перевіряє сервер. Сесія чинна рівно 86 400
+        секунд від входу, без автоматичного продовження. Від точної межі або після успішної зміни пароля старий
+        токен дає 401 AUTHENTICATION_REQUIRED з WWW-Authenticate: Bearer. Успішна зміна пароля повертає 204 без
+        тіла й анулює всі сесії цього запису, включно з поточною; наступний захищений запит вимагає повторного входу.
+        Невдала зміна не анулює сесій, якщо їх початковий строк ще не завершився.
+  parameters:
+    carId:
+      name: carId
+      in: path
+      required: true
+      schema:
+        $ref: '#/components/schemas/Id'
+      example: car-example
+    bookingId:
+      name: bookingId
+      in: path
+      required: true
+      schema:
+        $ref: '#/components/schemas/Id'
+      example: booking-example
+    periodId:
+      name: periodId
+      in: path
+      required: true
+      schema:
+        $ref: '#/components/schemas/Id'
+      example: period-example
+    startsAtOptional:
+      name: startsAt
+      in: query
+      required: false
+      schema:
+        $ref: '#/components/schemas/LocalHour'
+      example: 2026-11-12T09
+      description: Місцевий час Europe/Kyiv; сервер перевіряє дату, DST й порядок меж. У OP-01 обидві межі разом
+        або обидві відсутні.
+    startsAtRequired:
+      name: startsAt
+      in: query
+      required: true
+      schema:
+        $ref: '#/components/schemas/LocalHour'
+      example: 2026-11-12T09
+      description: Місцевий час Europe/Kyiv; сервер перевіряє дату, DST й порядок меж. У OP-01 обидві межі разом
+        або обидві відсутні.
+    endsAtOptional:
+      name: endsAt
+      in: query
+      required: false
+      schema:
+        $ref: '#/components/schemas/LocalHour'
+      example: 2026-11-14T09
+      description: Місцевий час Europe/Kyiv; сервер перевіряє дату, DST й порядок меж. У OP-01 обидві межі разом
+        або обидві відсутні.
+    endsAtRequired:
+      name: endsAt
+      in: query
+      required: true
+      schema:
+        $ref: '#/components/schemas/LocalHour'
+      example: 2026-11-14T09
+      description: Місцевий час Europe/Kyiv; сервер перевіряє дату, DST й порядок меж. У OP-01 обидві межі разом
+        або обидві відсутні.
+  headers:
+    WWW-Authenticate:
+      description: Обов’язковий для 401 помилки Bearer захищеної операції; не для INVALID_CREDENTIALS у POST /sessions.
+      required: true
+      schema:
+        type: string
+        const: Bearer
+    Retry-After:
+      description: 'Обов’язковий для LOGIN_BLOCKED: додатне ціле секунд до початкової межі блокування, округлення
+        вгору. Спроби не подовжують строк.'
+      required: true
+      schema:
+        type: integer
+        minimum: 1
+      example: 900
+    Allow:
+      description: 'Обов’язковий для 405: методи з контракту для запитаного URI, через кому; не залежить від ролі.'
+      required: true
+      schema:
+        type: string
+        minLength: 1
+      example: GET, POST
+  schemas:
+    Id:
+      type: string
+      minLength: 1
+      description: Непорожній непрозорий ідентифікатор; формат UUID чи числовий формат не вимагається.
+    Token:
+      type: string
+      minLength: 1
+      description: Непорожній непрозорий токен. Токен ціни не є токеном сесії.
+    NonEmptyString:
+      type: string
+      minLength: 1
+      pattern: \S
+      description: Щонайменше один непробільний символ; без обрізання, максимальної довжини чи regex телефону. Не
+        застосовується до паролів.
+    Email:
+      type: string
+      format: email
+      description: >-
+        Сервер спочатку видаляє крайні пробіли, потім перевіряє формат. Зіставлення й унікальність без регістру;
+        примусове зниження регістру при збереженні не вимагається.
+    NewPassword:
+      type: string
+      minLength: 8
+      writeOnly: true
+      description: Новий пароль без зміни та обрізання пробілів; правило NonEmptyString не застосовується.
+    LocalHour:
+      type: string
+      pattern: ^[0-9]{4}-(0[1-9]|1[0-2])-(0[1-9]|[12][0-9]|3[01])T([01][0-9]|2[0-3])$
+      description: >-
+        YYYY-MM-DDTHH без зміщення. Схема перевіряє структуру й діапазони компонентів; хвилини/секунди не передаються,
+        дорівнюють 00. Сервер додатково перевіряє існування календарної дати й коректність у Europe/Kyiv: неіснуючі
+        та неоднозначні введені межі відхиляються. Самого шаблону недостатньо; це також стосується службових періодів.
+      examples:
+      - 2026-11-12T09
+    EventTime:
+      type: string
+      format: date-time
+      not:
+        pattern: -00:00$
+      description: RFC 3339 з відомим зміщенням UTC; не обмежується цілою годиною.
+      examples:
+      - '2026-11-11T09:00:00+02:00'
+    Timezone:
+      type: string
+      const: Europe/Kyiv
+    Money:
+      type: string
+      pattern: ^-?[0-9]+\.[0-9]{2}$
+      description: Десятковий рядок з двома знаками після крапки, без експоненти. Не JSON number; без довільної
+        верхньої межі.
+    DailyRate:
+      type: string
+      pattern: ^[0-9]+\.[0-9]{2}$
+      not:
+        pattern: ^0+\.00$
+      description: Додатний тариф (> 0) у десятковому рядку з двома знаками. Нуль та від’ємні значення заборонені;
+        не округлювати мовчки.
+      examples:
+      - '1500.00'
+    Currency:
+      type: string
+      const: UAH
+    BillableDays:
+      type: integer
+      minimum: 1
+      maximum: 30
+    FutureBookingsCount:
+      type: integer
+      minimum: 0
+    BookingStatus:
+      type: string
+      enum:
+      - confirmed
+      - active
+      - completed
+      - cancelled
+    AccountRole:
+      type: string
+      enum:
+      - client
+      - administrator
+    Characteristics:
+      type: object
+      minProperties: 1
+      propertyNames:
+        $ref: '#/components/schemas/NonEmptyString'
+      additionalProperties:
+        $ref: '#/components/schemas/NonEmptyString'
+      description: Непорожній словник непорожніх назв і значень з непробільним символом. Передавання у PATCH повністю
+        замінює словник.
+    Profile:
+      type: object
+      additionalProperties: false
+      required:
+      - clientId
+      - firstName
+      - lastName
+      - email
+      - phone
+      properties:
+        clientId:
+          $ref: '#/components/schemas/Id'
+        firstName:
+          $ref: '#/components/schemas/NonEmptyString'
+        lastName:
+          $ref: '#/components/schemas/NonEmptyString'
+        email:
+          $ref: '#/components/schemas/Email'
+        phone:
+          $ref: '#/components/schemas/NonEmptyString'
+    RegistrationRequest:
+      type: object
+      additionalProperties: false
+      required:
+      - firstName
+      - lastName
+      - email
+      - phone
+      - password
+      properties:
+        firstName:
+          $ref: '#/components/schemas/NonEmptyString'
+        lastName:
+          $ref: '#/components/schemas/NonEmptyString'
+        email:
+          $ref: '#/components/schemas/Email'
+        phone:
+          $ref: '#/components/schemas/NonEmptyString'
+        password:
+          $ref: '#/components/schemas/NewPassword'
+    RegistrationResponse:
+      type: object
+      additionalProperties: false
+      required:
+      - profile
+      - role
+      properties:
+        profile:
+          $ref: '#/components/schemas/Profile'
+        role:
+          type: string
+          const: client
+    ProfilePatch:
+      type: object
+      additionalProperties: false
+      required: []
+      properties:
+        firstName:
+          $ref: '#/components/schemas/NonEmptyString'
+        lastName:
+          $ref: '#/components/schemas/NonEmptyString'
+        phone:
+          $ref: '#/components/schemas/NonEmptyString'
+      minProperties: 1
+    LoginRequest:
+      type: object
+      additionalProperties: false
+      required:
+      - email
+      - password
+      properties:
+        email:
+          $ref: '#/components/schemas/Email'
+        password:
+          type: string
+          writeOnly: true
+          description: Без обрізання чи зміни; мінімум 8 застосовується при встановленні нового пароля, а не замість
+            перевірки входу.
+    LoginResponse:
+      type: object
+      additionalProperties: false
+      required:
+      - accessToken
+      - tokenType
+      - accountId
+      - role
+      properties:
+        accessToken:
+          $ref: '#/components/schemas/Token'
+        tokenType:
+          type: string
+          const: Bearer
+        accountId:
+          $ref: '#/components/schemas/Id'
+        role:
+          $ref: '#/components/schemas/AccountRole'
+      description: >-
+        Сесія чинна рівно 86 400 секунд від входу, без автоматичного продовження. Від точної межі або після успішної
+        зміни пароля старий токен дає 401 AUTHENTICATION_REQUIRED з WWW-Authenticate: Bearer. Полів expiresAt/refreshToken
+        не вводиться.
+    PasswordChangeRequest:
+      type: object
+      additionalProperties: false
+      required:
+      - currentPassword
+      - newPassword
+      properties:
+        currentPassword:
+          type: string
+          writeOnly: true
+          description: Поточний пароль без обрізання; відповідність перевіряє сервер.
+        newPassword:
+          $ref: '#/components/schemas/NewPassword'
+      description: >-
+        Успішна зміна пароля повертає 204 без тіла й анулює всі сесії цього запису, включно з поточною; наступний
+        захищений запит вимагає повторного входу. Невдала зміна не анулює сесій, якщо їх початковий строк ще не
+        завершився.
+    PublicCar:
+      type: object
+      additionalProperties: false
+      required:
+      - id
+      - characteristics
+      - dailyRate
+      - currency
+      properties:
+        id:
+          $ref: '#/components/schemas/Id'
+        characteristics:
+          $ref: '#/components/schemas/Characteristics'
+        dailyRate:
+          $ref: '#/components/schemas/DailyRate'
+        currency:
+          $ref: '#/components/schemas/Currency'
+    AdminCar:
+      type: object
+      additionalProperties: false
+      required:
+      - id
+      - characteristics
+      - dailyRate
+      - currency
+      - hidden
+      - futureBookingsCount
+      properties:
+        id:
+          $ref: '#/components/schemas/Id'
+        characteristics:
+          $ref: '#/components/schemas/Characteristics'
+        dailyRate:
+          $ref: '#/components/schemas/DailyRate'
+        currency:
+          $ref: '#/components/schemas/Currency'
+        hidden:
+          type: boolean
+        futureBookingsCount:
+          $ref: '#/components/schemas/FutureBookingsCount'
+      description: >-
+        Лише А: лічильник підтверджених бронювань з початком строго після поточного серверного часу; скасовані,
+        активні та завершені не враховуються. Поле лише для читання.
+    CarCreateRequest:
+      type: object
+      additionalProperties: false
+      required:
+      - characteristics
+      - dailyRate
+      properties:
+        characteristics:
+          $ref: '#/components/schemas/Characteristics'
+        dailyRate:
+          $ref: '#/components/schemas/DailyRate'
+        hidden:
+          type: boolean
+          default: false
+    CarPatch:
+      type: object
+      additionalProperties: false
+      required: []
+      properties:
+        characteristics:
+          $ref: '#/components/schemas/Characteristics'
+        dailyRate:
+          $ref: '#/components/schemas/DailyRate'
+        hidden:
+          type: boolean
+      minProperties: 1
+    CarWarning:
+      type: object
+      additionalProperties: false
+      required:
+      - code
+      - futureBookingsCount
+      properties:
+        code:
+          type: string
+          const: FUTURE_BOOKINGS_EXIST
+        futureBookingsCount:
+          type: integer
+          minimum: 1
+    CarPatchResponse:
+      type: object
+      additionalProperties: false
+      required:
+      - car
+      - warnings
+      properties:
+        car:
+          $ref: '#/components/schemas/AdminCar'
+        warnings:
+          type: array
+          items:
+            $ref: '#/components/schemas/CarWarning'
+    CatalogQuery:
+      type: object
+      additionalProperties: false
+      required: []
+      properties:
+        startsAt:
+          $ref: '#/components/schemas/LocalHour'
+        endsAt:
+          $ref: '#/components/schemas/LocalHour'
+      dependentRequired:
+        startsAt:
+        - endsAt
+        endsAt:
+        - startsAt
+    AvailabilityQuery:
+      type: object
+      additionalProperties: false
+      required:
+      - startsAt
+      - endsAt
+      properties:
+        startsAt:
+          $ref: '#/components/schemas/LocalHour'
+        endsAt:
+          $ref: '#/components/schemas/LocalHour'
+    AvailabilityResponse:
+      type: object
+      additionalProperties: false
+      required:
+      - carId
+      - startsAt
+      - endsAt
+      - timezone
+      - available
+      properties:
+        carId:
+          $ref: '#/components/schemas/Id'
+        startsAt:
+          $ref: '#/components/schemas/LocalHour'
+        endsAt:
+          $ref: '#/components/schemas/LocalHour'
+        timezone:
+          $ref: '#/components/schemas/Timezone'
+        available:
+          type: boolean
+    QuoteRequest:
+      type: object
+      additionalProperties: false
+      required:
+      - carId
+      - startsAt
+      - endsAt
+      properties:
+        carId:
+          $ref: '#/components/schemas/Id'
+        startsAt:
+          $ref: '#/components/schemas/LocalHour'
+        endsAt:
+          $ref: '#/components/schemas/LocalHour'
+    Quote:
+      type: object
+      additionalProperties: false
+      required:
+      - carId
+      - startsAt
+      - endsAt
+      - timezone
+      - dailyRate
+      - billableDays
+      - totalPrice
+      - currency
+      - priceConfirmationToken
+      properties:
+        carId:
+          $ref: '#/components/schemas/Id'
+        startsAt:
+          $ref: '#/components/schemas/LocalHour'
+        endsAt:
+          $ref: '#/components/schemas/LocalHour'
+        timezone:
+          $ref: '#/components/schemas/Timezone'
+        dailyRate:
+          $ref: '#/components/schemas/DailyRate'
+        billableDays:
+          $ref: '#/components/schemas/BillableDays'
+        totalPrice:
+          $ref: '#/components/schemas/Money'
+        currency:
+          $ref: '#/components/schemas/Currency'
+        priceConfirmationToken:
+          $ref: '#/components/schemas/Token'
+    BookingCreateRequest:
+      type: object
+      additionalProperties: false
+      required:
+      - carId
+      - startsAt
+      - endsAt
+      - priceConfirmationToken
+      properties:
+        carId:
+          $ref: '#/components/schemas/Id'
+        startsAt:
+          $ref: '#/components/schemas/LocalHour'
+        endsAt:
+          $ref: '#/components/schemas/LocalHour'
+        priceConfirmationToken:
+          $ref: '#/components/schemas/Token'
+    BookingCar:
+      type: object
+      additionalProperties: false
+      required:
+      - id
+      - characteristics
+      properties:
+        id:
+          $ref: '#/components/schemas/Id'
+        characteristics:
+          $ref: '#/components/schemas/Characteristics'
+    ClientCancellation:
+      type: object
+      additionalProperties: false
+      required:
+      - cancelledAt
+      - authorRole
+      - reason
+      properties:
+        cancelledAt:
+          $ref: '#/components/schemas/EventTime'
+        authorRole:
+          $ref: '#/components/schemas/AccountRole'
+        reason:
+          oneOf:
+          - $ref: '#/components/schemas/NonEmptyString'
+          - type: 'null'
+      allOf:
+      - if:
+          properties:
+            authorRole:
+              const: client
+          required:
+          - authorRole
+        then:
+          properties:
+            reason:
+              type: 'null'
+        else:
+          properties:
+            reason:
+              $ref: '#/components/schemas/NonEmptyString'
+      description: >-
+        Проєкція для клієнта. Автор може бути клієнтом (reason=null) або адміністратором (непорожня причина). authorAccountId
+        та особисті дані адміністратора заборонені.
+    AdminCancellation:
+      type: object
+      additionalProperties: false
+      required:
+      - cancelledAt
+      - authorRole
+      - reason
+      - authorAccountId
+      properties:
+        cancelledAt:
+          $ref: '#/components/schemas/EventTime'
+        authorRole:
+          $ref: '#/components/schemas/AccountRole'
+        reason:
+          oneOf:
+          - $ref: '#/components/schemas/NonEmptyString'
+          - type: 'null'
+        authorAccountId:
+          $ref: '#/components/schemas/Id'
+      allOf:
+      - if:
+          properties:
+            authorRole:
+              const: client
+          required:
+          - authorRole
+        then:
+          properties:
+            reason:
+              type: 'null'
+        else:
+          properties:
+            reason:
+              $ref: '#/components/schemas/NonEmptyString'
+    ClientCancellationRequest:
+      type: object
+      additionalProperties: false
+      required: []
+      properties: {}
+      description: Лише порожній об’єкт; клієнт також може не передавати тіло. reason не приймається.
+    AdminCancellationRequest:
+      type: object
+      additionalProperties: false
+      required:
+      - reason
+      properties:
+        reason:
+          $ref: '#/components/schemas/NonEmptyString'
+    ClientBooking:
+      type: object
+      additionalProperties: false
+      required:
+      - id
+      - car
+      - startsAt
+      - endsAt
+      - timezone
+      - status
+      - dailyRate
+      - billableDays
+      - totalPrice
+      - currency
+      - clientCancellationDeadline
+      - cancellation
+      properties:
+        id:
+          $ref: '#/components/schemas/Id'
+        car:
+          $ref: '#/components/schemas/BookingCar'
+        startsAt:
+          $ref: '#/components/schemas/LocalHour'
+        endsAt:
+          $ref: '#/components/schemas/LocalHour'
+        timezone:
+          $ref: '#/components/schemas/Timezone'
+        status:
+          $ref: '#/components/schemas/BookingStatus'
+        dailyRate:
+          $ref: '#/components/schemas/DailyRate'
+        billableDays:
+          $ref: '#/components/schemas/BillableDays'
+        totalPrice:
+          $ref: '#/components/schemas/Money'
+        currency:
+          $ref: '#/components/schemas/Currency'
+        clientCancellationDeadline:
+          $ref: '#/components/schemas/EventTime'
+        cancellation:
+          oneOf:
+          - $ref: '#/components/schemas/ClientCancellation'
+          - type: 'null'
+      allOf:
+      - if:
+          properties:
+            status:
+              const: cancelled
+          required:
+          - status
+        then:
+          properties:
+            cancellation:
+              $ref: '#/components/schemas/ClientCancellation'
+        else:
+          properties:
+            cancellation:
+              type: 'null'
+    AdminBooking:
+      type: object
+      additionalProperties: false
+      required:
+      - id
+      - car
+      - startsAt
+      - endsAt
+      - timezone
+      - status
+      - dailyRate
+      - billableDays
+      - totalPrice
+      - currency
+      - clientCancellationDeadline
+      - cancellation
+      - client
+      properties:
+        id:
+          $ref: '#/components/schemas/Id'
+        car:
+          $ref: '#/components/schemas/BookingCar'
+        startsAt:
+          $ref: '#/components/schemas/LocalHour'
+        endsAt:
+          $ref: '#/components/schemas/LocalHour'
+        timezone:
+          $ref: '#/components/schemas/Timezone'
+        status:
+          $ref: '#/components/schemas/BookingStatus'
+        dailyRate:
+          $ref: '#/components/schemas/DailyRate'
+        billableDays:
+          $ref: '#/components/schemas/BillableDays'
+        totalPrice:
+          $ref: '#/components/schemas/Money'
+        currency:
+          $ref: '#/components/schemas/Currency'
+        clientCancellationDeadline:
+          $ref: '#/components/schemas/EventTime'
+        cancellation:
+          oneOf:
+          - $ref: '#/components/schemas/AdminCancellation'
+          - type: 'null'
+        client:
+          $ref: '#/components/schemas/Profile'
+      allOf:
+      - if:
+          properties:
+            status:
+              const: cancelled
+          required:
+          - status
+        then:
+          properties:
+            cancellation:
+              $ref: '#/components/schemas/AdminCancellation'
+        else:
+          properties:
+            cancellation:
+              type: 'null'
+    ServicePeriod:
+      type: object
+      additionalProperties: false
+      required:
+      - id
+      - carId
+      - startsAt
+      - endsAt
+      - timezone
+      - reason
+      properties:
+        id:
+          $ref: '#/components/schemas/Id'
+        carId:
+          $ref: '#/components/schemas/Id'
+        startsAt:
+          $ref: '#/components/schemas/LocalHour'
+        endsAt:
+          $ref: '#/components/schemas/LocalHour'
+        timezone:
+          $ref: '#/components/schemas/Timezone'
+        reason:
+          $ref: '#/components/schemas/NonEmptyString'
+    ServicePeriodCreateRequest:
+      type: object
+      additionalProperties: false
+      required:
+      - startsAt
+      - endsAt
+      - reason
+      properties:
+        startsAt:
+          $ref: '#/components/schemas/LocalHour'
+        endsAt:
+          $ref: '#/components/schemas/LocalHour'
+        reason:
+          $ref: '#/components/schemas/NonEmptyString'
+    ServicePeriodPatch:
+      type: object
+      additionalProperties: false
+      required: []
+      properties:
+        startsAt:
+          $ref: '#/components/schemas/LocalHour'
+        endsAt:
+          $ref: '#/components/schemas/LocalHour'
+        reason:
+          $ref: '#/components/schemas/NonEmptyString'
+      minProperties: 1
+    PublicCarList:
+      type: object
+      additionalProperties: false
+      required:
+      - items
+      properties:
+        items:
+          type: array
+          items:
+            $ref: '#/components/schemas/PublicCar'
+    AdminCarList:
+      type: object
+      additionalProperties: false
+      required:
+      - items
+      properties:
+        items:
+          type: array
+          items:
+            $ref: '#/components/schemas/AdminCar'
+    ClientBookingList:
+      type: object
+      additionalProperties: false
+      required:
+      - items
+      properties:
+        items:
+          type: array
+          items:
+            $ref: '#/components/schemas/ClientBooking'
+    AdminBookingList:
+      type: object
+      additionalProperties: false
+      required:
+      - items
+      properties:
+        items:
+          type: array
+          items:
+            $ref: '#/components/schemas/AdminBooking'
+    ServicePeriodList:
+      type: object
+      additionalProperties: false
+      required:
+      - items
+      properties:
+        items:
+          type: array
+          items:
+            $ref: '#/components/schemas/ServicePeriod'
+    FieldError:
+      type: object
+      additionalProperties: false
+      required:
+      - field
+      - message
+      properties:
+        field:
+          $ref: '#/components/schemas/NonEmptyString'
+        message:
+          $ref: '#/components/schemas/NonEmptyString'
+    ValidationDetails:
+      type: object
+      additionalProperties: false
+      required:
+      - fields
+      properties:
+        fields:
+          type: array
+          items:
+            $ref: '#/components/schemas/FieldError'
+          minItems: 1
+    PriceChangedDetails:
+      type: object
+      additionalProperties: false
+      required:
+      - quote
+      properties:
+        quote:
+          $ref: '#/components/schemas/Quote'
+    ErrorDetails:
+      oneOf:
+      - type: object
+        additionalProperties: false
+        required: []
+        properties: {}
+      - $ref: '#/components/schemas/ValidationDetails'
+      - $ref: '#/components/schemas/PriceChangedDetails'
+      default: {}
+    ApiError:
+      type: object
+      additionalProperties: false
+      required:
+      - code
+      - message
+      - details
+      properties:
+        code:
+          type: string
+          enum:
+          - BAD_REQUEST
+          - AUTHENTICATION_REQUIRED
+          - FORBIDDEN
+          - NOT_FOUND
+          - METHOD_NOT_ALLOWED
+          - INTERNAL_ERROR
+          - SERVICE_UNAVAILABLE
+          - EMAIL_ALREADY_EXISTS
+          - INVALID_CREDENTIALS
+          - LOGIN_BLOCKED
+          - CAR_UNAVAILABLE
+          - ALREADY_CANCELLED
+          - CANCELLATION_DEADLINE_PASSED
+          - BOOKING_NOT_CANCELLABLE
+          - CAR_HAS_RELATED_RECORDS
+          - SERVICE_PERIOD_CONFLICT
+          - SERVICE_PERIOD_ALREADY_STARTED
+          - VALIDATION_ERROR
+          - PRICE_CHANGED
+        message:
+          $ref: '#/components/schemas/NonEmptyString'
+        details:
+          $ref: '#/components/schemas/ErrorDetails'
+      allOf:
+      - if:
+          properties:
+            code:
+              const: VALIDATION_ERROR
+          required:
+          - code
+        then:
+          properties:
+            details:
+              $ref: '#/components/schemas/ValidationDetails'
+      - if:
+          properties:
+            code:
+              const: PRICE_CHANGED
+          required:
+          - code
+        then:
+          properties:
+            details:
+              $ref: '#/components/schemas/PriceChangedDetails'
+      - if:
+          properties:
+            code:
+              enum:
+              - BAD_REQUEST
+              - AUTHENTICATION_REQUIRED
+              - FORBIDDEN
+              - NOT_FOUND
+              - METHOD_NOT_ALLOWED
+              - INTERNAL_ERROR
+              - SERVICE_UNAVAILABLE
+              - EMAIL_ALREADY_EXISTS
+              - INVALID_CREDENTIALS
+              - LOGIN_BLOCKED
+              - CAR_UNAVAILABLE
+              - ALREADY_CANCELLED
+              - CANCELLATION_DEADLINE_PASSED
+              - BOOKING_NOT_CANCELLABLE
+              - CAR_HAS_RELATED_RECORDS
+              - SERVICE_PERIOD_CONFLICT
+              - SERVICE_PERIOD_ALREADY_STARTED
+          required:
+          - code
+        then:
+          properties:
+            details:
+              type: object
+              additionalProperties: false
+              required: []
+              properties: {}
+      - if:
+          properties:
+            code:
+              const: NOT_FOUND
+          required:
+          - code
+        then:
+          properties:
+            message:
+              const: Ресурс не знайдено.
+    ErrorResponse:
+      type: object
+      additionalProperties: false
+      required:
+      - error
+      properties:
+        error:
+          $ref: '#/components/schemas/ApiError'
+  responses:
+    BadRequest:
+      description: '400: некоректний JSON або синтаксис URI/query.'
+      content:
+        application/json:
+          schema:
+            allOf:
+            - $ref: '#/components/schemas/ErrorResponse'
+            - properties:
+                error:
+                  properties:
+                    code:
+                      enum:
+                      - BAD_REQUEST
+          examples:
+            BAD_REQUEST:
+              $ref: '#/components/examples/BAD_REQUEST'
+    Unauthorized:
+      description: >-
+        401 AUTHENTICATION_REQUIRED: Bearer відсутній, недійсний, строк завершився або сесію анульовано після зміни
+        пароля; без внутрішніх подробиць.
+      content:
+        application/json:
+          schema:
+            allOf:
+            - $ref: '#/components/schemas/ErrorResponse'
+            - properties:
+                error:
+                  properties:
+                    code:
+                      enum:
+                      - AUTHENTICATION_REQUIRED
+          examples:
+            AUTHENTICATION_REQUIRED:
+              $ref: '#/components/examples/AUTHENTICATION_REQUIRED'
+      headers:
+        WWW-Authenticate:
+          $ref: '#/components/headers/WWW-Authenticate'
+    Forbidden:
+      description: '403: автентифікована роль не має права на операцію.'
+      content:
+        application/json:
+          schema:
+            allOf:
+            - $ref: '#/components/schemas/ErrorResponse'
+            - properties:
+                error:
+                  properties:
+                    code:
+                      enum:
+                      - FORBIDDEN
+          examples:
+            FORBIDDEN:
+              $ref: '#/components/examples/FORBIDDEN'
+    NotFound:
+      description: >-
+        404: ресурс відсутній або недоступний. Для чужого й відсутнього бронювання повністю однакове тіло: NOT_FOUND,
+        Ресурс не знайдено., details={}.
+      content:
+        application/json:
+          schema:
+            allOf:
+            - $ref: '#/components/schemas/ErrorResponse'
+            - properties:
+                error:
+                  properties:
+                    code:
+                      enum:
+                      - NOT_FOUND
+          examples:
+            NOT_FOUND:
+              $ref: '#/components/examples/NOT_FOUND'
+    MethodNotAllowed:
+      description: '405: метод не підтримується відомим URI; Allow визначається маршрутом.'
+      content:
+        application/json:
+          schema:
+            allOf:
+            - $ref: '#/components/schemas/ErrorResponse'
+            - properties:
+                error:
+                  properties:
+                    code:
+                      enum:
+                      - METHOD_NOT_ALLOWED
+          examples:
+            METHOD_NOT_ALLOWED:
+              $ref: '#/components/examples/METHOD_NOT_ALLOWED'
+      headers:
+        Allow:
+          $ref: '#/components/headers/Allow'
+    InternalError:
+      description: '500: внутрішня помилка без технічних подробиць.'
+      content:
+        application/json:
+          schema:
+            allOf:
+            - $ref: '#/components/schemas/ErrorResponse'
+            - properties:
+                error:
+                  properties:
+                    code:
+                      enum:
+                      - INTERNAL_ERROR
+          examples:
+            INTERNAL_ERROR:
+              $ref: '#/components/examples/INTERNAL_ERROR'
+    ServiceUnavailable:
+      description: '503: тимчасова недоступність без технічних подробиць.'
+      content:
+        application/json:
+          schema:
+            allOf:
+            - $ref: '#/components/schemas/ErrorResponse'
+            - properties:
+                error:
+                  properties:
+                    code:
+                      enum:
+                      - SERVICE_UNAVAILABLE
+          examples:
+            SERVICE_UNAVAILABLE:
+              $ref: '#/components/examples/SERVICE_UNAVAILABLE'
+    EmailConflict:
+      description: '409: нормалізована пошта зайнята, без даних чужого облікового запису.'
+      content:
+        application/json:
+          schema:
+            allOf:
+            - $ref: '#/components/schemas/ErrorResponse'
+            - properties:
+                error:
+                  properties:
+                    code:
+                      enum:
+                      - EMAIL_ALREADY_EXISTS
+          examples:
+            EMAIL_ALREADY_EXISTS:
+              $ref: '#/components/examples/EMAIL_ALREADY_EXISTS'
+    InvalidCredentials:
+      description: '401: невірна пошта або пароль; це не Bearer-помилка, WWW-Authenticate: Bearer не додається.'
+      content:
+        application/json:
+          schema:
+            allOf:
+            - $ref: '#/components/schemas/ErrorResponse'
+            - properties:
+                error:
+                  properties:
+                    code:
+                      enum:
+                      - INVALID_CREDENTIALS
+          examples:
+            INVALID_CREDENTIALS:
+              $ref: '#/components/examples/INVALID_CREDENTIALS'
+    LoginBlocked:
+      description: '429: п’ята невдала спроба або чинне 15-хвилинне блокування. Повторні спроби не подовжують межу.'
+      content:
+        application/json:
+          schema:
+            allOf:
+            - $ref: '#/components/schemas/ErrorResponse'
+            - properties:
+                error:
+                  properties:
+                    code:
+                      enum:
+                      - LOGIN_BLOCKED
+          examples:
+            LOGIN_BLOCKED:
+              $ref: '#/components/examples/LOGIN_BLOCKED'
+      headers:
+        Retry-After:
+          $ref: '#/components/headers/Retry-After'
+    ValidationError:
+      description: >-
+        422: відсутні, невідомі чи недопустимі поля або порушення погоджених правил. details.fields обов’язковий;
+        значення полів не відображаються.
+      content:
+        application/json:
+          schema:
+            allOf:
+            - $ref: '#/components/schemas/ErrorResponse'
+            - properties:
+                error:
+                  properties:
+                    code:
+                      enum:
+                      - VALIDATION_ERROR
+          examples:
+            VALIDATION_ERROR:
+              $ref: '#/components/examples/VALIDATION_ERROR'
+    CarUnavailable:
+      description: '409: приховування або недоступність авто на період; без причин, чужих даних чи деталей конфлікту.'
+      content:
+        application/json:
+          schema:
+            allOf:
+            - $ref: '#/components/schemas/ErrorResponse'
+            - properties:
+                error:
+                  properties:
+                    code:
+                      enum:
+                      - CAR_UNAVAILABLE
+          examples:
+            CAR_UNAVAILABLE:
+              $ref: '#/components/examples/CAR_UNAVAILABLE'
+    CarRelatedRecords:
+      description: '409: будь-яке пов’язане бронювання чи службовий період, включно з історичними.'
+      content:
+        application/json:
+          schema:
+            allOf:
+            - $ref: '#/components/schemas/ErrorResponse'
+            - properties:
+                error:
+                  properties:
+                    code:
+                      enum:
+                      - CAR_HAS_RELATED_RECORDS
+          examples:
+            CAR_HAS_RELATED_RECORDS:
+              $ref: '#/components/examples/CAR_HAS_RELATED_RECORDS'
+    ServiceConflict:
+      description: '409: перетин із підтвердженим/активним бронюванням або іншим службовим періодом; без їх ідентифікаторів
+        і службових причин.'
+      content:
+        application/json:
+          schema:
+            allOf:
+            - $ref: '#/components/schemas/ErrorResponse'
+            - properties:
+                error:
+                  properties:
+                    code:
+                      enum:
+                      - SERVICE_PERIOD_CONFLICT
+          examples:
+            SERVICE_PERIOD_CONFLICT:
+              $ref: '#/components/examples/SERVICE_PERIOD_CONFLICT'
+    ServiceStarted:
+      description: '409: чинний службовий період уже почався; історія незмінна.'
+      content:
+        application/json:
+          schema:
+            allOf:
+            - $ref: '#/components/schemas/ErrorResponse'
+            - properties:
+                error:
+                  properties:
+                    code:
+                      enum:
+                      - SERVICE_PERIOD_ALREADY_STARTED
+          examples:
+            SERVICE_PERIOD_ALREADY_STARTED:
+              $ref: '#/components/examples/SERVICE_PERIOD_ALREADY_STARTED'
+    BookingConflict:
+      description: >-
+        409: авто недоступне або тариф змінився; для PRICE_CHANGED details.quote містить повний оновлений Quote
+        і новий priceConfirmationToken, без створення бронювання.
+      content:
+        application/json:
+          schema:
+            allOf:
+            - $ref: '#/components/schemas/ErrorResponse'
+            - properties:
+                error:
+                  properties:
+                    code:
+                      enum:
+                      - CAR_UNAVAILABLE
+                      - PRICE_CHANGED
+          examples:
+            CAR_UNAVAILABLE:
+              $ref: '#/components/examples/CAR_UNAVAILABLE'
+            PRICE_CHANGED:
+              $ref: '#/components/examples/PRICE_CHANGED'
+    CancellationConflict:
+      description: '409: вже скасовано; підтверджене бронювання після клієнтської межі; або початок уже настав.
+        Новий запис скасування не створюється.'
+      content:
+        application/json:
+          schema:
+            allOf:
+            - $ref: '#/components/schemas/ErrorResponse'
+            - properties:
+                error:
+                  properties:
+                    code:
+                      enum:
+                      - ALREADY_CANCELLED
+                      - CANCELLATION_DEADLINE_PASSED
+                      - BOOKING_NOT_CANCELLABLE
+          examples:
+            ALREADY_CANCELLED:
+              $ref: '#/components/examples/ALREADY_CANCELLED'
+            CANCELLATION_DEADLINE_PASSED:
+              $ref: '#/components/examples/CANCELLATION_DEADLINE_PASSED'
+            BOOKING_NOT_CANCELLABLE:
+              $ref: '#/components/examples/BOOKING_NOT_CANCELLABLE'
+    ServiceUpdateConflict:
+      description: '409: перетин або чинний службовий період уже почався; бронювання автоматично не скасовуються.'
+      content:
+        application/json:
+          schema:
+            allOf:
+            - $ref: '#/components/schemas/ErrorResponse'
+            - properties:
+                error:
+                  properties:
+                    code:
+                      enum:
+                      - SERVICE_PERIOD_CONFLICT
+                      - SERVICE_PERIOD_ALREADY_STARTED
+          examples:
+            SERVICE_PERIOD_CONFLICT:
+              $ref: '#/components/examples/SERVICE_PERIOD_CONFLICT'
+            SERVICE_PERIOD_ALREADY_STARTED:
+              $ref: '#/components/examples/SERVICE_PERIOD_ALREADY_STARTED'
+    Catalog:
+      description: >-
+        200: неприховані авто; А отримує адміністративну проєкцію. За періодом — лише доступні; без періоду доступність
+        не стверджується. anyOf дозволяє спільний порожній список; вибір проєкції за роллю перевіряє сервер.
+      content:
+        application/json:
+          schema:
+            anyOf:
+            - $ref: '#/components/schemas/PublicCarList'
+            - $ref: '#/components/schemas/AdminCarList'
+          examples:
+            PublicCarList:
+              $ref: '#/components/examples/PublicCarList'
+            AdminCarList:
+              $ref: '#/components/examples/AdminCarList'
+    Car:
+      description: '200: публічна або адміністративна проєкція за чинною роллю.'
+      content:
+        application/json:
+          schema:
+            oneOf:
+            - $ref: '#/components/schemas/PublicCar'
+            - $ref: '#/components/schemas/AdminCar'
+          examples:
+            PublicCar:
+              $ref: '#/components/examples/PublicCar'
+            AdminCar:
+              $ref: '#/components/examples/AdminCar'
+            AdminCarHidden:
+              $ref: '#/components/examples/AdminCarHidden'
+    Availability:
+      description: '200: результат на весь період; false також для відомого прихованого авто, без подробиць.'
+      content:
+        application/json:
+          schema:
+            $ref: '#/components/schemas/AvailabilityResponse'
+          examples:
+            AvailabilityTrue:
+              $ref: '#/components/examples/AvailabilityTrue'
+            AvailabilityFalse:
+              $ref: '#/components/examples/AvailabilityFalse'
+    RegisteredClient:
+      description: '201: створений клієнт, без Location та автоматичного входу.'
+      content:
+        application/json:
+          schema:
+            $ref: '#/components/schemas/RegistrationResponse'
+          examples:
+            RegistrationResponse:
+              $ref: '#/components/examples/RegistrationResponse'
+    SessionCreated:
+      description: >-
+        201: вхід відповідної ролі. Сесія чинна рівно 86 400 секунд від входу, без автоматичного продовження. Від
+        точної межі або після успішної зміни пароля старий токен дає 401 AUTHENTICATION_REQUIRED з WWW-Authenticate:
+        Bearer.
+      content:
+        application/json:
+          schema:
+            $ref: '#/components/schemas/LoginResponse'
+          examples:
+            LoginClient:
+              $ref: '#/components/examples/LoginClient'
+            LoginAdmin:
+              $ref: '#/components/examples/LoginAdmin'
+    Profile:
+      description: '200: власний актуальний профіль.'
+      content:
+        application/json:
+          schema:
+            $ref: '#/components/schemas/Profile'
+          examples:
+            Profile:
+              $ref: '#/components/examples/Profile'
+    Quote:
+      description: '200: попередня вартість; не створює бронювання та не резервує авто.'
+      content:
+        application/json:
+          schema:
+            $ref: '#/components/schemas/Quote'
+          examples:
+            Quote:
+              $ref: '#/components/examples/Quote'
+            QuoteCalendarGap:
+              $ref: '#/components/examples/QuoteCalendarGap'
+            QuoteCalendarNoDrift:
+              $ref: '#/components/examples/QuoteCalendarNoDrift'
+            QuoteCalendarFold:
+              $ref: '#/components/examples/QuoteCalendarFold'
+            QuoteCalendarMaximum:
+              $ref: '#/components/examples/QuoteCalendarMaximum'
+            QuoteCalendarHorizon:
+              $ref: '#/components/examples/QuoteCalendarHorizon'
+    BookingCreated:
+      description: '201: атомарно створене підтверджене бронювання; Location: /api/v1/bookings/{id}.'
+      content:
+        application/json:
+          schema:
+            allOf:
+            - $ref: '#/components/schemas/ClientBooking'
+            - properties:
+                status:
+                  const: confirmed
+          examples:
+            ClientBooking:
+              $ref: '#/components/examples/ClientBooking'
+      headers:
+        Location:
+          description: URI створеного бронювання; конкретний статичний приклад для mock.
+          required: true
+          schema:
+            type: string
+            format: uri-reference
+          example: /api/v1/bookings/booking-example
+    Bookings:
+      description: '200: К — власні записи; А — усі з актуальними контактами. anyOf дозволяє спільний порожній список;
+        роль перевіряє сервер.'
+      content:
+        application/json:
+          schema:
+            anyOf:
+            - $ref: '#/components/schemas/ClientBookingList'
+            - $ref: '#/components/schemas/AdminBookingList'
+          examples:
+            ClientBookingList:
+              $ref: '#/components/examples/ClientBookingList'
+            AdminBookingList:
+              $ref: '#/components/examples/AdminBookingList'
+    Booking:
+      description: '200: проєкція за роллю; К не отримує чужих бронювань чи особистих даних автора-адміністратора.'
+      content:
+        application/json:
+          schema:
+            oneOf:
+            - $ref: '#/components/schemas/ClientBooking'
+            - $ref: '#/components/schemas/AdminBooking'
+          examples:
+            ClientBooking:
+              $ref: '#/components/examples/ClientBooking'
+            AdminBooking:
+              $ref: '#/components/examples/AdminBooking'
+            ClientBookingCancelled:
+              $ref: '#/components/examples/ClientBookingCancelled'
+            AdminBookingCancelled:
+              $ref: '#/components/examples/AdminBookingCancelled'
+            ClientBookingActive:
+              $ref: '#/components/examples/ClientBookingActive'
+            ClientBookingCompleted:
+              $ref: '#/components/examples/ClientBookingCompleted'
+    CancellationCreated:
+      description: >-
+        201: запис скасування; стан cancelled і період звільнено. А отримує authorAccountId; К — ні. Location: /api/v1/bookings/{bookingId}/cancellation;
+        читання — всередині бронювання.
+      content:
+        application/json:
+          schema:
+            oneOf:
+            - $ref: '#/components/schemas/ClientCancellation'
+            - $ref: '#/components/schemas/AdminCancellation'
+          examples:
+            ClientCancellation:
+              $ref: '#/components/examples/ClientCancellation'
+            AdminCancellation:
+              $ref: '#/components/examples/AdminCancellation'
+            ClientCancellationAtDeadline:
+              $ref: '#/components/examples/ClientCancellationAtDeadline'
+      headers:
+        Location:
+          description: URI скасування запитаного бронювання; приклад спільний для обох ролей.
+          required: true
+          schema:
+            type: string
+            format: uri-reference
+          example: /api/v1/bookings/booking-example/cancellation
+    AdminCars:
+      description: '200: усі авто, включно з прихованими; лише А.'
+      content:
+        application/json:
+          schema:
+            $ref: '#/components/schemas/AdminCarList'
+          examples:
+            AdminCarList:
+              $ref: '#/components/examples/AdminCarList'
+            AdminCarListWithHidden:
+              $ref: '#/components/examples/AdminCarListWithHidden'
+    CarCreated:
+      description: '201: створений автомобіль; Location: /api/v1/cars/{id}.'
+      content:
+        application/json:
+          schema:
+            $ref: '#/components/schemas/AdminCar'
+          examples:
+            CreatedCar:
+              $ref: '#/components/examples/CreatedCar'
+      headers:
+        Location:
+          description: URI створеного автомобіля; конкретний статичний приклад для mock.
+          required: true
+          schema:
+            type: string
+            format: uri-reference
+          example: /api/v1/cars/car-example
+    CarUpdated:
+      description: '200: оновлене авто й warnings; попередження не блокує приховування.'
+      content:
+        application/json:
+          schema:
+            $ref: '#/components/schemas/CarPatchResponse'
+          examples:
+            CarPatchResponse:
+              $ref: '#/components/examples/CarPatchResponse'
+            CarDetailsUpdated:
+              $ref: '#/components/examples/CarDetailsUpdated'
+            CarRestored:
+              $ref: '#/components/examples/CarRestored'
+    ServicePeriods:
+      description: '200: майбутні й історичні службові періоди; лише А.'
+      content:
+        application/json:
+          schema:
+            $ref: '#/components/schemas/ServicePeriodList'
+          examples:
+            ServicePeriodList:
+              $ref: '#/components/examples/ServicePeriodList'
+            ServicePeriodHistoryList:
+              $ref: '#/components/examples/ServicePeriodHistoryList'
+    ServicePeriod:
+      description: '200: службовий період із причиною; лише А.'
+      content:
+        application/json:
+          schema:
+            $ref: '#/components/schemas/ServicePeriod'
+          examples:
+            ServicePeriod:
+              $ref: '#/components/examples/ServicePeriod'
+            ServicePeriodHistorical:
+              $ref: '#/components/examples/ServicePeriodHistorical'
+    ServicePeriodCreated:
+      description: '201: майбутній період; Location: /api/v1/cars/{carId}/service-unavailabilities/{id}.'
+      content:
+        application/json:
+          schema:
+            $ref: '#/components/schemas/ServicePeriod'
+          examples:
+            ServicePeriod:
+              $ref: '#/components/examples/ServicePeriod'
+      headers:
+        Location:
+          description: URI створеного службового періоду автомобіля; конкретний статичний приклад для mock.
+          required: true
+          schema:
+            type: string
+            format: uri-reference
+          example: /api/v1/cars/car-example/service-unavailabilities/period-example
+    NoContent:
+      description: '204: тіло відсутнє. Для OP-08 успіх анулює всі сесії запису, включно з поточною; для DELETE
+        семантика незмінна.'
+    MethodNotAllowedGetPost:
+      description: '405: метод не підтримується відомим URI; Allow визначається маршрутом.'
+      content:
+        application/json:
+          schema:
+            allOf:
+            - $ref: '#/components/schemas/ErrorResponse'
+            - properties:
+                error:
+                  properties:
+                    code:
+                      enum:
+                      - METHOD_NOT_ALLOWED
+          examples:
+            METHOD_NOT_ALLOWED:
+              $ref: '#/components/examples/METHOD_NOT_ALLOWED'
+      headers:
+        Allow:
+          description: 'Для цього URI підтримуються: GET, POST.'
+          required: true
+          schema:
+            type: string
+            minLength: 1
+          example: GET, POST
+    MethodNotAllowedGetPatchDelete:
+      description: '405: метод не підтримується відомим URI; Allow визначається маршрутом.'
+      content:
+        application/json:
+          schema:
+            allOf:
+            - $ref: '#/components/schemas/ErrorResponse'
+            - properties:
+                error:
+                  properties:
+                    code:
+                      enum:
+                      - METHOD_NOT_ALLOWED
+          examples:
+            METHOD_NOT_ALLOWED:
+              $ref: '#/components/examples/METHOD_NOT_ALLOWED'
+      headers:
+        Allow:
+          description: 'Для цього URI підтримуються: GET, PATCH, DELETE.'
+          required: true
+          schema:
+            type: string
+            minLength: 1
+          example: GET, PATCH, DELETE
+    MethodNotAllowedGet:
+      description: '405: метод не підтримується відомим URI; Allow визначається маршрутом.'
+      content:
+        application/json:
+          schema:
+            allOf:
+            - $ref: '#/components/schemas/ErrorResponse'
+            - properties:
+                error:
+                  properties:
+                    code:
+                      enum:
+                      - METHOD_NOT_ALLOWED
+          examples:
+            METHOD_NOT_ALLOWED:
+              $ref: '#/components/examples/METHOD_NOT_ALLOWED'
+      headers:
+        Allow:
+          description: 'Для цього URI підтримуються: GET.'
+          required: true
+          schema:
+            type: string
+            minLength: 1
+          example: GET
+    MethodNotAllowedPost:
+      description: '405: метод не підтримується відомим URI; Allow визначається маршрутом.'
+      content:
+        application/json:
+          schema:
+            allOf:
+            - $ref: '#/components/schemas/ErrorResponse'
+            - properties:
+                error:
+                  properties:
+                    code:
+                      enum:
+                      - METHOD_NOT_ALLOWED
+          examples:
+            METHOD_NOT_ALLOWED:
+              $ref: '#/components/examples/METHOD_NOT_ALLOWED'
+      headers:
+        Allow:
+          description: 'Для цього URI підтримуються: POST.'
+          required: true
+          schema:
+            type: string
+            minLength: 1
+          example: POST
+    MethodNotAllowedGetPatch:
+      description: '405: метод не підтримується відомим URI; Allow визначається маршрутом.'
+      content:
+        application/json:
+          schema:
+            allOf:
+            - $ref: '#/components/schemas/ErrorResponse'
+            - properties:
+                error:
+                  properties:
+                    code:
+                      enum:
+                      - METHOD_NOT_ALLOWED
+          examples:
+            METHOD_NOT_ALLOWED:
+              $ref: '#/components/examples/METHOD_NOT_ALLOWED'
+      headers:
+        Allow:
+          description: 'Для цього URI підтримуються: GET, PATCH.'
+          required: true
+          schema:
+            type: string
+            minLength: 1
+          example: GET, PATCH
+    MethodNotAllowedPut:
+      description: '405: метод не підтримується відомим URI; Allow визначається маршрутом.'
+      content:
+        application/json:
+          schema:
+            allOf:
+            - $ref: '#/components/schemas/ErrorResponse'
+            - properties:
+                error:
+                  properties:
+                    code:
+                      enum:
+                      - METHOD_NOT_ALLOWED
+          examples:
+            METHOD_NOT_ALLOWED:
+              $ref: '#/components/examples/METHOD_NOT_ALLOWED'
+      headers:
+        Allow:
+          description: 'Для цього URI підтримуються: PUT.'
+          required: true
+          schema:
+            type: string
+            minLength: 1
+          example: PUT
+    ProfileUpdated:
+      description: '200: власний актуальний профіль.'
+      content:
+        application/json:
+          schema:
+            $ref: '#/components/schemas/Profile'
+          examples:
+            ProfileUpdated:
+              $ref: '#/components/examples/ProfileUpdated'
+    ServicePeriodUpdated:
+      description: '200: службовий період із причиною; лише А.'
+      content:
+        application/json:
+          schema:
+            $ref: '#/components/schemas/ServicePeriod'
+          examples:
+            ServicePeriodUpdated:
+              $ref: '#/components/examples/ServicePeriodUpdated'
+  examples:
+    RegistrationRequest:
+      summary: Лише демонстраційний пароль; пробіли зберігаються
+      value:
+        firstName: Олена
+        lastName: Коваль
+        email: client@example.com
+        phone: '+380501234567'
+        password: 'ExamplePass8 '
+    RegistrationResponse:
+      summary: Створений клієнт без автоматичного входу
+      value:
+        profile:
+          clientId: client-example
+          firstName: Олена
+          lastName: Коваль
+          email: client@example.com
+          phone: '+380501234567'
+        role: client
+    LoginRequest:
+      summary: Демонстраційні дані входу
+      value:
+        email: client@example.com
+        password: 'ExamplePass8 '
+    LoginClient:
+      summary: Демонстраційна сесія клієнта
+      value:
+        accessToken: session-client-example
+        tokenType: Bearer
+        accountId: account-client-example
+        role: client
+    LoginAdmin:
+      summary: Демонстраційна сесія адміністратора
+      value:
+        accessToken: session-admin-example
+        tokenType: Bearer
+        accountId: admin-example
+        role: administrator
+    Profile:
+      summary: Демонстраційні дані; не визначають додаткових правил
+      value:
+        clientId: client-example
+        firstName: Олена
+        lastName: Коваль
+        email: client@example.com
+        phone: '+380501234567'
+    PublicCar:
+      summary: Демонстраційні дані; не визначають додаткових правил
+      value:
+        id: car-example
+        characteristics:
+          Марка: Porsche
+          Модель: '911'
+        dailyRate: '1500.00'
+        currency: UAH
+    AdminCar:
+      summary: Демонстраційні дані; не визначають додаткових правил
+      value:
+        id: car-example
+        characteristics:
+          Марка: Porsche
+          Модель: '911'
+        dailyRate: '1500.00'
+        currency: UAH
+        hidden: false
+        futureBookingsCount: 1
+    Quote:
+      summary: Демонстраційні дані; не визначають додаткових правил
+      value:
+        carId: car-example
+        startsAt: 2026-11-12T09
+        endsAt: 2026-11-14T09
+        timezone: Europe/Kyiv
+        dailyRate: '1500.00'
+        billableDays: 2
+        totalPrice: '3000.00'
+        currency: UAH
+        priceConfirmationToken: price-confirmation-example
+    ClientBooking:
+      summary: Демонстраційні дані; не визначають додаткових правил
+      value:
+        id: booking-example
+        car:
+          id: car-example
+          characteristics:
+            Марка: Porsche
+            Модель: '911'
+        startsAt: 2026-11-12T09
+        endsAt: 2026-11-14T09
+        timezone: Europe/Kyiv
+        status: confirmed
+        dailyRate: '1500.00'
+        billableDays: 2
+        totalPrice: '3000.00'
+        currency: UAH
+        clientCancellationDeadline: '2026-11-11T09:00:00+02:00'
+        cancellation: null
+    AdminBooking:
+      summary: Демонстраційні дані; не визначають додаткових правил
+      value:
+        id: booking-example
+        car:
+          id: car-example
+          characteristics:
+            Марка: Porsche
+            Модель: '911'
+        startsAt: 2026-11-12T09
+        endsAt: 2026-11-14T09
+        timezone: Europe/Kyiv
+        status: confirmed
+        dailyRate: '1500.00'
+        billableDays: 2
+        totalPrice: '3000.00'
+        currency: UAH
+        clientCancellationDeadline: '2026-11-11T09:00:00+02:00'
+        cancellation: null
+        client:
+          clientId: client-example
+          firstName: Олена
+          lastName: Коваль
+          email: client@example.com
+          phone: '+380501234567'
+    ClientCancellation:
+      summary: Демонстраційні дані; не визначають додаткових правил
+      value:
+        cancelledAt: '2026-11-10T12:00:00+02:00'
+        authorRole: client
+        reason: null
+    AdminCancellation:
+      summary: Демонстраційні дані; не визначають додаткових правил
+      value:
+        cancelledAt: '2026-11-11T12:00:00+02:00'
+        authorRole: administrator
+        reason: Заміна автомобіля в автопарку неможлива.
+        authorAccountId: admin-example
+    ServicePeriod:
+      summary: Демонстраційні дані; не визначають додаткових правил
+      value:
+        id: period-example
+        carId: car-example
+        startsAt: 2026-11-20T09
+        endsAt: 2026-11-21T09
+        timezone: Europe/Kyiv
+        reason: Планове технічне обслуговування.
+    ClientBookingCancelled:
+      summary: К бачить причину й роль адміністратора без його особистих даних
+      value:
+        id: booking-example
+        car:
+          id: car-example
+          characteristics:
+            Марка: Porsche
+            Модель: '911'
+        startsAt: 2026-11-12T09
+        endsAt: 2026-11-14T09
+        timezone: Europe/Kyiv
+        status: cancelled
+        dailyRate: '1500.00'
+        billableDays: 2
+        totalPrice: '3000.00'
+        currency: UAH
+        clientCancellationDeadline: '2026-11-11T09:00:00+02:00'
+        cancellation:
+          cancelledAt: '2026-11-11T12:00:00+02:00'
+          authorRole: administrator
+          reason: Заміна автомобіля в автопарку неможлива.
+    AdminBookingCancelled:
+      summary: А бачить обліковий запис автора скасування
+      value:
+        id: booking-example
+        car:
+          id: car-example
+          characteristics:
+            Марка: Porsche
+            Модель: '911'
+        startsAt: 2026-11-12T09
+        endsAt: 2026-11-14T09
+        timezone: Europe/Kyiv
+        status: cancelled
+        dailyRate: '1500.00'
+        billableDays: 2
+        totalPrice: '3000.00'
+        currency: UAH
+        clientCancellationDeadline: '2026-11-11T09:00:00+02:00'
+        cancellation:
+          cancelledAt: '2026-11-11T12:00:00+02:00'
+          authorRole: administrator
+          reason: Заміна автомобіля в автопарку неможлива.
+          authorAccountId: admin-example
+        client:
+          clientId: client-example
+          firstName: Олена
+          lastName: Коваль
+          email: client@example.com
+          phone: '+380501234567'
+    PublicCarList:
+      summary: Приклад списку; items також може бути порожнім
+      value:
+        items:
+        - id: car-example
+          characteristics:
+            Марка: Porsche
+            Модель: '911'
+          dailyRate: '1500.00'
+          currency: UAH
+    AdminCarList:
+      summary: Приклад списку; items також може бути порожнім
+      value:
+        items:
+        - id: car-example
+          characteristics:
+            Марка: Porsche
+            Модель: '911'
+          dailyRate: '1500.00'
+          currency: UAH
+          hidden: false
+          futureBookingsCount: 1
+    ClientBookingList:
+      summary: Приклад списку; items також може бути порожнім
+      value:
+        items:
+        - id: booking-example
+          car:
+            id: car-example
+            characteristics:
+              Марка: Porsche
+              Модель: '911'
+          startsAt: 2026-11-12T09
+          endsAt: 2026-11-14T09
+          timezone: Europe/Kyiv
+          status: confirmed
+          dailyRate: '1500.00'
+          billableDays: 2
+          totalPrice: '3000.00'
+          currency: UAH
+          clientCancellationDeadline: '2026-11-11T09:00:00+02:00'
+          cancellation: null
+    AdminBookingList:
+      summary: Приклад списку; items також може бути порожнім
+      value:
+        items:
+        - id: booking-example
+          car:
+            id: car-example
+            characteristics:
+              Марка: Porsche
+              Модель: '911'
+          startsAt: 2026-11-12T09
+          endsAt: 2026-11-14T09
+          timezone: Europe/Kyiv
+          status: confirmed
+          dailyRate: '1500.00'
+          billableDays: 2
+          totalPrice: '3000.00'
+          currency: UAH
+          clientCancellationDeadline: '2026-11-11T09:00:00+02:00'
+          cancellation: null
+          client:
+            clientId: client-example
+            firstName: Олена
+            lastName: Коваль
+            email: client@example.com
+            phone: '+380501234567'
+    ServicePeriodList:
+      summary: Приклад списку; items також може бути порожнім
+      value:
+        items:
+        - id: period-example
+          carId: car-example
+          startsAt: 2026-11-20T09
+          endsAt: 2026-11-21T09
+          timezone: Europe/Kyiv
+          reason: Планове технічне обслуговування.
+    AvailabilityTrue:
+      summary: Авто доступне на весь період
+      value:
+        carId: car-example
+        startsAt: 2026-11-12T09
+        endsAt: 2026-11-14T09
+        timezone: Europe/Kyiv
+        available: true
+    AvailabilityFalse:
+      summary: Авто недоступне без розкриття причин
+      value:
+        carId: car-example
+        startsAt: 2026-11-12T09
+        endsAt: 2026-11-14T09
+        timezone: Europe/Kyiv
+        available: false
+    ProfilePatch:
+      summary: Оновлення власного телефону
+      value:
+        phone: '+380671234567'
+    PasswordChangeRequest:
+      summary: Демонстраційні паролі без обрізання
+      value:
+        currentPassword: 'ExamplePass8 '
+        newPassword: 'NewExamplePass9 '
+    QuoteRequest:
+      summary: Попередній розрахунок без резервування
+      value:
+        carId: car-example
+        startsAt: 2026-11-12T09
+        endsAt: 2026-11-14T09
+    BookingCreateRequest:
+      summary: Підтвердження показаної ціни
+      value:
+        carId: car-example
+        startsAt: 2026-11-12T09
+        endsAt: 2026-11-14T09
+        priceConfirmationToken: price-confirmation-example
+    CarCreateRequest:
+      summary: Нове авто; hidden типово false
+      value:
+        characteristics:
+          Марка: Porsche
+          Модель: '911'
+        dailyRate: '1500.00'
+    CreatedCar:
+      summary: Щойно створене авто ще не має бронювань
+      value:
+        id: car-example
+        characteristics:
+          Марка: Porsche
+          Модель: '911'
+        dailyRate: '1500.00'
+        currency: UAH
+        hidden: false
+        futureBookingsCount: 0
+    CarPatch:
+      summary: Приховування без скасування бронювань
+      value:
+        hidden: true
+    CarPatchResponse:
+      summary: Попередження з результатом приховування
+      value:
+        car:
+          id: car-example
+          characteristics:
+            Марка: Porsche
+            Модель: '911'
+          dailyRate: '1500.00'
+          currency: UAH
+          hidden: true
+          futureBookingsCount: 1
+        warnings:
+        - code: FUTURE_BOOKINGS_EXIST
+          futureBookingsCount: 1
+    ClientCancellationRequest:
+      summary: Клієнт не передає причину; тіло можна пропустити
+      value: {}
+    AdminCancellationRequest:
+      summary: Причина адміністративного скасування
+      value:
+        reason: Заміна автомобіля в автопарку неможлива.
+    ServicePeriodCreateRequest:
+      summary: Майбутній службовий період
+      value:
+        startsAt: 2026-11-20T09
+        endsAt: 2026-11-21T09
+        reason: Планове технічне обслуговування.
+    ServicePeriodPatch:
+      summary: Редагування майбутнього періоду
+      value:
+        endsAt: 2026-11-22T09
+    BAD_REQUEST:
+      summary: Некоректний синтаксис запиту.
+      value:
+        error:
+          code: BAD_REQUEST
+          message: Некоректний синтаксис запиту.
+          details: {}
+    AUTHENTICATION_REQUIRED:
+      summary: Потрібна чинна автентифікація.
+      value:
+        error:
+          code: AUTHENTICATION_REQUIRED
+          message: Потрібна чинна автентифікація.
+          details: {}
+    FORBIDDEN:
+      summary: Недостатньо прав для цієї операції.
+      value:
+        error:
+          code: FORBIDDEN
+          message: Недостатньо прав для цієї операції.
+          details: {}
+    NOT_FOUND:
+      summary: Ресурс не знайдено.
+      value:
+        error:
+          code: NOT_FOUND
+          message: Ресурс не знайдено.
+          details: {}
+    METHOD_NOT_ALLOWED:
+      summary: Метод не підтримується для цього ресурсу.
+      value:
+        error:
+          code: METHOD_NOT_ALLOWED
+          message: Метод не підтримується для цього ресурсу.
+          details: {}
+    INTERNAL_ERROR:
+      summary: Внутрішня помилка сервісу.
+      value:
+        error:
+          code: INTERNAL_ERROR
+          message: Внутрішня помилка сервісу.
+          details: {}
+    SERVICE_UNAVAILABLE:
+      summary: Сервіс тимчасово недоступний.
+      value:
+        error:
+          code: SERVICE_UNAVAILABLE
+          message: Сервіс тимчасово недоступний.
+          details: {}
+    EMAIL_ALREADY_EXISTS:
+      summary: Цю електронну пошту вже зареєстровано.
+      value:
+        error:
+          code: EMAIL_ALREADY_EXISTS
+          message: Цю електронну пошту вже зареєстровано.
+          details: {}
+    INVALID_CREDENTIALS:
+      summary: Невірна електронна пошта або пароль.
+      value:
+        error:
+          code: INVALID_CREDENTIALS
+          message: Невірна електронна пошта або пароль.
+          details: {}
+    LOGIN_BLOCKED:
+      summary: Вхід тимчасово заблоковано.
+      value:
+        error:
+          code: LOGIN_BLOCKED
+          message: Вхід тимчасово заблоковано.
+          details: {}
+    CAR_UNAVAILABLE:
+      summary: Автомобіль недоступний на вибраний період.
+      value:
+        error:
+          code: CAR_UNAVAILABLE
+          message: Автомобіль недоступний на вибраний період.
+          details: {}
+    ALREADY_CANCELLED:
+      summary: Бронювання вже скасовано.
+      value:
+        error:
+          code: ALREADY_CANCELLED
+          message: Бронювання вже скасовано.
+          details: {}
+    CANCELLATION_DEADLINE_PASSED:
+      summary: Строк скасування клієнтом минув.
+      value:
+        error:
+          code: CANCELLATION_DEADLINE_PASSED
+          message: Строк скасування клієнтом минув.
+          details: {}
+    BOOKING_NOT_CANCELLABLE:
+      summary: Бронювання не можна скасувати після початку оренди.
+      value:
+        error:
+          code: BOOKING_NOT_CANCELLABLE
+          message: Бронювання не можна скасувати після початку оренди.
+          details: {}
+    CAR_HAS_RELATED_RECORDS:
+      summary: Автомобіль має пов’язані записи.
+      value:
+        error:
+          code: CAR_HAS_RELATED_RECORDS
+          message: Автомобіль має пов’язані записи.
+          details: {}
+    SERVICE_PERIOD_CONFLICT:
+      summary: Службовий період конфліктує з наявною зайнятістю.
+      value:
+        error:
+          code: SERVICE_PERIOD_CONFLICT
+          message: Службовий період конфліктує з наявною зайнятістю.
+          details: {}
+    SERVICE_PERIOD_ALREADY_STARTED:
+      summary: Службовий період уже почався.
+      value:
+        error:
+          code: SERVICE_PERIOD_ALREADY_STARTED
+          message: Службовий період уже почався.
+          details: {}
+    VALIDATION_ERROR:
+      summary: Валідація без відображення введеного значення
+      value:
+        error:
+          code: VALIDATION_ERROR
+          message: Перевірте поля запиту.
+          details:
+            fields:
+            - field: $
+              message: Запит містить недопустимі або відсутні поля.
+    PRICE_CHANGED:
+      summary: Оновлений розрахунок і новий токен ціни; бронювання не створено
+      value:
+        error:
+          code: PRICE_CHANGED
+          message: Вартість змінилася. Підтвердьте оновлену суму.
+          details:
+            quote:
+              carId: car-example
+              startsAt: 2026-11-12T09
+              endsAt: 2026-11-14T09
+              timezone: Europe/Kyiv
+              dailyRate: '1800.00'
+              billableDays: 2
+              totalPrice: '3600.00'
+              currency: UAH
+              priceConfirmationToken: updated-price-confirmation-example
+    LoginAdminRequest:
+      summary: Публічний вхід адміністратора; демонстраційні дані
+      value:
+        email: admin@example.com
+        password: 'ExamplePass8 '
+    ProfileUpdated:
+      summary: Власний профіль після дозволеної зміни телефону
+      value:
+        clientId: client-example
+        firstName: Олена
+        lastName: Коваль
+        email: client@example.com
+        phone: '+380671234567'
+    AdminCarHidden:
+      summary: Приховане авто доступне адміністратору
+      value:
+        id: car-example
+        characteristics:
+          Марка: Porsche
+          Модель: '911'
+        dailyRate: '1500.00'
+        currency: UAH
+        hidden: true
+        futureBookingsCount: 1
+    AdminCarListWithHidden:
+      summary: Адміністративний перелік включає приховане авто
+      value:
+        items:
+        - id: car-example
+          characteristics:
+            Марка: Porsche
+            Модель: '911'
+          dailyRate: '1500.00'
+          currency: UAH
+          hidden: true
+          futureBookingsCount: 1
+    CarDetailsPatch:
+      summary: Повна заміна характеристик і зміна поточного тарифу
+      value:
+        characteristics:
+          Марка: Porsche
+          Модель: 911 Carrera
+        dailyRate: '1800.00'
+    CarDetailsUpdated:
+      summary: Результат редагування без приховування
+      value:
+        car:
+          id: car-example
+          characteristics:
+            Марка: Porsche
+            Модель: 911 Carrera
+          dailyRate: '1800.00'
+          currency: UAH
+          hidden: false
+          futureBookingsCount: 1
+        warnings: []
+    CarRestoreRequest:
+      summary: Повернення прихованого авто до каталогу
+      value:
+        hidden: false
+    CarRestored:
+      summary: Повернуте авто зі збереженим лічильником майбутніх бронювань
+      value:
+        car:
+          id: car-example
+          characteristics:
+            Марка: Porsche
+            Модель: '911'
+          dailyRate: '1500.00'
+          currency: UAH
+          hidden: false
+          futureBookingsCount: 1
+        warnings: []
+    ClientCancellationAtDeadline:
+      summary: Клієнтське скасування рівно на дозволеній межі
+      value:
+        cancelledAt: '2026-11-11T09:00:00+02:00'
+        authorRole: client
+        reason: null
+    ClientBookingActive:
+      summary: Окремий статичний приклад стану active
+      value:
+        id: booking-example
+        car:
+          id: car-example
+          characteristics:
+            Марка: Porsche
+            Модель: '911'
+        startsAt: 2026-11-12T09
+        endsAt: 2026-11-14T09
+        timezone: Europe/Kyiv
+        status: active
+        dailyRate: '1500.00'
+        billableDays: 2
+        totalPrice: '3000.00'
+        currency: UAH
+        clientCancellationDeadline: '2026-11-11T09:00:00+02:00'
+        cancellation: null
+    ClientBookingCompleted:
+      summary: Окремий статичний приклад стану completed
+      value:
+        id: booking-example
+        car:
+          id: car-example
+          characteristics:
+            Марка: Porsche
+            Модель: '911'
+        startsAt: 2026-11-12T09
+        endsAt: 2026-11-14T09
+        timezone: Europe/Kyiv
+        status: completed
+        dailyRate: '1500.00'
+        billableDays: 2
+        totalPrice: '3000.00'
+        currency: UAH
+        clientCancellationDeadline: '2026-11-11T09:00:00+02:00'
+        cancellation: null
+    ServicePeriodUpdated:
+      summary: Результат редагування майбутнього службового періоду
+      value:
+        id: period-example
+        carId: car-example
+        startsAt: 2026-11-20T09
+        endsAt: 2026-11-22T09
+        timezone: Europe/Kyiv
+        reason: Планове технічне обслуговування.
+    ServicePeriodHistorical:
+      summary: Незмінний історичний службовий період
+      value:
+        id: period-history
+        carId: car-example
+        startsAt: 2026-11-01T09
+        endsAt: 2026-11-02T09
+        timezone: Europe/Kyiv
+        reason: Планове технічне обслуговування.
+    ServicePeriodHistoryList:
+      summary: Майбутній та історичний службові періоди одного авто
+      value:
+        items:
+        - id: period-example
+          carId: car-example
+          startsAt: 2026-11-20T09
+          endsAt: 2026-11-21T09
+          timezone: Europe/Kyiv
+          reason: Планове технічне обслуговування.
+        - id: period-history
+          carId: car-example
+          startsAt: 2026-11-01T09
+          endsAt: 2026-11-02T09
+          timezone: Europe/Kyiv
+          reason: Планове технічне обслуговування.
+    QuoteCalendarGapRequest:
+      summary: Незалежна календарна фікстура ADD-001, не обчислення mock
+      value:
+        carId: car-example
+        startsAt: 2026-03-28T03
+        endsAt: 2026-03-29T04
+    QuoteCalendarGap:
+      summary: Статичний очікуваний розрахунок ADD-001
+      value:
+        carId: car-example
+        startsAt: 2026-03-28T03
+        endsAt: 2026-03-29T04
+        timezone: Europe/Kyiv
+        dailyRate: '1500.00'
+        billableDays: 1
+        totalPrice: '1500.00'
+        currency: UAH
+        priceConfirmationToken: price-calendargap-example
+    QuoteCalendarNoDriftRequest:
+      summary: Незалежна календарна фікстура ADD-001, не обчислення mock
+      value:
+        carId: car-example
+        startsAt: 2026-03-28T03
+        endsAt: 2026-03-30T03
+    QuoteCalendarNoDrift:
+      summary: Статичний очікуваний розрахунок ADD-001
+      value:
+        carId: car-example
+        startsAt: 2026-03-28T03
+        endsAt: 2026-03-30T03
+        timezone: Europe/Kyiv
+        dailyRate: '1500.00'
+        billableDays: 2
+        totalPrice: '3000.00'
+        currency: UAH
+        priceConfirmationToken: price-calendarnodrift-example
+    QuoteCalendarFoldRequest:
+      summary: Незалежна календарна фікстура ADD-001, не обчислення mock
+      value:
+        carId: car-example
+        startsAt: 2026-10-24T03
+        endsAt: 2026-10-25T04
+    QuoteCalendarFold:
+      summary: Статичний очікуваний розрахунок ADD-001
+      value:
+        carId: car-example
+        startsAt: 2026-10-24T03
+        endsAt: 2026-10-25T04
+        timezone: Europe/Kyiv
+        dailyRate: '1500.00'
+        billableDays: 2
+        totalPrice: '3000.00'
+        currency: UAH
+        priceConfirmationToken: price-calendarfold-example
+    QuoteCalendarMaximumRequest:
+      summary: Незалежна календарна фікстура ADD-001, не обчислення mock
+      value:
+        carId: car-example
+        startsAt: 2026-02-27T03
+        endsAt: 2026-03-29T04
+    QuoteCalendarMaximum:
+      summary: Статичний очікуваний розрахунок ADD-001
+      value:
+        carId: car-example
+        startsAt: 2026-02-27T03
+        endsAt: 2026-03-29T04
+        timezone: Europe/Kyiv
+        dailyRate: '1500.00'
+        billableDays: 30
+        totalPrice: '45000.00'
+        currency: UAH
+        priceConfirmationToken: price-calendarmaximum-example
+    QuoteCalendarHorizonRequest:
+      summary: Незалежна календарна фікстура ADD-001, не обчислення mock
+      value:
+        carId: car-example
+        startsAt: 2026-03-29T04
+        endsAt: 2026-03-30T04
+    QuoteCalendarHorizon:
+      summary: Статичний очікуваний розрахунок ADD-001
+      value:
+        carId: car-example
+        startsAt: 2026-03-29T04
+        endsAt: 2026-03-30T04
+        timezone: Europe/Kyiv
+        dailyRate: '1500.00'
+        billableDays: 1
+        totalPrice: '1500.00'
+        currency: UAH
+        priceConfirmationToken: price-calendarhorizon-example
+x-unresolved-questions: []
+x-resolved-questions:
+- id: session-lifetime
+  description: >-
+    Сесія чинна рівно 86 400 секунд від входу, без автоматичного продовження. Від точної межі або після успішної
+    зміни пароля старий токен дає 401 AUTHENTICATION_REQUIRED з WWW-Authenticate: Bearer.
+  status: resolved
+  source: ../spec/srs-addendum-001.md
+- id: password-session-effects
+  description: >-
+    Успішна зміна пароля повертає 204 без тіла й анулює всі сесії цього запису, включно з поточною; наступний захищений
+    запит вимагає повторного входу. Невдала зміна не анулює сесій, якщо їх початковий строк ще не завершився.
+  status: resolved
+  source: ../spec/srs-addendum-001.md
+- id: Q-07
+  description: >-
+    За ADD-001 кожну обчислену календарну межу визначають від початкової місцевої опори Europe/Kyiv: неіснуючу переносять
+    вперед на величину переходу, для неоднозначної вибирають пізніший момент. Перенесення не накопичуються. Це діє
+    для меж 1/30 діб, оплачуваних діб та горизонту 90 днів; введені проблемні години як і раніше відхиляються з
+    422, правило дедлайну скасування збережено.
+  status: resolved
+  source: ../spec/srs-addendum-001.md
