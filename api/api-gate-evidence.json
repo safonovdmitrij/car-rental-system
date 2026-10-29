@@ -1,0 +1,205 @@
+{
+  "purpose": "API contract review evidence; not a human Gate decision or business implementation verification",
+  "generated_at": "2026-10-29T16:14:01+00:00",
+  "technical_checks_result": "PASS",
+  "human_gate_decision": "PENDING",
+  "source_sha256": {
+    "api/api-gate.md": "e617394fdd19f56b1dc753251af881ebcaa7b4a323bd7dbf8073c1020d826843",
+    "api/data-schemas.md": "c7a7c7fe8e2dee162bd42773c248d78adb49062a3b8df77cd13aff9d70fbb0bc",
+    "api/error-model.md": "764717099b4ced4ed904ff385d562725b06e90460afb93163767a5983ac5832a",
+    "api/mock-guide.md": "067ca632f71dafd5b201a247673a3c150fc0225db5216fffd1621212929e1598",
+    "api/mock-tools/check_scenarios.py": "53cbc785756da38647da022b8354f7360ea96fc2e33169b34393d1ae148a48b8",
+    "api/negative-scenarios.md": "b6c5e0f9699436eea29c80fe1397fea732a7fe484247112ee38d484a15dc5fef",
+    "api/openapi.yaml": "88989941676702ee28c13d5a16a1320d3636f97b100958cee48021a59be8282e",
+    "api/operations.md": "ae342962b1555e6798a18e7b18ad8f5cb159c4cd1c57614c4e0a46dd400aa5d1",
+    "api/positive-scenarios.md": "e71c0248e42d3f17c05b9259d103b0ecd07e76724daa8e2079fe475fd5ff7e76",
+    "api/requests-responses.md": "497642c5fd927f9b9a1f93846d21243d4f3d6262f06506e7d94cb46119f7b5e0",
+    "api/requirements.md": "d6d7bba682d6bf16c3007526bc1590a57c50cc4b4db1088bdceaafa61b3bfa10",
+    "api/resources.md": "f13dbab1c6bb615cd65251025eecb3cf37c2681865db987b056652c855db445a",
+    "api/scenario-validation-report.md": "ca221b23270adc4f82449ca903f6c2b4483f06ad8ccf7f253a925ee2522209f2",
+    "api/scenario-validation-results.json": "d9bc9b478c5750c7b012d50f752e2d67ed63173cd69a995a644b504f35a70cbf",
+    "api/traceability.md": "deed17def6afd8f64ba75e486df6e36c49aa802c5b30b4b588e8b182ca3ce455",
+    "api/validate_openapi.py": "1b9e792480bfc26081bfa83b085248aaad0e3ec369394793b90360c8eaf56b6f",
+    "api/validation-report.md": "27065a6f54cb457a8db9b7ea3a8d73f518984eea2a3d6350b0b77f9e13cf0923",
+    "api/validation-requirements.txt": "21c1ea5a7ab5a31743754489f84d6443902c4b51a02dfae1e3a50cad1d8f6e7e",
+    "planning/revised-decomposition.md": "306d2b8d0094cb16c6ef1c1ed6cf1b16ab698e78793c500e89c135a2fc1820b9",
+    "planning/roles.md": "238a24c7db95e5073c412e71c8402966a53d6fd14bf9e0136c508fd860ac1f94",
+    "spec/acceptance-criteria.md": "6b79a5cfb181b7789a8d829690368d69ed7554fa411dc338c9c2167089f0f13c",
+    "spec/bdd-scenarios.md": "d7523749b833451c4999a3b538e075c83230392d171ad5dfb38a428526d3ad77",
+    "spec/functional-requirements.md": "2a257653dcf626364471221d2df09006088418a6896f407c232e1512590dbb86",
+    "spec/glossary.md": "4b418a73920b5e33346fa347b8c3f60959c292a2f039a2ad463c74c6784f0e9e",
+    "spec/non-functional-requirements.md": "05ab7be07f57d0b9a9f80fb908fec71668afd2a348d37296a87aef773e449395",
+    "spec/open-questions.md": "8b2aa198d51abe57e0cb47f919036a467011a17e0baee8593de3c0dd0a2d510b",
+    "spec/srs-addendum-001.md": "836733d06a0bdd177fa082ce2e20396f2413479445d1dc9af8d970d8a8a3da43",
+    "spec/srs.md": "323794b3f9c9ad0d343fb36e8db774dbe3612d83c0f9e786ca41def24c6f7403",
+    "spec/traceability-matrix.md": "88bb081df960e1d9c2936d3fa6fc6d746edab1bcfd9407bbfa461d20cf2f5fd8"
+  },
+  "checks": [
+    {
+      "criterion": "current_response_evidence_hashes",
+      "result": "PASS",
+      "details": {
+        "openapi.yaml": "88989941676702ee28c13d5a16a1320d3636f97b100958cee48021a59be8282e",
+        "positive-scenarios.md": "e71c0248e42d3f17c05b9259d103b0ecd07e76724daa8e2079fe475fd5ff7e76",
+        "negative-scenarios.md": "b6c5e0f9699436eea29c80fe1397fea732a7fe484247112ee38d484a15dc5fef"
+      }
+    },
+    {
+      "criterion": "historical_hashes_addendum-001-baseline",
+      "result": "PASS",
+      "details": {
+        "attempted": 135,
+        "pass": 135,
+        "fail": 0,
+        "by_kind": {
+          "positive": {
+            "attempted": 41,
+            "pass": 41,
+            "fail": 0
+          },
+          "negative_static": {
+            "attempted": 94,
+            "pass": 94,
+            "fail": 0
+          }
+        },
+        "assertions": {
+          "PASS": 905,
+          "NOT_APPLICABLE": 6
+        }
+      }
+    },
+    {
+      "criterion": "historical_hashes_pre-api-gate",
+      "result": "PASS",
+      "details": {
+        "attempted": 151,
+        "pass": 151,
+        "fail": 0,
+        "by_kind": {
+          "positive": {
+            "attempted": 48,
+            "pass": 48,
+            "fail": 0
+          },
+          "negative_static": {
+            "attempted": 103,
+            "pass": 103,
+            "fail": 0
+          }
+        },
+        "assertions": {
+          "PASS": 1018,
+          "NOT_APPLICABLE": 6
+        }
+      }
+    },
+    {
+      "criterion": "bidirectional_traceability",
+      "result": "PASS",
+      "details": {
+        "requirements": 96,
+        "operations": 22,
+        "links": 315
+      }
+    },
+    {
+      "criterion": "openapi_requirement_links",
+      "result": "PASS",
+      "details": {
+        "operations": 22
+      }
+    },
+    {
+      "criterion": "documented_http_statuses",
+      "result": "PASS",
+      "details": {
+        "operations": 22
+      }
+    },
+    {
+      "criterion": "static_http_results",
+      "result": "PASS",
+      "details": {
+        "attempted": 151,
+        "pass": 151,
+        "fail": 0,
+        "by_kind": {
+          "positive": {
+            "attempted": 48,
+            "pass": 48,
+            "fail": 0
+          },
+          "negative_static": {
+            "attempted": 103,
+            "pass": 103,
+            "fail": 0
+          }
+        },
+        "assertions": {
+          "PASS": 1018,
+          "NOT_APPLICABLE": 6
+        }
+      }
+    },
+    {
+      "criterion": "public_protected_security",
+      "result": "PASS",
+      "details": {
+        "public": [
+          "OP-01",
+          "OP-02",
+          "OP-03",
+          "OP-04",
+          "OP-05"
+        ],
+        "protected": "OP-06..OP-22"
+      }
+    },
+    {
+      "criterion": "canonical_numbering",
+      "result": "PASS",
+      "details": {
+        "functional_requirements": 96,
+        "acceptance_criteria": 116,
+        "bdd": 20
+      }
+    },
+    {
+      "criterion": "global_matrix_unchanged",
+      "result": "PASS",
+      "details": {
+        "deferred_to": "laboratory item 16",
+        "sha256": "88bb081df960e1d9c2936d3fa6fc6d746edab1bcfd9407bbfa461d20cf2f5fd8"
+      }
+    }
+  ],
+  "repeated_validation": {
+    "tools": {
+      "openapi-spec-validator": "0.9.0",
+      "openapi-schema-validator": "0.9.0",
+      "jsonschema": "4.26.0",
+      "PyYAML": "6.0.3"
+    },
+    "openapi_errors": 0,
+    "schemas": 56,
+    "operations": 22,
+    "refs": 482,
+    "unique_examples": 78,
+    "example_validations": 360,
+    "warnings": [
+      "headers/Allow",
+      "schemas/CatalogQuery",
+      "schemas/AvailabilityQuery",
+      "responses/MethodNotAllowed"
+    ]
+  },
+  "http_command": "D:\\LABY\\Course4\\car-rental-system\\.venv-api-validation\\Scripts\\python.exe api/mock-tools/check_scenarios.py --base-url http://127.0.0.1:4010/api/v1 --output api/scenario-validation-results.json --baseline api/history/pre-api-gate/scenario-validation-results.json",
+  "http_started_at": "2026-10-29T17:09:48+01:00",
+  "http_finished_at": "2026-10-29T17:09:50+01:00",
+  "limitations": [
+    "Static mock responses only; no real session expiry, token invalidation, calendar computations, authorization, ownership, concurrency or persistence verification.",
+    "Global matrix update deferred to item 16.",
+    "Human Gate approval pending."
+  ]
+}
