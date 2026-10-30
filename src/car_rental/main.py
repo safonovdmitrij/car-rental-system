@@ -1,10 +1,9 @@
 """Minimal ASGI bootstrap without business or documentation routes."""
 
-from fastapi import FastAPI
-import sys
+import os
+from sqlalchemy import create_engine
+from car_rental.api import create_app
 
-from car_rental.observability import JsonEventLogger, RequestLoggingMiddleware
 
-
-app = FastAPI(openapi_url=None, docs_url=None, redoc_url=None)
-app.add_middleware(RequestLoggingMiddleware, logger=JsonEventLogger(sys.stdout))
+_database_url = os.environ.get("DATABASE_URL")
+app = create_app(create_engine(_database_url) if _database_url else None)
