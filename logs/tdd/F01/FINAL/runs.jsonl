@@ -1,0 +1,1 @@
+{"time": "2026-10-30T13:27:50.145272+00:00", "run_id": "FINAL", "command": [".venv-backend/Scripts/python.exe", "-m", "pytest", "tests", "-q", "--tb=line", "--assert=plain", "--show-capture=no", "-p", "no:cacheprovider", "--basetemp=.backend-setup/F01-FINAL", "--junitxml=logs/tdd/F01/FINAL/junit.xml"], "exit_code": 0, "result": "PASS"}

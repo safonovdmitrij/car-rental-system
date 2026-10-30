@@ -1,0 +1,1 @@
+{"time": "2026-10-30T12:41:00.438966+00:00", "run_id": "GREEN", "command": [".venv-backend/Scripts/python.exe", "-m", "pytest", "tests/unit/test_pricing.py", "-q", "--tb=short", "--assert=plain", "--show-capture=no", "-p", "no:cacheprovider", "--basetemp=.backend-setup/T08-calendar-GREEN", "--junitxml=logs/tdd/T08/calendar/GREEN/junit.xml"], "exit_code": 0, "result": "PASS"}

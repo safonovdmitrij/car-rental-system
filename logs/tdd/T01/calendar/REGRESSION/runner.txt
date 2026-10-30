@@ -1,0 +1,15 @@
+..........EE............................................................ [ 96%]
+...                                                                      [100%]
+=================================== ERRORS ====================================
+_ ERROR at setup of test_test_run_journal_records_exact_command_exit_code_and_result[0-PASS] _
+C:\Python314\Lib\pathlib\__init__.py:1016: in mkdir
+    os.mkdir(self, mode)
+E   FileNotFoundError: [WinError 3] Системе не удается найти указанный путь: 'D:\\LABY\\Course4\\car-rental-system\\.backend-setup\\T01\\calendar-REGRESSION'
+_ ERROR at setup of test_test_run_journal_records_exact_command_exit_code_and_result[1-FAIL] _
+C:\Python314\Lib\pathlib\__init__.py:1016: in mkdir
+    os.mkdir(self, mode)
+E   FileNotFoundError: [WinError 3] Системе не удается найти указанный путь: 'D:\\LABY\\Course4\\car-rental-system\\.backend-setup\\T01\\calendar-REGRESSION'
+=========================== short test summary info ===========================
+ERROR tests/infrastructure/test_logging.py::test_test_run_journal_records_exact_command_exit_code_and_result[0-PASS]
+ERROR tests/infrastructure/test_logging.py::test_test_run_journal_records_exact_command_exit_code_and_result[1-FAIL]
+73 passed, 2 errors in 1.81s

@@ -1,0 +1,2 @@
+﻿# Technical TEST-GATE: independent state/cancellation/service rules
+REQ-F-048–059,073–076,081/085/091; matching AC from acceptance-criteria.md; BDD-011/012/013/015/016 only isolated policy portions. 24 tests: precise state times, roles/ownership/reason, exact DST cancellation deadlines and one second after, immutable cancelled state, future service edits, no inherited rental limits. Expected RED NotImplementedError. Technical GO for independent functions, not HTTP/state persistence, not completion of T10–T12 or human Gate. Integration dependencies stay open.

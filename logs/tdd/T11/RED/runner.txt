@@ -1,0 +1,16 @@
+FFFF                                                                     [100%]
+================================== FAILURES ===================================
+E   AssertionError
+D:\LABY\Course4\car-rental-system\tests\integration\test_service.py:15: AssertionError
+E   AssertionError
+D:\LABY\Course4\car-rental-system\tests\integration\test_service.py:30: AssertionError
+E   AssertionError
+D:\LABY\Course4\car-rental-system\tests\integration\test_service.py:42: AssertionError
+E   AssertionError
+D:\LABY\Course4\car-rental-system\tests\integration\test_service.py:54: AssertionError
+=========================== short test summary info ===========================
+FAILED tests/integration/test_service.py::test_service_crud_adjacency_and_booking_conflict
+FAILED tests/integration/test_service.py::test_service_immutable_at_start_with_fresh_session
+FAILED tests/integration/test_service.py::test_service_validates_reason_time_and_roles
+FAILED tests/integration/test_service.py::test_parallel_booking_and_service_never_save_conflict
+4 failed in 1.11s

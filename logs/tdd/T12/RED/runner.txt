@@ -1,0 +1,25 @@
+FFFFFFF                                                                  [100%]
+================================== FAILURES ===================================
+E   AssertionError
+D:\LABY\Course4\car-rental-system\tests\integration\test_cancellation.py:15: AssertionError
+E   AssertionError
+D:\LABY\Course4\car-rental-system\tests\integration\test_cancellation.py:15: AssertionError
+E   AssertionError
+D:\LABY\Course4\car-rental-system\tests\integration\test_cancellation.py:29: AssertionError
+E   AssertionError
+D:\LABY\Course4\car-rental-system\tests\integration\test_cancellation.py:52: AssertionError
+E   AssertionError
+D:\LABY\Course4\car-rental-system\tests\integration\test_cancellation.py:52: AssertionError
+E   AssertionError
+D:\LABY\Course4\car-rental-system\tests\integration\test_cancellation.py:52: AssertionError
+E   AssertionError
+D:\LABY\Course4\car-rental-system\tests\integration\test_cancellation.py:52: AssertionError
+=========================== short test summary info ===========================
+FAILED tests/integration/test_cancellation.py::test_client_deadline_inclusive_and_release_history[0-201]
+FAILED tests/integration/test_cancellation.py::test_client_deadline_inclusive_and_release_history[1-409]
+FAILED tests/integration/test_cancellation.py::test_admin_reason_and_identity_private_to_client
+FAILED tests/integration/test_cancellation.py::test_dst_real_cancellation_boundaries[exact-2026-03-30T03-2026-04-01T03-2026-03-29T04:00:00+03:00]
+FAILED tests/integration/test_cancellation.py::test_dst_real_cancellation_boundaries[exact-2026-10-26T03-2026-10-28T03-2026-10-25T03:00:00+02:00]
+FAILED tests/integration/test_cancellation.py::test_dst_real_cancellation_boundaries[one-second-after-2026-03-30T03-2026-04-01T03-2026-03-29T04:00:00+03:00]
+FAILED tests/integration/test_cancellation.py::test_dst_real_cancellation_boundaries[one-second-after-2026-10-26T03-2026-10-28T03-2026-10-25T03:00:00+02:00]
+7 failed in 1.80s

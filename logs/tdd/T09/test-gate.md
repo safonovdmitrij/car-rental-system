@@ -1,0 +1,2 @@
+﻿# T09 technical TEST-GATE
+REQ-F-026/039–045/083/090, associated AC, BDD-006/009/010/016; OP-10 and shared price confirmation OP-09. Technical GO: 7 cases for real persistence, Location, concurrent winner invariant, token context, forbidden owner field, tariff version changed/back, lost availability. Expected RED missing POST/bookings. PostgreSQL per-car locking required for booking and later service writes; no mock or SQLite. Immutable editing/header cross-check completed T10.

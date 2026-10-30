@@ -1,0 +1,2 @@
+﻿# T06 public HTTP/DB subset — technical TEST-GATE
+REQ-F-001–008,092; AC-F-001-01–008-01,092-01; BDD-001/002; OP-01/02/03 guest/client public projections. Technical GO for actual PostgreSQL integration tests. Empty ASGI factory deliberately has no endpoints; expected RED is wrong HTTP status/body due absent routes, not DB setup. Distinct schemas per test in workspace-only cluster port 55432; no working database. Optional administrator projections remain dependent on T03. Contract checks follow GREEN against unchanged YAML. No human Gate is claimed.

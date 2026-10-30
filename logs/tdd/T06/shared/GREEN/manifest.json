@@ -1,0 +1,78 @@
+{
+  "started_at": "2026-10-30T12:41:00.774453+00:00",
+  "finished_at": "2026-10-30T12:41:01.862523+00:00",
+  "command": [
+    ".venv-backend/Scripts/python.exe",
+    "-m",
+    "pytest",
+    "tests/unit/test_availability.py",
+    "-q",
+    "--tb=short",
+    "--assert=plain",
+    "--show-capture=no",
+    "-p",
+    "no:cacheprovider",
+    "--basetemp=.backend-setup/T06-shared-GREEN",
+    "--junitxml=logs/tdd/T06/shared/GREEN/junit.xml"
+  ],
+  "exit_code": 0,
+  "python": "3.14.0",
+  "pytest": "9.2.0",
+  "test_ids": [
+    {
+      "classname": "tests.unit.test_availability",
+      "name": "test_half_open_overlap[8-9-False]",
+      "time": "0.001"
+    },
+    {
+      "classname": "tests.unit.test_availability",
+      "name": "test_half_open_overlap[11-12-False]",
+      "time": "0.001"
+    },
+    {
+      "classname": "tests.unit.test_availability",
+      "name": "test_half_open_overlap[8-10-True]",
+      "time": "0.001"
+    },
+    {
+      "classname": "tests.unit.test_availability",
+      "name": "test_half_open_overlap[9-10-True]",
+      "time": "0.001"
+    },
+    {
+      "classname": "tests.unit.test_availability",
+      "name": "test_half_open_overlap[10-11-True]",
+      "time": "0.001"
+    },
+    {
+      "classname": "tests.unit.test_availability",
+      "name": "test_half_open_overlap[9-11-True]",
+      "time": "0.001"
+    },
+    {
+      "classname": "tests.unit.test_availability",
+      "name": "test_half_open_overlap[8-12-True]",
+      "time": "0.001"
+    },
+    {
+      "classname": "tests.unit.test_availability",
+      "name": "test_half_open_overlap[9-12-True]",
+      "time": "0.001"
+    },
+    {
+      "classname": "tests.unit.test_availability",
+      "name": "test_special_cancellation_calendar_deadline[2026-11-12T09:00:00+02:00-2026-11-11T09:00:00+02:00]",
+      "time": "0.001"
+    },
+    {
+      "classname": "tests.unit.test_availability",
+      "name": "test_special_cancellation_calendar_deadline[2026-03-30T03:00:00+03:00-2026-03-29T04:00:00+03:00]",
+      "time": "0.001"
+    },
+    {
+      "classname": "tests.unit.test_availability",
+      "name": "test_special_cancellation_calendar_deadline[2026-10-26T03:00:00+02:00-2026-10-25T03:00:00+02:00]",
+      "time": "0.001"
+    }
+  ]
+}

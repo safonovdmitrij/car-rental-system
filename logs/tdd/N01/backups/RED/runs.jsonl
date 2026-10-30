@@ -1,0 +1,1 @@
+{"time": "2026-10-30T13:10:56.036184+00:00", "run_id": "RED", "command": [".venv-backend/Scripts/python.exe", "-m", "pytest", "tests/unit/test_backups.py", "-q", "--tb=line", "--assert=plain", "--show-capture=no", "-p", "no:cacheprovider", "--basetemp=.backend-setup/N01-backups-RED", "--junitxml=logs/tdd/N01/backups/RED/junit.xml"], "exit_code": 1, "result": "FAIL"}

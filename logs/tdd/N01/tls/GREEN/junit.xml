@@ -1,0 +1,1 @@
+<testsuites name="pytest tests"><testsuite name="pytest" errors="0" failures="0" skipped="0" tests="1" time="6.430" timestamp="2026-10-30T14:18:32.712070+01:00" hostname="local"><testcase classname="tests.integration.test_https" name="test_real_https_proxy_and_verified_local_certificate" time="6.376" /></testsuite></testsuites>

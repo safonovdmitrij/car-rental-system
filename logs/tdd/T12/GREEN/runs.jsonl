@@ -1,0 +1,1 @@
+{"time": "2026-10-30T13:02:55.593160+00:00", "run_id": "GREEN", "command": [".venv-backend/Scripts/python.exe", "-m", "pytest", "tests/integration/test_cancellation.py", "-q", "--tb=line", "--assert=plain", "--show-capture=no", "-p", "no:cacheprovider", "--basetemp=.backend-setup/T12-GREEN", "--junitxml=logs/tdd/T12/GREEN/junit.xml"], "exit_code": 0, "result": "PASS"}

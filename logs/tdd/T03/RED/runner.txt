@@ -1,0 +1,16 @@
+FFFF                                                                     [100%]
+================================== FAILURES ===================================
+E   AssertionError
+D:\LABY\Course4\car-rental-system\tests\integration\test_sessions.py:19: AssertionError
+E   AssertionError
+D:\LABY\Course4\car-rental-system\tests\integration\test_sessions.py:19: AssertionError
+E   AssertionError
+D:\LABY\Course4\car-rental-system\tests\integration\test_sessions.py:31: AssertionError
+E   AssertionError
+D:\LABY\Course4\car-rental-system\tests\integration\test_sessions.py:31: AssertionError
+=========================== short test summary info ===========================
+FAILED tests/integration/test_sessions.py::test_exact_fixed_session_ttl_both_roles[client]
+FAILED tests/integration/test_sessions.py::test_exact_fixed_session_ttl_both_roles[administrator]
+FAILED tests/integration/test_sessions.py::test_missing_invalid_bearer[None]
+FAILED tests/integration/test_sessions.py::test_missing_invalid_bearer[invalid-opaque-value]
+4 failed in 0.78s

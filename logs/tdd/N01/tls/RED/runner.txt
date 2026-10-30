@@ -1,0 +1,7 @@
+F                                                                        [100%]
+================================== FAILURES ===================================
+E   NotImplementedError: Local HTTPS proxy configuration is not implemented
+D:\LABY\Course4\car-rental-system\src\car_rental\transport.py:5: NotImplementedError: Local HTTPS proxy configuration is not implemented
+=========================== short test summary info ===========================
+FAILED tests/integration/test_https.py::test_real_https_proxy_and_verified_local_certificate
+1 failed in 0.04s

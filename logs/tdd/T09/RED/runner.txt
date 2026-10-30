@@ -1,0 +1,25 @@
+FFFFFFF                                                                  [100%]
+================================== FAILURES ===================================
+E   AssertionError
+D:\LABY\Course4\car-rental-system\tests\integration\test_booking_create.py:22: AssertionError
+E   AssertionError
+D:\LABY\Course4\car-rental-system\tests\integration\test_booking_create.py:31: AssertionError
+E   AssertionError
+D:\LABY\Course4\car-rental-system\tests\integration\test_booking_create.py:37: AssertionError
+E   AssertionError
+D:\LABY\Course4\car-rental-system\tests\integration\test_booking_create.py:37: AssertionError
+E   AssertionError
+D:\LABY\Course4\car-rental-system\tests\integration\test_booking_create.py:37: AssertionError
+E   AssertionError
+D:\LABY\Course4\car-rental-system\tests\integration\test_booking_create.py:45: AssertionError
+E   AssertionError
+D:\LABY\Course4\car-rental-system\tests\integration\test_booking_create.py:54: AssertionError
+=========================== short test summary info ===========================
+FAILED tests/integration/test_booking_create.py::test_booking_created_with_frozen_price_and_location
+FAILED tests/integration/test_booking_create.py::test_two_competing_requests_one_saved_booking
+FAILED tests/integration/test_booking_create.py::test_quote_context_and_owner_not_forged[patch0]
+FAILED tests/integration/test_booking_create.py::test_quote_context_and_owner_not_forged[patch1]
+FAILED tests/integration/test_booking_create.py::test_quote_context_and_owner_not_forged[patch2]
+FAILED tests/integration/test_booking_create.py::test_rate_change_and_return_requires_reconfirmation
+FAILED tests/integration/test_booking_create.py::test_lost_availability_after_quote
+7 failed in 1.39s

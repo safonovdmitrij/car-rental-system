@@ -1,0 +1,1 @@
+{"time": "2026-10-30T12:50:49.926391+00:00", "run_id": "CONTRACT-2", "command": [".venv-backend/Scripts/python.exe", "-m", "pytest", "tests/integration/test_accounts.py", "-q", "--tb=line", "--assert=plain", "--show-capture=no", "-p", "no:cacheprovider", "--basetemp=.backend-setup/T02-CONTRACT-2", "--junitxml=logs/tdd/T02/CONTRACT-2/junit.xml"], "exit_code": 0, "result": "PASS"}

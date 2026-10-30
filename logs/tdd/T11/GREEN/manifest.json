@@ -1,0 +1,43 @@
+{
+  "started_at": "2026-10-30T13:01:26.565749+00:00",
+  "finished_at": "2026-10-30T13:01:29.570427+00:00",
+  "command": [
+    ".venv-backend/Scripts/python.exe",
+    "-m",
+    "pytest",
+    "tests/integration/test_service.py",
+    "-q",
+    "--tb=line",
+    "--assert=plain",
+    "--show-capture=no",
+    "-p",
+    "no:cacheprovider",
+    "--basetemp=.backend-setup/T11-GREEN",
+    "--junitxml=logs/tdd/T11/GREEN/junit.xml"
+  ],
+  "exit_code": 0,
+  "python": "3.14.0",
+  "pytest": "9.2.0",
+  "test_ids": [
+    {
+      "classname": "tests.integration.test_service",
+      "name": "test_service_crud_adjacency_and_booking_conflict",
+      "time": "0.426"
+    },
+    {
+      "classname": "tests.integration.test_service",
+      "name": "test_service_immutable_at_start_with_fresh_session",
+      "time": "0.411"
+    },
+    {
+      "classname": "tests.integration.test_service",
+      "name": "test_service_validates_reason_time_and_roles",
+      "time": "0.352"
+    },
+    {
+      "classname": "tests.integration.test_service",
+      "name": "test_parallel_booking_and_service_never_save_conflict",
+      "time": "0.333"
+    }
+  ]
+}

@@ -1,0 +1,7 @@
+F                                                                        [100%]
+================================== FAILURES ===================================
+E   NotImplementedError: Alembic database upgrade is not implemented
+D:\LABY\Course4\car-rental-system\src\car_rental\migrations.py:5: NotImplementedError: Alembic database upgrade is not implemented
+=========================== short test summary info ===========================
+FAILED tests/integration/test_migrations.py::test_empty_database_upgrade_is_repeatable_and_preserves_data
+1 failed in 0.14s

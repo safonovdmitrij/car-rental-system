@@ -1,0 +1,16 @@
+{
+  "command": [
+    ".venv-backend/Scripts/python.exe",
+    "-m",
+    "car_rental.backups",
+    "--once"
+  ],
+  "started_at": "2026-10-30T13:19:36.634518+00:00",
+  "finished_at": "2026-10-30T13:19:37.361143+00:00",
+  "exit_code": 0,
+  "data_directory_verified_workspace_only": true,
+  "dump_nonempty": true,
+  "pg_restore_list_exit_code": 0,
+  "recovery_acceptance": "OPEN by user decision; no RPO/RTO or restore claim",
+  "raw_dump": "ignored .backend-setup; never committed"
+}

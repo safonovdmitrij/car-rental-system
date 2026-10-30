@@ -1,0 +1,13 @@
+FFF                                                                      [100%]
+================================== FAILURES ===================================
+E   AssertionError
+D:\LABY\Course4\car-rental-system\tests\integration\test_lockout.py:15: AssertionError
+E   AssertionError
+D:\LABY\Course4\car-rental-system\tests\integration\test_lockout.py:33: AssertionError
+E   AssertionError
+D:\LABY\Course4\car-rental-system\tests\integration\test_lockout.py:40: AssertionError
+=========================== short test summary info ===========================
+FAILED tests/integration/test_lockout.py::test_fifth_failure_blocks_fixed_deadline_and_resets_without_success
+FAILED tests/integration/test_lockout.py::test_success_resets_and_other_account_independent
+FAILED tests/integration/test_lockout.py::test_parallel_failures_do_not_lose_counter_updates
+3 failed in 1.17s

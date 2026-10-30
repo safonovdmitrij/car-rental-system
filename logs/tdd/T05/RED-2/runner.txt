@@ -1,0 +1,16 @@
+FFFF                                                                     [100%]
+================================== FAILURES ===================================
+E   AssertionError
+D:\LABY\Course4\car-rental-system\tests\integration\test_profile.py:14: AssertionError
+E   AssertionError
+D:\LABY\Course4\car-rental-system\tests\integration\test_profile.py:24: AssertionError
+E   AssertionError
+D:\LABY\Course4\car-rental-system\tests\integration\test_profile.py:32: AssertionError
+E   AssertionError
+D:\LABY\Course4\car-rental-system\tests\integration\test_profile.py:32: AssertionError
+=========================== short test summary info ===========================
+FAILED tests/integration/test_profile.py::test_profile_patch_persisted_and_email_immutable
+FAILED tests/integration/test_profile.py::test_successful_password_change_revokes_all_sessions
+FAILED tests/integration/test_profile.py::test_failed_password_change_keeps_both_sessions_and_password[wrong-current]
+FAILED tests/integration/test_profile.py::test_failed_password_change_keeps_both_sessions_and_password[short-new]
+4 failed in 0.81s

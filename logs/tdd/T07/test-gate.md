@@ -1,0 +1,2 @@
+﻿# T07 technical TEST-GATE
+REQ-F-065–072/087–089; all associated AC; BDD-014/016; OP-14–17 plus admin projections OP-01/02. Technical GO: 7 cases, positive CRUD/hide/show, whole replacement dictionary, negative rates, roles, future warning and historical delete restriction. Expected RED absent protected CRUD. All DB data synthetic. Q02/04/05 use already approved contract definitions, no new policy or remote ticket change.

@@ -1,0 +1,25 @@
+<testsuites name="pytest tests"><testsuite name="pytest" errors="0" failures="8" skipped="0" tests="8" time="0.952" timestamp="2026-10-30T13:47:43.801150+01:00" hostname="local"><testcase classname="tests.integration.test_accounts" name="test_registration_and_login_trim_case_unique" time="0.189"><failure message="AssertionError">tests\integration\test_accounts.py:15: in test_registration_and_login_trim_case_unique
+    assert r.status_code==201 and 'location' not in r.headers
+           ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+E   AssertionError</failure></testcase><testcase classname="tests.integration.test_accounts" name="test_invalid_registration_does_not_create_record[patch0]" time="0.058"><failure message="AssertionError">tests\integration\test_accounts.py:31: in test_invalid_registration_does_not_create_record
+    assert r.status_code==422 and r.json()['error']['code']=='VALIDATION_ERROR'
+           ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+E   AssertionError</failure></testcase><testcase classname="tests.integration.test_accounts" name="test_invalid_registration_does_not_create_record[patch1]" time="0.055"><failure message="AssertionError">tests\integration\test_accounts.py:31: in test_invalid_registration_does_not_create_record
+    assert r.status_code==422 and r.json()['error']['code']=='VALIDATION_ERROR'
+           ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+E   AssertionError</failure></testcase><testcase classname="tests.integration.test_accounts" name="test_invalid_registration_does_not_create_record[patch2]" time="0.055"><failure message="AssertionError">tests\integration\test_accounts.py:31: in test_invalid_registration_does_not_create_record
+    assert r.status_code==422 and r.json()['error']['code']=='VALIDATION_ERROR'
+           ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+E   AssertionError</failure></testcase><testcase classname="tests.integration.test_accounts" name="test_invalid_registration_does_not_create_record[patch3]" time="0.055"><failure message="AssertionError">tests\integration\test_accounts.py:31: in test_invalid_registration_does_not_create_record
+    assert r.status_code==422 and r.json()['error']['code']=='VALIDATION_ERROR'
+           ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+E   AssertionError</failure></testcase><testcase classname="tests.integration.test_accounts" name="test_invalid_registration_does_not_create_record[patch4]" time="0.172"><failure message="AssertionError">tests\integration\test_accounts.py:31: in test_invalid_registration_does_not_create_record
+    assert r.status_code==422 and r.json()['error']['code']=='VALIDATION_ERROR'
+           ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+E   AssertionError</failure></testcase><testcase classname="tests.integration.test_accounts" name="test_password_is_not_trimmed_and_eight_spaces_allowed" time="0.182"><failure message="AssertionError">tests\integration\test_accounts.py:36: in test_password_is_not_trimmed_and_eight_spaces_allowed
+    assert api('POST','/clients',{**registration,'password':' '*8}).status_code==201
+           ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+E   AssertionError</failure></testcase><testcase classname="tests.integration.test_accounts" name="test_unknown_credentials_same_failure" time="0.066"><failure message="AssertionError">tests\integration\test_accounts.py:44: in test_unknown_credentials_same_failure
+    assert r.status_code==401 and r.json()['error']['code']=='INVALID_CREDENTIALS'
+           ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+E   AssertionError</failure></testcase></testsuite></testsuites>

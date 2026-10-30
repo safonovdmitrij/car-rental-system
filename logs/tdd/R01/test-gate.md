@@ -1,0 +1,2 @@
+﻿# R01 technical refactoring gate
+Precondition: logs/tdd/B01/FINAL proves 228 PASS, including contract validation and TLS. Scope: extract duplicate UTC/Kyiv LocalHour presentation and opaque-token digest helpers; no behavior or expectation changes. Keep all tests unchanged and run complete regression/contract checks after refactoring. No fabricated RED is needed for unchanged behavior; compare source hashes before/after and existing GREEN proof. This is a technical decision, not acceptance of the whole system or human Gate.

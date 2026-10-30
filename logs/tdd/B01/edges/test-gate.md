@@ -1,0 +1,2 @@
+﻿# B01 error/edge technical TEST-GATE
+Global OpenAPI405/Allow,400/BAD_REQUEST,503/SERVICE_UNAVAILABLE; REQ-F-045/055/058/059/085/091 with AC and BDD-012/013/016. Technical GO before fixes: 5 cases, actual denied mutations and fault-injected DB error. Expect RED incomplete Allow and missing structured503 handler; already supported cases may PASS. Test server exceptions suppressed only in fault probe so actual HTTP response can be asserted. This is not mock evidence.

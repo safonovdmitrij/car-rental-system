@@ -1,0 +1,9 @@
+............................F........................................... [ 40%]
+........................................................................ [ 80%]
+....................................                                     [100%]
+================================== FAILURES ===================================
+E   AssertionError: Actual response violates approved OpenAPI
+D:\LABY\Course4\car-rental-system\tests\integration\conftest.py:51: AssertionError: Actual response violates approved OpenAPI
+=========================== short test summary info ===========================
+FAILED tests/integration/test_booking_read.py::test_foreign_and_missing_same_404_and_patch_forbidden
+1 failed, 179 passed in 12.55s

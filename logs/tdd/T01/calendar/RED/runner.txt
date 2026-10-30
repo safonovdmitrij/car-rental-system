@@ -1,0 +1,482 @@
+FFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFF          [100%]
+================================== FAILURES ===================================
+____________ test_all_whole_hours_without_business_hours_limit[0] _____________
+tests\unit\test_calendar.py:17: in test_all_whole_hours_without_business_hours_limit
+    parsed = parse_local_hour(f"2026-11-12T{hour:02}")
+             ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+src\car_rental\calendar.py:7: in parse_local_hour
+    raise NotImplementedError("LocalHour parsing is not implemented")
+E   NotImplementedError: LocalHour parsing is not implemented
+____________ test_all_whole_hours_without_business_hours_limit[1] _____________
+tests\unit\test_calendar.py:17: in test_all_whole_hours_without_business_hours_limit
+    parsed = parse_local_hour(f"2026-11-12T{hour:02}")
+             ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+src\car_rental\calendar.py:7: in parse_local_hour
+    raise NotImplementedError("LocalHour parsing is not implemented")
+E   NotImplementedError: LocalHour parsing is not implemented
+____________ test_all_whole_hours_without_business_hours_limit[2] _____________
+tests\unit\test_calendar.py:17: in test_all_whole_hours_without_business_hours_limit
+    parsed = parse_local_hour(f"2026-11-12T{hour:02}")
+             ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+src\car_rental\calendar.py:7: in parse_local_hour
+    raise NotImplementedError("LocalHour parsing is not implemented")
+E   NotImplementedError: LocalHour parsing is not implemented
+____________ test_all_whole_hours_without_business_hours_limit[3] _____________
+tests\unit\test_calendar.py:17: in test_all_whole_hours_without_business_hours_limit
+    parsed = parse_local_hour(f"2026-11-12T{hour:02}")
+             ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+src\car_rental\calendar.py:7: in parse_local_hour
+    raise NotImplementedError("LocalHour parsing is not implemented")
+E   NotImplementedError: LocalHour parsing is not implemented
+____________ test_all_whole_hours_without_business_hours_limit[4] _____________
+tests\unit\test_calendar.py:17: in test_all_whole_hours_without_business_hours_limit
+    parsed = parse_local_hour(f"2026-11-12T{hour:02}")
+             ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+src\car_rental\calendar.py:7: in parse_local_hour
+    raise NotImplementedError("LocalHour parsing is not implemented")
+E   NotImplementedError: LocalHour parsing is not implemented
+____________ test_all_whole_hours_without_business_hours_limit[5] _____________
+tests\unit\test_calendar.py:17: in test_all_whole_hours_without_business_hours_limit
+    parsed = parse_local_hour(f"2026-11-12T{hour:02}")
+             ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+src\car_rental\calendar.py:7: in parse_local_hour
+    raise NotImplementedError("LocalHour parsing is not implemented")
+E   NotImplementedError: LocalHour parsing is not implemented
+____________ test_all_whole_hours_without_business_hours_limit[6] _____________
+tests\unit\test_calendar.py:17: in test_all_whole_hours_without_business_hours_limit
+    parsed = parse_local_hour(f"2026-11-12T{hour:02}")
+             ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+src\car_rental\calendar.py:7: in parse_local_hour
+    raise NotImplementedError("LocalHour parsing is not implemented")
+E   NotImplementedError: LocalHour parsing is not implemented
+____________ test_all_whole_hours_without_business_hours_limit[7] _____________
+tests\unit\test_calendar.py:17: in test_all_whole_hours_without_business_hours_limit
+    parsed = parse_local_hour(f"2026-11-12T{hour:02}")
+             ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+src\car_rental\calendar.py:7: in parse_local_hour
+    raise NotImplementedError("LocalHour parsing is not implemented")
+E   NotImplementedError: LocalHour parsing is not implemented
+____________ test_all_whole_hours_without_business_hours_limit[8] _____________
+tests\unit\test_calendar.py:17: in test_all_whole_hours_without_business_hours_limit
+    parsed = parse_local_hour(f"2026-11-12T{hour:02}")
+             ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+src\car_rental\calendar.py:7: in parse_local_hour
+    raise NotImplementedError("LocalHour parsing is not implemented")
+E   NotImplementedError: LocalHour parsing is not implemented
+____________ test_all_whole_hours_without_business_hours_limit[9] _____________
+tests\unit\test_calendar.py:17: in test_all_whole_hours_without_business_hours_limit
+    parsed = parse_local_hour(f"2026-11-12T{hour:02}")
+             ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+src\car_rental\calendar.py:7: in parse_local_hour
+    raise NotImplementedError("LocalHour parsing is not implemented")
+E   NotImplementedError: LocalHour parsing is not implemented
+____________ test_all_whole_hours_without_business_hours_limit[10] ____________
+tests\unit\test_calendar.py:17: in test_all_whole_hours_without_business_hours_limit
+    parsed = parse_local_hour(f"2026-11-12T{hour:02}")
+             ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+src\car_rental\calendar.py:7: in parse_local_hour
+    raise NotImplementedError("LocalHour parsing is not implemented")
+E   NotImplementedError: LocalHour parsing is not implemented
+____________ test_all_whole_hours_without_business_hours_limit[11] ____________
+tests\unit\test_calendar.py:17: in test_all_whole_hours_without_business_hours_limit
+    parsed = parse_local_hour(f"2026-11-12T{hour:02}")
+             ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+src\car_rental\calendar.py:7: in parse_local_hour
+    raise NotImplementedError("LocalHour parsing is not implemented")
+E   NotImplementedError: LocalHour parsing is not implemented
+____________ test_all_whole_hours_without_business_hours_limit[12] ____________
+tests\unit\test_calendar.py:17: in test_all_whole_hours_without_business_hours_limit
+    parsed = parse_local_hour(f"2026-11-12T{hour:02}")
+             ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+src\car_rental\calendar.py:7: in parse_local_hour
+    raise NotImplementedError("LocalHour parsing is not implemented")
+E   NotImplementedError: LocalHour parsing is not implemented
+____________ test_all_whole_hours_without_business_hours_limit[13] ____________
+tests\unit\test_calendar.py:17: in test_all_whole_hours_without_business_hours_limit
+    parsed = parse_local_hour(f"2026-11-12T{hour:02}")
+             ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+src\car_rental\calendar.py:7: in parse_local_hour
+    raise NotImplementedError("LocalHour parsing is not implemented")
+E   NotImplementedError: LocalHour parsing is not implemented
+____________ test_all_whole_hours_without_business_hours_limit[14] ____________
+tests\unit\test_calendar.py:17: in test_all_whole_hours_without_business_hours_limit
+    parsed = parse_local_hour(f"2026-11-12T{hour:02}")
+             ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+src\car_rental\calendar.py:7: in parse_local_hour
+    raise NotImplementedError("LocalHour parsing is not implemented")
+E   NotImplementedError: LocalHour parsing is not implemented
+____________ test_all_whole_hours_without_business_hours_limit[15] ____________
+tests\unit\test_calendar.py:17: in test_all_whole_hours_without_business_hours_limit
+    parsed = parse_local_hour(f"2026-11-12T{hour:02}")
+             ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+src\car_rental\calendar.py:7: in parse_local_hour
+    raise NotImplementedError("LocalHour parsing is not implemented")
+E   NotImplementedError: LocalHour parsing is not implemented
+____________ test_all_whole_hours_without_business_hours_limit[16] ____________
+tests\unit\test_calendar.py:17: in test_all_whole_hours_without_business_hours_limit
+    parsed = parse_local_hour(f"2026-11-12T{hour:02}")
+             ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+src\car_rental\calendar.py:7: in parse_local_hour
+    raise NotImplementedError("LocalHour parsing is not implemented")
+E   NotImplementedError: LocalHour parsing is not implemented
+____________ test_all_whole_hours_without_business_hours_limit[17] ____________
+tests\unit\test_calendar.py:17: in test_all_whole_hours_without_business_hours_limit
+    parsed = parse_local_hour(f"2026-11-12T{hour:02}")
+             ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+src\car_rental\calendar.py:7: in parse_local_hour
+    raise NotImplementedError("LocalHour parsing is not implemented")
+E   NotImplementedError: LocalHour parsing is not implemented
+____________ test_all_whole_hours_without_business_hours_limit[18] ____________
+tests\unit\test_calendar.py:17: in test_all_whole_hours_without_business_hours_limit
+    parsed = parse_local_hour(f"2026-11-12T{hour:02}")
+             ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+src\car_rental\calendar.py:7: in parse_local_hour
+    raise NotImplementedError("LocalHour parsing is not implemented")
+E   NotImplementedError: LocalHour parsing is not implemented
+____________ test_all_whole_hours_without_business_hours_limit[19] ____________
+tests\unit\test_calendar.py:17: in test_all_whole_hours_without_business_hours_limit
+    parsed = parse_local_hour(f"2026-11-12T{hour:02}")
+             ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+src\car_rental\calendar.py:7: in parse_local_hour
+    raise NotImplementedError("LocalHour parsing is not implemented")
+E   NotImplementedError: LocalHour parsing is not implemented
+____________ test_all_whole_hours_without_business_hours_limit[20] ____________
+tests\unit\test_calendar.py:17: in test_all_whole_hours_without_business_hours_limit
+    parsed = parse_local_hour(f"2026-11-12T{hour:02}")
+             ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+src\car_rental\calendar.py:7: in parse_local_hour
+    raise NotImplementedError("LocalHour parsing is not implemented")
+E   NotImplementedError: LocalHour parsing is not implemented
+____________ test_all_whole_hours_without_business_hours_limit[21] ____________
+tests\unit\test_calendar.py:17: in test_all_whole_hours_without_business_hours_limit
+    parsed = parse_local_hour(f"2026-11-12T{hour:02}")
+             ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+src\car_rental\calendar.py:7: in parse_local_hour
+    raise NotImplementedError("LocalHour parsing is not implemented")
+E   NotImplementedError: LocalHour parsing is not implemented
+____________ test_all_whole_hours_without_business_hours_limit[22] ____________
+tests\unit\test_calendar.py:17: in test_all_whole_hours_without_business_hours_limit
+    parsed = parse_local_hour(f"2026-11-12T{hour:02}")
+             ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+src\car_rental\calendar.py:7: in parse_local_hour
+    raise NotImplementedError("LocalHour parsing is not implemented")
+E   NotImplementedError: LocalHour parsing is not implemented
+____________ test_all_whole_hours_without_business_hours_limit[23] ____________
+tests\unit\test_calendar.py:17: in test_all_whole_hours_without_business_hours_limit
+    parsed = parse_local_hour(f"2026-11-12T{hour:02}")
+             ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+src\car_rental\calendar.py:7: in parse_local_hour
+    raise NotImplementedError("LocalHour parsing is not implemented")
+E   NotImplementedError: LocalHour parsing is not implemented
+___ test_invalid_format_date_or_ambiguous_input_rejected[2026-11-12T09:00] ____
+tests\unit\test_calendar.py:32: in test_invalid_format_date_or_ambiguous_input_rejected
+    parse_local_hour(value)
+src\car_rental\calendar.py:7: in parse_local_hour
+    raise NotImplementedError("LocalHour parsing is not implemented")
+E   NotImplementedError: LocalHour parsing is not implemented
+___ test_invalid_format_date_or_ambiguous_input_rejected[2026-11-12T09:01] ____
+tests\unit\test_calendar.py:32: in test_invalid_format_date_or_ambiguous_input_rejected
+    parse_local_hour(value)
+src\car_rental\calendar.py:7: in parse_local_hour
+    raise NotImplementedError("LocalHour parsing is not implemented")
+E   NotImplementedError: LocalHour parsing is not implemented
+____ test_invalid_format_date_or_ambiguous_input_rejected[2026-11-12T09Z] _____
+tests\unit\test_calendar.py:32: in test_invalid_format_date_or_ambiguous_input_rejected
+    parse_local_hour(value)
+src\car_rental\calendar.py:7: in parse_local_hour
+    raise NotImplementedError("LocalHour parsing is not implemented")
+E   NotImplementedError: LocalHour parsing is not implemented
+__ test_invalid_format_date_or_ambiguous_input_rejected[2026-11-12T09+02:00] __
+tests\unit\test_calendar.py:32: in test_invalid_format_date_or_ambiguous_input_rejected
+    parse_local_hour(value)
+src\car_rental\calendar.py:7: in parse_local_hour
+    raise NotImplementedError("LocalHour parsing is not implemented")
+E   NotImplementedError: LocalHour parsing is not implemented
+_____ test_invalid_format_date_or_ambiguous_input_rejected[2026-11-12T24] _____
+tests\unit\test_calendar.py:32: in test_invalid_format_date_or_ambiguous_input_rejected
+    parse_local_hour(value)
+src\car_rental\calendar.py:7: in parse_local_hour
+    raise NotImplementedError("LocalHour parsing is not implemented")
+E   NotImplementedError: LocalHour parsing is not implemented
+_____ test_invalid_format_date_or_ambiguous_input_rejected[2026-02-30T09] _____
+tests\unit\test_calendar.py:32: in test_invalid_format_date_or_ambiguous_input_rejected
+    parse_local_hour(value)
+src\car_rental\calendar.py:7: in parse_local_hour
+    raise NotImplementedError("LocalHour parsing is not implemented")
+E   NotImplementedError: LocalHour parsing is not implemented
+_____ test_invalid_format_date_or_ambiguous_input_rejected[2025-02-29T09] _____
+tests\unit\test_calendar.py:32: in test_invalid_format_date_or_ambiguous_input_rejected
+    parse_local_hour(value)
+src\car_rental\calendar.py:7: in parse_local_hour
+    raise NotImplementedError("LocalHour parsing is not implemented")
+E   NotImplementedError: LocalHour parsing is not implemented
+_____ test_invalid_format_date_or_ambiguous_input_rejected[2026-00-12T09] _____
+tests\unit\test_calendar.py:32: in test_invalid_format_date_or_ambiguous_input_rejected
+    parse_local_hour(value)
+src\car_rental\calendar.py:7: in parse_local_hour
+    raise NotImplementedError("LocalHour parsing is not implemented")
+E   NotImplementedError: LocalHour parsing is not implemented
+_____ test_invalid_format_date_or_ambiguous_input_rejected[2026-13-12T09] _____
+tests\unit\test_calendar.py:32: in test_invalid_format_date_or_ambiguous_input_rejected
+    parse_local_hour(value)
+src\car_rental\calendar.py:7: in parse_local_hour
+    raise NotImplementedError("LocalHour parsing is not implemented")
+E   NotImplementedError: LocalHour parsing is not implemented
+_____ test_invalid_format_date_or_ambiguous_input_rejected[0000-01-01T00] _____
+tests\unit\test_calendar.py:32: in test_invalid_format_date_or_ambiguous_input_rejected
+    parse_local_hour(value)
+src\car_rental\calendar.py:7: in parse_local_hour
+    raise NotImplementedError("LocalHour parsing is not implemented")
+E   NotImplementedError: LocalHour parsing is not implemented
+____ test_invalid_format_date_or_ambiguous_input_rejected[ 2026-11-12T09] _____
+tests\unit\test_calendar.py:32: in test_invalid_format_date_or_ambiguous_input_rejected
+    parse_local_hour(value)
+src\car_rental\calendar.py:7: in parse_local_hour
+    raise NotImplementedError("LocalHour parsing is not implemented")
+E   NotImplementedError: LocalHour parsing is not implemented
+____ test_invalid_format_date_or_ambiguous_input_rejected[2026-11-12T09\n] ____
+tests\unit\test_calendar.py:32: in test_invalid_format_date_or_ambiguous_input_rejected
+    parse_local_hour(value)
+src\car_rental\calendar.py:7: in parse_local_hour
+    raise NotImplementedError("LocalHour parsing is not implemented")
+E   NotImplementedError: LocalHour parsing is not implemented
+_____ test_invalid_format_date_or_ambiguous_input_rejected[2026-3-01T09] ______
+tests\unit\test_calendar.py:32: in test_invalid_format_date_or_ambiguous_input_rejected
+    parse_local_hour(value)
+src\car_rental\calendar.py:7: in parse_local_hour
+    raise NotImplementedError("LocalHour parsing is not implemented")
+E   NotImplementedError: LocalHour parsing is not implemented
+_____ test_invalid_format_date_or_ambiguous_input_rejected[2026-03-29T03] _____
+tests\unit\test_calendar.py:32: in test_invalid_format_date_or_ambiguous_input_rejected
+    parse_local_hour(value)
+src\car_rental\calendar.py:7: in parse_local_hour
+    raise NotImplementedError("LocalHour parsing is not implemented")
+E   NotImplementedError: LocalHour parsing is not implemented
+_____ test_invalid_format_date_or_ambiguous_input_rejected[2026-10-25T03] _____
+tests\unit\test_calendar.py:32: in test_invalid_format_date_or_ambiguous_input_rejected
+    parse_local_hour(value)
+src\car_rental\calendar.py:7: in parse_local_hour
+    raise NotImplementedError("LocalHour parsing is not implemented")
+E   NotImplementedError: LocalHour parsing is not implemented
+_ test_boundaries_from_original_anchor[2026-03-28T03:00:00+02:00-1-2026-03-29T04:00:00+03:00] _
+tests\unit\test_calendar.py:45: in test_boundaries_from_original_anchor
+    assert calendar_boundary(datetime.fromisoformat(anchor), n).isoformat() == expected
+           ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+src\car_rental\calendar.py:11: in calendar_boundary
+    raise NotImplementedError("Calendar boundaries are not implemented")
+E   NotImplementedError: Calendar boundaries are not implemented
+_ test_boundaries_from_original_anchor[2026-03-28T03:00:00+02:00-2-2026-03-30T03:00:00+03:00] _
+tests\unit\test_calendar.py:45: in test_boundaries_from_original_anchor
+    assert calendar_boundary(datetime.fromisoformat(anchor), n).isoformat() == expected
+           ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+src\car_rental\calendar.py:11: in calendar_boundary
+    raise NotImplementedError("Calendar boundaries are not implemented")
+E   NotImplementedError: Calendar boundaries are not implemented
+_ test_boundaries_from_original_anchor[2026-10-24T03:00:00+03:00-1-2026-10-25T03:00:00+02:00] _
+tests\unit\test_calendar.py:45: in test_boundaries_from_original_anchor
+    assert calendar_boundary(datetime.fromisoformat(anchor), n).isoformat() == expected
+           ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+src\car_rental\calendar.py:11: in calendar_boundary
+    raise NotImplementedError("Calendar boundaries are not implemented")
+E   NotImplementedError: Calendar boundaries are not implemented
+_ test_boundaries_from_original_anchor[2026-02-27T03:00:00+02:00-30-2026-03-29T04:00:00+03:00] _
+tests\unit\test_calendar.py:45: in test_boundaries_from_original_anchor
+    assert calendar_boundary(datetime.fromisoformat(anchor), n).isoformat() == expected
+           ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+src\car_rental\calendar.py:11: in calendar_boundary
+    raise NotImplementedError("Calendar boundaries are not implemented")
+E   NotImplementedError: Calendar boundaries are not implemented
+_ test_boundaries_from_original_anchor[2025-12-29T03:00:00+02:00-90-2026-03-29T04:00:00+03:00] _
+tests\unit\test_calendar.py:45: in test_boundaries_from_original_anchor
+    assert calendar_boundary(datetime.fromisoformat(anchor), n).isoformat() == expected
+           ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+src\car_rental\calendar.py:11: in calendar_boundary
+    raise NotImplementedError("Calendar boundaries are not implemented")
+E   NotImplementedError: Calendar boundaries are not implemented
+_ test_boundaries_from_original_anchor[2026-01-01T09:27:35+02:00-90-2026-04-01T09:27:35+03:00] _
+tests\unit\test_calendar.py:45: in test_boundaries_from_original_anchor
+    assert calendar_boundary(datetime.fromisoformat(anchor), n).isoformat() == expected
+           ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+src\car_rental\calendar.py:11: in calendar_boundary
+    raise NotImplementedError("Calendar boundaries are not implemented")
+E   NotImplementedError: Calendar boundaries are not implemented
+_ test_rental_boundaries[2026-11-12T09-2026-11-13T09-2026-11-10T12:00:00+02:00-True] _
+tests\unit\test_calendar.py:71: in test_rental_boundaries
+    a, b = validate_rental(start, end, now=datetime.fromisoformat(now))
+           ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+src\car_rental\calendar.py:15: in validate_rental
+    raise NotImplementedError("Rental period validation is not implemented")
+E   NotImplementedError: Rental period validation is not implemented
+_ test_rental_boundaries[2026-11-12T09-2026-11-13T08-2026-11-10T12:00:00+02:00-False] _
+tests\unit\test_calendar.py:75: in test_rental_boundaries
+    validate_rental(start, end, now=datetime.fromisoformat(now))
+src\car_rental\calendar.py:15: in validate_rental
+    raise NotImplementedError("Rental period validation is not implemented")
+E   NotImplementedError: Rental period validation is not implemented
+_ test_rental_boundaries[2026-11-12T09-2026-12-12T09-2026-11-10T12:00:00+02:00-True] _
+tests\unit\test_calendar.py:71: in test_rental_boundaries
+    a, b = validate_rental(start, end, now=datetime.fromisoformat(now))
+           ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+src\car_rental\calendar.py:15: in validate_rental
+    raise NotImplementedError("Rental period validation is not implemented")
+E   NotImplementedError: Rental period validation is not implemented
+_ test_rental_boundaries[2026-11-12T09-2026-12-12T10-2026-11-10T12:00:00+02:00-False] _
+tests\unit\test_calendar.py:75: in test_rental_boundaries
+    validate_rental(start, end, now=datetime.fromisoformat(now))
+src\car_rental\calendar.py:15: in validate_rental
+    raise NotImplementedError("Rental period validation is not implemented")
+E   NotImplementedError: Rental period validation is not implemented
+_ test_rental_boundaries[2026-11-12T09-2026-11-12T09-2026-11-10T12:00:00+02:00-False] _
+tests\unit\test_calendar.py:75: in test_rental_boundaries
+    validate_rental(start, end, now=datetime.fromisoformat(now))
+src\car_rental\calendar.py:15: in validate_rental
+    raise NotImplementedError("Rental period validation is not implemented")
+E   NotImplementedError: Rental period validation is not implemented
+_ test_rental_boundaries[2026-11-12T09-2026-11-11T09-2026-11-10T12:00:00+02:00-False] _
+tests\unit\test_calendar.py:75: in test_rental_boundaries
+    validate_rental(start, end, now=datetime.fromisoformat(now))
+src\car_rental\calendar.py:15: in validate_rental
+    raise NotImplementedError("Rental period validation is not implemented")
+E   NotImplementedError: Rental period validation is not implemented
+_ test_rental_boundaries[2026-11-10T12-2026-11-11T12-2026-11-10T12:00:00+02:00-False] _
+tests\unit\test_calendar.py:75: in test_rental_boundaries
+    validate_rental(start, end, now=datetime.fromisoformat(now))
+src\car_rental\calendar.py:15: in validate_rental
+    raise NotImplementedError("Rental period validation is not implemented")
+E   NotImplementedError: Rental period validation is not implemented
+_ test_rental_boundaries[2026-11-10T11-2026-11-11T11-2026-11-10T12:00:00+02:00-False] _
+tests\unit\test_calendar.py:75: in test_rental_boundaries
+    validate_rental(start, end, now=datetime.fromisoformat(now))
+src\car_rental\calendar.py:15: in validate_rental
+    raise NotImplementedError("Rental period validation is not implemented")
+E   NotImplementedError: Rental period validation is not implemented
+_ test_rental_boundaries[2026-03-28T03-2026-03-29T02-2026-03-27T12:00:00+02:00-False] _
+tests\unit\test_calendar.py:75: in test_rental_boundaries
+    validate_rental(start, end, now=datetime.fromisoformat(now))
+src\car_rental\calendar.py:15: in validate_rental
+    raise NotImplementedError("Rental period validation is not implemented")
+E   NotImplementedError: Rental period validation is not implemented
+_ test_rental_boundaries[2026-03-28T03-2026-03-29T04-2026-03-27T12:00:00+02:00-True] _
+tests\unit\test_calendar.py:71: in test_rental_boundaries
+    a, b = validate_rental(start, end, now=datetime.fromisoformat(now))
+           ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+src\car_rental\calendar.py:15: in validate_rental
+    raise NotImplementedError("Rental period validation is not implemented")
+E   NotImplementedError: Rental period validation is not implemented
+_ test_rental_boundaries[2026-02-27T03-2026-03-29T04-2026-02-26T12:00:00+02:00-True] _
+tests\unit\test_calendar.py:71: in test_rental_boundaries
+    a, b = validate_rental(start, end, now=datetime.fromisoformat(now))
+           ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+src\car_rental\calendar.py:15: in validate_rental
+    raise NotImplementedError("Rental period validation is not implemented")
+E   NotImplementedError: Rental period validation is not implemented
+_ test_rental_boundaries[2026-02-27T03-2026-03-29T05-2026-02-26T12:00:00+02:00-False] _
+tests\unit\test_calendar.py:75: in test_rental_boundaries
+    validate_rental(start, end, now=datetime.fromisoformat(now))
+src\car_rental\calendar.py:15: in validate_rental
+    raise NotImplementedError("Rental period validation is not implemented")
+E   NotImplementedError: Rental period validation is not implemented
+_ test_rental_boundaries[2026-03-29T04-2026-03-30T04-2025-12-29T03:00:00+02:00-True] _
+tests\unit\test_calendar.py:71: in test_rental_boundaries
+    a, b = validate_rental(start, end, now=datetime.fromisoformat(now))
+           ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+src\car_rental\calendar.py:15: in validate_rental
+    raise NotImplementedError("Rental period validation is not implemented")
+E   NotImplementedError: Rental period validation is not implemented
+_ test_rental_boundaries[2026-03-29T05-2026-03-30T05-2025-12-29T03:00:00+02:00-False] _
+tests\unit\test_calendar.py:75: in test_rental_boundaries
+    validate_rental(start, end, now=datetime.fromisoformat(now))
+src\car_rental\calendar.py:15: in validate_rental
+    raise NotImplementedError("Rental period validation is not implemented")
+E   NotImplementedError: Rental period validation is not implemented
+_ test_rental_boundaries[2026-03-28T04-2026-03-29T04-2026-03-27T12:00:00+02:00-True] _
+tests\unit\test_calendar.py:71: in test_rental_boundaries
+    a, b = validate_rental(start, end, now=datetime.fromisoformat(now))
+           ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+src\car_rental\calendar.py:15: in validate_rental
+    raise NotImplementedError("Rental period validation is not implemented")
+E   NotImplementedError: Rental period validation is not implemented
+_ test_rental_boundaries[2026-10-24T04-2026-10-25T04-2026-10-23T12:00:00+03:00-True] _
+tests\unit\test_calendar.py:71: in test_rental_boundaries
+    a, b = validate_rental(start, end, now=datetime.fromisoformat(now))
+           ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+src\car_rental\calendar.py:15: in validate_rental
+    raise NotImplementedError("Rental period validation is not implemented")
+E   NotImplementedError: Rental period validation is not implemented
+_ test_rental_boundaries[2026-03-29T03-2026-03-30T04-2026-03-27T12:00:00+02:00-False] _
+tests\unit\test_calendar.py:75: in test_rental_boundaries
+    validate_rental(start, end, now=datetime.fromisoformat(now))
+src\car_rental\calendar.py:15: in validate_rental
+    raise NotImplementedError("Rental period validation is not implemented")
+E   NotImplementedError: Rental period validation is not implemented
+_ test_rental_boundaries[2026-10-24T03-2026-10-25T03-2026-10-23T12:00:00+03:00-False] _
+tests\unit\test_calendar.py:75: in test_rental_boundaries
+    validate_rental(start, end, now=datetime.fromisoformat(now))
+src\car_rental\calendar.py:15: in validate_rental
+    raise NotImplementedError("Rental period validation is not implemented")
+E   NotImplementedError: Rental period validation is not implemented
+=========================== short test summary info ===========================
+FAILED tests/unit/test_calendar.py::test_all_whole_hours_without_business_hours_limit[0]
+FAILED tests/unit/test_calendar.py::test_all_whole_hours_without_business_hours_limit[1]
+FAILED tests/unit/test_calendar.py::test_all_whole_hours_without_business_hours_limit[2]
+FAILED tests/unit/test_calendar.py::test_all_whole_hours_without_business_hours_limit[3]
+FAILED tests/unit/test_calendar.py::test_all_whole_hours_without_business_hours_limit[4]
+FAILED tests/unit/test_calendar.py::test_all_whole_hours_without_business_hours_limit[5]
+FAILED tests/unit/test_calendar.py::test_all_whole_hours_without_business_hours_limit[6]
+FAILED tests/unit/test_calendar.py::test_all_whole_hours_without_business_hours_limit[7]
+FAILED tests/unit/test_calendar.py::test_all_whole_hours_without_business_hours_limit[8]
+FAILED tests/unit/test_calendar.py::test_all_whole_hours_without_business_hours_limit[9]
+FAILED tests/unit/test_calendar.py::test_all_whole_hours_without_business_hours_limit[10]
+FAILED tests/unit/test_calendar.py::test_all_whole_hours_without_business_hours_limit[11]
+FAILED tests/unit/test_calendar.py::test_all_whole_hours_without_business_hours_limit[12]
+FAILED tests/unit/test_calendar.py::test_all_whole_hours_without_business_hours_limit[13]
+FAILED tests/unit/test_calendar.py::test_all_whole_hours_without_business_hours_limit[14]
+FAILED tests/unit/test_calendar.py::test_all_whole_hours_without_business_hours_limit[15]
+FAILED tests/unit/test_calendar.py::test_all_whole_hours_without_business_hours_limit[16]
+FAILED tests/unit/test_calendar.py::test_all_whole_hours_without_business_hours_limit[17]
+FAILED tests/unit/test_calendar.py::test_all_whole_hours_without_business_hours_limit[18]
+FAILED tests/unit/test_calendar.py::test_all_whole_hours_without_business_hours_limit[19]
+FAILED tests/unit/test_calendar.py::test_all_whole_hours_without_business_hours_limit[20]
+FAILED tests/unit/test_calendar.py::test_all_whole_hours_without_business_hours_limit[21]
+FAILED tests/unit/test_calendar.py::test_all_whole_hours_without_business_hours_limit[22]
+FAILED tests/unit/test_calendar.py::test_all_whole_hours_without_business_hours_limit[23]
+FAILED tests/unit/test_calendar.py::test_invalid_format_date_or_ambiguous_input_rejected[2026-11-12T09:00]
+FAILED tests/unit/test_calendar.py::test_invalid_format_date_or_ambiguous_input_rejected[2026-11-12T09:01]
+FAILED tests/unit/test_calendar.py::test_invalid_format_date_or_ambiguous_input_rejected[2026-11-12T09Z]
+FAILED tests/unit/test_calendar.py::test_invalid_format_date_or_ambiguous_input_rejected[2026-11-12T09+02:00]
+FAILED tests/unit/test_calendar.py::test_invalid_format_date_or_ambiguous_input_rejected[2026-11-12T24]
+FAILED tests/unit/test_calendar.py::test_invalid_format_date_or_ambiguous_input_rejected[2026-02-30T09]
+FAILED tests/unit/test_calendar.py::test_invalid_format_date_or_ambiguous_input_rejected[2025-02-29T09]
+FAILED tests/unit/test_calendar.py::test_invalid_format_date_or_ambiguous_input_rejected[2026-00-12T09]
+FAILED tests/unit/test_calendar.py::test_invalid_format_date_or_ambiguous_input_rejected[2026-13-12T09]
+FAILED tests/unit/test_calendar.py::test_invalid_format_date_or_ambiguous_input_rejected[0000-01-01T00]
+FAILED tests/unit/test_calendar.py::test_invalid_format_date_or_ambiguous_input_rejected[ 2026-11-12T09]
+FAILED tests/unit/test_calendar.py::test_invalid_format_date_or_ambiguous_input_rejected[2026-11-12T09\n]
+FAILED tests/unit/test_calendar.py::test_invalid_format_date_or_ambiguous_input_rejected[2026-3-01T09]
+FAILED tests/unit/test_calendar.py::test_invalid_format_date_or_ambiguous_input_rejected[2026-03-29T03]
+FAILED tests/unit/test_calendar.py::test_invalid_format_date_or_ambiguous_input_rejected[2026-10-25T03]
+FAILED tests/unit/test_calendar.py::test_boundaries_from_original_anchor[2026-03-28T03:00:00+02:00-1-2026-03-29T04:00:00+03:00]
+FAILED tests/unit/test_calendar.py::test_boundaries_from_original_anchor[2026-03-28T03:00:00+02:00-2-2026-03-30T03:00:00+03:00]
+FAILED tests/unit/test_calendar.py::test_boundaries_from_original_anchor[2026-10-24T03:00:00+03:00-1-2026-10-25T03:00:00+02:00]
+FAILED tests/unit/test_calendar.py::test_boundaries_from_original_anchor[2026-02-27T03:00:00+02:00-30-2026-03-29T04:00:00+03:00]
+FAILED tests/unit/test_calendar.py::test_boundaries_from_original_anchor[2025-12-29T03:00:00+02:00-90-2026-03-29T04:00:00+03:00]
+FAILED tests/unit/test_calendar.py::test_boundaries_from_original_anchor[2026-01-01T09:27:35+02:00-90-2026-04-01T09:27:35+03:00]
+FAILED tests/unit/test_calendar.py::test_rental_boundaries[2026-11-12T09-2026-11-13T09-2026-11-10T12:00:00+02:00-True]
+FAILED tests/unit/test_calendar.py::test_rental_boundaries[2026-11-12T09-2026-11-13T08-2026-11-10T12:00:00+02:00-False]
+FAILED tests/unit/test_calendar.py::test_rental_boundaries[2026-11-12T09-2026-12-12T09-2026-11-10T12:00:00+02:00-True]
+FAILED tests/unit/test_calendar.py::test_rental_boundaries[2026-11-12T09-2026-12-12T10-2026-11-10T12:00:00+02:00-False]
+FAILED tests/unit/test_calendar.py::test_rental_boundaries[2026-11-12T09-2026-11-12T09-2026-11-10T12:00:00+02:00-False]
+FAILED tests/unit/test_calendar.py::test_rental_boundaries[2026-11-12T09-2026-11-11T09-2026-11-10T12:00:00+02:00-False]
+FAILED tests/unit/test_calendar.py::test_rental_boundaries[2026-11-10T12-2026-11-11T12-2026-11-10T12:00:00+02:00-False]
+FAILED tests/unit/test_calendar.py::test_rental_boundaries[2026-11-10T11-2026-11-11T11-2026-11-10T12:00:00+02:00-False]
+FAILED tests/unit/test_calendar.py::test_rental_boundaries[2026-03-28T03-2026-03-29T02-2026-03-27T12:00:00+02:00-False]
+FAILED tests/unit/test_calendar.py::test_rental_boundaries[2026-03-28T03-2026-03-29T04-2026-03-27T12:00:00+02:00-True]
+FAILED tests/unit/test_calendar.py::test_rental_boundaries[2026-02-27T03-2026-03-29T04-2026-02-26T12:00:00+02:00-True]
+FAILED tests/unit/test_calendar.py::test_rental_boundaries[2026-02-27T03-2026-03-29T05-2026-02-26T12:00:00+02:00-False]
+FAILED tests/unit/test_calendar.py::test_rental_boundaries[2026-03-29T04-2026-03-30T04-2025-12-29T03:00:00+02:00-True]
+FAILED tests/unit/test_calendar.py::test_rental_boundaries[2026-03-29T05-2026-03-30T05-2025-12-29T03:00:00+02:00-False]
+FAILED tests/unit/test_calendar.py::test_rental_boundaries[2026-03-28T04-2026-03-29T04-2026-03-27T12:00:00+02:00-True]
+FAILED tests/unit/test_calendar.py::test_rental_boundaries[2026-10-24T04-2026-10-25T04-2026-10-23T12:00:00+03:00-True]
+FAILED tests/unit/test_calendar.py::test_rental_boundaries[2026-03-29T03-2026-03-30T04-2026-03-27T12:00:00+02:00-False]
+FAILED tests/unit/test_calendar.py::test_rental_boundaries[2026-10-24T03-2026-10-25T03-2026-10-23T12:00:00+03:00-False]
+63 failed in 0.63s

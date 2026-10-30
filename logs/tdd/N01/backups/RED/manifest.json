@@ -1,0 +1,33 @@
+{
+  "started_at": "2026-10-30T13:10:54.986371+00:00",
+  "finished_at": "2026-10-30T13:10:56.036715+00:00",
+  "command": [
+    ".venv-backend/Scripts/python.exe",
+    "-m",
+    "pytest",
+    "tests/unit/test_backups.py",
+    "-q",
+    "--tb=line",
+    "--assert=plain",
+    "--show-capture=no",
+    "-p",
+    "no:cacheprovider",
+    "--basetemp=.backend-setup/N01-backups-RED",
+    "--junitxml=logs/tdd/N01/backups/RED/junit.xml"
+  ],
+  "exit_code": 1,
+  "python": "3.14.0",
+  "pytest": "9.2.0",
+  "test_ids": [
+    {
+      "classname": "tests.unit.test_backups",
+      "name": "test_once_per_utc_day_and_restart_checkpoint",
+      "time": "0.004"
+    },
+    {
+      "classname": "tests.unit.test_backups",
+      "name": "test_failed_backup_can_retry_without_marking_success",
+      "time": "0.003"
+    }
+  ]
+}

@@ -1,0 +1,63 @@
+{
+  "started_at": "2026-10-30T12:50:47.382655+00:00",
+  "finished_at": "2026-10-30T12:50:49.926665+00:00",
+  "command": [
+    ".venv-backend/Scripts/python.exe",
+    "-m",
+    "pytest",
+    "tests/integration/test_accounts.py",
+    "-q",
+    "--tb=line",
+    "--assert=plain",
+    "--show-capture=no",
+    "-p",
+    "no:cacheprovider",
+    "--basetemp=.backend-setup/T02-CONTRACT-2",
+    "--junitxml=logs/tdd/T02/CONTRACT-2/junit.xml"
+  ],
+  "exit_code": 0,
+  "python": "3.14.0",
+  "pytest": "9.2.0",
+  "test_ids": [
+    {
+      "classname": "tests.integration.test_accounts",
+      "name": "test_registration_and_login_trim_case_unique",
+      "time": "0.312"
+    },
+    {
+      "classname": "tests.integration.test_accounts",
+      "name": "test_invalid_registration_does_not_create_record[patch0]",
+      "time": "0.074"
+    },
+    {
+      "classname": "tests.integration.test_accounts",
+      "name": "test_invalid_registration_does_not_create_record[patch1]",
+      "time": "0.063"
+    },
+    {
+      "classname": "tests.integration.test_accounts",
+      "name": "test_invalid_registration_does_not_create_record[patch2]",
+      "time": "0.068"
+    },
+    {
+      "classname": "tests.integration.test_accounts",
+      "name": "test_invalid_registration_does_not_create_record[patch3]",
+      "time": "0.066"
+    },
+    {
+      "classname": "tests.integration.test_accounts",
+      "name": "test_invalid_registration_does_not_create_record[patch4]",
+      "time": "0.166"
+    },
+    {
+      "classname": "tests.integration.test_accounts",
+      "name": "test_password_is_not_trimmed_and_eight_spaces_allowed",
+      "time": "0.155"
+    },
+    {
+      "classname": "tests.integration.test_accounts",
+      "name": "test_unknown_credentials_same_failure",
+      "time": "0.172"
+    }
+  ]
+}

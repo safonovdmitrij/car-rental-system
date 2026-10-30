@@ -1,0 +1,38 @@
+{
+  "started_at": "2026-10-30T12:52:32.174791+00:00",
+  "finished_at": "2026-10-30T12:52:34.763551+00:00",
+  "command": [
+    ".venv-backend/Scripts/python.exe",
+    "-m",
+    "pytest",
+    "tests/integration/test_lockout.py",
+    "-q",
+    "--tb=line",
+    "--assert=plain",
+    "--show-capture=no",
+    "-p",
+    "no:cacheprovider",
+    "--basetemp=.backend-setup/T04-RED",
+    "--junitxml=logs/tdd/T04/RED/junit.xml"
+  ],
+  "exit_code": 1,
+  "python": "3.14.0",
+  "pytest": "9.2.0",
+  "test_ids": [
+    {
+      "classname": "tests.integration.test_lockout",
+      "name": "test_fifth_failure_blocks_fixed_deadline_and_resets_without_success",
+      "time": "0.423"
+    },
+    {
+      "classname": "tests.integration.test_lockout",
+      "name": "test_success_resets_and_other_account_independent",
+      "time": "0.466"
+    },
+    {
+      "classname": "tests.integration.test_lockout",
+      "name": "test_parallel_failures_do_not_lose_counter_updates",
+      "time": "0.252"
+    }
+  ]
+}

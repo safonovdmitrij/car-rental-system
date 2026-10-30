@@ -1,0 +1,2 @@
+﻿# T02 technical TEST-GATE
+REQ-F-009–014/082/089, NF-006; matching AC, BDD-003/016; OP-04/05. User explicitly approved Argon2id m=19 MiB,t=2,p=1 and random salt in current conversation. Technical GO: real DB uniqueness, email trim/case, no auto login, salted hash parameters, 7/8 character boundary, password spaces unchanged, invalid role/blank fields, indistinguishable bad credentials. Expected RED absent registration/login routes. No human Validation/G-READY asserted.

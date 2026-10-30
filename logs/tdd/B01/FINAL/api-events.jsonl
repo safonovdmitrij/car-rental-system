@@ -1,0 +1,980 @@
+{"time": "2026-10-30T13:19:41.706361+00:00", "event": "request.start", "result": "started", "request_id": "92b5dce64888416a835cc2fa4d3e99ce", "method": "GET"}
+{"time": "2026-10-30T13:19:41.707895+00:00", "event": "request.end", "result": "error", "request_id": "92b5dce64888416a835cc2fa4d3e99ce", "status": 401, "duration_ms": 1.5377001836895943}
+{"time": "2026-10-30T13:19:42.021769+00:00", "event": "request.start", "result": "started", "request_id": "9572c3b75d6948249708bd5e46220c6b", "method": "PATCH"}
+{"time": "2026-10-30T13:19:42.022935+00:00", "event": "request.end", "result": "error", "request_id": "9572c3b75d6948249708bd5e46220c6b", "status": 401, "duration_ms": 1.1705998331308365}
+{"time": "2026-10-30T13:19:42.222768+00:00", "event": "request.start", "result": "started", "request_id": "c7b5eb071b5b465fa9a2bbfd662af069", "method": "PUT"}
+{"time": "2026-10-30T13:19:42.224820+00:00", "event": "request.end", "result": "error", "request_id": "c7b5eb071b5b465fa9a2bbfd662af069", "status": 401, "duration_ms": 2.0571001805365086}
+{"time": "2026-10-30T13:19:42.408789+00:00", "event": "request.start", "result": "started", "request_id": "38a4f4be4ef14493b1784e4f218c8a42", "method": "POST"}
+{"time": "2026-10-30T13:19:42.409758+00:00", "event": "request.end", "result": "error", "request_id": "38a4f4be4ef14493b1784e4f218c8a42", "status": 401, "duration_ms": 0.9713000617921352}
+{"time": "2026-10-30T13:19:42.573672+00:00", "event": "request.start", "result": "started", "request_id": "b081ba1bd39d4c60a136e28f9df2d0d4", "method": "POST"}
+{"time": "2026-10-30T13:19:42.575100+00:00", "event": "request.end", "result": "error", "request_id": "b081ba1bd39d4c60a136e28f9df2d0d4", "status": 401, "duration_ms": 1.4313999563455582}
+{"time": "2026-10-30T13:19:42.751082+00:00", "event": "request.start", "result": "started", "request_id": "6ad9e0227e16477eae5d40b8f0fe6062", "method": "GET"}
+{"time": "2026-10-30T13:19:42.751909+00:00", "event": "request.end", "result": "error", "request_id": "6ad9e0227e16477eae5d40b8f0fe6062", "status": 401, "duration_ms": 0.8282000198960304}
+{"time": "2026-10-30T13:19:42.916739+00:00", "event": "request.start", "result": "started", "request_id": "55b5c86bf165484a988a5df76e939ddc", "method": "GET"}
+{"time": "2026-10-30T13:19:42.917618+00:00", "event": "request.end", "result": "error", "request_id": "55b5c86bf165484a988a5df76e939ddc", "status": 401, "duration_ms": 0.8802996017038822}
+{"time": "2026-10-30T13:19:43.089616+00:00", "event": "request.start", "result": "started", "request_id": "8ea321bd9f4c4304a8ad364b431b8d73", "method": "POST"}
+{"time": "2026-10-30T13:19:43.090932+00:00", "event": "request.end", "result": "error", "request_id": "8ea321bd9f4c4304a8ad364b431b8d73", "status": 401, "duration_ms": 1.3184002600610256}
+{"time": "2026-10-30T13:19:43.252845+00:00", "event": "request.start", "result": "started", "request_id": "781116b60cc74f2199d58ab4aa3df7e7", "method": "GET"}
+{"time": "2026-10-30T13:19:43.253792+00:00", "event": "request.end", "result": "error", "request_id": "781116b60cc74f2199d58ab4aa3df7e7", "status": 401, "duration_ms": 0.952600035816431}
+{"time": "2026-10-30T13:19:43.417831+00:00", "event": "request.start", "result": "started", "request_id": "acc2e46820fc4a93ae56fb9770fdd64f", "method": "POST"}
+{"time": "2026-10-30T13:19:43.418906+00:00", "event": "request.end", "result": "error", "request_id": "acc2e46820fc4a93ae56fb9770fdd64f", "status": 401, "duration_ms": 1.046100165694952}
+{"time": "2026-10-30T13:19:43.672201+00:00", "event": "request.start", "result": "started", "request_id": "e94e49a591b7487382419f2d9414dda4", "method": "PATCH"}
+{"time": "2026-10-30T13:19:43.673319+00:00", "event": "request.end", "result": "error", "request_id": "e94e49a591b7487382419f2d9414dda4", "status": 401, "duration_ms": 1.1205999180674553}
+{"time": "2026-10-30T13:19:43.965817+00:00", "event": "request.start", "result": "started", "request_id": "acc5d87292384342a110cd08ab0e7426", "method": "DELETE"}
+{"time": "2026-10-30T13:19:43.966776+00:00", "event": "request.end", "result": "error", "request_id": "acc5d87292384342a110cd08ab0e7426", "status": 401, "duration_ms": 0.9615998715162277}
+{"time": "2026-10-30T13:19:44.134514+00:00", "event": "request.start", "result": "started", "request_id": "c2254ee49137475fb1c88d0cb672e0ba", "method": "GET"}
+{"time": "2026-10-30T13:19:44.135355+00:00", "event": "request.end", "result": "error", "request_id": "c2254ee49137475fb1c88d0cb672e0ba", "status": 401, "duration_ms": 0.8414997719228268}
+{"time": "2026-10-30T13:19:44.307479+00:00", "event": "request.start", "result": "started", "request_id": "fa8d4da733874ef09f4b8b19197454c6", "method": "GET"}
+{"time": "2026-10-30T13:19:44.308261+00:00", "event": "request.end", "result": "error", "request_id": "fa8d4da733874ef09f4b8b19197454c6", "status": 401, "duration_ms": 0.7841000333428383}
+{"time": "2026-10-30T13:19:44.644927+00:00", "event": "request.start", "result": "started", "request_id": "a7d6c901b61146a8bb88183633da27d3", "method": "POST"}
+{"time": "2026-10-30T13:19:44.646021+00:00", "event": "request.end", "result": "error", "request_id": "a7d6c901b61146a8bb88183633da27d3", "status": 401, "duration_ms": 1.095999963581562}
+{"time": "2026-10-30T13:19:44.808294+00:00", "event": "request.start", "result": "started", "request_id": "6a077fe7c5b34d9dbe4449d8d8caf54c", "method": "PATCH"}
+{"time": "2026-10-30T13:19:44.809472+00:00", "event": "request.end", "result": "error", "request_id": "6a077fe7c5b34d9dbe4449d8d8caf54c", "status": 401, "duration_ms": 1.1802003718912601}
+{"time": "2026-10-30T13:19:45.106414+00:00", "event": "request.start", "result": "started", "request_id": "3db9430ee1594c149f7e701b40ec013f", "method": "DELETE"}
+{"time": "2026-10-30T13:19:45.107746+00:00", "event": "request.end", "result": "error", "request_id": "3db9430ee1594c149f7e701b40ec013f", "status": 401, "duration_ms": 1.3390998356044292}
+{"time": "2026-10-30T13:19:45.290339+00:00", "event": "request.start", "result": "started", "request_id": "5acab4f1605242189aac29fa9344f937", "method": "POST"}
+{"time": "2026-10-30T13:19:45.378833+00:00", "event": "account.created", "result": "success", "request_id": "5acab4f1605242189aac29fa9344f937"}
+{"time": "2026-10-30T13:19:45.384191+00:00", "event": "request.end", "result": "success", "request_id": "5acab4f1605242189aac29fa9344f937", "status": 201, "duration_ms": 93.86179968714714}
+{"time": "2026-10-30T13:19:45.389931+00:00", "event": "request.start", "result": "started", "request_id": "a8dac2d3eda643688301c842e6372f2b", "method": "POST"}
+{"time": "2026-10-30T13:19:45.461763+00:00", "event": "session.created", "result": "success", "request_id": "a8dac2d3eda643688301c842e6372f2b"}
+{"time": "2026-10-30T13:19:45.463696+00:00", "event": "request.end", "result": "success", "request_id": "a8dac2d3eda643688301c842e6372f2b", "status": 201, "duration_ms": 73.76739988103509}
+{"time": "2026-10-30T13:19:45.470008+00:00", "event": "request.start", "result": "started", "request_id": "a6f1e9f1a0604ffa8b30f2d557c2d2ac", "method": "GET"}
+{"time": "2026-10-30T13:19:45.476708+00:00", "event": "request.end", "result": "error", "request_id": "a6f1e9f1a0604ffa8b30f2d557c2d2ac", "status": 403, "duration_ms": 6.700200028717518}
+{"time": "2026-10-30T13:19:45.638337+00:00", "event": "request.start", "result": "started", "request_id": "c062511deb1146168188040578762c98", "method": "POST"}
+{"time": "2026-10-30T13:19:45.700281+00:00", "event": "account.created", "result": "success", "request_id": "c062511deb1146168188040578762c98"}
+{"time": "2026-10-30T13:19:45.704484+00:00", "event": "request.end", "result": "success", "request_id": "c062511deb1146168188040578762c98", "status": 201, "duration_ms": 66.14700006321073}
+{"time": "2026-10-30T13:19:45.710728+00:00", "event": "request.start", "result": "started", "request_id": "5ec8ac2fd35d4f9083ff7abaee544047", "method": "POST"}
+{"time": "2026-10-30T13:19:45.770782+00:00", "event": "session.created", "result": "success", "request_id": "5ec8ac2fd35d4f9083ff7abaee544047"}
+{"time": "2026-10-30T13:19:45.772653+00:00", "event": "request.end", "result": "success", "request_id": "5ec8ac2fd35d4f9083ff7abaee544047", "status": 201, "duration_ms": 61.92689994350076}
+{"time": "2026-10-30T13:19:45.778544+00:00", "event": "request.start", "result": "started", "request_id": "c84bb77d3c1a4357852ad141c499657b", "method": "POST"}
+{"time": "2026-10-30T13:19:45.783011+00:00", "event": "request.end", "result": "error", "request_id": "c84bb77d3c1a4357852ad141c499657b", "status": 403, "duration_ms": 4.466899670660496}
+{"time": "2026-10-30T13:19:45.994521+00:00", "event": "request.start", "result": "started", "request_id": "4d424e86a2944f74998ca2dd7138ea3b", "method": "POST"}
+{"time": "2026-10-30T13:19:46.054629+00:00", "event": "account.created", "result": "success", "request_id": "4d424e86a2944f74998ca2dd7138ea3b"}
+{"time": "2026-10-30T13:19:46.057686+00:00", "event": "request.end", "result": "success", "request_id": "4d424e86a2944f74998ca2dd7138ea3b", "status": 201, "duration_ms": 63.167800195515156}
+{"time": "2026-10-30T13:19:46.062971+00:00", "event": "request.start", "result": "started", "request_id": "b0c6436b5dd242538342bb23506338c6", "method": "POST"}
+{"time": "2026-10-30T13:19:46.140356+00:00", "event": "session.created", "result": "success", "request_id": "b0c6436b5dd242538342bb23506338c6"}
+{"time": "2026-10-30T13:19:46.142293+00:00", "event": "request.end", "result": "success", "request_id": "b0c6436b5dd242538342bb23506338c6", "status": 201, "duration_ms": 79.3218002654612}
+{"time": "2026-10-30T13:19:46.148466+00:00", "event": "request.start", "result": "started", "request_id": "49894261fbf746c2bae66a7ea8a5a821", "method": "PATCH"}
+{"time": "2026-10-30T13:19:46.155231+00:00", "event": "request.end", "result": "error", "request_id": "49894261fbf746c2bae66a7ea8a5a821", "status": 403, "duration_ms": 6.76429970189929}
+{"time": "2026-10-30T13:19:46.341460+00:00", "event": "request.start", "result": "started", "request_id": "00101d0c438a42a69ff85584b0b6de3e", "method": "POST"}
+{"time": "2026-10-30T13:19:46.398598+00:00", "event": "account.created", "result": "success", "request_id": "00101d0c438a42a69ff85584b0b6de3e"}
+{"time": "2026-10-30T13:19:46.401319+00:00", "event": "request.end", "result": "success", "request_id": "00101d0c438a42a69ff85584b0b6de3e", "status": 201, "duration_ms": 59.8621997050941}
+{"time": "2026-10-30T13:19:46.406744+00:00", "event": "request.start", "result": "started", "request_id": "59b4cc611a4445bfbd0256d4d8e5c5c6", "method": "POST"}
+{"time": "2026-10-30T13:19:46.463801+00:00", "event": "session.created", "result": "success", "request_id": "59b4cc611a4445bfbd0256d4d8e5c5c6"}
+{"time": "2026-10-30T13:19:46.465707+00:00", "event": "request.end", "result": "success", "request_id": "59b4cc611a4445bfbd0256d4d8e5c5c6", "status": 201, "duration_ms": 58.966599870473146}
+{"time": "2026-10-30T13:19:46.472245+00:00", "event": "request.start", "result": "started", "request_id": "0ea4780ad42e4e18a8317c52351a5e20", "method": "DELETE"}
+{"time": "2026-10-30T13:19:46.477335+00:00", "event": "request.end", "result": "error", "request_id": "0ea4780ad42e4e18a8317c52351a5e20", "status": 403, "duration_ms": 5.090400110930204}
+{"time": "2026-10-30T13:19:46.647502+00:00", "event": "request.start", "result": "started", "request_id": "f6c3e27021d04da69e218497dd847d62", "method": "POST"}
+{"time": "2026-10-30T13:19:46.707879+00:00", "event": "account.created", "result": "success", "request_id": "f6c3e27021d04da69e218497dd847d62"}
+{"time": "2026-10-30T13:19:46.710743+00:00", "event": "request.end", "result": "success", "request_id": "f6c3e27021d04da69e218497dd847d62", "status": 201, "duration_ms": 63.243099953979254}
+{"time": "2026-10-30T13:19:46.715865+00:00", "event": "request.start", "result": "started", "request_id": "8ff0750180f04cd2b4ec0fa71bed4a71", "method": "POST"}
+{"time": "2026-10-30T13:19:46.775344+00:00", "event": "session.created", "result": "success", "request_id": "8ff0750180f04cd2b4ec0fa71bed4a71"}
+{"time": "2026-10-30T13:19:46.777234+00:00", "event": "request.end", "result": "success", "request_id": "8ff0750180f04cd2b4ec0fa71bed4a71", "status": 201, "duration_ms": 61.36919977143407}
+{"time": "2026-10-30T13:19:46.783376+00:00", "event": "request.start", "result": "started", "request_id": "2d7eb4cddf5c4a978bc7c9f48192719b", "method": "GET"}
+{"time": "2026-10-30T13:19:46.788735+00:00", "event": "request.end", "result": "error", "request_id": "2d7eb4cddf5c4a978bc7c9f48192719b", "status": 403, "duration_ms": 5.359500180929899}
+{"time": "2026-10-30T13:19:46.966712+00:00", "event": "request.start", "result": "started", "request_id": "b7888d55a2714d0fb1105c7b02a5a257", "method": "POST"}
+{"time": "2026-10-30T13:19:47.062708+00:00", "event": "account.created", "result": "success", "request_id": "b7888d55a2714d0fb1105c7b02a5a257"}
+{"time": "2026-10-30T13:19:47.065300+00:00", "event": "request.end", "result": "success", "request_id": "b7888d55a2714d0fb1105c7b02a5a257", "status": 201, "duration_ms": 98.5928000882268}
+{"time": "2026-10-30T13:19:47.071203+00:00", "event": "request.start", "result": "started", "request_id": "c93c08fd780e401e809d135c8e7b9d97", "method": "POST"}
+{"time": "2026-10-30T13:19:47.132048+00:00", "event": "session.created", "result": "success", "request_id": "c93c08fd780e401e809d135c8e7b9d97"}
+{"time": "2026-10-30T13:19:47.134006+00:00", "event": "request.end", "result": "success", "request_id": "c93c08fd780e401e809d135c8e7b9d97", "status": 201, "duration_ms": 62.81389994546771}
+{"time": "2026-10-30T13:19:47.140907+00:00", "event": "request.start", "result": "started", "request_id": "9740c22411104861a62e05bf4ef6b053", "method": "GET"}
+{"time": "2026-10-30T13:19:47.177161+00:00", "event": "request.end", "result": "error", "request_id": "9740c22411104861a62e05bf4ef6b053", "status": 403, "duration_ms": 36.2526997923851}
+{"time": "2026-10-30T13:19:47.358034+00:00", "event": "request.start", "result": "started", "request_id": "ce8a344e16ea4994888b2dbeec7fcaa2", "method": "POST"}
+{"time": "2026-10-30T13:19:47.416975+00:00", "event": "account.created", "result": "success", "request_id": "ce8a344e16ea4994888b2dbeec7fcaa2"}
+{"time": "2026-10-30T13:19:47.419985+00:00", "event": "request.end", "result": "success", "request_id": "ce8a344e16ea4994888b2dbeec7fcaa2", "status": 201, "duration_ms": 61.95760006085038}
+{"time": "2026-10-30T13:19:47.425205+00:00", "event": "request.start", "result": "started", "request_id": "d831aeaf339b451a91adeceb1c112af3", "method": "POST"}
+{"time": "2026-10-30T13:19:47.481890+00:00", "event": "session.created", "result": "success", "request_id": "d831aeaf339b451a91adeceb1c112af3"}
+{"time": "2026-10-30T13:19:47.483602+00:00", "event": "request.end", "result": "success", "request_id": "d831aeaf339b451a91adeceb1c112af3", "status": 201, "duration_ms": 58.396299835294485}
+{"time": "2026-10-30T13:19:47.490273+00:00", "event": "request.start", "result": "started", "request_id": "9ac90bda053345be89e0d3067394687c", "method": "POST"}
+{"time": "2026-10-30T13:19:47.495202+00:00", "event": "request.end", "result": "error", "request_id": "9ac90bda053345be89e0d3067394687c", "status": 403, "duration_ms": 4.929699935019016}
+{"time": "2026-10-30T13:19:47.662436+00:00", "event": "request.start", "result": "started", "request_id": "d740227fe5f54bbe988b844f45500ef1", "method": "POST"}
+{"time": "2026-10-30T13:19:47.721974+00:00", "event": "account.created", "result": "success", "request_id": "d740227fe5f54bbe988b844f45500ef1"}
+{"time": "2026-10-30T13:19:47.724921+00:00", "event": "request.end", "result": "success", "request_id": "d740227fe5f54bbe988b844f45500ef1", "status": 201, "duration_ms": 62.48699966818094}
+{"time": "2026-10-30T13:19:47.730159+00:00", "event": "request.start", "result": "started", "request_id": "9ad294a8cb5f447aa96b8f38f3f3aceb", "method": "POST"}
+{"time": "2026-10-30T13:19:47.787588+00:00", "event": "session.created", "result": "success", "request_id": "9ad294a8cb5f447aa96b8f38f3f3aceb"}
+{"time": "2026-10-30T13:19:47.789378+00:00", "event": "request.end", "result": "success", "request_id": "9ad294a8cb5f447aa96b8f38f3f3aceb", "status": 201, "duration_ms": 59.21859992668033}
+{"time": "2026-10-30T13:19:47.797159+00:00", "event": "request.start", "result": "started", "request_id": "25b8d306ddcc4e239b9bd7149a5e4f40", "method": "PATCH"}
+{"time": "2026-10-30T13:19:47.803992+00:00", "event": "request.end", "result": "error", "request_id": "25b8d306ddcc4e239b9bd7149a5e4f40", "status": 403, "duration_ms": 6.833199877291918}
+{"time": "2026-10-30T13:19:48.134911+00:00", "event": "request.start", "result": "started", "request_id": "6758073049354786a82faa399295643e", "method": "POST"}
+{"time": "2026-10-30T13:19:48.193074+00:00", "event": "account.created", "result": "success", "request_id": "6758073049354786a82faa399295643e"}
+{"time": "2026-10-30T13:19:48.195911+00:00", "event": "request.end", "result": "success", "request_id": "6758073049354786a82faa399295643e", "status": 201, "duration_ms": 61.004099901765585}
+{"time": "2026-10-30T13:19:48.201324+00:00", "event": "request.start", "result": "started", "request_id": "ea16b57d661a41e6ace58d1ac3207c33", "method": "POST"}
+{"time": "2026-10-30T13:19:48.279486+00:00", "event": "session.created", "result": "success", "request_id": "ea16b57d661a41e6ace58d1ac3207c33"}
+{"time": "2026-10-30T13:19:48.281756+00:00", "event": "request.end", "result": "success", "request_id": "ea16b57d661a41e6ace58d1ac3207c33", "status": 201, "duration_ms": 80.43029997497797}
+{"time": "2026-10-30T13:19:48.291554+00:00", "event": "request.start", "result": "started", "request_id": "6e2d4a7dd8244c099b66093343376b9b", "method": "DELETE"}
+{"time": "2026-10-30T13:19:48.299110+00:00", "event": "request.end", "result": "error", "request_id": "6e2d4a7dd8244c099b66093343376b9b", "status": 403, "duration_ms": 7.558400277048349}
+{"time": "2026-10-30T13:19:48.475319+00:00", "event": "request.start", "result": "started", "request_id": "1ea7d655c1994eef9c3a605e53495058", "method": "POST"}
+{"time": "2026-10-30T13:19:48.533986+00:00", "event": "account.created", "result": "success", "request_id": "1ea7d655c1994eef9c3a605e53495058"}
+{"time": "2026-10-30T13:19:48.537473+00:00", "event": "request.end", "result": "success", "request_id": "1ea7d655c1994eef9c3a605e53495058", "status": 201, "duration_ms": 62.15480016544461}
+{"time": "2026-10-30T13:19:48.548944+00:00", "event": "request.start", "result": "started", "request_id": "8737559411ed435a9a7de8b909d7e305", "method": "POST"}
+{"time": "2026-10-30T13:19:48.614621+00:00", "event": "session.created", "result": "success", "request_id": "8737559411ed435a9a7de8b909d7e305"}
+{"time": "2026-10-30T13:19:48.616511+00:00", "event": "request.end", "result": "success", "request_id": "8737559411ed435a9a7de8b909d7e305", "status": 201, "duration_ms": 67.56919994950294}
+{"time": "2026-10-30T13:19:48.624251+00:00", "event": "request.start", "result": "started", "request_id": "591558201f264dc2aea9f8669ff232c1", "method": "POST"}
+{"time": "2026-10-30T13:19:48.687919+00:00", "event": "account.created", "result": "success", "request_id": "591558201f264dc2aea9f8669ff232c1"}
+{"time": "2026-10-30T13:19:48.690019+00:00", "event": "request.end", "result": "success", "request_id": "591558201f264dc2aea9f8669ff232c1", "status": 201, "duration_ms": 65.77029963955283}
+{"time": "2026-10-30T13:19:48.695635+00:00", "event": "request.start", "result": "started", "request_id": "f1bccb35c365439e808d88d4f322edda", "method": "POST"}
+{"time": "2026-10-30T13:19:48.750689+00:00", "event": "session.created", "result": "success", "request_id": "f1bccb35c365439e808d88d4f322edda"}
+{"time": "2026-10-30T13:19:48.753207+00:00", "event": "request.end", "result": "success", "request_id": "f1bccb35c365439e808d88d4f322edda", "status": 201, "duration_ms": 57.57109960541129}
+{"time": "2026-10-30T13:19:48.763242+00:00", "event": "request.start", "result": "started", "request_id": "ab1200b2061c4b1d9d9f7a4c359f2c3b", "method": "POST"}
+{"time": "2026-10-30T13:19:48.796359+00:00", "event": "quote.created", "result": "success", "request_id": "ab1200b2061c4b1d9d9f7a4c359f2c3b"}
+{"time": "2026-10-30T13:19:48.796622+00:00", "event": "request.end", "result": "success", "request_id": "ab1200b2061c4b1d9d9f7a4c359f2c3b", "status": 200, "duration_ms": 33.381199929863214}
+{"time": "2026-10-30T13:19:48.803476+00:00", "event": "request.start", "result": "started", "request_id": "584cf5d5d37c4894aaf7c5de942429e2", "method": "POST"}
+{"time": "2026-10-30T13:19:48.821222+00:00", "event": "booking.created", "result": "success", "request_id": "584cf5d5d37c4894aaf7c5de942429e2"}
+{"time": "2026-10-30T13:19:48.826811+00:00", "event": "request.end", "result": "success", "request_id": "584cf5d5d37c4894aaf7c5de942429e2", "status": 201, "duration_ms": 23.338300175964832}
+{"time": "2026-10-30T13:19:48.833964+00:00", "event": "request.start", "result": "started", "request_id": "c9df592a457a45e3bdac4ff5051d0126", "method": "GET"}
+{"time": "2026-10-30T13:19:48.841893+00:00", "event": "request.end", "result": "error", "request_id": "c9df592a457a45e3bdac4ff5051d0126", "status": 404, "duration_ms": 7.926599588245153}
+{"time": "2026-10-30T13:19:48.848308+00:00", "event": "request.start", "result": "started", "request_id": "c39162e8103749b789637d68801ada75", "method": "GET"}
+{"time": "2026-10-30T13:19:48.853042+00:00", "event": "request.end", "result": "error", "request_id": "c39162e8103749b789637d68801ada75", "status": 404, "duration_ms": 4.734300076961517}
+{"time": "2026-10-30T13:19:49.021069+00:00", "event": "request.start", "result": "started", "request_id": "98b1d141c1e44b47b4c6d564bfa0a63e", "method": "POST"}
+{"time": "2026-10-30T13:19:49.081023+00:00", "event": "account.created", "result": "success", "request_id": "98b1d141c1e44b47b4c6d564bfa0a63e"}
+{"time": "2026-10-30T13:19:49.083636+00:00", "event": "request.end", "result": "success", "request_id": "98b1d141c1e44b47b4c6d564bfa0a63e", "status": 201, "duration_ms": 62.56849970668554}
+{"time": "2026-10-30T13:19:49.093490+00:00", "event": "request.start", "result": "started", "request_id": "1f5bd48ad1bc4b0ca97f31e8d5b26a65", "method": "POST"}
+{"time": "2026-10-30T13:19:49.147364+00:00", "event": "request.end", "result": "error", "request_id": "1f5bd48ad1bc4b0ca97f31e8d5b26a65", "status": 409, "duration_ms": 53.873099852353334}
+{"time": "2026-10-30T13:19:49.154583+00:00", "event": "request.start", "result": "started", "request_id": "a14071db2deb44af8d02a399dbfc5446", "method": "POST"}
+{"time": "2026-10-30T13:19:49.229492+00:00", "event": "session.created", "result": "success", "request_id": "a14071db2deb44af8d02a399dbfc5446"}
+{"time": "2026-10-30T13:19:49.231382+00:00", "event": "request.end", "result": "success", "request_id": "a14071db2deb44af8d02a399dbfc5446", "status": 201, "duration_ms": 76.80199993774295}
+{"time": "2026-10-30T13:19:49.419258+00:00", "event": "request.start", "result": "started", "request_id": "4e68cb3c79a54468aa248c7570142516", "method": "POST"}
+{"time": "2026-10-30T13:19:49.421387+00:00", "event": "request.end", "result": "error", "request_id": "4e68cb3c79a54468aa248c7570142516", "status": 422, "duration_ms": 2.122300211340189}
+{"time": "2026-10-30T13:19:49.586091+00:00", "event": "request.start", "result": "started", "request_id": "7369606bbf28446e9cf933242cd5c6ba", "method": "POST"}
+{"time": "2026-10-30T13:19:49.587548+00:00", "event": "request.end", "result": "error", "request_id": "7369606bbf28446e9cf933242cd5c6ba", "status": 422, "duration_ms": 1.4609000645577908}
+{"time": "2026-10-30T13:19:49.782190+00:00", "event": "request.start", "result": "started", "request_id": "8a0412bdea3046279693742c8eaa5607", "method": "POST"}
+{"time": "2026-10-30T13:19:49.784367+00:00", "event": "request.end", "result": "error", "request_id": "8a0412bdea3046279693742c8eaa5607", "status": 422, "duration_ms": 2.1795001812279224}
+{"time": "2026-10-30T13:19:49.989582+00:00", "event": "request.start", "result": "started", "request_id": "a4b764eb9b624f53a7d8ccce6531d481", "method": "POST"}
+{"time": "2026-10-30T13:19:49.991172+00:00", "event": "request.end", "result": "error", "request_id": "a4b764eb9b624f53a7d8ccce6531d481", "status": 422, "duration_ms": 1.5924996696412563}
+{"time": "2026-10-30T13:19:50.158291+00:00", "event": "request.start", "result": "started", "request_id": "c3447b78ee3c45d99986771359f523cd", "method": "POST"}
+{"time": "2026-10-30T13:19:50.159872+00:00", "event": "request.end", "result": "error", "request_id": "c3447b78ee3c45d99986771359f523cd", "status": 422, "duration_ms": 1.582400407642126}
+{"time": "2026-10-30T13:19:50.356070+00:00", "event": "request.start", "result": "started", "request_id": "3fd34fb2ad3c4db88be06a1e50d3bfb1", "method": "POST"}
+{"time": "2026-10-30T13:19:50.410938+00:00", "event": "account.created", "result": "success", "request_id": "3fd34fb2ad3c4db88be06a1e50d3bfb1"}
+{"time": "2026-10-30T13:19:50.414306+00:00", "event": "request.end", "result": "success", "request_id": "3fd34fb2ad3c4db88be06a1e50d3bfb1", "status": 201, "duration_ms": 58.23859991505742}
+{"time": "2026-10-30T13:19:50.420742+00:00", "event": "request.start", "result": "started", "request_id": "41f50dc65e5441bab8e861ec85af06fa", "method": "POST"}
+{"time": "2026-10-30T13:19:50.481353+00:00", "event": "session.created", "result": "success", "request_id": "41f50dc65e5441bab8e861ec85af06fa"}
+{"time": "2026-10-30T13:19:50.483268+00:00", "event": "request.end", "result": "success", "request_id": "41f50dc65e5441bab8e861ec85af06fa", "status": 201, "duration_ms": 62.526899855583906}
+{"time": "2026-10-30T13:19:50.489262+00:00", "event": "request.start", "result": "started", "request_id": "a7c1d35484724441b29e5b6915f4a70f", "method": "POST"}
+{"time": "2026-10-30T13:19:50.560947+00:00", "event": "login.failed", "result": "error", "request_id": "a7c1d35484724441b29e5b6915f4a70f"}
+{"time": "2026-10-30T13:19:50.561480+00:00", "event": "request.end", "result": "error", "request_id": "a7c1d35484724441b29e5b6915f4a70f", "status": 401, "duration_ms": 72.21799995750189}
+{"time": "2026-10-30T13:19:50.754067+00:00", "event": "request.start", "result": "started", "request_id": "1249ee1823c743e8bd9fb2623fbae831", "method": "POST"}
+{"time": "2026-10-30T13:19:50.759756+00:00", "event": "login.failed", "result": "error", "request_id": "1249ee1823c743e8bd9fb2623fbae831"}
+{"time": "2026-10-30T13:19:50.760233+00:00", "event": "request.end", "result": "error", "request_id": "1249ee1823c743e8bd9fb2623fbae831", "status": 401, "duration_ms": 6.168900057673454}
+{"time": "2026-10-30T13:19:50.929032+00:00", "event": "request.start", "result": "started", "request_id": "788cc11e39f74d14884b7fc1d1e175ae", "method": "PUT"}
+{"time": "2026-10-30T13:19:50.929437+00:00", "event": "request.end", "result": "error", "request_id": "788cc11e39f74d14884b7fc1d1e175ae", "status": 405, "duration_ms": 0.4056999459862709}
+{"time": "2026-10-30T13:19:51.211192+00:00", "event": "request.start", "result": "started", "request_id": "2be93d27a72a43828091ba6a6b39d9e0", "method": "GET"}
+{"time": "2026-10-30T13:19:51.214799+00:00", "event": "request.end", "result": "error", "request_id": "2be93d27a72a43828091ba6a6b39d9e0", "status": 503, "duration_ms": 3.610599786043167}
+{"time": "2026-10-30T13:19:51.396943+00:00", "event": "request.start", "result": "started", "request_id": "76668dcaa22e48b3bfd9700d2a09054a", "method": "POST"}
+{"time": "2026-10-30T13:19:51.399002+00:00", "event": "request.end", "result": "error", "request_id": "76668dcaa22e48b3bfd9700d2a09054a", "status": 400, "duration_ms": 2.063499763607979}
+{"time": "2026-10-30T13:19:51.684384+00:00", "event": "request.start", "result": "started", "request_id": "e84fa3edc9284842af6394d66915776f", "method": "POST"}
+{"time": "2026-10-30T13:19:51.751333+00:00", "event": "account.created", "result": "success", "request_id": "e84fa3edc9284842af6394d66915776f"}
+{"time": "2026-10-30T13:19:51.755214+00:00", "event": "request.end", "result": "success", "request_id": "e84fa3edc9284842af6394d66915776f", "status": 201, "duration_ms": 70.83369977772236}
+{"time": "2026-10-30T13:19:51.762209+00:00", "event": "request.start", "result": "started", "request_id": "19b1e8199feb4bbdaabc5ded55a84d54", "method": "POST"}
+{"time": "2026-10-30T13:19:51.847068+00:00", "event": "session.created", "result": "success", "request_id": "19b1e8199feb4bbdaabc5ded55a84d54"}
+{"time": "2026-10-30T13:19:51.849154+00:00", "event": "request.end", "result": "success", "request_id": "19b1e8199feb4bbdaabc5ded55a84d54", "status": 201, "duration_ms": 86.94499963894486}
+{"time": "2026-10-30T13:19:51.860018+00:00", "event": "request.start", "result": "started", "request_id": "9135ec8584924e548e3848d08100f9e4", "method": "POST"}
+{"time": "2026-10-30T13:19:51.875197+00:00", "event": "quote.created", "result": "success", "request_id": "9135ec8584924e548e3848d08100f9e4"}
+{"time": "2026-10-30T13:19:51.875439+00:00", "event": "request.end", "result": "success", "request_id": "9135ec8584924e548e3848d08100f9e4", "status": 200, "duration_ms": 15.422999858856201}
+{"time": "2026-10-30T13:19:51.882340+00:00", "event": "request.start", "result": "started", "request_id": "79f56fc41c894aec8f053807bd62c0f5", "method": "POST"}
+{"time": "2026-10-30T13:19:51.899222+00:00", "event": "booking.created", "result": "success", "request_id": "79f56fc41c894aec8f053807bd62c0f5"}
+{"time": "2026-10-30T13:19:51.906528+00:00", "event": "request.end", "result": "success", "request_id": "79f56fc41c894aec8f053807bd62c0f5", "status": 201, "duration_ms": 24.186499882489443}
+{"time": "2026-10-30T13:19:51.915287+00:00", "event": "request.start", "result": "started", "request_id": "deeaf32a9bee4b47a0d83ecd19a7d15d", "method": "POST"}
+{"time": "2026-10-30T13:19:51.976008+00:00", "event": "account.created", "result": "success", "request_id": "deeaf32a9bee4b47a0d83ecd19a7d15d"}
+{"time": "2026-10-30T13:19:51.978226+00:00", "event": "request.end", "result": "success", "request_id": "deeaf32a9bee4b47a0d83ecd19a7d15d", "status": 201, "duration_ms": 62.93969973921776}
+{"time": "2026-10-30T13:19:51.984868+00:00", "event": "request.start", "result": "started", "request_id": "beac350014db41bda465c4582cf84494", "method": "POST"}
+{"time": "2026-10-30T13:19:52.098609+00:00", "event": "session.created", "result": "success", "request_id": "beac350014db41bda465c4582cf84494"}
+{"time": "2026-10-30T13:19:52.100769+00:00", "event": "request.end", "result": "success", "request_id": "beac350014db41bda465c4582cf84494", "status": 201, "duration_ms": 115.90109998360276}
+{"time": "2026-10-30T13:19:52.108528+00:00", "event": "request.start", "result": "started", "request_id": "8a6c8db086c14cc0aeb4148b4cda4a97", "method": "POST"}
+{"time": "2026-10-30T13:19:52.114829+00:00", "event": "request.end", "result": "error", "request_id": "8a6c8db086c14cc0aeb4148b4cda4a97", "status": 404, "duration_ms": 6.30280002951622}
+{"time": "2026-10-30T13:19:52.124612+00:00", "event": "request.start", "result": "started", "request_id": "3c46902957a742149fb98a0f34c3934e", "method": "POST"}
+{"time": "2026-10-30T13:19:52.129748+00:00", "event": "request.end", "result": "error", "request_id": "3c46902957a742149fb98a0f34c3934e", "status": 404, "duration_ms": 5.142799578607082}
+{"time": "2026-10-30T13:19:52.136889+00:00", "event": "request.start", "result": "started", "request_id": "1709431a9e53490b8a0361dbf863d4b8", "method": "POST"}
+{"time": "2026-10-30T13:19:52.144962+00:00", "event": "request.end", "result": "error", "request_id": "1709431a9e53490b8a0361dbf863d4b8", "status": 422, "duration_ms": 8.073900360614061}
+{"time": "2026-10-30T13:19:52.435511+00:00", "event": "request.start", "result": "started", "request_id": "6c9013ccae4b467dbcadb8b9e8f6bc1b", "method": "POST"}
+{"time": "2026-10-30T13:19:52.509210+00:00", "event": "account.created", "result": "success", "request_id": "6c9013ccae4b467dbcadb8b9e8f6bc1b"}
+{"time": "2026-10-30T13:19:52.512528+00:00", "event": "request.end", "result": "success", "request_id": "6c9013ccae4b467dbcadb8b9e8f6bc1b", "status": 201, "duration_ms": 77.01930031180382}
+{"time": "2026-10-30T13:19:52.520315+00:00", "event": "request.start", "result": "started", "request_id": "43d49621c981494ba818a8047175935b", "method": "POST"}
+{"time": "2026-10-30T13:19:52.591707+00:00", "event": "session.created", "result": "success", "request_id": "43d49621c981494ba818a8047175935b"}
+{"time": "2026-10-30T13:19:52.593717+00:00", "event": "request.end", "result": "success", "request_id": "43d49621c981494ba818a8047175935b", "status": 201, "duration_ms": 73.40640015900135}
+{"time": "2026-10-30T13:19:52.609678+00:00", "event": "request.start", "result": "started", "request_id": "751936e9ff484847af85f1ff80bf33d3", "method": "POST"}
+{"time": "2026-10-30T13:19:52.625670+00:00", "event": "quote.created", "result": "success", "request_id": "751936e9ff484847af85f1ff80bf33d3"}
+{"time": "2026-10-30T13:19:52.625952+00:00", "event": "request.end", "result": "success", "request_id": "751936e9ff484847af85f1ff80bf33d3", "status": 200, "duration_ms": 16.307199839502573}
+{"time": "2026-10-30T13:19:52.632848+00:00", "event": "request.start", "result": "started", "request_id": "383c35f04f474bf0b619cbbcfd4f7f26", "method": "POST"}
+{"time": "2026-10-30T13:19:52.649813+00:00", "event": "booking.created", "result": "success", "request_id": "383c35f04f474bf0b619cbbcfd4f7f26"}
+{"time": "2026-10-30T13:19:52.656696+00:00", "event": "request.end", "result": "success", "request_id": "383c35f04f474bf0b619cbbcfd4f7f26", "status": 201, "duration_ms": 23.843300063163042}
+{"time": "2026-10-30T13:19:52.665601+00:00", "event": "request.start", "result": "started", "request_id": "ebf25bb49275405e8e05f115fae9d871", "method": "POST"}
+{"time": "2026-10-30T13:19:52.735199+00:00", "event": "session.created", "result": "success", "request_id": "ebf25bb49275405e8e05f115fae9d871"}
+{"time": "2026-10-30T13:19:52.737838+00:00", "event": "request.end", "result": "success", "request_id": "ebf25bb49275405e8e05f115fae9d871", "status": 201, "duration_ms": 72.23669998347759}
+{"time": "2026-10-30T13:19:52.744733+00:00", "event": "request.start", "result": "started", "request_id": "be222c76042041aa9c2b5a83716b5235", "method": "POST"}
+{"time": "2026-10-30T13:19:52.755832+00:00", "event": "request.end", "result": "error", "request_id": "be222c76042041aa9c2b5a83716b5235", "status": 409, "duration_ms": 11.096300091594458}
+{"time": "2026-10-30T13:19:52.764487+00:00", "event": "request.start", "result": "started", "request_id": "7e232b26e5a844439e33aca036699634", "method": "GET"}
+{"time": "2026-10-30T13:19:52.771540+00:00", "event": "request.end", "result": "success", "request_id": "7e232b26e5a844439e33aca036699634", "status": 200, "duration_ms": 7.052099797874689}
+{"time": "2026-10-30T13:19:52.954064+00:00", "event": "request.start", "result": "started", "request_id": "5e22e31fbfdd4a9c82835099ee7bdd56", "method": "POST"}
+{"time": "2026-10-30T13:19:53.010731+00:00", "event": "account.created", "result": "success", "request_id": "5e22e31fbfdd4a9c82835099ee7bdd56"}
+{"time": "2026-10-30T13:19:53.013703+00:00", "event": "request.end", "result": "success", "request_id": "5e22e31fbfdd4a9c82835099ee7bdd56", "status": 201, "duration_ms": 59.6461002714932}
+{"time": "2026-10-30T13:19:53.020506+00:00", "event": "request.start", "result": "started", "request_id": "8c3befb24b3743329524c4dcc1a0a9e1", "method": "POST"}
+{"time": "2026-10-30T13:19:53.115694+00:00", "event": "session.created", "result": "success", "request_id": "8c3befb24b3743329524c4dcc1a0a9e1"}
+{"time": "2026-10-30T13:19:53.117745+00:00", "event": "request.end", "result": "success", "request_id": "8c3befb24b3743329524c4dcc1a0a9e1", "status": 201, "duration_ms": 97.2391995601356}
+{"time": "2026-10-30T13:19:53.129240+00:00", "event": "request.start", "result": "started", "request_id": "f6374eb379794afba5b6ed160b980a33", "method": "POST"}
+{"time": "2026-10-30T13:19:53.145636+00:00", "event": "quote.created", "result": "success", "request_id": "f6374eb379794afba5b6ed160b980a33"}
+{"time": "2026-10-30T13:19:53.145938+00:00", "event": "request.end", "result": "success", "request_id": "f6374eb379794afba5b6ed160b980a33", "status": 200, "duration_ms": 16.701399814337492}
+{"time": "2026-10-30T13:19:53.154715+00:00", "event": "request.start", "result": "started", "request_id": "9731b72b033e42b9bd056142a809c64a", "method": "POST"}
+{"time": "2026-10-30T13:19:53.172611+00:00", "event": "booking.created", "result": "success", "request_id": "9731b72b033e42b9bd056142a809c64a"}
+{"time": "2026-10-30T13:19:53.180004+00:00", "event": "request.end", "result": "success", "request_id": "9731b72b033e42b9bd056142a809c64a", "status": 201, "duration_ms": 25.28940001502633}
+{"time": "2026-10-30T13:19:53.364801+00:00", "event": "request.start", "result": "started", "request_id": "3755960a17ae498992fa770f7673a9ff", "method": "POST"}
+{"time": "2026-10-30T13:19:53.426716+00:00", "event": "account.created", "result": "success", "request_id": "3755960a17ae498992fa770f7673a9ff"}
+{"time": "2026-10-30T13:19:53.430125+00:00", "event": "request.end", "result": "success", "request_id": "3755960a17ae498992fa770f7673a9ff", "status": 201, "duration_ms": 65.32680010423064}
+{"time": "2026-10-30T13:19:53.436601+00:00", "event": "request.start", "result": "started", "request_id": "346dca5692344086a0f6c1b271838f96", "method": "POST"}
+{"time": "2026-10-30T13:19:53.504132+00:00", "event": "session.created", "result": "success", "request_id": "346dca5692344086a0f6c1b271838f96"}
+{"time": "2026-10-30T13:19:53.506059+00:00", "event": "request.end", "result": "success", "request_id": "346dca5692344086a0f6c1b271838f96", "status": 201, "duration_ms": 69.45790024474263}
+{"time": "2026-10-30T13:19:53.515802+00:00", "event": "request.start", "result": "started", "request_id": "462078b60f5d4d239336ca200990d614", "method": "POST"}
+{"time": "2026-10-30T13:19:53.529581+00:00", "event": "quote.created", "result": "success", "request_id": "462078b60f5d4d239336ca200990d614"}
+{"time": "2026-10-30T13:19:53.529783+00:00", "event": "request.end", "result": "success", "request_id": "462078b60f5d4d239336ca200990d614", "status": 200, "duration_ms": 13.982899952679873}
+{"time": "2026-10-30T13:19:53.539768+00:00", "event": "request.start", "result": "started", "request_id": "8b15916b8ab0459e8acb684dbc1a63f6", "method": "POST"}
+{"time": "2026-10-30T13:19:53.555505+00:00", "event": "booking.created", "result": "success", "request_id": "8b15916b8ab0459e8acb684dbc1a63f6"}
+{"time": "2026-10-30T13:19:53.557647+00:00", "event": "request.start", "result": "started", "request_id": "34cd2819f876484ebc0011e77a7aa6d9", "method": "POST"}
+{"time": "2026-10-30T13:19:53.562991+00:00", "event": "request.end", "result": "success", "request_id": "8b15916b8ab0459e8acb684dbc1a63f6", "status": 201, "duration_ms": 23.22460012510419}
+{"time": "2026-10-30T13:19:53.598273+00:00", "event": "request.end", "result": "error", "request_id": "34cd2819f876484ebc0011e77a7aa6d9", "status": 409, "duration_ms": 40.6309999525547}
+{"time": "2026-10-30T13:19:53.814161+00:00", "event": "request.start", "result": "started", "request_id": "5232f422f6b4455189b29444fc77297a", "method": "POST"}
+{"time": "2026-10-30T13:19:53.868902+00:00", "event": "account.created", "result": "success", "request_id": "5232f422f6b4455189b29444fc77297a"}
+{"time": "2026-10-30T13:19:53.872176+00:00", "event": "request.end", "result": "success", "request_id": "5232f422f6b4455189b29444fc77297a", "status": 201, "duration_ms": 58.017199859023094}
+{"time": "2026-10-30T13:19:53.878768+00:00", "event": "request.start", "result": "started", "request_id": "df908217e63a4035a3d1dca67ba6ddca", "method": "POST"}
+{"time": "2026-10-30T13:19:53.943921+00:00", "event": "session.created", "result": "success", "request_id": "df908217e63a4035a3d1dca67ba6ddca"}
+{"time": "2026-10-30T13:19:53.945635+00:00", "event": "request.end", "result": "success", "request_id": "df908217e63a4035a3d1dca67ba6ddca", "status": 201, "duration_ms": 66.86689984053373}
+{"time": "2026-10-30T13:19:53.955426+00:00", "event": "request.start", "result": "started", "request_id": "ce62c07b40484ce0a04d46c7476dc1c6", "method": "POST"}
+{"time": "2026-10-30T13:19:53.969074+00:00", "event": "quote.created", "result": "success", "request_id": "ce62c07b40484ce0a04d46c7476dc1c6"}
+{"time": "2026-10-30T13:19:53.969322+00:00", "event": "request.end", "result": "success", "request_id": "ce62c07b40484ce0a04d46c7476dc1c6", "status": 200, "duration_ms": 13.898099772632122}
+{"time": "2026-10-30T13:19:53.977188+00:00", "event": "request.start", "result": "started", "request_id": "323cea2c33124a90aabc9d0b3d94b7b3", "method": "POST"}
+{"time": "2026-10-30T13:19:53.985567+00:00", "event": "request.end", "result": "error", "request_id": "323cea2c33124a90aabc9d0b3d94b7b3", "status": 422, "duration_ms": 8.379600010812283}
+{"time": "2026-10-30T13:19:54.155490+00:00", "event": "request.start", "result": "started", "request_id": "2428b77e5b5f4355b0c09d9be294b8a2", "method": "POST"}
+{"time": "2026-10-30T13:19:54.221758+00:00", "event": "account.created", "result": "success", "request_id": "2428b77e5b5f4355b0c09d9be294b8a2"}
+{"time": "2026-10-30T13:19:54.224603+00:00", "event": "request.end", "result": "success", "request_id": "2428b77e5b5f4355b0c09d9be294b8a2", "status": 201, "duration_ms": 69.11469995975494}
+{"time": "2026-10-30T13:19:54.230959+00:00", "event": "request.start", "result": "started", "request_id": "a44f0a1420ca490894b2120d1d342aba", "method": "POST"}
+{"time": "2026-10-30T13:19:54.306805+00:00", "event": "session.created", "result": "success", "request_id": "a44f0a1420ca490894b2120d1d342aba"}
+{"time": "2026-10-30T13:19:54.308732+00:00", "event": "request.end", "result": "success", "request_id": "a44f0a1420ca490894b2120d1d342aba", "status": 201, "duration_ms": 77.77319988235831}
+{"time": "2026-10-30T13:19:54.319086+00:00", "event": "request.start", "result": "started", "request_id": "d6a0e7fa6b2e4bedb2ef89c626ae6486", "method": "POST"}
+{"time": "2026-10-30T13:19:54.333293+00:00", "event": "quote.created", "result": "success", "request_id": "d6a0e7fa6b2e4bedb2ef89c626ae6486"}
+{"time": "2026-10-30T13:19:54.333499+00:00", "event": "request.end", "result": "success", "request_id": "d6a0e7fa6b2e4bedb2ef89c626ae6486", "status": 200, "duration_ms": 14.417300000786781}
+{"time": "2026-10-30T13:19:54.341493+00:00", "event": "request.start", "result": "started", "request_id": "8f75d9b8c9cf43df8814b20faab7bc82", "method": "POST"}
+{"time": "2026-10-30T13:19:54.350747+00:00", "event": "request.end", "result": "error", "request_id": "8f75d9b8c9cf43df8814b20faab7bc82", "status": 422, "duration_ms": 9.255600161850452}
+{"time": "2026-10-30T13:19:54.533619+00:00", "event": "request.start", "result": "started", "request_id": "9fc2ef3a4b874f34b0c89a7afb4ed559", "method": "POST"}
+{"time": "2026-10-30T13:19:54.588835+00:00", "event": "account.created", "result": "success", "request_id": "9fc2ef3a4b874f34b0c89a7afb4ed559"}
+{"time": "2026-10-30T13:19:54.591940+00:00", "event": "request.end", "result": "success", "request_id": "9fc2ef3a4b874f34b0c89a7afb4ed559", "status": 201, "duration_ms": 58.323599863797426}
+{"time": "2026-10-30T13:19:54.598444+00:00", "event": "request.start", "result": "started", "request_id": "55f6323b5e5d4e7abd9b35b6d144d332", "method": "POST"}
+{"time": "2026-10-30T13:19:54.656286+00:00", "event": "session.created", "result": "success", "request_id": "55f6323b5e5d4e7abd9b35b6d144d332"}
+{"time": "2026-10-30T13:19:54.658167+00:00", "event": "request.end", "result": "success", "request_id": "55f6323b5e5d4e7abd9b35b6d144d332", "status": 201, "duration_ms": 59.72309969365597}
+{"time": "2026-10-30T13:19:54.673031+00:00", "event": "request.start", "result": "started", "request_id": "5adbc4de68b54de3b457a7873ca36fa8", "method": "POST"}
+{"time": "2026-10-30T13:19:54.688457+00:00", "event": "quote.created", "result": "success", "request_id": "5adbc4de68b54de3b457a7873ca36fa8"}
+{"time": "2026-10-30T13:19:54.688669+00:00", "event": "request.end", "result": "success", "request_id": "5adbc4de68b54de3b457a7873ca36fa8", "status": 200, "duration_ms": 15.641800127923489}
+{"time": "2026-10-30T13:19:54.696217+00:00", "event": "request.start", "result": "started", "request_id": "b024a982e84e44f69b7e5e7f2c5fa086", "method": "POST"}
+{"time": "2026-10-30T13:19:54.700347+00:00", "event": "request.end", "result": "error", "request_id": "b024a982e84e44f69b7e5e7f2c5fa086", "status": 422, "duration_ms": 4.13049990311265}
+{"time": "2026-10-30T13:19:55.089722+00:00", "event": "request.start", "result": "started", "request_id": "832fc13f97254f5db4d41a23ff2d781a", "method": "POST"}
+{"time": "2026-10-30T13:19:55.151337+00:00", "event": "account.created", "result": "success", "request_id": "832fc13f97254f5db4d41a23ff2d781a"}
+{"time": "2026-10-30T13:19:55.155096+00:00", "event": "request.end", "result": "success", "request_id": "832fc13f97254f5db4d41a23ff2d781a", "status": 201, "duration_ms": 65.37760002538562}
+{"time": "2026-10-30T13:19:55.161642+00:00", "event": "request.start", "result": "started", "request_id": "20ef1e57f23e49bc8b8d4568aac151df", "method": "POST"}
+{"time": "2026-10-30T13:19:55.220791+00:00", "event": "session.created", "result": "success", "request_id": "20ef1e57f23e49bc8b8d4568aac151df"}
+{"time": "2026-10-30T13:19:55.222703+00:00", "event": "request.end", "result": "success", "request_id": "20ef1e57f23e49bc8b8d4568aac151df", "status": 201, "duration_ms": 61.06099998578429}
+{"time": "2026-10-30T13:19:55.232792+00:00", "event": "request.start", "result": "started", "request_id": "9dcbd01a1a5d4d598bbd7c1670377b0d", "method": "POST"}
+{"time": "2026-10-30T13:19:55.247490+00:00", "event": "quote.created", "result": "success", "request_id": "9dcbd01a1a5d4d598bbd7c1670377b0d"}
+{"time": "2026-10-30T13:19:55.247730+00:00", "event": "request.end", "result": "success", "request_id": "9dcbd01a1a5d4d598bbd7c1670377b0d", "status": 200, "duration_ms": 14.939600136131048}
+{"time": "2026-10-30T13:19:55.259358+00:00", "event": "request.start", "result": "started", "request_id": "6668fdfa343947b9ab3ad5792ed1a430", "method": "POST"}
+{"time": "2026-10-30T13:19:55.270673+00:00", "event": "quote.price_changed", "result": "error", "request_id": "6668fdfa343947b9ab3ad5792ed1a430"}
+{"time": "2026-10-30T13:19:55.270902+00:00", "event": "request.end", "result": "error", "request_id": "6668fdfa343947b9ab3ad5792ed1a430", "status": 409, "duration_ms": 11.545700021088123}
+{"time": "2026-10-30T13:19:55.281823+00:00", "event": "request.start", "result": "started", "request_id": "4dcdfdce76e04d739b8c0b566ff1d3c6", "method": "POST"}
+{"time": "2026-10-30T13:19:55.294020+00:00", "event": "booking.created", "result": "success", "request_id": "4dcdfdce76e04d739b8c0b566ff1d3c6"}
+{"time": "2026-10-30T13:19:55.299363+00:00", "event": "request.end", "result": "success", "request_id": "4dcdfdce76e04d739b8c0b566ff1d3c6", "status": 201, "duration_ms": 17.53919990733266}
+{"time": "2026-10-30T13:19:55.471588+00:00", "event": "request.start", "result": "started", "request_id": "5d065f6c44554dee8b5494fbbc3b1a96", "method": "POST"}
+{"time": "2026-10-30T13:19:55.528541+00:00", "event": "account.created", "result": "success", "request_id": "5d065f6c44554dee8b5494fbbc3b1a96"}
+{"time": "2026-10-30T13:19:55.531211+00:00", "event": "request.end", "result": "success", "request_id": "5d065f6c44554dee8b5494fbbc3b1a96", "status": 201, "duration_ms": 59.624699875712395}
+{"time": "2026-10-30T13:19:55.538355+00:00", "event": "request.start", "result": "started", "request_id": "7f7681917da04232b2071f67409c9095", "method": "POST"}
+{"time": "2026-10-30T13:19:55.600906+00:00", "event": "session.created", "result": "success", "request_id": "7f7681917da04232b2071f67409c9095"}
+{"time": "2026-10-30T13:19:55.603069+00:00", "event": "request.end", "result": "success", "request_id": "7f7681917da04232b2071f67409c9095", "status": 201, "duration_ms": 64.71440009772778}
+{"time": "2026-10-30T13:19:55.613568+00:00", "event": "request.start", "result": "started", "request_id": "06ced11a86bf482c8541d060be3c0909", "method": "POST"}
+{"time": "2026-10-30T13:19:55.629381+00:00", "event": "quote.created", "result": "success", "request_id": "06ced11a86bf482c8541d060be3c0909"}
+{"time": "2026-10-30T13:19:55.629598+00:00", "event": "request.end", "result": "success", "request_id": "06ced11a86bf482c8541d060be3c0909", "status": 200, "duration_ms": 16.032500192523003}
+{"time": "2026-10-30T13:19:55.644947+00:00", "event": "request.start", "result": "started", "request_id": "b5dcaefa942e4c2193d000573b154929", "method": "POST"}
+{"time": "2026-10-30T13:19:55.654071+00:00", "event": "request.end", "result": "error", "request_id": "b5dcaefa942e4c2193d000573b154929", "status": 409, "duration_ms": 9.126000106334686}
+{"time": "2026-10-30T13:19:55.816771+00:00", "event": "request.start", "result": "started", "request_id": "2afae0b80f914e0e99d4e4563a805621", "method": "POST"}
+{"time": "2026-10-30T13:19:55.874136+00:00", "event": "account.created", "result": "success", "request_id": "2afae0b80f914e0e99d4e4563a805621"}
+{"time": "2026-10-30T13:19:55.876874+00:00", "event": "request.end", "result": "success", "request_id": "2afae0b80f914e0e99d4e4563a805621", "status": 201, "duration_ms": 60.10429980233312}
+{"time": "2026-10-30T13:19:55.883400+00:00", "event": "request.start", "result": "started", "request_id": "62bd4c9293184d4c89c4359065964002", "method": "POST"}
+{"time": "2026-10-30T13:19:55.940282+00:00", "event": "session.created", "result": "success", "request_id": "62bd4c9293184d4c89c4359065964002"}
+{"time": "2026-10-30T13:19:55.942264+00:00", "event": "request.end", "result": "success", "request_id": "62bd4c9293184d4c89c4359065964002", "status": 201, "duration_ms": 58.86430013924837}
+{"time": "2026-10-30T13:19:55.952684+00:00", "event": "request.start", "result": "started", "request_id": "deb6e88f123a4d43a292e3db4fc84bef", "method": "POST"}
+{"time": "2026-10-30T13:19:55.966138+00:00", "event": "quote.created", "result": "success", "request_id": "deb6e88f123a4d43a292e3db4fc84bef"}
+{"time": "2026-10-30T13:19:55.966335+00:00", "event": "request.end", "result": "success", "request_id": "deb6e88f123a4d43a292e3db4fc84bef", "status": 200, "duration_ms": 13.65310000255704}
+{"time": "2026-10-30T13:19:55.973490+00:00", "event": "request.start", "result": "started", "request_id": "8bf7757d1150483aaf3d628fa34af855", "method": "POST"}
+{"time": "2026-10-30T13:19:55.989710+00:00", "event": "booking.created", "result": "success", "request_id": "8bf7757d1150483aaf3d628fa34af855"}
+{"time": "2026-10-30T13:19:55.995657+00:00", "event": "request.end", "result": "success", "request_id": "8bf7757d1150483aaf3d628fa34af855", "status": 201, "duration_ms": 22.167500108480453}
+{"time": "2026-10-30T13:19:56.003812+00:00", "event": "request.start", "result": "started", "request_id": "9a02d1401f1843caa577bc899c4af768", "method": "POST"}
+{"time": "2026-10-30T13:19:56.059425+00:00", "event": "account.created", "result": "success", "request_id": "9a02d1401f1843caa577bc899c4af768"}
+{"time": "2026-10-30T13:19:56.061435+00:00", "event": "request.end", "result": "success", "request_id": "9a02d1401f1843caa577bc899c4af768", "status": 201, "duration_ms": 57.623700238764286}
+{"time": "2026-10-30T13:19:56.072983+00:00", "event": "request.start", "result": "started", "request_id": "b9fa2071a23b4a2e9743332f92f905e9", "method": "POST"}
+{"time": "2026-10-30T13:19:56.127664+00:00", "event": "session.created", "result": "success", "request_id": "b9fa2071a23b4a2e9743332f92f905e9"}
+{"time": "2026-10-30T13:19:56.129555+00:00", "event": "request.end", "result": "success", "request_id": "b9fa2071a23b4a2e9743332f92f905e9", "status": 201, "duration_ms": 56.572699919342995}
+{"time": "2026-10-30T13:19:56.137956+00:00", "event": "request.start", "result": "started", "request_id": "1073d3641fec41a08f6f9724cb4fa62f", "method": "GET"}
+{"time": "2026-10-30T13:19:56.144774+00:00", "event": "request.end", "result": "success", "request_id": "1073d3641fec41a08f6f9724cb4fa62f", "status": 200, "duration_ms": 6.8176002241671085}
+{"time": "2026-10-30T13:19:56.152904+00:00", "event": "request.start", "result": "started", "request_id": "70b9d481ab0b442ea1f4d26602505056", "method": "GET"}
+{"time": "2026-10-30T13:19:56.159127+00:00", "event": "request.end", "result": "success", "request_id": "70b9d481ab0b442ea1f4d26602505056", "status": 200, "duration_ms": 6.223800126463175}
+{"time": "2026-10-30T13:19:56.166566+00:00", "event": "request.start", "result": "started", "request_id": "1bcab81f7feb4616a189b2077d9430ee", "method": "PATCH"}
+{"time": "2026-10-30T13:19:56.172516+00:00", "event": "profile.updated", "result": "success", "request_id": "1bcab81f7feb4616a189b2077d9430ee"}
+{"time": "2026-10-30T13:19:56.174268+00:00", "event": "request.end", "result": "success", "request_id": "1bcab81f7feb4616a189b2077d9430ee", "status": 200, "duration_ms": 7.702100090682507}
+{"time": "2026-10-30T13:19:56.180590+00:00", "event": "request.start", "result": "started", "request_id": "2db680ca29e84d729b8d488eabfc9db1", "method": "GET"}
+{"time": "2026-10-30T13:19:56.187001+00:00", "event": "request.end", "result": "success", "request_id": "2db680ca29e84d729b8d488eabfc9db1", "status": 200, "duration_ms": 6.409599911421537}
+{"time": "2026-10-30T13:19:56.200235+00:00", "event": "request.start", "result": "started", "request_id": "ff9be41fbfae473e912a25014c69d142", "method": "GET"}
+{"time": "2026-10-30T13:19:56.207276+00:00", "event": "request.end", "result": "success", "request_id": "ff9be41fbfae473e912a25014c69d142", "status": 200, "duration_ms": 7.041200064122677}
+{"time": "2026-10-30T13:19:56.215199+00:00", "event": "request.start", "result": "started", "request_id": "48e931fc485047d29303fc46e7e66e24", "method": "GET"}
+{"time": "2026-10-30T13:19:56.222698+00:00", "event": "request.end", "result": "success", "request_id": "48e931fc485047d29303fc46e7e66e24", "status": 200, "duration_ms": 7.4986000545322895}
+{"time": "2026-10-30T13:19:56.392808+00:00", "event": "request.start", "result": "started", "request_id": "00407ae8d1704fefac33afe59742e1f5", "method": "POST"}
+{"time": "2026-10-30T13:19:56.466743+00:00", "event": "account.created", "result": "success", "request_id": "00407ae8d1704fefac33afe59742e1f5"}
+{"time": "2026-10-30T13:19:56.470330+00:00", "event": "request.end", "result": "success", "request_id": "00407ae8d1704fefac33afe59742e1f5", "status": 201, "duration_ms": 77.52340007573366}
+{"time": "2026-10-30T13:19:56.477341+00:00", "event": "request.start", "result": "started", "request_id": "91af5741e158460bb624b8c561b14eb9", "method": "POST"}
+{"time": "2026-10-30T13:19:56.550345+00:00", "event": "session.created", "result": "success", "request_id": "91af5741e158460bb624b8c561b14eb9"}
+{"time": "2026-10-30T13:19:56.552354+00:00", "event": "request.end", "result": "success", "request_id": "91af5741e158460bb624b8c561b14eb9", "status": 201, "duration_ms": 75.0121995806694}
+{"time": "2026-10-30T13:19:56.562266+00:00", "event": "request.start", "result": "started", "request_id": "acccb6c7ceea4ecf9ce831fa6db18e31", "method": "POST"}
+{"time": "2026-10-30T13:19:56.577300+00:00", "event": "quote.created", "result": "success", "request_id": "acccb6c7ceea4ecf9ce831fa6db18e31"}
+{"time": "2026-10-30T13:19:56.577522+00:00", "event": "request.end", "result": "success", "request_id": "acccb6c7ceea4ecf9ce831fa6db18e31", "status": 200, "duration_ms": 15.257200226187706}
+{"time": "2026-10-30T13:19:56.586900+00:00", "event": "request.start", "result": "started", "request_id": "5927e426b395482e816e99e5764d6e6f", "method": "POST"}
+{"time": "2026-10-30T13:19:56.604274+00:00", "event": "booking.created", "result": "success", "request_id": "5927e426b395482e816e99e5764d6e6f"}
+{"time": "2026-10-30T13:19:56.609621+00:00", "event": "request.end", "result": "success", "request_id": "5927e426b395482e816e99e5764d6e6f", "status": 201, "duration_ms": 22.724699694663286}
+{"time": "2026-10-30T13:19:56.617914+00:00", "event": "request.start", "result": "started", "request_id": "2643b6d27e8949ba98e7774401ece3ce", "method": "POST"}
+{"time": "2026-10-30T13:19:56.673737+00:00", "event": "account.created", "result": "success", "request_id": "2643b6d27e8949ba98e7774401ece3ce"}
+{"time": "2026-10-30T13:19:56.675748+00:00", "event": "request.end", "result": "success", "request_id": "2643b6d27e8949ba98e7774401ece3ce", "status": 201, "duration_ms": 57.83439986407757}
+{"time": "2026-10-30T13:19:56.682392+00:00", "event": "request.start", "result": "started", "request_id": "7dd29fe2e4d949a6a0ded9eb21fd794b", "method": "POST"}
+{"time": "2026-10-30T13:19:56.737692+00:00", "event": "session.created", "result": "success", "request_id": "7dd29fe2e4d949a6a0ded9eb21fd794b"}
+{"time": "2026-10-30T13:19:56.739776+00:00", "event": "request.end", "result": "success", "request_id": "7dd29fe2e4d949a6a0ded9eb21fd794b", "status": 201, "duration_ms": 57.382999919354916}
+{"time": "2026-10-30T13:19:56.746696+00:00", "event": "request.start", "result": "started", "request_id": "d21da70b50794464a2902a956624171e", "method": "GET"}
+{"time": "2026-10-30T13:19:56.753171+00:00", "event": "request.end", "result": "error", "request_id": "d21da70b50794464a2902a956624171e", "status": 404, "duration_ms": 6.475299596786499}
+{"time": "2026-10-30T13:19:56.760698+00:00", "event": "request.start", "result": "started", "request_id": "22f4dc3c94e14063a652049a6fc03f87", "method": "GET"}
+{"time": "2026-10-30T13:19:56.764885+00:00", "event": "request.end", "result": "error", "request_id": "22f4dc3c94e14063a652049a6fc03f87", "status": 404, "duration_ms": 4.188099876046181}
+{"time": "2026-10-30T13:19:56.772260+00:00", "event": "request.start", "result": "started", "request_id": "fcc727cacf684a37850b0b29c225ac4a", "method": "GET"}
+{"time": "2026-10-30T13:19:56.777785+00:00", "event": "request.end", "result": "success", "request_id": "fcc727cacf684a37850b0b29c225ac4a", "status": 200, "duration_ms": 5.525899585336447}
+{"time": "2026-10-30T13:19:56.784206+00:00", "event": "request.start", "result": "started", "request_id": "8f361927baeb4810aa089d4bff163f12", "method": "PATCH"}
+{"time": "2026-10-30T13:19:56.784797+00:00", "event": "request.end", "result": "error", "request_id": "8f361927baeb4810aa089d4bff163f12", "status": 405, "duration_ms": 0.5910000763833523}
+{"time": "2026-10-30T13:19:56.956346+00:00", "event": "request.start", "result": "started", "request_id": "af20b679c3994de3a1b357c1e825627d", "method": "POST"}
+{"time": "2026-10-30T13:19:57.029191+00:00", "event": "account.created", "result": "success", "request_id": "af20b679c3994de3a1b357c1e825627d"}
+{"time": "2026-10-30T13:19:57.032155+00:00", "event": "request.end", "result": "success", "request_id": "af20b679c3994de3a1b357c1e825627d", "status": 201, "duration_ms": 75.81140007823706}
+{"time": "2026-10-30T13:19:57.039507+00:00", "event": "request.start", "result": "started", "request_id": "8b09d321b8a14444bb5eea6f65c63d8b", "method": "POST"}
+{"time": "2026-10-30T13:19:57.097894+00:00", "event": "session.created", "result": "success", "request_id": "8b09d321b8a14444bb5eea6f65c63d8b"}
+{"time": "2026-10-30T13:19:57.099614+00:00", "event": "request.end", "result": "success", "request_id": "8b09d321b8a14444bb5eea6f65c63d8b", "status": 201, "duration_ms": 60.10829983279109}
+{"time": "2026-10-30T13:19:57.110020+00:00", "event": "request.start", "result": "started", "request_id": "f073926fab8947ee96c5ea0cab52640e", "method": "POST"}
+{"time": "2026-10-30T13:19:57.123907+00:00", "event": "quote.created", "result": "success", "request_id": "f073926fab8947ee96c5ea0cab52640e"}
+{"time": "2026-10-30T13:19:57.124112+00:00", "event": "request.end", "result": "success", "request_id": "f073926fab8947ee96c5ea0cab52640e", "status": 200, "duration_ms": 14.094999991357327}
+{"time": "2026-10-30T13:19:57.130954+00:00", "event": "request.start", "result": "started", "request_id": "afe0e6b3c35d414eab97ea3bf014070f", "method": "POST"}
+{"time": "2026-10-30T13:19:57.148171+00:00", "event": "booking.created", "result": "success", "request_id": "afe0e6b3c35d414eab97ea3bf014070f"}
+{"time": "2026-10-30T13:19:57.153667+00:00", "event": "request.end", "result": "success", "request_id": "afe0e6b3c35d414eab97ea3bf014070f", "status": 201, "duration_ms": 22.71150005981326}
+{"time": "2026-10-30T13:19:57.166355+00:00", "event": "request.start", "result": "started", "request_id": "7a593b9d95224b3387eca6b7d5e3abfb", "method": "POST"}
+{"time": "2026-10-30T13:19:57.245596+00:00", "event": "session.created", "result": "success", "request_id": "7a593b9d95224b3387eca6b7d5e3abfb"}
+{"time": "2026-10-30T13:19:57.247364+00:00", "event": "request.end", "result": "success", "request_id": "7a593b9d95224b3387eca6b7d5e3abfb", "status": 201, "duration_ms": 81.010099966079}
+{"time": "2026-10-30T13:19:57.255386+00:00", "event": "request.start", "result": "started", "request_id": "ef0c0f47e6f942f8882c942b0dd97077", "method": "GET"}
+{"time": "2026-10-30T13:19:57.261367+00:00", "event": "request.end", "result": "success", "request_id": "ef0c0f47e6f942f8882c942b0dd97077", "status": 200, "duration_ms": 5.9819999150931835}
+{"time": "2026-10-30T13:19:57.269698+00:00", "event": "request.start", "result": "started", "request_id": "a4f7b96f953248bb88057857a564937c", "method": "POST"}
+{"time": "2026-10-30T13:19:57.327275+00:00", "event": "session.created", "result": "success", "request_id": "a4f7b96f953248bb88057857a564937c"}
+{"time": "2026-10-30T13:19:57.329072+00:00", "event": "request.end", "result": "success", "request_id": "a4f7b96f953248bb88057857a564937c", "status": 201, "duration_ms": 59.37479995191097}
+{"time": "2026-10-30T13:19:57.336620+00:00", "event": "request.start", "result": "started", "request_id": "8d4cfdaa280f42d393d02c2978f8a8da", "method": "GET"}
+{"time": "2026-10-30T13:19:57.341467+00:00", "event": "request.end", "result": "success", "request_id": "8d4cfdaa280f42d393d02c2978f8a8da", "status": 200, "duration_ms": 4.847600124776363}
+{"time": "2026-10-30T13:19:57.348877+00:00", "event": "request.start", "result": "started", "request_id": "13f48ba2a0354b9bbbbbbac51ad096fd", "method": "POST"}
+{"time": "2026-10-30T13:19:57.401668+00:00", "event": "session.created", "result": "success", "request_id": "13f48ba2a0354b9bbbbbbac51ad096fd"}
+{"time": "2026-10-30T13:19:57.403427+00:00", "event": "request.end", "result": "success", "request_id": "13f48ba2a0354b9bbbbbbac51ad096fd", "status": 201, "duration_ms": 54.549300111830235}
+{"time": "2026-10-30T13:19:57.410142+00:00", "event": "request.start", "result": "started", "request_id": "95ac2cfbd6dd41fd9ae3ba5ffc81f990", "method": "GET"}
+{"time": "2026-10-30T13:19:57.414935+00:00", "event": "request.end", "result": "success", "request_id": "95ac2cfbd6dd41fd9ae3ba5ffc81f990", "status": 200, "duration_ms": 4.793999716639519}
+{"time": "2026-10-30T13:19:57.585753+00:00", "event": "request.start", "result": "started", "request_id": "c30c6cbe99d745acb5867c81aa29b63a", "method": "POST"}
+{"time": "2026-10-30T13:19:57.643704+00:00", "event": "account.created", "result": "success", "request_id": "c30c6cbe99d745acb5867c81aa29b63a"}
+{"time": "2026-10-30T13:19:57.646736+00:00", "event": "request.end", "result": "success", "request_id": "c30c6cbe99d745acb5867c81aa29b63a", "status": 201, "duration_ms": 60.9845002181828}
+{"time": "2026-10-30T13:19:57.653741+00:00", "event": "request.start", "result": "started", "request_id": "70a8ef52807b4bccae6a268fa55d32e6", "method": "POST"}
+{"time": "2026-10-30T13:19:57.717679+00:00", "event": "session.created", "result": "success", "request_id": "70a8ef52807b4bccae6a268fa55d32e6"}
+{"time": "2026-10-30T13:19:57.719990+00:00", "event": "request.end", "result": "success", "request_id": "70a8ef52807b4bccae6a268fa55d32e6", "status": 201, "duration_ms": 66.24870002269745}
+{"time": "2026-10-30T13:19:57.730109+00:00", "event": "request.start", "result": "started", "request_id": "cd1b935bd3f14939b3925cafc83fa745", "method": "POST"}
+{"time": "2026-10-30T13:19:57.744001+00:00", "event": "quote.created", "result": "success", "request_id": "cd1b935bd3f14939b3925cafc83fa745"}
+{"time": "2026-10-30T13:19:57.744206+00:00", "event": "request.end", "result": "success", "request_id": "cd1b935bd3f14939b3925cafc83fa745", "status": 200, "duration_ms": 14.098300132900476}
+{"time": "2026-10-30T13:19:57.751255+00:00", "event": "request.start", "result": "started", "request_id": "87dc41f75f064750a07bea00a5b1dc37", "method": "POST"}
+{"time": "2026-10-30T13:19:57.766552+00:00", "event": "booking.created", "result": "success", "request_id": "87dc41f75f064750a07bea00a5b1dc37"}
+{"time": "2026-10-30T13:19:57.772244+00:00", "event": "request.end", "result": "success", "request_id": "87dc41f75f064750a07bea00a5b1dc37", "status": 201, "duration_ms": 20.98900033161044}
+{"time": "2026-10-30T13:19:57.780882+00:00", "event": "request.start", "result": "started", "request_id": "275317199e744da8b25602f7d0ea2e22", "method": "POST"}
+{"time": "2026-10-30T13:19:57.796742+00:00", "event": "booking.cancelled", "result": "success", "request_id": "275317199e744da8b25602f7d0ea2e22"}
+{"time": "2026-10-30T13:19:57.801184+00:00", "event": "request.end", "result": "success", "request_id": "275317199e744da8b25602f7d0ea2e22", "status": 201, "duration_ms": 20.299999974668026}
+{"time": "2026-10-30T13:19:57.813921+00:00", "event": "request.start", "result": "started", "request_id": "e64ad1dca1c64452971ad00828d895fe", "method": "GET"}
+{"time": "2026-10-30T13:19:57.837063+00:00", "event": "request.end", "result": "success", "request_id": "e64ad1dca1c64452971ad00828d895fe", "status": 200, "duration_ms": 23.142799735069275}
+{"time": "2026-10-30T13:19:57.849280+00:00", "event": "request.start", "result": "started", "request_id": "efffeb9e495f4422a9b756bed804db1c", "method": "GET"}
+{"time": "2026-10-30T13:19:57.854790+00:00", "event": "request.end", "result": "success", "request_id": "efffeb9e495f4422a9b756bed804db1c", "status": 200, "duration_ms": 5.512100178748369}
+{"time": "2026-10-30T13:19:57.864547+00:00", "event": "request.start", "result": "started", "request_id": "e92d47ed48da4182a2c3691fbd03cf21", "method": "POST"}
+{"time": "2026-10-30T13:19:57.872627+00:00", "event": "request.end", "result": "error", "request_id": "e92d47ed48da4182a2c3691fbd03cf21", "status": 409, "duration_ms": 8.081699721515179}
+{"time": "2026-10-30T13:19:58.041775+00:00", "event": "request.start", "result": "started", "request_id": "ac3a59feb43d407fa15282debc2c567a", "method": "POST"}
+{"time": "2026-10-30T13:19:58.098786+00:00", "event": "account.created", "result": "success", "request_id": "ac3a59feb43d407fa15282debc2c567a"}
+{"time": "2026-10-30T13:19:58.101423+00:00", "event": "request.end", "result": "success", "request_id": "ac3a59feb43d407fa15282debc2c567a", "status": 201, "duration_ms": 59.649200178682804}
+{"time": "2026-10-30T13:19:58.108861+00:00", "event": "request.start", "result": "started", "request_id": "0378b8ba2cfa482391358015660540ee", "method": "POST"}
+{"time": "2026-10-30T13:19:58.166403+00:00", "event": "session.created", "result": "success", "request_id": "0378b8ba2cfa482391358015660540ee"}
+{"time": "2026-10-30T13:19:58.168599+00:00", "event": "request.end", "result": "success", "request_id": "0378b8ba2cfa482391358015660540ee", "status": 201, "duration_ms": 59.73909981548786}
+{"time": "2026-10-30T13:19:58.179381+00:00", "event": "request.start", "result": "started", "request_id": "f61f3d7bcc774d04a8dee16a239a4ed2", "method": "POST"}
+{"time": "2026-10-30T13:19:58.193530+00:00", "event": "quote.created", "result": "success", "request_id": "f61f3d7bcc774d04a8dee16a239a4ed2"}
+{"time": "2026-10-30T13:19:58.193730+00:00", "event": "request.end", "result": "success", "request_id": "f61f3d7bcc774d04a8dee16a239a4ed2", "status": 200, "duration_ms": 14.351099729537964}
+{"time": "2026-10-30T13:19:58.200760+00:00", "event": "request.start", "result": "started", "request_id": "11b4dffa07a24bca89a2bb0788572238", "method": "POST"}
+{"time": "2026-10-30T13:19:58.217432+00:00", "event": "booking.created", "result": "success", "request_id": "11b4dffa07a24bca89a2bb0788572238"}
+{"time": "2026-10-30T13:19:58.223479+00:00", "event": "request.end", "result": "success", "request_id": "11b4dffa07a24bca89a2bb0788572238", "status": 201, "duration_ms": 22.71750010550022}
+{"time": "2026-10-30T13:19:58.232289+00:00", "event": "request.start", "result": "started", "request_id": "a3b98e551af74d4daf9f61ebf356d2f2", "method": "POST"}
+{"time": "2026-10-30T13:19:58.241816+00:00", "event": "request.end", "result": "error", "request_id": "a3b98e551af74d4daf9f61ebf356d2f2", "status": 409, "duration_ms": 9.527100250124931}
+{"time": "2026-10-30T13:19:58.248674+00:00", "event": "request.start", "result": "started", "request_id": "77f55f68920a4e6da56dd297042d1de3", "method": "GET"}
+{"time": "2026-10-30T13:19:58.254502+00:00", "event": "request.end", "result": "success", "request_id": "77f55f68920a4e6da56dd297042d1de3", "status": 200, "duration_ms": 5.827000364661217}
+{"time": "2026-10-30T13:19:58.556922+00:00", "event": "request.start", "result": "started", "request_id": "69d4b91f2f3d4a719641910b6deb14e2", "method": "POST"}
+{"time": "2026-10-30T13:19:58.612365+00:00", "event": "account.created", "result": "success", "request_id": "69d4b91f2f3d4a719641910b6deb14e2"}
+{"time": "2026-10-30T13:19:58.616323+00:00", "event": "request.end", "result": "success", "request_id": "69d4b91f2f3d4a719641910b6deb14e2", "status": 201, "duration_ms": 59.40200015902519}
+{"time": "2026-10-30T13:19:58.641709+00:00", "event": "request.start", "result": "started", "request_id": "74d28a30682f4e6c85d756b963045dc0", "method": "POST"}
+{"time": "2026-10-30T13:19:58.702635+00:00", "event": "session.created", "result": "success", "request_id": "74d28a30682f4e6c85d756b963045dc0"}
+{"time": "2026-10-30T13:19:58.704921+00:00", "event": "request.end", "result": "success", "request_id": "74d28a30682f4e6c85d756b963045dc0", "status": 201, "duration_ms": 63.21369996294379}
+{"time": "2026-10-30T13:19:58.715124+00:00", "event": "request.start", "result": "started", "request_id": "35051489d0ba40e4b744ad36b834a47f", "method": "POST"}
+{"time": "2026-10-30T13:19:58.728562+00:00", "event": "quote.created", "result": "success", "request_id": "35051489d0ba40e4b744ad36b834a47f"}
+{"time": "2026-10-30T13:19:58.728760+00:00", "event": "request.end", "result": "success", "request_id": "35051489d0ba40e4b744ad36b834a47f", "status": 200, "duration_ms": 13.636599760502577}
+{"time": "2026-10-30T13:19:58.736311+00:00", "event": "request.start", "result": "started", "request_id": "9c82ea2befdf40d699e1bdc85ef37cae", "method": "POST"}
+{"time": "2026-10-30T13:19:58.751759+00:00", "event": "booking.created", "result": "success", "request_id": "9c82ea2befdf40d699e1bdc85ef37cae"}
+{"time": "2026-10-30T13:19:58.757613+00:00", "event": "request.end", "result": "success", "request_id": "9c82ea2befdf40d699e1bdc85ef37cae", "status": 201, "duration_ms": 21.302000153809786}
+{"time": "2026-10-30T13:19:58.766473+00:00", "event": "request.start", "result": "started", "request_id": "dc524e64539749f691aa4f16eb4e3e5f", "method": "POST"}
+{"time": "2026-10-30T13:19:58.834512+00:00", "event": "account.created", "result": "success", "request_id": "dc524e64539749f691aa4f16eb4e3e5f"}
+{"time": "2026-10-30T13:19:58.836675+00:00", "event": "request.end", "result": "success", "request_id": "dc524e64539749f691aa4f16eb4e3e5f", "status": 201, "duration_ms": 70.2029000967741}
+{"time": "2026-10-30T13:19:58.847844+00:00", "event": "request.start", "result": "started", "request_id": "854c17f875124b28a5338708d7848923", "method": "POST"}
+{"time": "2026-10-30T13:19:58.900605+00:00", "event": "session.created", "result": "success", "request_id": "854c17f875124b28a5338708d7848923"}
+{"time": "2026-10-30T13:19:58.902755+00:00", "event": "request.end", "result": "success", "request_id": "854c17f875124b28a5338708d7848923", "status": 201, "duration_ms": 54.910599719733}
+{"time": "2026-10-30T13:19:58.910389+00:00", "event": "request.start", "result": "started", "request_id": "98ed50ff33cc4ae3ac9754ad2e72e3cd", "method": "POST"}
+{"time": "2026-10-30T13:19:58.919936+00:00", "event": "request.end", "result": "error", "request_id": "98ed50ff33cc4ae3ac9754ad2e72e3cd", "status": 422, "duration_ms": 9.547300171107054}
+{"time": "2026-10-30T13:19:58.927460+00:00", "event": "request.start", "result": "started", "request_id": "4aed3a8b2d0149c6af1a85069a69b950", "method": "POST"}
+{"time": "2026-10-30T13:19:58.934140+00:00", "event": "request.end", "result": "error", "request_id": "4aed3a8b2d0149c6af1a85069a69b950", "status": 422, "duration_ms": 6.679000332951546}
+{"time": "2026-10-30T13:19:58.941941+00:00", "event": "request.start", "result": "started", "request_id": "5b7f4b8a6ae646c69c6ce4d6130e8e64", "method": "POST"}
+{"time": "2026-10-30T13:19:58.954109+00:00", "event": "booking.cancelled", "result": "success", "request_id": "5b7f4b8a6ae646c69c6ce4d6130e8e64"}
+{"time": "2026-10-30T13:19:58.958739+00:00", "event": "request.end", "result": "success", "request_id": "5b7f4b8a6ae646c69c6ce4d6130e8e64", "status": 201, "duration_ms": 16.798200085759163}
+{"time": "2026-10-30T13:19:58.966207+00:00", "event": "request.start", "result": "started", "request_id": "15e9b03740e94b00ac354ff88e381cde", "method": "GET"}
+{"time": "2026-10-30T13:19:58.972133+00:00", "event": "request.end", "result": "success", "request_id": "15e9b03740e94b00ac354ff88e381cde", "status": 200, "duration_ms": 5.925399716943502}
+{"time": "2026-10-30T13:19:58.980346+00:00", "event": "request.start", "result": "started", "request_id": "4d766eb69c974c8587783a0edb3a5c46", "method": "GET"}
+{"time": "2026-10-30T13:19:58.986413+00:00", "event": "request.end", "result": "success", "request_id": "4d766eb69c974c8587783a0edb3a5c46", "status": 200, "duration_ms": 6.067200098186731}
+{"time": "2026-10-30T13:19:59.164507+00:00", "event": "request.start", "result": "started", "request_id": "e5fe2af9fde14939ad8467c6e8b11214", "method": "POST"}
+{"time": "2026-10-30T13:19:59.226022+00:00", "event": "account.created", "result": "success", "request_id": "e5fe2af9fde14939ad8467c6e8b11214"}
+{"time": "2026-10-30T13:19:59.228604+00:00", "event": "request.end", "result": "success", "request_id": "e5fe2af9fde14939ad8467c6e8b11214", "status": 201, "duration_ms": 64.09840006381273}
+{"time": "2026-10-30T13:19:59.236012+00:00", "event": "request.start", "result": "started", "request_id": "1dd9ea75ae834c57ad35e5fc270ffe38", "method": "POST"}
+{"time": "2026-10-30T13:19:59.296107+00:00", "event": "session.created", "result": "success", "request_id": "1dd9ea75ae834c57ad35e5fc270ffe38"}
+{"time": "2026-10-30T13:19:59.297832+00:00", "event": "request.end", "result": "success", "request_id": "1dd9ea75ae834c57ad35e5fc270ffe38", "status": 201, "duration_ms": 61.82010006159544}
+{"time": "2026-10-30T13:19:59.306699+00:00", "event": "request.start", "result": "started", "request_id": "978a6e6bbaaa429992e773fe36d8633b", "method": "POST"}
+{"time": "2026-10-30T13:19:59.361679+00:00", "event": "session.created", "result": "success", "request_id": "978a6e6bbaaa429992e773fe36d8633b"}
+{"time": "2026-10-30T13:19:59.363642+00:00", "event": "request.end", "result": "success", "request_id": "978a6e6bbaaa429992e773fe36d8633b", "status": 201, "duration_ms": 56.94300029426813}
+{"time": "2026-10-30T13:19:59.374151+00:00", "event": "request.start", "result": "started", "request_id": "51f8315ff6bf433cb9e66b010cfdca71", "method": "POST"}
+{"time": "2026-10-30T13:19:59.388043+00:00", "event": "quote.created", "result": "success", "request_id": "51f8315ff6bf433cb9e66b010cfdca71"}
+{"time": "2026-10-30T13:19:59.388258+00:00", "event": "request.end", "result": "success", "request_id": "51f8315ff6bf433cb9e66b010cfdca71", "status": 200, "duration_ms": 14.110999647527933}
+{"time": "2026-10-30T13:19:59.397946+00:00", "event": "request.start", "result": "started", "request_id": "38678d20277143038693678e28e82760", "method": "POST"}
+{"time": "2026-10-30T13:19:59.414608+00:00", "event": "booking.created", "result": "success", "request_id": "38678d20277143038693678e28e82760"}
+{"time": "2026-10-30T13:19:59.419860+00:00", "event": "request.end", "result": "success", "request_id": "38678d20277143038693678e28e82760", "status": 201, "duration_ms": 21.913900040090084}
+{"time": "2026-10-30T13:19:59.427640+00:00", "event": "request.start", "result": "started", "request_id": "6bab6e7ae1f64323a5bc59bf012b1afd", "method": "POST"}
+{"time": "2026-10-30T13:19:59.441873+00:00", "event": "booking.cancelled", "result": "success", "request_id": "6bab6e7ae1f64323a5bc59bf012b1afd"}
+{"time": "2026-10-30T13:19:59.445094+00:00", "event": "request.end", "result": "success", "request_id": "6bab6e7ae1f64323a5bc59bf012b1afd", "status": 201, "duration_ms": 17.454400192946196}
+{"time": "2026-10-30T13:19:59.737459+00:00", "event": "request.start", "result": "started", "request_id": "3b5b30e99fd14c39aa9b71ff09c01539", "method": "POST"}
+{"time": "2026-10-30T13:19:59.794898+00:00", "event": "account.created", "result": "success", "request_id": "3b5b30e99fd14c39aa9b71ff09c01539"}
+{"time": "2026-10-30T13:19:59.797679+00:00", "event": "request.end", "result": "success", "request_id": "3b5b30e99fd14c39aa9b71ff09c01539", "status": 201, "duration_ms": 60.22140011191368}
+{"time": "2026-10-30T13:19:59.805571+00:00", "event": "request.start", "result": "started", "request_id": "514269dcbb774046b2092007a7cf77e9", "method": "POST"}
+{"time": "2026-10-30T13:19:59.877899+00:00", "event": "session.created", "result": "success", "request_id": "514269dcbb774046b2092007a7cf77e9"}
+{"time": "2026-10-30T13:19:59.879792+00:00", "event": "request.end", "result": "success", "request_id": "514269dcbb774046b2092007a7cf77e9", "status": 201, "duration_ms": 74.22180008143187}
+{"time": "2026-10-30T13:19:59.889952+00:00", "event": "request.start", "result": "started", "request_id": "c7f57f59f93d4f2ba5ba3ee5b48c4d93", "method": "POST"}
+{"time": "2026-10-30T13:19:59.963707+00:00", "event": "session.created", "result": "success", "request_id": "c7f57f59f93d4f2ba5ba3ee5b48c4d93"}
+{"time": "2026-10-30T13:19:59.965602+00:00", "event": "request.end", "result": "success", "request_id": "c7f57f59f93d4f2ba5ba3ee5b48c4d93", "status": 201, "duration_ms": 75.65219979733229}
+{"time": "2026-10-30T13:19:59.976552+00:00", "event": "request.start", "result": "started", "request_id": "24433d46d4134876b7c9e87dc342e7c3", "method": "POST"}
+{"time": "2026-10-30T13:19:59.991207+00:00", "event": "quote.created", "result": "success", "request_id": "24433d46d4134876b7c9e87dc342e7c3"}
+{"time": "2026-10-30T13:19:59.991408+00:00", "event": "request.end", "result": "success", "request_id": "24433d46d4134876b7c9e87dc342e7c3", "status": 200, "duration_ms": 14.858399983495474}
+{"time": "2026-10-30T13:19:59.998588+00:00", "event": "request.start", "result": "started", "request_id": "71e019ae29ea41d7b5f4270cc1e27574", "method": "POST"}
+{"time": "2026-10-30T13:20:00.016489+00:00", "event": "booking.created", "result": "success", "request_id": "71e019ae29ea41d7b5f4270cc1e27574"}
+{"time": "2026-10-30T13:20:00.022488+00:00", "event": "request.end", "result": "success", "request_id": "71e019ae29ea41d7b5f4270cc1e27574", "status": 201, "duration_ms": 23.89870025217533}
+{"time": "2026-10-30T13:20:00.030470+00:00", "event": "request.start", "result": "started", "request_id": "03250a435d694d40931a937a0d2e0429", "method": "POST"}
+{"time": "2026-10-30T13:20:00.045772+00:00", "event": "booking.cancelled", "result": "success", "request_id": "03250a435d694d40931a937a0d2e0429"}
+{"time": "2026-10-30T13:20:00.049042+00:00", "event": "request.end", "result": "success", "request_id": "03250a435d694d40931a937a0d2e0429", "status": 201, "duration_ms": 18.573499750345945}
+{"time": "2026-10-30T13:20:00.345815+00:00", "event": "request.start", "result": "started", "request_id": "f1e13bfabfd64e0fb756a79d10489136", "method": "POST"}
+{"time": "2026-10-30T13:20:00.401159+00:00", "event": "account.created", "result": "success", "request_id": "f1e13bfabfd64e0fb756a79d10489136"}
+{"time": "2026-10-30T13:20:00.404579+00:00", "event": "request.end", "result": "success", "request_id": "f1e13bfabfd64e0fb756a79d10489136", "status": 201, "duration_ms": 58.76660021021962}
+{"time": "2026-10-30T13:20:00.411969+00:00", "event": "request.start", "result": "started", "request_id": "ee1fdc341054461eb05295b90653c1ec", "method": "POST"}
+{"time": "2026-10-30T13:20:00.487074+00:00", "event": "session.created", "result": "success", "request_id": "ee1fdc341054461eb05295b90653c1ec"}
+{"time": "2026-10-30T13:20:00.489606+00:00", "event": "request.end", "result": "success", "request_id": "ee1fdc341054461eb05295b90653c1ec", "status": 201, "duration_ms": 77.63609988614917}
+{"time": "2026-10-30T13:20:00.498595+00:00", "event": "request.start", "result": "started", "request_id": "e8f97fc23a6445308002170ddfa7b803", "method": "POST"}
+{"time": "2026-10-30T13:20:00.551141+00:00", "event": "session.created", "result": "success", "request_id": "e8f97fc23a6445308002170ddfa7b803"}
+{"time": "2026-10-30T13:20:00.553544+00:00", "event": "request.end", "result": "success", "request_id": "e8f97fc23a6445308002170ddfa7b803", "status": 201, "duration_ms": 54.94849989190698}
+{"time": "2026-10-30T13:20:00.564432+00:00", "event": "request.start", "result": "started", "request_id": "02e38f141af3467c93b64e8f76cc1aac", "method": "POST"}
+{"time": "2026-10-30T13:20:00.578295+00:00", "event": "quote.created", "result": "success", "request_id": "02e38f141af3467c93b64e8f76cc1aac"}
+{"time": "2026-10-30T13:20:00.578507+00:00", "event": "request.end", "result": "success", "request_id": "02e38f141af3467c93b64e8f76cc1aac", "status": 200, "duration_ms": 14.077600091695786}
+{"time": "2026-10-30T13:20:00.586501+00:00", "event": "request.start", "result": "started", "request_id": "61bd31558bd84e91b69664ce4b3bc40e", "method": "POST"}
+{"time": "2026-10-30T13:20:00.601677+00:00", "event": "booking.created", "result": "success", "request_id": "61bd31558bd84e91b69664ce4b3bc40e"}
+{"time": "2026-10-30T13:20:00.607319+00:00", "event": "request.end", "result": "success", "request_id": "61bd31558bd84e91b69664ce4b3bc40e", "status": 201, "duration_ms": 20.818499848246574}
+{"time": "2026-10-30T13:20:00.615216+00:00", "event": "request.start", "result": "started", "request_id": "d7b99bfc6a014f1dbf2dc6d9f6599c6a", "method": "POST"}
+{"time": "2026-10-30T13:20:00.674552+00:00", "event": "request.end", "result": "error", "request_id": "d7b99bfc6a014f1dbf2dc6d9f6599c6a", "status": 409, "duration_ms": 59.32069988921285}
+{"time": "2026-10-30T13:20:00.960450+00:00", "event": "request.start", "result": "started", "request_id": "7476075fe5af41199187bb2c6c29ca37", "method": "POST"}
+{"time": "2026-10-30T13:20:01.036107+00:00", "event": "account.created", "result": "success", "request_id": "7476075fe5af41199187bb2c6c29ca37"}
+{"time": "2026-10-30T13:20:01.039631+00:00", "event": "request.end", "result": "success", "request_id": "7476075fe5af41199187bb2c6c29ca37", "status": 201, "duration_ms": 79.18370002880692}
+{"time": "2026-10-30T13:20:01.047283+00:00", "event": "request.start", "result": "started", "request_id": "31d65f8544e74991be4f4b520441cd14", "method": "POST"}
+{"time": "2026-10-30T13:20:01.112159+00:00", "event": "session.created", "result": "success", "request_id": "31d65f8544e74991be4f4b520441cd14"}
+{"time": "2026-10-30T13:20:01.114271+00:00", "event": "request.end", "result": "success", "request_id": "31d65f8544e74991be4f4b520441cd14", "status": 201, "duration_ms": 66.98529981076717}
+{"time": "2026-10-30T13:20:01.128018+00:00", "event": "request.start", "result": "started", "request_id": "0f95b2b394bd4f678981e5c6ceae3636", "method": "POST"}
+{"time": "2026-10-30T13:20:01.254535+00:00", "event": "session.created", "result": "success", "request_id": "0f95b2b394bd4f678981e5c6ceae3636"}
+{"time": "2026-10-30T13:20:01.256343+00:00", "event": "request.end", "result": "success", "request_id": "0f95b2b394bd4f678981e5c6ceae3636", "status": 201, "duration_ms": 128.33039974793792}
+{"time": "2026-10-30T13:20:01.266249+00:00", "event": "request.start", "result": "started", "request_id": "19aa5c6578e943d6961c6a6fad4c850a", "method": "POST"}
+{"time": "2026-10-30T13:20:01.279119+00:00", "event": "quote.created", "result": "success", "request_id": "19aa5c6578e943d6961c6a6fad4c850a"}
+{"time": "2026-10-30T13:20:01.279355+00:00", "event": "request.end", "result": "success", "request_id": "19aa5c6578e943d6961c6a6fad4c850a", "status": 200, "duration_ms": 13.106800150126219}
+{"time": "2026-10-30T13:20:01.287731+00:00", "event": "request.start", "result": "started", "request_id": "2d76b6eefad84d88b96f1c8ca761c263", "method": "POST"}
+{"time": "2026-10-30T13:20:01.302932+00:00", "event": "booking.created", "result": "success", "request_id": "2d76b6eefad84d88b96f1c8ca761c263"}
+{"time": "2026-10-30T13:20:01.308020+00:00", "event": "request.end", "result": "success", "request_id": "2d76b6eefad84d88b96f1c8ca761c263", "status": 201, "duration_ms": 20.290700253099203}
+{"time": "2026-10-30T13:20:01.316032+00:00", "event": "request.start", "result": "started", "request_id": "7b4656139d4c45fc8a103060085ef453", "method": "POST"}
+{"time": "2026-10-30T13:20:01.324942+00:00", "event": "request.end", "result": "error", "request_id": "7b4656139d4c45fc8a103060085ef453", "status": 409, "duration_ms": 8.909200318157673}
+{"time": "2026-10-30T13:20:05.463658+00:00", "event": "request.start", "result": "started", "request_id": "a34d00265c4548f784e189189cea3e40", "method": "POST"}
+{"time": "2026-10-30T13:20:05.522872+00:00", "event": "account.created", "result": "success", "request_id": "a34d00265c4548f784e189189cea3e40"}
+{"time": "2026-10-30T13:20:05.525975+00:00", "event": "request.end", "result": "success", "request_id": "a34d00265c4548f784e189189cea3e40", "status": 201, "duration_ms": 62.31930013746023}
+{"time": "2026-10-30T13:20:05.540257+00:00", "event": "request.start", "result": "started", "request_id": "833e5dd6cc3547fd890969e19f3a90fb", "method": "POST"}
+{"time": "2026-10-30T13:20:05.599286+00:00", "event": "session.created", "result": "success", "request_id": "833e5dd6cc3547fd890969e19f3a90fb"}
+{"time": "2026-10-30T13:20:05.601733+00:00", "event": "request.end", "result": "success", "request_id": "833e5dd6cc3547fd890969e19f3a90fb", "status": 201, "duration_ms": 61.47519964724779}
+{"time": "2026-10-30T13:20:05.611502+00:00", "event": "request.start", "result": "started", "request_id": "8a35f7fa25b141fd84f69a0336ee0c9a", "method": "POST"}
+{"time": "2026-10-30T13:20:05.621525+00:00", "event": "car.created", "result": "success", "request_id": "8a35f7fa25b141fd84f69a0336ee0c9a"}
+{"time": "2026-10-30T13:20:05.627609+00:00", "event": "request.end", "result": "success", "request_id": "8a35f7fa25b141fd84f69a0336ee0c9a", "status": 201, "duration_ms": 16.108199954032898}
+{"time": "2026-10-30T13:20:05.637253+00:00", "event": "request.start", "result": "started", "request_id": "a4cf4b5f003b4aaeba3da4372ea022ea", "method": "GET"}
+{"time": "2026-10-30T13:20:05.643799+00:00", "event": "request.end", "result": "success", "request_id": "a4cf4b5f003b4aaeba3da4372ea022ea", "status": 200, "duration_ms": 6.546400021761656}
+{"time": "2026-10-30T13:20:05.653486+00:00", "event": "request.start", "result": "started", "request_id": "b5040757a181422f94e341ed1029e796", "method": "GET"}
+{"time": "2026-10-30T13:20:05.656620+00:00", "event": "request.end", "result": "success", "request_id": "b5040757a181422f94e341ed1029e796", "status": 200, "duration_ms": 3.1336001120507717}
+{"time": "2026-10-30T13:20:05.665259+00:00", "event": "request.start", "result": "started", "request_id": "9b3428e4ff5b4bb19020ade57f75a3c0", "method": "GET"}
+{"time": "2026-10-30T13:20:05.671488+00:00", "event": "request.end", "result": "success", "request_id": "9b3428e4ff5b4bb19020ade57f75a3c0", "status": 200, "duration_ms": 6.22730003669858}
+{"time": "2026-10-30T13:20:05.680811+00:00", "event": "request.start", "result": "started", "request_id": "b6bc3a62deed437c9ab59ac16b072f54", "method": "PATCH"}
+{"time": "2026-10-30T13:20:05.689335+00:00", "event": "car.updated", "result": "success", "request_id": "b6bc3a62deed437c9ab59ac16b072f54"}
+{"time": "2026-10-30T13:20:05.692277+00:00", "event": "request.end", "result": "success", "request_id": "b6bc3a62deed437c9ab59ac16b072f54", "status": 200, "duration_ms": 11.472499929368496}
+{"time": "2026-10-30T13:20:05.701712+00:00", "event": "request.start", "result": "started", "request_id": "a175d3e67f074084b5b2317469f18eb8", "method": "GET"}
+{"time": "2026-10-30T13:20:05.703965+00:00", "event": "request.end", "result": "error", "request_id": "a175d3e67f074084b5b2317469f18eb8", "status": 404, "duration_ms": 2.2546001709997654}
+{"time": "2026-10-30T13:20:05.712144+00:00", "event": "request.start", "result": "started", "request_id": "8ed085656a95461698bf8a4898aedda6", "method": "GET"}
+{"time": "2026-10-30T13:20:05.717136+00:00", "event": "request.end", "result": "success", "request_id": "8ed085656a95461698bf8a4898aedda6", "status": 200, "duration_ms": 4.992499947547913}
+{"time": "2026-10-30T13:20:05.726983+00:00", "event": "request.start", "result": "started", "request_id": "153ca04b131c4efca8779da792bb9797", "method": "PATCH"}
+{"time": "2026-10-30T13:20:05.732988+00:00", "event": "car.updated", "result": "success", "request_id": "153ca04b131c4efca8779da792bb9797"}
+{"time": "2026-10-30T13:20:05.736260+00:00", "event": "request.end", "result": "success", "request_id": "153ca04b131c4efca8779da792bb9797", "status": 200, "duration_ms": 9.27670020610094}
+{"time": "2026-10-30T13:20:05.745252+00:00", "event": "request.start", "result": "started", "request_id": "06156147a69b43dfaf74995c6dbd978a", "method": "DELETE"}
+{"time": "2026-10-30T13:20:05.755316+00:00", "event": "car.deleted", "result": "success", "request_id": "06156147a69b43dfaf74995c6dbd978a"}
+{"time": "2026-10-30T13:20:05.755432+00:00", "event": "request.end", "result": "success", "request_id": "06156147a69b43dfaf74995c6dbd978a", "status": 204, "duration_ms": 10.18129987642169}
+{"time": "2026-10-30T13:20:06.052469+00:00", "event": "request.start", "result": "started", "request_id": "d347c5d8f0604ad1a16c8eebfb3b754c", "method": "POST"}
+{"time": "2026-10-30T13:20:06.110489+00:00", "event": "account.created", "result": "success", "request_id": "d347c5d8f0604ad1a16c8eebfb3b754c"}
+{"time": "2026-10-30T13:20:06.114013+00:00", "event": "request.end", "result": "success", "request_id": "d347c5d8f0604ad1a16c8eebfb3b754c", "status": 201, "duration_ms": 61.54639972373843}
+{"time": "2026-10-30T13:20:06.128462+00:00", "event": "request.start", "result": "started", "request_id": "aa0c55634f264c30b6e14380ba7e9cb2", "method": "POST"}
+{"time": "2026-10-30T13:20:06.205261+00:00", "event": "session.created", "result": "success", "request_id": "aa0c55634f264c30b6e14380ba7e9cb2"}
+{"time": "2026-10-30T13:20:06.207258+00:00", "event": "request.end", "result": "success", "request_id": "aa0c55634f264c30b6e14380ba7e9cb2", "status": 201, "duration_ms": 78.78780039027333}
+{"time": "2026-10-30T13:20:06.217105+00:00", "event": "request.start", "result": "started", "request_id": "7d0bee8167a645d888171cb196aa256a", "method": "POST"}
+{"time": "2026-10-30T13:20:06.223199+00:00", "event": "request.end", "result": "error", "request_id": "7d0bee8167a645d888171cb196aa256a", "status": 422, "duration_ms": 6.103599909693003}
+{"time": "2026-10-30T13:20:06.404591+00:00", "event": "request.start", "result": "started", "request_id": "c1febc21c2744d10bf63c89097dbb886", "method": "POST"}
+{"time": "2026-10-30T13:20:06.466333+00:00", "event": "account.created", "result": "success", "request_id": "c1febc21c2744d10bf63c89097dbb886"}
+{"time": "2026-10-30T13:20:06.469743+00:00", "event": "request.end", "result": "success", "request_id": "c1febc21c2744d10bf63c89097dbb886", "status": 201, "duration_ms": 65.15560019761324}
+{"time": "2026-10-30T13:20:06.487541+00:00", "event": "request.start", "result": "started", "request_id": "df866beb46db41d79574dcb67cacfade", "method": "POST"}
+{"time": "2026-10-30T13:20:06.548222+00:00", "event": "session.created", "result": "success", "request_id": "df866beb46db41d79574dcb67cacfade"}
+{"time": "2026-10-30T13:20:06.550132+00:00", "event": "request.end", "result": "success", "request_id": "df866beb46db41d79574dcb67cacfade", "status": 201, "duration_ms": 62.593300361186266}
+{"time": "2026-10-30T13:20:06.563241+00:00", "event": "request.start", "result": "started", "request_id": "8c3e1ef79f3546659e35edded73e785d", "method": "POST"}
+{"time": "2026-10-30T13:20:06.569697+00:00", "event": "request.end", "result": "error", "request_id": "8c3e1ef79f3546659e35edded73e785d", "status": 422, "duration_ms": 6.455200258642435}
+{"time": "2026-10-30T13:20:06.770467+00:00", "event": "request.start", "result": "started", "request_id": "54a6ce7d0bf04a159ea45ad961aa8355", "method": "POST"}
+{"time": "2026-10-30T13:20:06.825352+00:00", "event": "account.created", "result": "success", "request_id": "54a6ce7d0bf04a159ea45ad961aa8355"}
+{"time": "2026-10-30T13:20:06.827946+00:00", "event": "request.end", "result": "success", "request_id": "54a6ce7d0bf04a159ea45ad961aa8355", "status": 201, "duration_ms": 57.48109985142946}
+{"time": "2026-10-30T13:20:06.844442+00:00", "event": "request.start", "result": "started", "request_id": "12989eb9f99443278d21ba2524054ba0", "method": "POST"}
+{"time": "2026-10-30T13:20:06.929852+00:00", "event": "session.created", "result": "success", "request_id": "12989eb9f99443278d21ba2524054ba0"}
+{"time": "2026-10-30T13:20:06.931575+00:00", "event": "request.end", "result": "success", "request_id": "12989eb9f99443278d21ba2524054ba0", "status": 201, "duration_ms": 87.1386001817882}
+{"time": "2026-10-30T13:20:06.941269+00:00", "event": "request.start", "result": "started", "request_id": "411418afd3c8442e8cbbe5d42e623ef7", "method": "POST"}
+{"time": "2026-10-30T13:20:06.946837+00:00", "event": "request.end", "result": "error", "request_id": "411418afd3c8442e8cbbe5d42e623ef7", "status": 422, "duration_ms": 5.571000277996063}
+{"time": "2026-10-30T13:20:07.124567+00:00", "event": "request.start", "result": "started", "request_id": "085e326b941e4269a8938f4fbb98a9e9", "method": "POST"}
+{"time": "2026-10-30T13:20:07.192527+00:00", "event": "account.created", "result": "success", "request_id": "085e326b941e4269a8938f4fbb98a9e9"}
+{"time": "2026-10-30T13:20:07.195265+00:00", "event": "request.end", "result": "success", "request_id": "085e326b941e4269a8938f4fbb98a9e9", "status": 201, "duration_ms": 70.70020027458668}
+{"time": "2026-10-30T13:20:07.208262+00:00", "event": "request.start", "result": "started", "request_id": "63c7bb419f4a4c11b40724af852f59bc", "method": "POST"}
+{"time": "2026-10-30T13:20:07.270876+00:00", "event": "session.created", "result": "success", "request_id": "63c7bb419f4a4c11b40724af852f59bc"}
+{"time": "2026-10-30T13:20:07.272636+00:00", "event": "request.end", "result": "success", "request_id": "63c7bb419f4a4c11b40724af852f59bc", "status": 201, "duration_ms": 64.37549972906709}
+{"time": "2026-10-30T13:20:07.281866+00:00", "event": "request.start", "result": "started", "request_id": "5605b0e463a743a597a0159597675680", "method": "POST"}
+{"time": "2026-10-30T13:20:07.287351+00:00", "event": "request.end", "result": "error", "request_id": "5605b0e463a743a597a0159597675680", "status": 422, "duration_ms": 5.485199857503176}
+{"time": "2026-10-30T13:20:07.576788+00:00", "event": "request.start", "result": "started", "request_id": "f06c9df6283244398253a8b3f5e3c300", "method": "POST"}
+{"time": "2026-10-30T13:20:07.643465+00:00", "event": "account.created", "result": "success", "request_id": "f06c9df6283244398253a8b3f5e3c300"}
+{"time": "2026-10-30T13:20:07.646518+00:00", "event": "request.end", "result": "success", "request_id": "f06c9df6283244398253a8b3f5e3c300", "status": 201, "duration_ms": 69.73170023411512}
+{"time": "2026-10-30T13:20:07.661950+00:00", "event": "request.start", "result": "started", "request_id": "b1237987704b46c58492cdb3d6b54de2", "method": "POST"}
+{"time": "2026-10-30T13:20:07.721395+00:00", "event": "session.created", "result": "success", "request_id": "b1237987704b46c58492cdb3d6b54de2"}
+{"time": "2026-10-30T13:20:07.723303+00:00", "event": "request.end", "result": "success", "request_id": "b1237987704b46c58492cdb3d6b54de2", "status": 201, "duration_ms": 61.35590001940727}
+{"time": "2026-10-30T13:20:07.732623+00:00", "event": "request.start", "result": "started", "request_id": "7c04edd74fd34834942d2e1d5450b3ac", "method": "POST"}
+{"time": "2026-10-30T13:20:07.742093+00:00", "event": "car.created", "result": "success", "request_id": "7c04edd74fd34834942d2e1d5450b3ac"}
+{"time": "2026-10-30T13:20:07.747339+00:00", "event": "request.end", "result": "success", "request_id": "7c04edd74fd34834942d2e1d5450b3ac", "status": 201, "duration_ms": 14.714499935507774}
+{"time": "2026-10-30T13:20:07.758722+00:00", "event": "request.start", "result": "started", "request_id": "2e578575281749c68f2aa5aa90a61442", "method": "PATCH"}
+{"time": "2026-10-30T13:20:07.766017+00:00", "event": "car.updated", "result": "success", "request_id": "2e578575281749c68f2aa5aa90a61442"}
+{"time": "2026-10-30T13:20:07.769455+00:00", "event": "request.end", "result": "success", "request_id": "2e578575281749c68f2aa5aa90a61442", "status": 200, "duration_ms": 10.733999777585268}
+{"time": "2026-10-30T13:20:07.778019+00:00", "event": "request.start", "result": "started", "request_id": "04fae1836de84ffe814b4245c26a617c", "method": "DELETE"}
+{"time": "2026-10-30T13:20:07.784630+00:00", "event": "request.end", "result": "error", "request_id": "04fae1836de84ffe814b4245c26a617c", "status": 409, "duration_ms": 6.609900388866663}
+{"time": "2026-10-30T13:20:07.798315+00:00", "event": "request.start", "result": "started", "request_id": "32162583dc2d489da3e6b03513dfd5ed", "method": "DELETE"}
+{"time": "2026-10-30T13:20:07.804405+00:00", "event": "request.end", "result": "error", "request_id": "32162583dc2d489da3e6b03513dfd5ed", "status": 409, "duration_ms": 6.089199800044298}
+{"time": "2026-10-30T13:20:07.969025+00:00", "event": "request.start", "result": "started", "request_id": "e183e6a2f6c74069a053c369b5ccafff", "method": "POST"}
+{"time": "2026-10-30T13:20:08.025312+00:00", "event": "account.created", "result": "success", "request_id": "e183e6a2f6c74069a053c369b5ccafff"}
+{"time": "2026-10-30T13:20:08.028869+00:00", "event": "request.end", "result": "success", "request_id": "e183e6a2f6c74069a053c369b5ccafff", "status": 201, "duration_ms": 59.84649993479252}
+{"time": "2026-10-30T13:20:08.039877+00:00", "event": "request.start", "result": "started", "request_id": "5530d51245a742d982f6af1b8fe6bf28", "method": "POST"}
+{"time": "2026-10-30T13:20:08.096907+00:00", "event": "session.created", "result": "success", "request_id": "5530d51245a742d982f6af1b8fe6bf28"}
+{"time": "2026-10-30T13:20:08.098511+00:00", "event": "request.end", "result": "success", "request_id": "5530d51245a742d982f6af1b8fe6bf28", "status": 201, "duration_ms": 58.63740015774965}
+{"time": "2026-10-30T13:20:08.107894+00:00", "event": "request.start", "result": "started", "request_id": "77c62151f7ef4fa89859b804548d1e87", "method": "GET"}
+{"time": "2026-10-30T13:20:08.108624+00:00", "event": "request.end", "result": "error", "request_id": "77c62151f7ef4fa89859b804548d1e87", "status": 401, "duration_ms": 0.7319999858736992}
+{"time": "2026-10-30T13:20:08.116913+00:00", "event": "request.start", "result": "started", "request_id": "f942da39af144626bb08abaec6b88661", "method": "POST"}
+{"time": "2026-10-30T13:20:08.117744+00:00", "event": "request.end", "result": "error", "request_id": "f942da39af144626bb08abaec6b88661", "status": 401, "duration_ms": 0.830299686640501}
+{"time": "2026-10-30T13:20:08.126272+00:00", "event": "request.start", "result": "started", "request_id": "3b2cf85287824c91bb754001167ed050", "method": "GET"}
+{"time": "2026-10-30T13:20:08.130827+00:00", "event": "request.end", "result": "error", "request_id": "3b2cf85287824c91bb754001167ed050", "status": 403, "duration_ms": 4.5553999952971935}
+{"time": "2026-10-30T13:20:08.139545+00:00", "event": "request.start", "result": "started", "request_id": "522deb5b56584f9f823cf42315a25d8f", "method": "POST"}
+{"time": "2026-10-30T13:20:08.142627+00:00", "event": "request.end", "result": "error", "request_id": "522deb5b56584f9f823cf42315a25d8f", "status": 403, "duration_ms": 3.083399962633848}
+{"time": "2026-10-30T13:20:14.127182+00:00", "event": "request.start", "result": "started", "request_id": "4c91d02bf3e24b888bbbf960907be405", "method": "POST"}
+{"time": "2026-10-30T13:20:14.189850+00:00", "event": "account.created", "result": "success", "request_id": "4c91d02bf3e24b888bbbf960907be405"}
+{"time": "2026-10-30T13:20:14.193198+00:00", "event": "request.end", "result": "success", "request_id": "4c91d02bf3e24b888bbbf960907be405", "status": 201, "duration_ms": 66.019999794662}
+{"time": "2026-10-30T13:20:14.203385+00:00", "event": "request.start", "result": "started", "request_id": "02810c9bb3d845dab9cdf0b7df286ed9", "method": "POST"}
+{"time": "2026-10-30T13:20:14.267399+00:00", "event": "login.failed", "result": "error", "request_id": "02810c9bb3d845dab9cdf0b7df286ed9"}
+{"time": "2026-10-30T13:20:14.267991+00:00", "event": "request.end", "result": "error", "request_id": "02810c9bb3d845dab9cdf0b7df286ed9", "status": 401, "duration_ms": 64.60320018231869}
+{"time": "2026-10-30T13:20:14.278090+00:00", "event": "request.start", "result": "started", "request_id": "577cd1257e3b4cde9cb28283c007e8ee", "method": "POST"}
+{"time": "2026-10-30T13:20:14.344344+00:00", "event": "login.failed", "result": "error", "request_id": "577cd1257e3b4cde9cb28283c007e8ee"}
+{"time": "2026-10-30T13:20:14.344953+00:00", "event": "request.end", "result": "error", "request_id": "577cd1257e3b4cde9cb28283c007e8ee", "status": 401, "duration_ms": 66.86269957572222}
+{"time": "2026-10-30T13:20:14.361916+00:00", "event": "request.start", "result": "started", "request_id": "63169a53faa843078a63543a2835ff6c", "method": "POST"}
+{"time": "2026-10-30T13:20:14.435896+00:00", "event": "login.failed", "result": "error", "request_id": "63169a53faa843078a63543a2835ff6c"}
+{"time": "2026-10-30T13:20:14.436424+00:00", "event": "request.end", "result": "error", "request_id": "63169a53faa843078a63543a2835ff6c", "status": 401, "duration_ms": 74.51959978789091}
+{"time": "2026-10-30T13:20:14.446357+00:00", "event": "request.start", "result": "started", "request_id": "373d6535460043f3b60d68fef1f9ac81", "method": "POST"}
+{"time": "2026-10-30T13:20:14.507960+00:00", "event": "login.failed", "result": "error", "request_id": "373d6535460043f3b60d68fef1f9ac81"}
+{"time": "2026-10-30T13:20:14.508517+00:00", "event": "request.end", "result": "error", "request_id": "373d6535460043f3b60d68fef1f9ac81", "status": 401, "duration_ms": 62.160799745470285}
+{"time": "2026-10-30T13:20:14.518969+00:00", "event": "request.start", "result": "started", "request_id": "1e101cf8c2a94c8dbad9fef893aa3096", "method": "POST"}
+{"time": "2026-10-30T13:20:14.582407+00:00", "event": "login.blocked", "result": "error", "request_id": "1e101cf8c2a94c8dbad9fef893aa3096"}
+{"time": "2026-10-30T13:20:14.582995+00:00", "event": "request.end", "result": "error", "request_id": "1e101cf8c2a94c8dbad9fef893aa3096", "status": 429, "duration_ms": 64.02730010449886}
+{"time": "2026-10-30T13:20:14.593157+00:00", "event": "request.start", "result": "started", "request_id": "9cc711c7be5d440ca25d8e635a66bb22", "method": "POST"}
+{"time": "2026-10-30T13:20:14.595920+00:00", "event": "login.blocked", "result": "error", "request_id": "9cc711c7be5d440ca25d8e635a66bb22"}
+{"time": "2026-10-30T13:20:14.596503+00:00", "event": "request.end", "result": "error", "request_id": "9cc711c7be5d440ca25d8e635a66bb22", "status": 429, "duration_ms": 3.3472999930381775}
+{"time": "2026-10-30T13:20:14.606310+00:00", "event": "request.start", "result": "started", "request_id": "58046976146f4d18811a12a40c64bb75", "method": "POST"}
+{"time": "2026-10-30T13:20:14.676396+00:00", "event": "login.failed", "result": "error", "request_id": "58046976146f4d18811a12a40c64bb75"}
+{"time": "2026-10-30T13:20:14.676978+00:00", "event": "request.end", "result": "error", "request_id": "58046976146f4d18811a12a40c64bb75", "status": 401, "duration_ms": 70.66910015419126}
+{"time": "2026-10-30T13:20:14.687624+00:00", "event": "request.start", "result": "started", "request_id": "793b0ba9268a4e8c94f1f76f838b203c", "method": "POST"}
+{"time": "2026-10-30T13:20:14.755337+00:00", "event": "login.failed", "result": "error", "request_id": "793b0ba9268a4e8c94f1f76f838b203c"}
+{"time": "2026-10-30T13:20:14.755927+00:00", "event": "request.end", "result": "error", "request_id": "793b0ba9268a4e8c94f1f76f838b203c", "status": 401, "duration_ms": 68.30340018495917}
+{"time": "2026-10-30T13:20:14.765457+00:00", "event": "request.start", "result": "started", "request_id": "8b885bd1a37049fbae99718d0fbb843f", "method": "POST"}
+{"time": "2026-10-30T13:20:14.825574+00:00", "event": "login.failed", "result": "error", "request_id": "8b885bd1a37049fbae99718d0fbb843f"}
+{"time": "2026-10-30T13:20:14.826167+00:00", "event": "request.end", "result": "error", "request_id": "8b885bd1a37049fbae99718d0fbb843f", "status": 401, "duration_ms": 60.70889998227358}
+{"time": "2026-10-30T13:20:14.840328+00:00", "event": "request.start", "result": "started", "request_id": "23a97b44b376411e8f2a1157d22cb731", "method": "POST"}
+{"time": "2026-10-30T13:20:14.927237+00:00", "event": "login.failed", "result": "error", "request_id": "23a97b44b376411e8f2a1157d22cb731"}
+{"time": "2026-10-30T13:20:14.927794+00:00", "event": "request.end", "result": "error", "request_id": "23a97b44b376411e8f2a1157d22cb731", "status": 401, "duration_ms": 87.47409982606769}
+{"time": "2026-10-30T13:20:14.937959+00:00", "event": "request.start", "result": "started", "request_id": "faac5badf2d84f37afb5d2117cdeafd4", "method": "POST"}
+{"time": "2026-10-30T13:20:15.003511+00:00", "event": "login.blocked", "result": "error", "request_id": "faac5badf2d84f37afb5d2117cdeafd4"}
+{"time": "2026-10-30T13:20:15.004209+00:00", "event": "request.end", "result": "error", "request_id": "faac5badf2d84f37afb5d2117cdeafd4", "status": 429, "duration_ms": 66.25190004706383}
+{"time": "2026-10-30T13:20:15.187764+00:00", "event": "request.start", "result": "started", "request_id": "71a223479750401c9d1f3f2b0afb90e6", "method": "POST"}
+{"time": "2026-10-30T13:20:15.259817+00:00", "event": "account.created", "result": "success", "request_id": "71a223479750401c9d1f3f2b0afb90e6"}
+{"time": "2026-10-30T13:20:15.262975+00:00", "event": "request.end", "result": "success", "request_id": "71a223479750401c9d1f3f2b0afb90e6", "status": 201, "duration_ms": 75.21949987858534}
+{"time": "2026-10-30T13:20:15.273027+00:00", "event": "request.start", "result": "started", "request_id": "8a82aff05b3f4cd58bd3a5af74f3891c", "method": "POST"}
+{"time": "2026-10-30T13:20:15.335755+00:00", "event": "account.created", "result": "success", "request_id": "8a82aff05b3f4cd58bd3a5af74f3891c"}
+{"time": "2026-10-30T13:20:15.338292+00:00", "event": "request.end", "result": "success", "request_id": "8a82aff05b3f4cd58bd3a5af74f3891c", "status": 201, "duration_ms": 65.2661002241075}
+{"time": "2026-10-30T13:20:15.348686+00:00", "event": "request.start", "result": "started", "request_id": "4a389a65ef0c46a7a6f57e41c6dd7b41", "method": "POST"}
+{"time": "2026-10-30T13:20:15.433176+00:00", "event": "login.failed", "result": "error", "request_id": "4a389a65ef0c46a7a6f57e41c6dd7b41"}
+{"time": "2026-10-30T13:20:15.434014+00:00", "event": "request.end", "result": "error", "request_id": "4a389a65ef0c46a7a6f57e41c6dd7b41", "status": 401, "duration_ms": 85.31949995085597}
+{"time": "2026-10-30T13:20:15.445167+00:00", "event": "request.start", "result": "started", "request_id": "a36ac52fa3114a17a310035b8991aef9", "method": "POST"}
+{"time": "2026-10-30T13:20:15.508446+00:00", "event": "login.failed", "result": "error", "request_id": "a36ac52fa3114a17a310035b8991aef9"}
+{"time": "2026-10-30T13:20:15.508900+00:00", "event": "request.end", "result": "error", "request_id": "a36ac52fa3114a17a310035b8991aef9", "status": 401, "duration_ms": 63.7385998852551}
+{"time": "2026-10-30T13:20:15.519608+00:00", "event": "request.start", "result": "started", "request_id": "ed8ceb2de6fb4e0db8cc8357a25724bb", "method": "POST"}
+{"time": "2026-10-30T13:20:15.582003+00:00", "event": "login.failed", "result": "error", "request_id": "ed8ceb2de6fb4e0db8cc8357a25724bb"}
+{"time": "2026-10-30T13:20:15.582531+00:00", "event": "request.end", "result": "error", "request_id": "ed8ceb2de6fb4e0db8cc8357a25724bb", "status": 401, "duration_ms": 62.92600044980645}
+{"time": "2026-10-30T13:20:15.592954+00:00", "event": "request.start", "result": "started", "request_id": "ee2dbf2fe8254cccbcbf3602523f647f", "method": "POST"}
+{"time": "2026-10-30T13:20:15.655662+00:00", "event": "login.failed", "result": "error", "request_id": "ee2dbf2fe8254cccbcbf3602523f647f"}
+{"time": "2026-10-30T13:20:15.656248+00:00", "event": "request.end", "result": "error", "request_id": "ee2dbf2fe8254cccbcbf3602523f647f", "status": 401, "duration_ms": 63.29450011253357}
+{"time": "2026-10-30T13:20:15.665868+00:00", "event": "request.start", "result": "started", "request_id": "83a577f1056742908c92166ffd7f6555", "method": "POST"}
+{"time": "2026-10-30T13:20:15.727478+00:00", "event": "session.created", "result": "success", "request_id": "83a577f1056742908c92166ffd7f6555"}
+{"time": "2026-10-30T13:20:15.729592+00:00", "event": "request.end", "result": "success", "request_id": "83a577f1056742908c92166ffd7f6555", "status": 201, "duration_ms": 63.721099868416786}
+{"time": "2026-10-30T13:20:15.739692+00:00", "event": "request.start", "result": "started", "request_id": "0d0f4ac8fb7944ee8e7ad9f68b500d2e", "method": "POST"}
+{"time": "2026-10-30T13:20:15.804202+00:00", "event": "login.failed", "result": "error", "request_id": "0d0f4ac8fb7944ee8e7ad9f68b500d2e"}
+{"time": "2026-10-30T13:20:15.805021+00:00", "event": "request.end", "result": "error", "request_id": "0d0f4ac8fb7944ee8e7ad9f68b500d2e", "status": 401, "duration_ms": 65.33079966902733}
+{"time": "2026-10-30T13:20:15.815196+00:00", "event": "request.start", "result": "started", "request_id": "aa14a71891724019affd95f3c97a4290", "method": "POST"}
+{"time": "2026-10-30T13:20:15.880362+00:00", "event": "login.failed", "result": "error", "request_id": "aa14a71891724019affd95f3c97a4290"}
+{"time": "2026-10-30T13:20:15.880893+00:00", "event": "request.end", "result": "error", "request_id": "aa14a71891724019affd95f3c97a4290", "status": 401, "duration_ms": 65.7001999206841}
+{"time": "2026-10-30T13:20:15.890248+00:00", "event": "request.start", "result": "started", "request_id": "fa9e69b84b68410b8ac491d3c9ef1a1d", "method": "POST"}
+{"time": "2026-10-30T13:20:15.961811+00:00", "event": "login.failed", "result": "error", "request_id": "fa9e69b84b68410b8ac491d3c9ef1a1d"}
+{"time": "2026-10-30T13:20:15.962385+00:00", "event": "request.end", "result": "error", "request_id": "fa9e69b84b68410b8ac491d3c9ef1a1d", "status": 401, "duration_ms": 72.136000264436}
+{"time": "2026-10-30T13:20:15.972824+00:00", "event": "request.start", "result": "started", "request_id": "3beae40d1342457aa62349e01dd3c8ae", "method": "POST"}
+{"time": "2026-10-30T13:20:16.028287+00:00", "event": "login.failed", "result": "error", "request_id": "3beae40d1342457aa62349e01dd3c8ae"}
+{"time": "2026-10-30T13:20:16.028820+00:00", "event": "request.end", "result": "error", "request_id": "3beae40d1342457aa62349e01dd3c8ae", "status": 401, "duration_ms": 55.997599847614765}
+{"time": "2026-10-30T13:20:16.042520+00:00", "event": "request.start", "result": "started", "request_id": "1a9a1a99b10a46a1b07a76d77efafab9", "method": "POST"}
+{"time": "2026-10-30T13:20:16.098179+00:00", "event": "session.created", "result": "success", "request_id": "1a9a1a99b10a46a1b07a76d77efafab9"}
+{"time": "2026-10-30T13:20:16.100133+00:00", "event": "request.end", "result": "success", "request_id": "1a9a1a99b10a46a1b07a76d77efafab9", "status": 201, "duration_ms": 57.61739984154701}
+{"time": "2026-10-30T13:20:16.109232+00:00", "event": "request.start", "result": "started", "request_id": "8c5147935dfe45ecb275650dd2104067", "method": "POST"}
+{"time": "2026-10-30T13:20:16.166361+00:00", "event": "login.blocked", "result": "error", "request_id": "8c5147935dfe45ecb275650dd2104067"}
+{"time": "2026-10-30T13:20:16.166910+00:00", "event": "request.end", "result": "error", "request_id": "8c5147935dfe45ecb275650dd2104067", "status": 429, "duration_ms": 57.678500190377235}
+{"time": "2026-10-30T13:20:16.341973+00:00", "event": "request.start", "result": "started", "request_id": "e47d6478373245b69a6529bce9b12d79", "method": "POST"}
+{"time": "2026-10-30T13:20:16.409065+00:00", "event": "account.created", "result": "success", "request_id": "e47d6478373245b69a6529bce9b12d79"}
+{"time": "2026-10-30T13:20:16.412318+00:00", "event": "request.end", "result": "success", "request_id": "e47d6478373245b69a6529bce9b12d79", "status": 201, "duration_ms": 70.3476001508534}
+{"time": "2026-10-30T13:20:16.428168+00:00", "event": "request.start", "result": "started", "request_id": "2f8d7b60bb294c149fd9cb3bd4f15bcd", "method": "POST"}
+{"time": "2026-10-30T13:20:16.445584+00:00", "event": "request.start", "result": "started", "request_id": "452af2f7643341d98b540e174d1c09e1", "method": "POST"}
+{"time": "2026-10-30T13:20:16.460817+00:00", "event": "request.start", "result": "started", "request_id": "82573351c615424aa64577c24e810cf1", "method": "POST"}
+{"time": "2026-10-30T13:20:16.474074+00:00", "event": "request.start", "result": "started", "request_id": "30bc409f77404fde8b817846d0911fb0", "method": "POST"}
+{"time": "2026-10-30T13:20:16.487998+00:00", "event": "request.start", "result": "started", "request_id": "c1166be9b6e14b6291485e28185a2573", "method": "POST"}
+{"time": "2026-10-30T13:20:16.505008+00:00", "event": "login.failed", "result": "error", "request_id": "2f8d7b60bb294c149fd9cb3bd4f15bcd"}
+{"time": "2026-10-30T13:20:16.505548+00:00", "event": "request.end", "result": "error", "request_id": "2f8d7b60bb294c149fd9cb3bd4f15bcd", "status": 401, "duration_ms": 77.38450029864907}
+{"time": "2026-10-30T13:20:16.556499+00:00", "event": "login.failed", "result": "error", "request_id": "452af2f7643341d98b540e174d1c09e1"}
+{"time": "2026-10-30T13:20:16.557010+00:00", "event": "request.end", "result": "error", "request_id": "452af2f7643341d98b540e174d1c09e1", "status": 401, "duration_ms": 111.43600009381771}
+{"time": "2026-10-30T13:20:16.612764+00:00", "event": "login.failed", "result": "error", "request_id": "82573351c615424aa64577c24e810cf1"}
+{"time": "2026-10-30T13:20:16.613239+00:00", "event": "request.end", "result": "error", "request_id": "82573351c615424aa64577c24e810cf1", "status": 401, "duration_ms": 152.42880024015903}
+{"time": "2026-10-30T13:20:16.667357+00:00", "event": "login.failed", "result": "error", "request_id": "30bc409f77404fde8b817846d0911fb0"}
+{"time": "2026-10-30T13:20:16.667908+00:00", "event": "request.end", "result": "error", "request_id": "30bc409f77404fde8b817846d0911fb0", "status": 401, "duration_ms": 193.84379964321852}
+{"time": "2026-10-30T13:20:16.720614+00:00", "event": "login.blocked", "result": "error", "request_id": "c1166be9b6e14b6291485e28185a2573"}
+{"time": "2026-10-30T13:20:16.721184+00:00", "event": "request.end", "result": "error", "request_id": "c1166be9b6e14b6291485e28185a2573", "status": 429, "duration_ms": 233.19109994918108}
+{"time": "2026-10-30T13:20:17.167272+00:00", "event": "request.start", "result": "started", "request_id": "183fc8b017dd4fa2a97da866e8326ad4", "method": "POST"}
+{"time": "2026-10-30T13:20:17.222790+00:00", "event": "account.created", "result": "success", "request_id": "183fc8b017dd4fa2a97da866e8326ad4"}
+{"time": "2026-10-30T13:20:17.225466+00:00", "event": "request.end", "result": "success", "request_id": "183fc8b017dd4fa2a97da866e8326ad4", "status": 201, "duration_ms": 58.19900007918477}
+{"time": "2026-10-30T13:20:17.408829+00:00", "event": "request.start", "result": "started", "request_id": "3e8e400dd84245e488cf69a8aed30509", "method": "POST"}
+{"time": "2026-10-30T13:20:17.467291+00:00", "event": "account.created", "result": "success", "request_id": "3e8e400dd84245e488cf69a8aed30509"}
+{"time": "2026-10-30T13:20:17.470539+00:00", "event": "request.end", "result": "success", "request_id": "3e8e400dd84245e488cf69a8aed30509", "status": 201, "duration_ms": 61.71200005337596}
+{"time": "2026-10-30T13:20:17.480082+00:00", "event": "request.start", "result": "started", "request_id": "22e62302c5c344a2b0b1ff159d2384cc", "method": "POST"}
+{"time": "2026-10-30T13:20:17.542341+00:00", "event": "session.created", "result": "success", "request_id": "22e62302c5c344a2b0b1ff159d2384cc"}
+{"time": "2026-10-30T13:20:17.543976+00:00", "event": "request.end", "result": "success", "request_id": "22e62302c5c344a2b0b1ff159d2384cc", "status": 201, "duration_ms": 63.8945996761322}
+{"time": "2026-10-30T13:20:17.554356+00:00", "event": "request.start", "result": "started", "request_id": "577e4ad948684253b7ea49079b17aade", "method": "POST"}
+{"time": "2026-10-30T13:20:17.611495+00:00", "event": "session.created", "result": "success", "request_id": "577e4ad948684253b7ea49079b17aade"}
+{"time": "2026-10-30T13:20:17.613031+00:00", "event": "request.end", "result": "success", "request_id": "577e4ad948684253b7ea49079b17aade", "status": 201, "duration_ms": 58.67630010470748}
+{"time": "2026-10-30T13:20:17.622277+00:00", "event": "request.start", "result": "started", "request_id": "3f21894dad3642ecabb30a676324c482", "method": "PATCH"}
+{"time": "2026-10-30T13:20:17.629164+00:00", "event": "profile.updated", "result": "success", "request_id": "3f21894dad3642ecabb30a676324c482"}
+{"time": "2026-10-30T13:20:17.630603+00:00", "event": "request.end", "result": "success", "request_id": "3f21894dad3642ecabb30a676324c482", "status": 200, "duration_ms": 8.326599840074778}
+{"time": "2026-10-30T13:20:17.639819+00:00", "event": "request.start", "result": "started", "request_id": "a8e3899d517a4ea9b0b8c4a0f7ef4da9", "method": "GET"}
+{"time": "2026-10-30T13:20:17.643063+00:00", "event": "request.end", "result": "success", "request_id": "a8e3899d517a4ea9b0b8c4a0f7ef4da9", "status": 200, "duration_ms": 3.244999796152115}
+{"time": "2026-10-30T13:20:17.652545+00:00", "event": "request.start", "result": "started", "request_id": "a0251c26b05143f79244764924e87d18", "method": "PATCH"}
+{"time": "2026-10-30T13:20:17.655339+00:00", "event": "request.end", "result": "error", "request_id": "a0251c26b05143f79244764924e87d18", "status": 422, "duration_ms": 2.7948999777436256}
+{"time": "2026-10-30T13:20:17.664799+00:00", "event": "request.start", "result": "started", "request_id": "e306fec0f0654f0581081820d197ec7e", "method": "PATCH"}
+{"time": "2026-10-30T13:20:17.667727+00:00", "event": "request.end", "result": "error", "request_id": "e306fec0f0654f0581081820d197ec7e", "status": 422, "duration_ms": 2.927399706095457}
+{"time": "2026-10-30T13:20:17.677307+00:00", "event": "request.start", "result": "started", "request_id": "3bd70a8cd39f4448862f166d121f1768", "method": "PATCH"}
+{"time": "2026-10-30T13:20:17.680447+00:00", "event": "request.end", "result": "error", "request_id": "3bd70a8cd39f4448862f166d121f1768", "status": 422, "duration_ms": 3.1404998153448105}
+{"time": "2026-10-30T13:20:17.689817+00:00", "event": "request.start", "result": "started", "request_id": "6bfb7fdfe2dd4d5aa5bb9bde2daf0edd", "method": "PATCH"}
+{"time": "2026-10-30T13:20:17.692877+00:00", "event": "request.end", "result": "error", "request_id": "6bfb7fdfe2dd4d5aa5bb9bde2daf0edd", "status": 422, "duration_ms": 3.0602002516388893}
+{"time": "2026-10-30T13:20:17.702720+00:00", "event": "request.start", "result": "started", "request_id": "ff03ceae9aab46608c2d4607d07d4ea9", "method": "GET"}
+{"time": "2026-10-30T13:20:17.705639+00:00", "event": "request.end", "result": "success", "request_id": "ff03ceae9aab46608c2d4607d07d4ea9", "status": 200, "duration_ms": 2.9194997623562813}
+{"time": "2026-10-30T13:20:17.873637+00:00", "event": "request.start", "result": "started", "request_id": "aa8d840ef64d44b69efab9cec5d27519", "method": "POST"}
+{"time": "2026-10-30T13:20:17.934047+00:00", "event": "account.created", "result": "success", "request_id": "aa8d840ef64d44b69efab9cec5d27519"}
+{"time": "2026-10-30T13:20:17.937418+00:00", "event": "request.end", "result": "success", "request_id": "aa8d840ef64d44b69efab9cec5d27519", "status": 201, "duration_ms": 63.783000223338604}
+{"time": "2026-10-30T13:20:17.946568+00:00", "event": "request.start", "result": "started", "request_id": "f9063b4bcd5f4cd8a2c42d1c19d231e4", "method": "POST"}
+{"time": "2026-10-30T13:20:18.003147+00:00", "event": "session.created", "result": "success", "request_id": "f9063b4bcd5f4cd8a2c42d1c19d231e4"}
+{"time": "2026-10-30T13:20:18.005082+00:00", "event": "request.end", "result": "success", "request_id": "f9063b4bcd5f4cd8a2c42d1c19d231e4", "status": 201, "duration_ms": 58.51450003683567}
+{"time": "2026-10-30T13:20:18.014110+00:00", "event": "request.start", "result": "started", "request_id": "5485df7b858d4fbebd43c84e9047e90d", "method": "POST"}
+{"time": "2026-10-30T13:20:18.076319+00:00", "event": "session.created", "result": "success", "request_id": "5485df7b858d4fbebd43c84e9047e90d"}
+{"time": "2026-10-30T13:20:18.078005+00:00", "event": "request.end", "result": "success", "request_id": "5485df7b858d4fbebd43c84e9047e90d", "status": 201, "duration_ms": 63.894799910485744}
+{"time": "2026-10-30T13:20:18.087425+00:00", "event": "request.start", "result": "started", "request_id": "e9f418860a8d4058b4598523a2b3af91", "method": "PUT"}
+{"time": "2026-10-30T13:20:18.203151+00:00", "event": "password.changed", "result": "success", "request_id": "e9f418860a8d4058b4598523a2b3af91"}
+{"time": "2026-10-30T13:20:18.203327+00:00", "event": "request.end", "result": "success", "request_id": "e9f418860a8d4058b4598523a2b3af91", "status": 204, "duration_ms": 115.9028997644782}
+{"time": "2026-10-30T13:20:18.212090+00:00", "event": "request.start", "result": "started", "request_id": "592ace1975894936a40e4e229a88d43b", "method": "GET"}
+{"time": "2026-10-30T13:20:18.214705+00:00", "event": "request.end", "result": "error", "request_id": "592ace1975894936a40e4e229a88d43b", "status": 401, "duration_ms": 2.615800127387047}
+{"time": "2026-10-30T13:20:18.223761+00:00", "event": "request.start", "result": "started", "request_id": "19296510637c4548ab276f5d4644439d", "method": "GET"}
+{"time": "2026-10-30T13:20:18.226015+00:00", "event": "request.end", "result": "error", "request_id": "19296510637c4548ab276f5d4644439d", "status": 401, "duration_ms": 2.2478001192212105}
+{"time": "2026-10-30T13:20:18.235848+00:00", "event": "request.start", "result": "started", "request_id": "b472cce5347144f58ebb742fc5f17bc1", "method": "POST"}
+{"time": "2026-10-30T13:20:18.349280+00:00", "event": "session.created", "result": "success", "request_id": "b472cce5347144f58ebb742fc5f17bc1"}
+{"time": "2026-10-30T13:20:18.351495+00:00", "event": "request.end", "result": "success", "request_id": "b472cce5347144f58ebb742fc5f17bc1", "status": 201, "duration_ms": 115.64690014347434}
+{"time": "2026-10-30T13:20:18.532224+00:00", "event": "request.start", "result": "started", "request_id": "ff14503f4cbe4bb1ac3b213135bc9425", "method": "POST"}
+{"time": "2026-10-30T13:20:18.587107+00:00", "event": "account.created", "result": "success", "request_id": "ff14503f4cbe4bb1ac3b213135bc9425"}
+{"time": "2026-10-30T13:20:18.590086+00:00", "event": "request.end", "result": "success", "request_id": "ff14503f4cbe4bb1ac3b213135bc9425", "status": 201, "duration_ms": 57.86650022491813}
+{"time": "2026-10-30T13:20:18.599483+00:00", "event": "request.start", "result": "started", "request_id": "57179bc539ba4d22ab3d8cac2bc2c217", "method": "POST"}
+{"time": "2026-10-30T13:20:18.659417+00:00", "event": "session.created", "result": "success", "request_id": "57179bc539ba4d22ab3d8cac2bc2c217"}
+{"time": "2026-10-30T13:20:18.661352+00:00", "event": "request.end", "result": "success", "request_id": "57179bc539ba4d22ab3d8cac2bc2c217", "status": 201, "duration_ms": 61.87030021101236}
+{"time": "2026-10-30T13:20:18.673971+00:00", "event": "request.start", "result": "started", "request_id": "0efac5f9fdf546b99865d9f3a31ca157", "method": "POST"}
+{"time": "2026-10-30T13:20:18.729949+00:00", "event": "session.created", "result": "success", "request_id": "0efac5f9fdf546b99865d9f3a31ca157"}
+{"time": "2026-10-30T13:20:18.731923+00:00", "event": "request.end", "result": "success", "request_id": "0efac5f9fdf546b99865d9f3a31ca157", "status": 201, "duration_ms": 57.955500204116106}
+{"time": "2026-10-30T13:20:18.741746+00:00", "event": "request.start", "result": "started", "request_id": "bedd60ef10634401bff9a094711cf9d8", "method": "PUT"}
+{"time": "2026-10-30T13:20:18.797916+00:00", "event": "request.end", "result": "error", "request_id": "bedd60ef10634401bff9a094711cf9d8", "status": 422, "duration_ms": 56.16959976032376}
+{"time": "2026-10-30T13:20:18.811555+00:00", "event": "request.start", "result": "started", "request_id": "7947a2e5534a4f40b1b8a3a7006f7a9b", "method": "GET"}
+{"time": "2026-10-30T13:20:18.815183+00:00", "event": "request.end", "result": "success", "request_id": "7947a2e5534a4f40b1b8a3a7006f7a9b", "status": 200, "duration_ms": 3.6336001940071583}
+{"time": "2026-10-30T13:20:18.824559+00:00", "event": "request.start", "result": "started", "request_id": "c9132fdfb7a2457d8a989f929ec34826", "method": "GET"}
+{"time": "2026-10-30T13:20:18.827921+00:00", "event": "request.end", "result": "success", "request_id": "c9132fdfb7a2457d8a989f929ec34826", "status": 200, "duration_ms": 3.3631999976933002}
+{"time": "2026-10-30T13:20:18.837734+00:00", "event": "request.start", "result": "started", "request_id": "3a184f03f2674e9abb950405a2db5d37", "method": "POST"}
+{"time": "2026-10-30T13:20:18.897208+00:00", "event": "session.created", "result": "success", "request_id": "3a184f03f2674e9abb950405a2db5d37"}
+{"time": "2026-10-30T13:20:18.899416+00:00", "event": "request.end", "result": "success", "request_id": "3a184f03f2674e9abb950405a2db5d37", "status": 201, "duration_ms": 61.683000065386295}
+{"time": "2026-10-30T13:20:19.183850+00:00", "event": "request.start", "result": "started", "request_id": "8e004e1aba2a450997faeec4c0747583", "method": "POST"}
+{"time": "2026-10-30T13:20:19.244717+00:00", "event": "account.created", "result": "success", "request_id": "8e004e1aba2a450997faeec4c0747583"}
+{"time": "2026-10-30T13:20:19.248016+00:00", "event": "request.end", "result": "success", "request_id": "8e004e1aba2a450997faeec4c0747583", "status": 201, "duration_ms": 64.17170027270913}
+{"time": "2026-10-30T13:20:19.258219+00:00", "event": "request.start", "result": "started", "request_id": "91df9ab11e0849c28cab52041b75d24b", "method": "POST"}
+{"time": "2026-10-30T13:20:19.317924+00:00", "event": "session.created", "result": "success", "request_id": "91df9ab11e0849c28cab52041b75d24b"}
+{"time": "2026-10-30T13:20:19.319874+00:00", "event": "request.end", "result": "success", "request_id": "91df9ab11e0849c28cab52041b75d24b", "status": 201, "duration_ms": 61.65539985522628}
+{"time": "2026-10-30T13:20:19.332952+00:00", "event": "request.start", "result": "started", "request_id": "7991c67af2724d64bc6ff8fede4caaf5", "method": "POST"}
+{"time": "2026-10-30T13:20:19.390885+00:00", "event": "session.created", "result": "success", "request_id": "7991c67af2724d64bc6ff8fede4caaf5"}
+{"time": "2026-10-30T13:20:19.392793+00:00", "event": "request.end", "result": "success", "request_id": "7991c67af2724d64bc6ff8fede4caaf5", "status": 201, "duration_ms": 59.84400026500225}
+{"time": "2026-10-30T13:20:19.402813+00:00", "event": "request.start", "result": "started", "request_id": "60f88e45d133441b839234c5e48510b9", "method": "PUT"}
+{"time": "2026-10-30T13:20:19.410892+00:00", "event": "request.end", "result": "error", "request_id": "60f88e45d133441b839234c5e48510b9", "status": 422, "duration_ms": 8.078899700194597}
+{"time": "2026-10-30T13:20:19.421652+00:00", "event": "request.start", "result": "started", "request_id": "1d39be3118594fcab77902eb703c85ad", "method": "GET"}
+{"time": "2026-10-30T13:20:19.425449+00:00", "event": "request.end", "result": "success", "request_id": "1d39be3118594fcab77902eb703c85ad", "status": 200, "duration_ms": 3.7979003973305225}
+{"time": "2026-10-30T13:20:19.434802+00:00", "event": "request.start", "result": "started", "request_id": "f9ff2e34a4dd463ab94dd1054d1c49d2", "method": "GET"}
+{"time": "2026-10-30T13:20:19.438034+00:00", "event": "request.end", "result": "success", "request_id": "f9ff2e34a4dd463ab94dd1054d1c49d2", "status": 200, "duration_ms": 3.2340004108846188}
+{"time": "2026-10-30T13:20:19.446930+00:00", "event": "request.start", "result": "started", "request_id": "ffec01b5f9f941cfab2f197c40b673cf", "method": "POST"}
+{"time": "2026-10-30T13:20:19.505685+00:00", "event": "session.created", "result": "success", "request_id": "ffec01b5f9f941cfab2f197c40b673cf"}
+{"time": "2026-10-30T13:20:19.508019+00:00", "event": "request.end", "result": "success", "request_id": "ffec01b5f9f941cfab2f197c40b673cf", "status": 201, "duration_ms": 61.089400202035904}
+{"time": "2026-10-30T13:20:19.691530+00:00", "event": "request.start", "result": "started", "request_id": "d9de8b75a01041f883cae9844eb7fbc0", "method": "POST"}
+{"time": "2026-10-30T13:20:19.747565+00:00", "event": "account.created", "result": "success", "request_id": "d9de8b75a01041f883cae9844eb7fbc0"}
+{"time": "2026-10-30T13:20:19.750929+00:00", "event": "request.end", "result": "success", "request_id": "d9de8b75a01041f883cae9844eb7fbc0", "status": 201, "duration_ms": 59.39850024878979}
+{"time": "2026-10-30T13:20:19.762020+00:00", "event": "request.start", "result": "started", "request_id": "69d92fc0694548aca53ecb18cbe4a411", "method": "POST"}
+{"time": "2026-10-30T13:20:19.825380+00:00", "event": "session.created", "result": "success", "request_id": "69d92fc0694548aca53ecb18cbe4a411"}
+{"time": "2026-10-30T13:20:19.827212+00:00", "event": "request.end", "result": "success", "request_id": "69d92fc0694548aca53ecb18cbe4a411", "status": 201, "duration_ms": 65.19419979304075}
+{"time": "2026-10-30T13:20:19.841427+00:00", "event": "request.start", "result": "started", "request_id": "7326c76d99eb4ac283661e4f8cb976c4", "method": "POST"}
+{"time": "2026-10-30T13:20:19.856683+00:00", "event": "quote.created", "result": "success", "request_id": "7326c76d99eb4ac283661e4f8cb976c4"}
+{"time": "2026-10-30T13:20:19.857009+00:00", "event": "request.end", "result": "success", "request_id": "7326c76d99eb4ac283661e4f8cb976c4", "status": 200, "duration_ms": 15.582500025629997}
+{"time": "2026-10-30T13:20:19.871040+00:00", "event": "request.start", "result": "started", "request_id": "01334a940a4a46539a632af31da6050f", "method": "POST"}
+{"time": "2026-10-30T13:20:19.879214+00:00", "event": "quote.created", "result": "success", "request_id": "01334a940a4a46539a632af31da6050f"}
+{"time": "2026-10-30T13:20:19.879411+00:00", "event": "request.end", "result": "success", "request_id": "01334a940a4a46539a632af31da6050f", "status": 200, "duration_ms": 8.377599995583296}
+{"time": "2026-10-30T13:20:20.135190+00:00", "event": "request.start", "result": "started", "request_id": "8227a63d62204096a50d1566781c4d76", "method": "POST"}
+{"time": "2026-10-30T13:20:20.191931+00:00", "event": "account.created", "result": "success", "request_id": "8227a63d62204096a50d1566781c4d76"}
+{"time": "2026-10-30T13:20:20.194834+00:00", "event": "request.end", "result": "success", "request_id": "8227a63d62204096a50d1566781c4d76", "status": 201, "duration_ms": 59.6461002714932}
+{"time": "2026-10-30T13:20:20.205431+00:00", "event": "request.start", "result": "started", "request_id": "90fa343d64504f59abbbc0a743a1f7b8", "method": "POST"}
+{"time": "2026-10-30T13:20:20.273847+00:00", "event": "session.created", "result": "success", "request_id": "90fa343d64504f59abbbc0a743a1f7b8"}
+{"time": "2026-10-30T13:20:20.275557+00:00", "event": "request.end", "result": "success", "request_id": "90fa343d64504f59abbbc0a743a1f7b8", "status": 201, "duration_ms": 70.12980012223125}
+{"time": "2026-10-30T13:20:20.292076+00:00", "event": "request.start", "result": "started", "request_id": "8d541a9eb9164a5596ca4286192d659f", "method": "POST"}
+{"time": "2026-10-30T13:20:20.298219+00:00", "event": "request.end", "result": "error", "request_id": "8d541a9eb9164a5596ca4286192d659f", "status": 422, "duration_ms": 6.145599763840437}
+{"time": "2026-10-30T13:20:20.591105+00:00", "event": "request.start", "result": "started", "request_id": "493704479008464ab804b24af10b9f51", "method": "POST"}
+{"time": "2026-10-30T13:20:20.648628+00:00", "event": "account.created", "result": "success", "request_id": "493704479008464ab804b24af10b9f51"}
+{"time": "2026-10-30T13:20:20.651508+00:00", "event": "request.end", "result": "success", "request_id": "493704479008464ab804b24af10b9f51", "status": 201, "duration_ms": 60.41190028190613}
+{"time": "2026-10-30T13:20:20.660840+00:00", "event": "request.start", "result": "started", "request_id": "3100ee40122641bf8f1e59fe685bede8", "method": "POST"}
+{"time": "2026-10-30T13:20:20.721941+00:00", "event": "session.created", "result": "success", "request_id": "3100ee40122641bf8f1e59fe685bede8"}
+{"time": "2026-10-30T13:20:20.723856+00:00", "event": "request.end", "result": "success", "request_id": "3100ee40122641bf8f1e59fe685bede8", "status": 201, "duration_ms": 63.01689986139536}
+{"time": "2026-10-30T13:20:20.740704+00:00", "event": "request.start", "result": "started", "request_id": "c034f0a204c94b6e8868ced2d364908e", "method": "POST"}
+{"time": "2026-10-30T13:20:20.748600+00:00", "event": "request.end", "result": "error", "request_id": "c034f0a204c94b6e8868ced2d364908e", "status": 422, "duration_ms": 7.898499723523855}
+{"time": "2026-10-30T13:20:20.923780+00:00", "event": "request.start", "result": "started", "request_id": "eeb7e8ef8de34f06adbc93b70c3d2f5b", "method": "POST"}
+{"time": "2026-10-30T13:20:20.990525+00:00", "event": "account.created", "result": "success", "request_id": "eeb7e8ef8de34f06adbc93b70c3d2f5b"}
+{"time": "2026-10-30T13:20:20.993885+00:00", "event": "request.end", "result": "success", "request_id": "eeb7e8ef8de34f06adbc93b70c3d2f5b", "status": 201, "duration_ms": 70.11050032451749}
+{"time": "2026-10-30T13:20:21.003978+00:00", "event": "request.start", "result": "started", "request_id": "61d6c578a6e24abfae676ff0f07ea019", "method": "POST"}
+{"time": "2026-10-30T13:20:21.065540+00:00", "event": "session.created", "result": "success", "request_id": "61d6c578a6e24abfae676ff0f07ea019"}
+{"time": "2026-10-30T13:20:21.067526+00:00", "event": "request.end", "result": "success", "request_id": "61d6c578a6e24abfae676ff0f07ea019", "status": 201, "duration_ms": 63.550999853760004}
+{"time": "2026-10-30T13:20:21.081648+00:00", "event": "request.start", "result": "started", "request_id": "eca3360481a94d53b4cb5e013b60b6af", "method": "POST"}
+{"time": "2026-10-30T13:20:21.087766+00:00", "event": "request.end", "result": "error", "request_id": "eca3360481a94d53b4cb5e013b60b6af", "status": 422, "duration_ms": 6.11859979107976}
+{"time": "2026-10-30T13:20:21.404072+00:00", "event": "request.start", "result": "started", "request_id": "f555f9a2f8904ea18590b016f7ca31f3", "method": "POST"}
+{"time": "2026-10-30T13:20:21.464352+00:00", "event": "account.created", "result": "success", "request_id": "f555f9a2f8904ea18590b016f7ca31f3"}
+{"time": "2026-10-30T13:20:21.467734+00:00", "event": "request.end", "result": "success", "request_id": "f555f9a2f8904ea18590b016f7ca31f3", "status": 201, "duration_ms": 63.6613997630775}
+{"time": "2026-10-30T13:20:21.480678+00:00", "event": "request.start", "result": "started", "request_id": "4abb1b1dccd448c88a87e6796cb6a198", "method": "POST"}
+{"time": "2026-10-30T13:20:21.555355+00:00", "event": "session.created", "result": "success", "request_id": "4abb1b1dccd448c88a87e6796cb6a198"}
+{"time": "2026-10-30T13:20:21.557269+00:00", "event": "request.end", "result": "success", "request_id": "4abb1b1dccd448c88a87e6796cb6a198", "status": 201, "duration_ms": 76.60209992900491}
+{"time": "2026-10-30T13:20:21.571738+00:00", "event": "request.start", "result": "started", "request_id": "18a3804e90b54eb0ab09ed85295dfa78", "method": "POST"}
+{"time": "2026-10-30T13:20:21.577313+00:00", "event": "request.end", "result": "error", "request_id": "18a3804e90b54eb0ab09ed85295dfa78", "status": 422, "duration_ms": 5.577299743890762}
+{"time": "2026-10-30T13:20:21.746352+00:00", "event": "request.start", "result": "started", "request_id": "bc2ae4a19ee541a591be77f069a22faf", "method": "POST"}
+{"time": "2026-10-30T13:20:21.803788+00:00", "event": "account.created", "result": "success", "request_id": "bc2ae4a19ee541a591be77f069a22faf"}
+{"time": "2026-10-30T13:20:21.807040+00:00", "event": "request.end", "result": "success", "request_id": "bc2ae4a19ee541a591be77f069a22faf", "status": 201, "duration_ms": 60.69059995934367}
+{"time": "2026-10-30T13:20:21.816544+00:00", "event": "request.start", "result": "started", "request_id": "59ee26009fc64f5b8e271d4e4251c39e", "method": "POST"}
+{"time": "2026-10-30T13:20:21.880784+00:00", "event": "session.created", "result": "success", "request_id": "59ee26009fc64f5b8e271d4e4251c39e"}
+{"time": "2026-10-30T13:20:21.882503+00:00", "event": "request.end", "result": "success", "request_id": "59ee26009fc64f5b8e271d4e4251c39e", "status": 201, "duration_ms": 65.9599001519382}
+{"time": "2026-10-30T13:20:21.903462+00:00", "event": "request.start", "result": "started", "request_id": "6b4dd56fed314bb1a16705a76670eb08", "method": "POST"}
+{"time": "2026-10-30T13:20:21.911029+00:00", "event": "request.end", "result": "error", "request_id": "6b4dd56fed314bb1a16705a76670eb08", "status": 409, "duration_ms": 7.568300236016512}
+{"time": "2026-10-30T13:20:22.096915+00:00", "event": "request.start", "result": "started", "request_id": "8df2b3086c8d4fbc9c963aed487d7586", "method": "POST"}
+{"time": "2026-10-30T13:20:22.159732+00:00", "event": "account.created", "result": "success", "request_id": "8df2b3086c8d4fbc9c963aed487d7586"}
+{"time": "2026-10-30T13:20:22.163052+00:00", "event": "request.end", "result": "success", "request_id": "8df2b3086c8d4fbc9c963aed487d7586", "status": 201, "duration_ms": 66.14140002056956}
+{"time": "2026-10-30T13:20:22.178642+00:00", "event": "request.start", "result": "started", "request_id": "a7db89cb76114a8d835f38ecdb8aa7a5", "method": "POST"}
+{"time": "2026-10-30T13:20:22.241506+00:00", "event": "session.created", "result": "success", "request_id": "a7db89cb76114a8d835f38ecdb8aa7a5"}
+{"time": "2026-10-30T13:20:22.243301+00:00", "event": "request.end", "result": "success", "request_id": "a7db89cb76114a8d835f38ecdb8aa7a5", "status": 201, "duration_ms": 64.6608998067677}
+{"time": "2026-10-30T13:20:22.256836+00:00", "event": "request.start", "result": "started", "request_id": "87607ea7942640469d5d16a6edaad07d", "method": "POST"}
+{"time": "2026-10-30T13:20:22.257770+00:00", "event": "request.end", "result": "error", "request_id": "87607ea7942640469d5d16a6edaad07d", "status": 401, "duration_ms": 0.9367996826767921}
+{"time": "2026-10-30T13:20:22.267800+00:00", "event": "request.start", "result": "started", "request_id": "dfec9fd074114e4189430b5bb88e17ab", "method": "POST"}
+{"time": "2026-10-30T13:20:22.272444+00:00", "event": "request.end", "result": "error", "request_id": "dfec9fd074114e4189430b5bb88e17ab", "status": 403, "duration_ms": 4.644600208848715}
+{"time": "2026-10-30T13:20:22.459026+00:00", "event": "request.start", "result": "started", "request_id": "66f9d74e631c42be8eaf92ffa00eff44", "method": "POST"}
+{"time": "2026-10-30T13:20:22.516251+00:00", "event": "account.created", "result": "success", "request_id": "66f9d74e631c42be8eaf92ffa00eff44"}
+{"time": "2026-10-30T13:20:22.519353+00:00", "event": "request.end", "result": "success", "request_id": "66f9d74e631c42be8eaf92ffa00eff44", "status": 201, "duration_ms": 60.32940000295639}
+{"time": "2026-10-30T13:20:22.533149+00:00", "event": "request.start", "result": "started", "request_id": "ac1175426dd640f3ade794f7b8a83ab2", "method": "POST"}
+{"time": "2026-10-30T13:20:22.597885+00:00", "event": "session.created", "result": "success", "request_id": "ac1175426dd640f3ade794f7b8a83ab2"}
+{"time": "2026-10-30T13:20:22.599712+00:00", "event": "request.end", "result": "success", "request_id": "ac1175426dd640f3ade794f7b8a83ab2", "status": 201, "duration_ms": 66.56419998034835}
+{"time": "2026-10-30T13:20:22.614206+00:00", "event": "request.start", "result": "started", "request_id": "6acc9c6d00234df3aa68bb0daa51e4be", "method": "POST"}
+{"time": "2026-10-30T13:20:22.678988+00:00", "event": "account.created", "result": "success", "request_id": "6acc9c6d00234df3aa68bb0daa51e4be"}
+{"time": "2026-10-30T13:20:22.681366+00:00", "event": "request.end", "result": "success", "request_id": "6acc9c6d00234df3aa68bb0daa51e4be", "status": 201, "duration_ms": 67.16129975393414}
+{"time": "2026-10-30T13:20:22.697906+00:00", "event": "request.start", "result": "started", "request_id": "6785de6e1b034903b73db3b3fcbcde05", "method": "POST"}
+{"time": "2026-10-30T13:20:22.790586+00:00", "event": "session.created", "result": "success", "request_id": "6785de6e1b034903b73db3b3fcbcde05"}
+{"time": "2026-10-30T13:20:22.792707+00:00", "event": "request.end", "result": "success", "request_id": "6785de6e1b034903b73db3b3fcbcde05", "status": 201, "duration_ms": 94.80540035292506}
+{"time": "2026-10-30T13:20:22.806006+00:00", "event": "request.start", "result": "started", "request_id": "686d4a943a294027b88f29d2ed60b799", "method": "POST"}
+{"time": "2026-10-30T13:20:22.819423+00:00", "event": "quote.created", "result": "success", "request_id": "686d4a943a294027b88f29d2ed60b799"}
+{"time": "2026-10-30T13:20:22.819678+00:00", "event": "request.end", "result": "success", "request_id": "686d4a943a294027b88f29d2ed60b799", "status": 200, "duration_ms": 13.675599824637175}
+{"time": "2026-10-30T13:20:22.829458+00:00", "event": "request.start", "result": "started", "request_id": "8e58b0dce5cd462582c54f6dfd2dd7f9", "method": "POST"}
+{"time": "2026-10-30T13:20:22.845923+00:00", "event": "booking.created", "result": "success", "request_id": "8e58b0dce5cd462582c54f6dfd2dd7f9"}
+{"time": "2026-10-30T13:20:22.851443+00:00", "event": "request.end", "result": "success", "request_id": "8e58b0dce5cd462582c54f6dfd2dd7f9", "status": 201, "duration_ms": 21.983600221574306}
+{"time": "2026-10-30T13:20:22.863937+00:00", "event": "request.start", "result": "started", "request_id": "f5441ddc2e104309bb048e2ead0b2f2c", "method": "POST"}
+{"time": "2026-10-30T13:20:22.876226+00:00", "event": "service.created", "result": "success", "request_id": "f5441ddc2e104309bb048e2ead0b2f2c"}
+{"time": "2026-10-30T13:20:22.878349+00:00", "event": "request.end", "result": "success", "request_id": "f5441ddc2e104309bb048e2ead0b2f2c", "status": 201, "duration_ms": 14.414600096642971}
+{"time": "2026-10-30T13:20:22.888344+00:00", "event": "request.start", "result": "started", "request_id": "bcbbd284e54d4b058e7bfa9c3c84451f", "method": "GET"}
+{"time": "2026-10-30T13:20:22.894811+00:00", "event": "request.end", "result": "success", "request_id": "bcbbd284e54d4b058e7bfa9c3c84451f", "status": 200, "duration_ms": 6.467799656093121}
+{"time": "2026-10-30T13:20:22.904730+00:00", "event": "request.start", "result": "started", "request_id": "8c17cc1c891f460386144418ba45319e", "method": "GET"}
+{"time": "2026-10-30T13:20:22.910800+00:00", "event": "request.end", "result": "success", "request_id": "8c17cc1c891f460386144418ba45319e", "status": 200, "duration_ms": 6.071599666029215}
+{"time": "2026-10-30T13:20:22.920727+00:00", "event": "request.start", "result": "started", "request_id": "043d8acaca85446792c070c48d7e8a12", "method": "PATCH"}
+{"time": "2026-10-30T13:20:22.927688+00:00", "event": "request.end", "result": "error", "request_id": "043d8acaca85446792c070c48d7e8a12", "status": 409, "duration_ms": 6.961700040847063}
+{"time": "2026-10-30T13:20:22.937877+00:00", "event": "request.start", "result": "started", "request_id": "f251f390f2654c71802447e6b28408fd", "method": "PATCH"}
+{"time": "2026-10-30T13:20:22.947505+00:00", "event": "service.updated", "result": "success", "request_id": "f251f390f2654c71802447e6b28408fd"}
+{"time": "2026-10-30T13:20:22.949183+00:00", "event": "request.end", "result": "success", "request_id": "f251f390f2654c71802447e6b28408fd", "status": 200, "duration_ms": 11.309400200843811}
+{"time": "2026-10-30T13:20:22.959254+00:00", "event": "request.start", "result": "started", "request_id": "87d9c3255c4a49be86d25d6f7b31da47", "method": "GET"}
+{"time": "2026-10-30T13:20:22.963673+00:00", "event": "request.end", "result": "success", "request_id": "87d9c3255c4a49be86d25d6f7b31da47", "status": 200, "duration_ms": 4.448899999260902}
+{"time": "2026-10-30T13:20:22.973438+00:00", "event": "request.start", "result": "started", "request_id": "b2ad5f7cd9bc4bdd8c8efa42fb7c7fbf", "method": "DELETE"}
+{"time": "2026-10-30T13:20:22.982016+00:00", "event": "service.deleted", "result": "success", "request_id": "b2ad5f7cd9bc4bdd8c8efa42fb7c7fbf"}
+{"time": "2026-10-30T13:20:22.982131+00:00", "event": "request.end", "result": "success", "request_id": "b2ad5f7cd9bc4bdd8c8efa42fb7c7fbf", "status": 204, "duration_ms": 8.696299977600574}
+{"time": "2026-10-30T13:20:22.991561+00:00", "event": "request.start", "result": "started", "request_id": "0e12e076f5a14c16b3b56c9fecec21cd", "method": "GET"}
+{"time": "2026-10-30T13:20:22.995939+00:00", "event": "request.end", "result": "error", "request_id": "0e12e076f5a14c16b3b56c9fecec21cd", "status": 404, "duration_ms": 4.378799814730883}
+{"time": "2026-10-30T13:20:23.178546+00:00", "event": "request.start", "result": "started", "request_id": "5a6c5bb6d66549729ed795387c0a3ab9", "method": "POST"}
+{"time": "2026-10-30T13:20:23.242637+00:00", "event": "account.created", "result": "success", "request_id": "5a6c5bb6d66549729ed795387c0a3ab9"}
+{"time": "2026-10-30T13:20:23.245619+00:00", "event": "request.end", "result": "success", "request_id": "5a6c5bb6d66549729ed795387c0a3ab9", "status": 201, "duration_ms": 67.0741000212729}
+{"time": "2026-10-30T13:20:23.261747+00:00", "event": "request.start", "result": "started", "request_id": "e4edfc4861634af5b310ac0d68e088f3", "method": "POST"}
+{"time": "2026-10-30T13:20:23.324841+00:00", "event": "session.created", "result": "success", "request_id": "e4edfc4861634af5b310ac0d68e088f3"}
+{"time": "2026-10-30T13:20:23.326914+00:00", "event": "request.end", "result": "success", "request_id": "e4edfc4861634af5b310ac0d68e088f3", "status": 201, "duration_ms": 65.16849994659424}
+{"time": "2026-10-30T13:20:23.338458+00:00", "event": "request.start", "result": "started", "request_id": "b4e71cff3c36418699255dc52fbddc73", "method": "POST"}
+{"time": "2026-10-30T13:20:23.395597+00:00", "event": "account.created", "result": "success", "request_id": "b4e71cff3c36418699255dc52fbddc73"}
+{"time": "2026-10-30T13:20:23.397747+00:00", "event": "request.end", "result": "success", "request_id": "b4e71cff3c36418699255dc52fbddc73", "status": 201, "duration_ms": 59.29070012643933}
+{"time": "2026-10-30T13:20:23.415367+00:00", "event": "request.start", "result": "started", "request_id": "ecb56905e0c94ebcb589dddfbe4f285f", "method": "POST"}
+{"time": "2026-10-30T13:20:23.470401+00:00", "event": "session.created", "result": "success", "request_id": "ecb56905e0c94ebcb589dddfbe4f285f"}
+{"time": "2026-10-30T13:20:23.472312+00:00", "event": "request.end", "result": "success", "request_id": "ecb56905e0c94ebcb589dddfbe4f285f", "status": 201, "duration_ms": 56.952300015836954}
+{"time": "2026-10-30T13:20:23.487080+00:00", "event": "request.start", "result": "started", "request_id": "5272bb3d60e3475b8753f6df7b45ccb8", "method": "POST"}
+{"time": "2026-10-30T13:20:23.502209+00:00", "event": "quote.created", "result": "success", "request_id": "5272bb3d60e3475b8753f6df7b45ccb8"}
+{"time": "2026-10-30T13:20:23.502477+00:00", "event": "request.end", "result": "success", "request_id": "5272bb3d60e3475b8753f6df7b45ccb8", "status": 200, "duration_ms": 15.402399934828281}
+{"time": "2026-10-30T13:20:23.512585+00:00", "event": "request.start", "result": "started", "request_id": "bce5ca41722547709ccf2a8ad5917304", "method": "POST"}
+{"time": "2026-10-30T13:20:23.528071+00:00", "event": "booking.created", "result": "success", "request_id": "bce5ca41722547709ccf2a8ad5917304"}
+{"time": "2026-10-30T13:20:23.533347+00:00", "event": "request.end", "result": "success", "request_id": "bce5ca41722547709ccf2a8ad5917304", "status": 201, "duration_ms": 20.762200001627207}
+{"time": "2026-10-30T13:20:23.545055+00:00", "event": "request.start", "result": "started", "request_id": "e8fff3fbfda142629bb36d2f6f4123c7", "method": "POST"}
+{"time": "2026-10-30T13:20:23.556219+00:00", "event": "service.created", "result": "success", "request_id": "e8fff3fbfda142629bb36d2f6f4123c7"}
+{"time": "2026-10-30T13:20:23.558555+00:00", "event": "request.end", "result": "success", "request_id": "e8fff3fbfda142629bb36d2f6f4123c7", "status": 201, "duration_ms": 13.500900007784367}
+{"time": "2026-10-30T13:20:23.568524+00:00", "event": "request.start", "result": "started", "request_id": "0c4e1a0c163942b08b418da08292365c", "method": "POST"}
+{"time": "2026-10-30T13:20:23.629414+00:00", "event": "session.created", "result": "success", "request_id": "0c4e1a0c163942b08b418da08292365c"}
+{"time": "2026-10-30T13:20:23.631159+00:00", "event": "request.end", "result": "success", "request_id": "0c4e1a0c163942b08b418da08292365c", "status": 201, "duration_ms": 62.63580033555627}
+{"time": "2026-10-30T13:20:23.641184+00:00", "event": "request.start", "result": "started", "request_id": "518d6af863ee48b8a5e3d16a083f237d", "method": "PATCH"}
+{"time": "2026-10-30T13:20:23.647275+00:00", "event": "request.end", "result": "error", "request_id": "518d6af863ee48b8a5e3d16a083f237d", "status": 409, "duration_ms": 6.091400049626827}
+{"time": "2026-10-30T13:20:23.675331+00:00", "event": "request.start", "result": "started", "request_id": "db443b8a77e641d394a3a977e64affdf", "method": "DELETE"}
+{"time": "2026-10-30T13:20:23.681301+00:00", "event": "request.end", "result": "error", "request_id": "db443b8a77e641d394a3a977e64affdf", "status": 409, "duration_ms": 5.971299950033426}
+{"time": "2026-10-30T13:20:23.691798+00:00", "event": "request.start", "result": "started", "request_id": "c233a590474b4c959d4f4e00cd422347", "method": "GET"}
+{"time": "2026-10-30T13:20:23.697991+00:00", "event": "request.end", "result": "success", "request_id": "c233a590474b4c959d4f4e00cd422347", "status": 200, "duration_ms": 6.192999891936779}
+{"time": "2026-10-30T13:20:23.869190+00:00", "event": "request.start", "result": "started", "request_id": "6e1c3de8506143b89cdade1d77b64608", "method": "POST"}
+{"time": "2026-10-30T13:20:23.925206+00:00", "event": "account.created", "result": "success", "request_id": "6e1c3de8506143b89cdade1d77b64608"}
+{"time": "2026-10-30T13:20:23.927971+00:00", "event": "request.end", "result": "success", "request_id": "6e1c3de8506143b89cdade1d77b64608", "status": 201, "duration_ms": 58.78379987552762}
+{"time": "2026-10-30T13:20:23.942159+00:00", "event": "request.start", "result": "started", "request_id": "42cc6177fd6848da95b5edf33ff249e1", "method": "POST"}
+{"time": "2026-10-30T13:20:24.005992+00:00", "event": "session.created", "result": "success", "request_id": "42cc6177fd6848da95b5edf33ff249e1"}
+{"time": "2026-10-30T13:20:24.007898+00:00", "event": "request.end", "result": "success", "request_id": "42cc6177fd6848da95b5edf33ff249e1", "status": 201, "duration_ms": 65.74039999395609}
+{"time": "2026-10-30T13:20:24.019037+00:00", "event": "request.start", "result": "started", "request_id": "e755ef88710248ff8a64c28850520c9f", "method": "POST"}
+{"time": "2026-10-30T13:20:24.072754+00:00", "event": "account.created", "result": "success", "request_id": "e755ef88710248ff8a64c28850520c9f"}
+{"time": "2026-10-30T13:20:24.074698+00:00", "event": "request.end", "result": "success", "request_id": "e755ef88710248ff8a64c28850520c9f", "status": 201, "duration_ms": 55.659899953752756}
+{"time": "2026-10-30T13:20:24.089862+00:00", "event": "request.start", "result": "started", "request_id": "659cb248122045fca04ba434ee355be1", "method": "POST"}
+{"time": "2026-10-30T13:20:24.152718+00:00", "event": "session.created", "result": "success", "request_id": "659cb248122045fca04ba434ee355be1"}
+{"time": "2026-10-30T13:20:24.154353+00:00", "event": "request.end", "result": "success", "request_id": "659cb248122045fca04ba434ee355be1", "status": 201, "duration_ms": 64.49560029432178}
+{"time": "2026-10-30T13:20:24.168637+00:00", "event": "request.start", "result": "started", "request_id": "6d4e0f3e8471476e86e6b49f603a0013", "method": "POST"}
+{"time": "2026-10-30T13:20:24.182560+00:00", "event": "quote.created", "result": "success", "request_id": "6d4e0f3e8471476e86e6b49f603a0013"}
+{"time": "2026-10-30T13:20:24.182788+00:00", "event": "request.end", "result": "success", "request_id": "6d4e0f3e8471476e86e6b49f603a0013", "status": 200, "duration_ms": 14.155300334095955}
+{"time": "2026-10-30T13:20:24.193342+00:00", "event": "request.start", "result": "started", "request_id": "a6918804d3d94df482fc522b8dde225f", "method": "POST"}
+{"time": "2026-10-30T13:20:24.210070+00:00", "event": "booking.created", "result": "success", "request_id": "a6918804d3d94df482fc522b8dde225f"}
+{"time": "2026-10-30T13:20:24.215852+00:00", "event": "request.end", "result": "success", "request_id": "a6918804d3d94df482fc522b8dde225f", "status": 201, "duration_ms": 22.51160005107522}
+{"time": "2026-10-30T13:20:24.228042+00:00", "event": "request.start", "result": "started", "request_id": "4ed6f38834ed4a08b770ca7ce2087794", "method": "POST"}
+{"time": "2026-10-30T13:20:24.233490+00:00", "event": "request.end", "result": "error", "request_id": "4ed6f38834ed4a08b770ca7ce2087794", "status": 422, "duration_ms": 5.4480996914207935}
+{"time": "2026-10-30T13:20:24.244071+00:00", "event": "request.start", "result": "started", "request_id": "8b2ece7ee2ec49558dc2d8b3f7b4f498", "method": "POST"}
+{"time": "2026-10-30T13:20:24.249039+00:00", "event": "request.end", "result": "error", "request_id": "8b2ece7ee2ec49558dc2d8b3f7b4f498", "status": 422, "duration_ms": 4.9678003415465355}
+{"time": "2026-10-30T13:20:24.259325+00:00", "event": "request.start", "result": "started", "request_id": "6df804ca61c241d0ba43ea83632367f2", "method": "POST"}
+{"time": "2026-10-30T13:20:24.263979+00:00", "event": "request.end", "result": "error", "request_id": "6df804ca61c241d0ba43ea83632367f2", "status": 422, "duration_ms": 4.65509993955493}
+{"time": "2026-10-30T13:20:24.274469+00:00", "event": "request.start", "result": "started", "request_id": "7d8aa265bbeb417da511306785d61a81", "method": "GET"}
+{"time": "2026-10-30T13:20:24.277971+00:00", "event": "request.end", "result": "error", "request_id": "7d8aa265bbeb417da511306785d61a81", "status": 403, "duration_ms": 3.5035000182688236}
+{"time": "2026-10-30T13:20:24.462883+00:00", "event": "request.start", "result": "started", "request_id": "cec5c6c5639b483d90a83b2b443f302f", "method": "POST"}
+{"time": "2026-10-30T13:20:24.525280+00:00", "event": "account.created", "result": "success", "request_id": "cec5c6c5639b483d90a83b2b443f302f"}
+{"time": "2026-10-30T13:20:24.528483+00:00", "event": "request.end", "result": "success", "request_id": "cec5c6c5639b483d90a83b2b443f302f", "status": 201, "duration_ms": 65.60310022905469}
+{"time": "2026-10-30T13:20:24.548150+00:00", "event": "request.start", "result": "started", "request_id": "6d0a7667f08c4afab17213d089c97fdb", "method": "POST"}
+{"time": "2026-10-30T13:20:24.609525+00:00", "event": "session.created", "result": "success", "request_id": "6d0a7667f08c4afab17213d089c97fdb"}
+{"time": "2026-10-30T13:20:24.611301+00:00", "event": "request.end", "result": "success", "request_id": "6d0a7667f08c4afab17213d089c97fdb", "status": 201, "duration_ms": 63.15609999001026}
+{"time": "2026-10-30T13:20:24.621310+00:00", "event": "request.start", "result": "started", "request_id": "dc7ab3e7e48342ae8e91ce049e3f6c34", "method": "POST"}
+{"time": "2026-10-30T13:20:24.682301+00:00", "event": "account.created", "result": "success", "request_id": "dc7ab3e7e48342ae8e91ce049e3f6c34"}
+{"time": "2026-10-30T13:20:24.684297+00:00", "event": "request.end", "result": "success", "request_id": "dc7ab3e7e48342ae8e91ce049e3f6c34", "status": 201, "duration_ms": 62.98620020970702}
+{"time": "2026-10-30T13:20:24.694665+00:00", "event": "request.start", "result": "started", "request_id": "2483a5e36ca3472c8d03f38cd364e9b4", "method": "POST"}
+{"time": "2026-10-30T13:20:24.757920+00:00", "event": "session.created", "result": "success", "request_id": "2483a5e36ca3472c8d03f38cd364e9b4"}
+{"time": "2026-10-30T13:20:24.759560+00:00", "event": "request.end", "result": "success", "request_id": "2483a5e36ca3472c8d03f38cd364e9b4", "status": 201, "duration_ms": 64.8972000926733}
+{"time": "2026-10-30T13:20:24.773545+00:00", "event": "request.start", "result": "started", "request_id": "951d51a1a0f14011b4d138ce18fb086e", "method": "POST"}
+{"time": "2026-10-30T13:20:24.787810+00:00", "event": "quote.created", "result": "success", "request_id": "951d51a1a0f14011b4d138ce18fb086e"}
+{"time": "2026-10-30T13:20:24.788036+00:00", "event": "request.end", "result": "success", "request_id": "951d51a1a0f14011b4d138ce18fb086e", "status": 200, "duration_ms": 14.494400005787611}
+{"time": "2026-10-30T13:20:24.800011+00:00", "event": "request.start", "result": "started", "request_id": "dd23da429edb4f0aa1a7213c5cee509c", "method": "POST"}
+{"time": "2026-10-30T13:20:24.812518+00:00", "event": "service.created", "result": "success", "request_id": "dd23da429edb4f0aa1a7213c5cee509c"}
+{"time": "2026-10-30T13:20:24.814822+00:00", "event": "request.end", "result": "success", "request_id": "dd23da429edb4f0aa1a7213c5cee509c", "status": 201, "duration_ms": 14.81359964236617}
+{"time": "2026-10-30T13:20:24.822945+00:00", "event": "request.start", "result": "started", "request_id": "bc72a5370f884fa387c02c5764f8cc6d", "method": "POST"}
+{"time": "2026-10-30T13:20:24.833281+00:00", "event": "request.end", "result": "error", "request_id": "bc72a5370f884fa387c02c5764f8cc6d", "status": 409, "duration_ms": 10.335700120776892}
+{"time": "2026-10-30T13:20:25.124894+00:00", "event": "request.start", "result": "started", "request_id": "f27a9f263aa14c3ba5ea61d3f944b738", "method": "POST"}
+{"time": "2026-10-30T13:20:25.183825+00:00", "event": "account.created", "result": "success", "request_id": "f27a9f263aa14c3ba5ea61d3f944b738"}
+{"time": "2026-10-30T13:20:25.186947+00:00", "event": "request.end", "result": "success", "request_id": "f27a9f263aa14c3ba5ea61d3f944b738", "status": 201, "duration_ms": 62.05409998074174}
+{"time": "2026-10-30T13:20:25.208330+00:00", "event": "request.start", "result": "started", "request_id": "a05b6ae024fc4fc0a4f2af8c7946f93a", "method": "POST"}
+{"time": "2026-10-30T13:20:25.287846+00:00", "event": "session.created", "result": "success", "request_id": "a05b6ae024fc4fc0a4f2af8c7946f93a"}
+{"time": "2026-10-30T13:20:25.289973+00:00", "event": "request.end", "result": "success", "request_id": "a05b6ae024fc4fc0a4f2af8c7946f93a", "status": 201, "duration_ms": 81.64389990270138}
+{"time": "2026-10-30T13:20:25.299585+00:00", "event": "request.start", "result": "started", "request_id": "c10b76393e2b41f8a299a5fa8ba072ff", "method": "GET"}
+{"time": "2026-10-30T13:20:25.304819+00:00", "event": "request.end", "result": "success", "request_id": "c10b76393e2b41f8a299a5fa8ba072ff", "status": 200, "duration_ms": 5.233400035649538}
+{"time": "2026-10-30T13:20:25.314398+00:00", "event": "request.start", "result": "started", "request_id": "23a28e6cd03748a798e919002b0ce2df", "method": "GET"}
+{"time": "2026-10-30T13:20:25.316530+00:00", "event": "request.end", "result": "error", "request_id": "23a28e6cd03748a798e919002b0ce2df", "status": 401, "duration_ms": 2.0766998641192913}
+{"time": "2026-10-30T13:20:25.326731+00:00", "event": "request.start", "result": "started", "request_id": "70d378da0eb54c87b38b84be9ffe2715", "method": "GET"}
+{"time": "2026-10-30T13:20:25.328955+00:00", "event": "request.end", "result": "error", "request_id": "70d378da0eb54c87b38b84be9ffe2715", "status": 401, "duration_ms": 2.2239000536501408}
+{"time": "2026-10-30T13:20:25.501318+00:00", "event": "request.start", "result": "started", "request_id": "5ff8c28bf986487780a42b746eaceef0", "method": "POST"}
+{"time": "2026-10-30T13:20:25.556954+00:00", "event": "account.created", "result": "success", "request_id": "5ff8c28bf986487780a42b746eaceef0"}
+{"time": "2026-10-30T13:20:25.559833+00:00", "event": "request.end", "result": "success", "request_id": "5ff8c28bf986487780a42b746eaceef0", "status": 201, "duration_ms": 58.5206001996994}
+{"time": "2026-10-30T13:20:25.574283+00:00", "event": "request.start", "result": "started", "request_id": "475b1cbb9a004075b168c9bb6bc7739c", "method": "POST"}
+{"time": "2026-10-30T13:20:25.633613+00:00", "event": "session.created", "result": "success", "request_id": "475b1cbb9a004075b168c9bb6bc7739c"}
+{"time": "2026-10-30T13:20:25.635860+00:00", "event": "request.end", "result": "success", "request_id": "475b1cbb9a004075b168c9bb6bc7739c", "status": 201, "duration_ms": 61.577599961310625}
+{"time": "2026-10-30T13:20:25.645876+00:00", "event": "request.start", "result": "started", "request_id": "51e42a2fdc664d118ced5f3f3ff16c6f", "method": "GET"}
+{"time": "2026-10-30T13:20:25.651041+00:00", "event": "request.end", "result": "error", "request_id": "51e42a2fdc664d118ced5f3f3ff16c6f", "status": 403, "duration_ms": 5.163900088518858}
+{"time": "2026-10-30T13:20:25.661888+00:00", "event": "request.start", "result": "started", "request_id": "f5e4f25b76554bda962414d488bdb48d", "method": "GET"}
+{"time": "2026-10-30T13:20:25.664913+00:00", "event": "request.end", "result": "error", "request_id": "f5e4f25b76554bda962414d488bdb48d", "status": 401, "duration_ms": 3.0247000977396965}
+{"time": "2026-10-30T13:20:25.682122+00:00", "event": "request.start", "result": "started", "request_id": "1d6732c20dd54fcf864fbda575da7068", "method": "GET"}
+{"time": "2026-10-30T13:20:25.684998+00:00", "event": "request.end", "result": "error", "request_id": "1d6732c20dd54fcf864fbda575da7068", "status": 401, "duration_ms": 2.8775003738701344}
+{"time": "2026-10-30T13:20:25.863638+00:00", "event": "request.start", "result": "started", "request_id": "2e35a9cc3ab4474295fef243cb6bc228", "method": "GET"}
+{"time": "2026-10-30T13:20:25.864360+00:00", "event": "request.end", "result": "error", "request_id": "2e35a9cc3ab4474295fef243cb6bc228", "status": 401, "duration_ms": 0.7247999310493469}
+{"time": "2026-10-30T13:20:26.192129+00:00", "event": "request.start", "result": "started", "request_id": "ee6f0eed451948cf8270d40ef975a004", "method": "GET"}
+{"time": "2026-10-30T13:20:26.197850+00:00", "event": "request.end", "result": "error", "request_id": "ee6f0eed451948cf8270d40ef975a004", "status": 401, "duration_ms": 5.726800300180912}

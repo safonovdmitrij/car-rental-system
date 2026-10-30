@@ -1,0 +1,58 @@
+{
+  "started_at": "2026-10-30T12:56:23.742698+00:00",
+  "finished_at": "2026-10-30T12:56:26.714860+00:00",
+  "command": [
+    ".venv-backend/Scripts/python.exe",
+    "-m",
+    "pytest",
+    "tests/integration/test_quotes.py",
+    "-q",
+    "--tb=line",
+    "--assert=plain",
+    "--show-capture=no",
+    "-p",
+    "no:cacheprovider",
+    "--basetemp=.backend-setup/T08-http-RED",
+    "--junitxml=logs/tdd/T08/http/RED/junit.xml"
+  ],
+  "exit_code": 1,
+  "python": "3.14.0",
+  "pytest": "9.2.0",
+  "test_ids": [
+    {
+      "classname": "tests.integration.test_quotes",
+      "name": "test_quote_prices_and_does_not_reserve",
+      "time": "0.371"
+    },
+    {
+      "classname": "tests.integration.test_quotes",
+      "name": "test_quote_rental_limits_422[patch0]",
+      "time": "0.126"
+    },
+    {
+      "classname": "tests.integration.test_quotes",
+      "name": "test_quote_rental_limits_422[patch1]",
+      "time": "0.244"
+    },
+    {
+      "classname": "tests.integration.test_quotes",
+      "name": "test_quote_rental_limits_422[patch2]",
+      "time": "0.136"
+    },
+    {
+      "classname": "tests.integration.test_quotes",
+      "name": "test_quote_rental_limits_422[patch3]",
+      "time": "0.232"
+    },
+    {
+      "classname": "tests.integration.test_quotes",
+      "name": "test_hidden_quote_rejected",
+      "time": "0.237"
+    },
+    {
+      "classname": "tests.integration.test_quotes",
+      "name": "test_quote_roles",
+      "time": "0.133"
+    }
+  ]
+}

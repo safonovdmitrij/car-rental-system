@@ -1,0 +1,2 @@
+﻿# T03 technical TEST-GATE
+REQ-F-087–089,093/094; AC-F-093/094-01; BDD-016/017; OP-05/06 and later protected OP. Technical GO: 4 cases with both roles through DST, T+86399/86400/after, no extension by activity, missing/invalid tokens; admin valid profile forbidden vs expired token unauthorized. Expected RED absent protected profile endpoint. User current scope includes ADD-001 implementation; mapping to P001/F004/F014/V001 recorded as implementation links, not retroactive approval of old tickets.

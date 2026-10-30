@@ -1,0 +1,1 @@
+{"time": "2026-10-30T13:13:32.233458+00:00", "run_id": "RED", "command": [".venv-backend/Scripts/python.exe", "-m", "pytest", "tests/integration/test_operation_audit.py", "-q", "--tb=line", "--assert=plain", "--show-capture=no", "-p", "no:cacheprovider", "--basetemp=.backend-setup/B01-audit-RED", "--junitxml=logs/tdd/B01/audit/RED/junit.xml"], "exit_code": 1, "result": "FAIL"}

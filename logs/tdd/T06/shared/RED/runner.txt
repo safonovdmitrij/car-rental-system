@@ -1,0 +1,92 @@
+FFFFFFFFFFF                                                              [100%]
+================================== FAILURES ===================================
+______________________ test_half_open_overlap[8-9-False] ______________________
+tests\unit\test_availability.py:13: in test_half_open_overlap
+    assert overlaps(at(9),at(11),at(c),at(d)) is expected
+           ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+src\car_rental\availability.py:6: in overlaps
+    raise NotImplementedError("Half-open interval overlap is not implemented")
+E   NotImplementedError: Half-open interval overlap is not implemented
+_____________________ test_half_open_overlap[11-12-False] _____________________
+tests\unit\test_availability.py:13: in test_half_open_overlap
+    assert overlaps(at(9),at(11),at(c),at(d)) is expected
+           ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+src\car_rental\availability.py:6: in overlaps
+    raise NotImplementedError("Half-open interval overlap is not implemented")
+E   NotImplementedError: Half-open interval overlap is not implemented
+______________________ test_half_open_overlap[8-10-True] ______________________
+tests\unit\test_availability.py:13: in test_half_open_overlap
+    assert overlaps(at(9),at(11),at(c),at(d)) is expected
+           ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+src\car_rental\availability.py:6: in overlaps
+    raise NotImplementedError("Half-open interval overlap is not implemented")
+E   NotImplementedError: Half-open interval overlap is not implemented
+______________________ test_half_open_overlap[9-10-True] ______________________
+tests\unit\test_availability.py:13: in test_half_open_overlap
+    assert overlaps(at(9),at(11),at(c),at(d)) is expected
+           ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+src\car_rental\availability.py:6: in overlaps
+    raise NotImplementedError("Half-open interval overlap is not implemented")
+E   NotImplementedError: Half-open interval overlap is not implemented
+_____________________ test_half_open_overlap[10-11-True] ______________________
+tests\unit\test_availability.py:13: in test_half_open_overlap
+    assert overlaps(at(9),at(11),at(c),at(d)) is expected
+           ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+src\car_rental\availability.py:6: in overlaps
+    raise NotImplementedError("Half-open interval overlap is not implemented")
+E   NotImplementedError: Half-open interval overlap is not implemented
+______________________ test_half_open_overlap[9-11-True] ______________________
+tests\unit\test_availability.py:13: in test_half_open_overlap
+    assert overlaps(at(9),at(11),at(c),at(d)) is expected
+           ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+src\car_rental\availability.py:6: in overlaps
+    raise NotImplementedError("Half-open interval overlap is not implemented")
+E   NotImplementedError: Half-open interval overlap is not implemented
+______________________ test_half_open_overlap[8-12-True] ______________________
+tests\unit\test_availability.py:13: in test_half_open_overlap
+    assert overlaps(at(9),at(11),at(c),at(d)) is expected
+           ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+src\car_rental\availability.py:6: in overlaps
+    raise NotImplementedError("Half-open interval overlap is not implemented")
+E   NotImplementedError: Half-open interval overlap is not implemented
+______________________ test_half_open_overlap[9-12-True] ______________________
+tests\unit\test_availability.py:13: in test_half_open_overlap
+    assert overlaps(at(9),at(11),at(c),at(d)) is expected
+           ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+src\car_rental\availability.py:6: in overlaps
+    raise NotImplementedError("Half-open interval overlap is not implemented")
+E   NotImplementedError: Half-open interval overlap is not implemented
+_ test_special_cancellation_calendar_deadline[2026-11-12T09:00:00+02:00-2026-11-11T09:00:00+02:00] _
+tests\unit\test_availability.py:22: in test_special_cancellation_calendar_deadline
+    assert cancellation_deadline(datetime.fromisoformat(start)).isoformat()==expected
+           ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+src\car_rental\availability.py:10: in cancellation_deadline
+    raise NotImplementedError("Cancellation deadline is not implemented")
+E   NotImplementedError: Cancellation deadline is not implemented
+_ test_special_cancellation_calendar_deadline[2026-03-30T03:00:00+03:00-2026-03-29T04:00:00+03:00] _
+tests\unit\test_availability.py:22: in test_special_cancellation_calendar_deadline
+    assert cancellation_deadline(datetime.fromisoformat(start)).isoformat()==expected
+           ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+src\car_rental\availability.py:10: in cancellation_deadline
+    raise NotImplementedError("Cancellation deadline is not implemented")
+E   NotImplementedError: Cancellation deadline is not implemented
+_ test_special_cancellation_calendar_deadline[2026-10-26T03:00:00+02:00-2026-10-25T03:00:00+02:00] _
+tests\unit\test_availability.py:22: in test_special_cancellation_calendar_deadline
+    assert cancellation_deadline(datetime.fromisoformat(start)).isoformat()==expected
+           ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+src\car_rental\availability.py:10: in cancellation_deadline
+    raise NotImplementedError("Cancellation deadline is not implemented")
+E   NotImplementedError: Cancellation deadline is not implemented
+=========================== short test summary info ===========================
+FAILED tests/unit/test_availability.py::test_half_open_overlap[8-9-False] - N...
+FAILED tests/unit/test_availability.py::test_half_open_overlap[11-12-False]
+FAILED tests/unit/test_availability.py::test_half_open_overlap[8-10-True] - N...
+FAILED tests/unit/test_availability.py::test_half_open_overlap[9-10-True] - N...
+FAILED tests/unit/test_availability.py::test_half_open_overlap[10-11-True] - ...
+FAILED tests/unit/test_availability.py::test_half_open_overlap[9-11-True] - N...
+FAILED tests/unit/test_availability.py::test_half_open_overlap[8-12-True] - N...
+FAILED tests/unit/test_availability.py::test_half_open_overlap[9-12-True] - N...
+FAILED tests/unit/test_availability.py::test_special_cancellation_calendar_deadline[2026-11-12T09:00:00+02:00-2026-11-11T09:00:00+02:00]
+FAILED tests/unit/test_availability.py::test_special_cancellation_calendar_deadline[2026-03-30T03:00:00+03:00-2026-03-29T04:00:00+03:00]
+FAILED tests/unit/test_availability.py::test_special_cancellation_calendar_deadline[2026-10-26T03:00:00+02:00-2026-10-25T03:00:00+02:00]
+11 failed in 0.25s

@@ -1,53 +1,71 @@
-# Запуск backend-середовища
+# Запуск базового REST API
 
-Підготовлені ASGI-застосунок, інфраструктурний runner та мінімальне JSON-логування. Бізнес-маршрутів і календарної реалізації ще немає. Рішення про обсяг — [T01 preparation-decisions](../logs/tdd/T01/preparation-decisions.md), історичний setup — [звіт середовища](../logs/tdd/T01/environment/review.md), результати логування — [GREEN-звіт](../logs/tdd/T01/logging-green/review.md).
+Реалізовано 22 операції затвердженого [OpenAPI](../api/openapi.yaml). [Підсумок та незавершене](../logs/tdd/base-implementation-review.md), [рішення користувача](../logs/tdd/implementation-decisions.md). Фінальна регресія — 231 PASS; це не приймання всіх NF-вимог чи людський G-READY.
 
-## Відтворення: Windows x86-64, CPython 3.14.0
+## Середовище
 
-`uv` не знайдено; використано стандартні venv і pip. `.python-version` документує Python 3.14.0, але сам не встановлює й не перемикає інтерпретатор. Команди нижче виконуються з кореня репозиторію у PowerShell. Активація середовища не потрібна.
+Windows x86-64, CPython 3.14.0, pip 25.2. uv недоступний, використано venv/pip. `.python-version` документує версію, але не встановлює Python. Команди виконуються з кореня репозиторію; активація venv не потрібна.
 
 ```powershell
 python --version
-# Перед продовженням перевірити: Python 3.14.0, Windows x86-64.
+# Лише для нового середовища:
 python -m venv .venv-backend
-.\.venv-backend\Scripts\python.exe -m pip --version
-# Для відтворення використано pip 25.2 (ensurepip у Python 3.14.0).
 .\.venv-backend\Scripts\python.exe -m pip --isolated install --require-hashes --only-binary=:all: --index-url https://pypi.org/simple -r requirements/backend.lock
 .\.venv-backend\Scripts\python.exe -m pip check
+$env:PYTHONUTF8 = '1'
+$env:PYTHONPATH = 'src'
+$env:PYTEST_DISABLE_PLUGIN_AUTOLOAD = '1'
 ```
 
-[backend.in](../requirements/backend.in) описує прямі залежності й межі підбору. **Встановлювати слід [backend.lock](../requirements/backend.lock)**: у ньому всі 30 розв’язаних дистрибутивів мають точні версії та SHA-256 коліс. `psycopg-binary` зафіксований окремо разом із psycopg. Hash checking забезпечується pip `--require-hashes`: [офіційна документація](https://pip.pypa.io/en/stable/topics/repeatable-installs/). Ізоляція venv описана в [документації Python](https://docs.python.org/3.14/library/venv.html).
+[backend.in](../requirements/backend.in) — прямі залежності; встановлювати [backend.lock](../requirements/backend.lock): 45 дистрибутивів із точними версіями та SHA-256 Windows/Python 3.14 коліс. Для іншої платформи потрібні окреме розв’язання й перевірка, не видалення hashes. `.venv-api-validation` та mock-середовище не змінювати. Argon2id m=19 MiB/t=2/p=1 погоджено користувачем; OpenAPI-валідатор додано для реального API за незмінним YAML.
 
-Lock містить хеші вибраних Windows/CPython 3.14 коліс, а не універсальний набір для всіх платформ. Для іншої ОС/архітектури/версії Python потрібне окреме свідоме розв’язання й перевірка коліс. Не прибирати hashes для обходу помилки. Не встановлювати backend-залежності в `.venv-api-validation` або глобальний Python. Розв’язання за `.in` призначене для контрольованого оновлення, не повсякденного запуску.
+## Окремий тестовий PostgreSQL
 
-## Runner та мінімальний застосунок
+Створено кластер **лише в `.backend-setup/postgres-test`**, loopback:55432, роль car_rental_test. Робочий PostgreSQL-сервіс не використовувався. Після фінальних тестів власний тестовий процес зупинено, файли збережено; перевірити або запустити його можна встановленими бінарними файлами:
 
 ```powershell
-$env:PYTEST_DISABLE_PLUGIN_AUTOLOAD = '1'
-$env:PYTHONUTF8 = '1'
-.\.venv-backend\Scripts\python.exe -m pytest tests/infrastructure --collect-only -q
-.\.venv-backend\Scripts\python.exe -m pytest tests/infrastructure -q
+$testPgBin = 'D:\IDE\postgres\bin'
+& "$testPgBin\pg_ctl.exe" -D .backend-setup/postgres-test status
+# Якщо він зупинений:
+& "$testPgBin\pg_ctl.exe" -D .backend-setup/postgres-test -l .backend-setup/postgres-test.log -o '-h 127.0.0.1 -p 55432' -w start
+```
+
+Для чистого checkout спочатку створити цей каталог через initdb із новим окремим data_directory; не ініціалізувати наявні дані. Локальний disposable-кластер використовує trust тільки для синтетичних даних; це не production-конфігурація. [.env.test.example](../.env.test.example) задає TEST_DATABASE_URL; `.env.test` автоматично не завантажується. Фікстури перевіряють SHOW data_directory, відмовляються писати поза зазначеним кластером і створюють UUID-схеми через Alembic. SQLite не використовується.
+
+## Міграції й застосунок
+
+```powershell
+$env:DATABASE_URL = 'postgresql+psycopg://car_rental_test@127.0.0.1:55432/postgres'
+.\.venv-backend\Scripts\python.exe -m alembic upgrade head
 .\.venv-backend\Scripts\python.exe -m uvicorn car_rental.main:app --app-dir src --host 127.0.0.1 --port 8000 --no-access-log
 ```
 
-Завершити сервер Ctrl+C. Застосунок не має маршрутів, включно з `/docs`, `/redoc` і `/openapi.json`; відповіді на невідомі URI — лише стандартна поведінка порожнього framework. Це не підтверджує затверджену модель бізнес-помилок. Єдиним погодженим контрактом залишається [api/openapi.yaml](../api/openapi.yaml), він не генерується й не перезаписується під час запуску. CLI Uvicorn перевірено через `--version`; реальний мережевий сервер на цьому етапі не запускався. ASGI-обмін перевірено HTTPX ASGITransport без socket.
+Завершити сервер Ctrl+C. Міграції запускаються явно; [0001_base](../migrations/versions/0001_base.py) незалежна від майбутніх Python-моделей. Для робочого середовища DATABASE_URL задається окремо й свідомо; секрети не передавати через Git/argv/журнали. Адміністратор провізіонується довіреним адміністратором БД поза публічним API; реєстрація завжди створює лише client. Ізольований тестовий приклад — fixture admin у [conftest.py](../tests/integration/conftest.py).
 
-Три інфраструктурні перевірки перевіряють імпорти залежностей, HTTPX→ASGI й доступність Europe/Kyiv. Вони не звертаються до БД та не обчислюють календарні правила. pytest знаходить пакет через `pythonpath = ["src"]` у [pyproject.toml](../pyproject.toml); запуск Uvicorn використовує `--app-dir src`. Встановлення локального проєкту через `pip install .` не налаштоване й не потрібне.
+`/docs`, `/redoc` і `/openapi.json` відключені. Погоджений YAML не генерується/перезаписується; API читає його для валідації запитів. Тести перевіряють відповіді за ним, а не за схемою, виведеною з коду.
 
-Для нового контрольного запуску можна додати `--junitxml=<новий-шлях>.xml`, зберегти stdout/stderr, точну команду, налаштоване середовище й `$LASTEXITCODE` відразу після процесу. Не перезаписувати докази попередніх запусків. Перевірити, що зібрані саме потрібні test ID, exit code відповідає JUnit і журнали не містять чутливих даних; hostname у JUnit прибрати перед передачею. Збір команд/результатів поточного етапу міститься в manifest-файлах звіту. `--no-access-log` у ручному запуску вимикає стандартний запис сирого URI/IP; працює власний безпечний JSON-middleware.
+## Перевірки й докази
 
-## Журнали
+```powershell
+# Без PostgreSQL:
+.\.venv-backend\Scripts\python.exe -m pytest tests/infrastructure tests/unit -q -p no:cacheprovider
+# Повний набір потребує зазначеного кластера:
+$env:TDD_CONTRACT_CHECK = '1'
+.\.venv-backend\Scripts\python.exe -m pytest tests -q --tb=line --assert=plain --show-capture=no -p no:cacheprovider --basetemp=.backend-setup/manual-tests
+```
 
-Застосунок пише JSON Lines у stdout: UTC `time`, `event`, `result`, внутрішній `request_id`; `request.start` також має стандартний HTTP `method`, `request.end` — `status` і `duration_ms` за монотонним годинником. Кожний HTTP-запит отримує згенерований id у contextvars, спільний для подій операції та початку/завершення; контекст очищається після запиту. Заголовок/поле request_id до HTTP-контракту не додається. Винятки зберігають ASGI-семантику й не перетворюються логером на нову модель помилок API; журнал не містить їхнього тексту.
+test_https.py використовує наявний `.mock-runtime/caddy-2.11.7/caddy.exe`, перевіряє справжній TLS через явний CA-файл, не встановлює глобальну довіру та завершує свої процеси. Ключі лишаються в ігнорованому basetemp. Production/browser trust не прийнято. [transport.py](../src/car_rental/transport.py) генерує локальний loopback-only proxy config; довготривале розгортання потребує окремого сертифіката й керованого запуску.
 
-`JsonEventLogger.emit(event, result, request_id=..., **fields)` приймає **внутрішні довірені** назви подій/результатів та id, а не дані користувача. Додатково дозволені лише валідний числовий status, скінченна невід’ємна duration_ms і стандартний HTTP method. Інші поля не серіалізуються: body, credentials, контакти, query, URL/IP і сирі винятки не потрапляють у журнал. Не передавати в event/result/request_id вільний текст чи вхідні HTTP-значення. Для запиту id надає middleware; для подій поза запитом потрібен явний внутрішній id.
+`scripts/tdd_run.py <package> <new-phase> <test-paths> [--expect 1]` зберігає точну команду, exit code, test IDs, stdout, очищений JUnit і runs.jsonl. Існуючу фазу не перезаписує; для успішної регресії `--expect 1` не використовувати. Помилки середовища не є бізнес-RED. Реальні команди — у manifest.json пакетів.
 
-`record_test_run(path, run_id=..., command=[...], exit_code=..., result=...)` додає JSONL-запис часу, run_id, точного argv та результату до окремого журналу запусків. Передавати тільки перевірені статичні команди без паролів/токенів/персональних шляхів або інших чутливих аргументів: цей журнал зберігає точні аргументи, а не редагує їх. Для зовнішніх автоматизацій до запуску перевіряти безпечність argv; не передавати stdout/stderr чи тіла запитів у command. У цій передачі функція використана для [runs.jsonl](../logs/tdd/T01/logging-green/runs.jsonl).
+З TDD_CONTRACT_CHECK відповіді перевіряються в пам’яті. Профілі/токени не експортуються; contract-checks.jsonl містить метод, синтетичний шлях, статус і результат. api-events.jsonl містить фактичні безпечні події; після прогону перевіряти пари start/end за request_id, очікувані коди й відсутність чутливих значень. [Фінальний аналіз](../logs/tdd/F01/FINAL/contract-and-log-review.json).
 
-Це мінімальний sink, не система збору/ротації журналів; stdout слід збирати в ігнорований `logs/runtime/` у майбутньому середовищі. Не вмикати Uvicorn access-log/SQL echo, які обходять allowlist; перевірка майбутнього середовища залишається окремою роботою. Поточні прогони: 9 тестів логування та 3 smoke-перевірки, окремо від календарного T01.
+## Логування й копії
 
-## Майбутня тестова PostgreSQL
+JSON Lines у stdout: UTC time, event, result, request_id, дозволені method/status/duration_ms; значущі дії пишуться після commit. Немає тіл/заголовків/query/IP/контактів/паролів/токенів/сирих винятків. ContextVar розділяє запити; обов’язковий HTTP-заголовок чи поле request_id не додається. Labels та явний id — довірені технічні значення, не вхідні HTTP-дані. Сторонні access-log/SQL echo й production error-log потребують безпечної конфігурації.
 
-[.env.test.example](../.env.test.example) — конфігурація окремої локальної disposable-БД `car_rental_test` та тестової ролі. Це приклад, він автоматично не завантажується. За потреби скопіювати його в ігнорований `.env.test` і явно передати `TEST_DATABASE_URL` майбутнім інтеграційним тестам. Пароль у URL не вносити; локальні засоби автентифікації (наприклад PGPASSFILE) конфігурувати поза Git і журналами.
+record_test_run зберігає точний перевірений argv, run_id, час, exit_code/result; не передавати туди секретні аргументи, контакти чи персональні шляхи. Ротація/централізований збирач лишаються deployment-роботою.
 
-Наразі немає клієнтського з’єднання, створення БД, міграцій або очищення таблиць. До інтеграційних тестів слід перевірити фактичну окремість тестового сервера/ролі/БД та заборонити робочі адреси. Саме ім’я БД або `.env` не гарантує ізоляцію. Однаковий `DATABASE_URL` для робочих і тестових даних не використовується. SQLite не підключається. Відсутність PostgreSQL не блокує ці smoke-перевірки й майбутні календарні модульні тести.
+Для добового резервування підготовлено окремий single-worker `python -m car_rental.backups`. PGHOST/PGPORT/PGDATABASE/PGUSER/PGPASSFILE задають підключення, PG_DUMP — шлях до pg_dump, BACKUP_DIR — ігнорований каталог копій. Раз на хвилину worker перевіряє успішну копію поточної UTC-дати; checkpoint переживає restart, збій дозволяє повтор. `--once` — діагностика. Windows task/service агент не реєстрував. Сирі dumps не комітити.
+
+Є unit-доказ scheduler та реальний pg_dump/list diagnostic. Q-08, аварійне відновлення/RPO/RTO, production-приймання N01, Q-10/браузерна продуктивність і UI-сумісність відкриті за [підсумком](../logs/tdd/base-implementation-review.md). Увесь API готовим не оголошено.

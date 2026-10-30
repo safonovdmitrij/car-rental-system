@@ -1,0 +1,133 @@
+{
+  "command": [
+    ".venv-api-validation/Scripts/python.exe",
+    "scripts/check_contract.py",
+    "logs\\tdd\\T06\\public\\CONTRACT-RUN\\responses.jsonl",
+    "logs\\tdd\\T06\\public\\contract.json"
+  ],
+  "openapi_sha256": "88989941676702ee28c13d5a16a1320d3636f97b100958cee48021a59be8282e",
+  "source": "actual ASGI responses against isolated PostgreSQL",
+  "checks": [
+    {
+      "operation": "OP-01",
+      "status": 200,
+      "result": "PASS"
+    },
+    {
+      "operation": "OP-02",
+      "status": 200,
+      "result": "PASS"
+    },
+    {
+      "operation": "OP-02",
+      "status": 404,
+      "result": "PASS"
+    },
+    {
+      "operation": "OP-02",
+      "status": 404,
+      "result": "PASS"
+    },
+    {
+      "operation": "OP-03",
+      "status": 200,
+      "result": "PASS"
+    },
+    {
+      "operation": "OP-01",
+      "status": 200,
+      "result": "PASS"
+    },
+    {
+      "operation": "OP-03",
+      "status": 200,
+      "result": "PASS"
+    },
+    {
+      "operation": "OP-01",
+      "status": 200,
+      "result": "PASS"
+    },
+    {
+      "operation": "OP-03",
+      "status": 200,
+      "result": "PASS"
+    },
+    {
+      "operation": "OP-01",
+      "status": 200,
+      "result": "PASS"
+    },
+    {
+      "operation": "OP-03",
+      "status": 200,
+      "result": "PASS"
+    },
+    {
+      "operation": "OP-01",
+      "status": 200,
+      "result": "PASS"
+    },
+    {
+      "operation": "OP-03",
+      "status": 200,
+      "result": "PASS"
+    },
+    {
+      "operation": "OP-01",
+      "status": 200,
+      "result": "PASS"
+    },
+    {
+      "operation": "OP-03",
+      "status": 200,
+      "result": "PASS"
+    },
+    {
+      "operation": "OP-03",
+      "status": 200,
+      "result": "PASS"
+    },
+    {
+      "operation": "OP-01",
+      "status": 422,
+      "result": "PASS"
+    },
+    {
+      "operation": "OP-01",
+      "status": 422,
+      "result": "PASS"
+    },
+    {
+      "operation": "OP-01",
+      "status": 422,
+      "result": "PASS"
+    },
+    {
+      "operation": "OP-01",
+      "status": 422,
+      "result": "PASS"
+    },
+    {
+      "operation": "OP-01",
+      "status": 422,
+      "result": "PASS"
+    },
+    {
+      "operation": "OP-01",
+      "status": 422,
+      "result": "PASS"
+    },
+    {
+      "operation": "OP-01",
+      "status": 200,
+      "result": "PASS"
+    },
+    {
+      "operation": "OP-01",
+      "status": 200,
+      "result": "PASS"
+    }
+  ],
+  "result": "PASS"
+}

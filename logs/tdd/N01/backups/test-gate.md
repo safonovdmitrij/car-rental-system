@@ -1,0 +1,2 @@
+﻿# N01 backup scheduler technical TEST-GATE
+REQ-NF-007 / AC-NF-007-01. Technical GO for 2 scheduler tests: first run, one success per UTC day across worker restart, next day, failure not recorded as successful. Expected RED explicit missing scheduler. UTC is an operational scheduling convention, not rental timezone. Q08 acceptance deliberately left OPEN by user; no RPO/RTO or disaster acceptance claimed. Writer injection tests scheduling only; real pg_dump is separately exercised as a backup diagnostic.

@@ -1,0 +1,1 @@
+Contract harness failed all 8 tests because it matched the server /api/v1 prefix against paths without that prefix. Fixed lookup normalization; no expectations or contract semantics changed. Original stdout not persisted by canary guard. JUnit sanitized before transmission. Repeat CONTRACT-2 is the actual contract result.

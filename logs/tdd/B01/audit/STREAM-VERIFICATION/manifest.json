@@ -1,0 +1,74 @@
+{
+  "started_at": "2026-10-30T13:15:46.592611+00:00",
+  "finished_at": "2026-10-30T13:15:50.432423+00:00",
+  "command": [
+    ".venv-backend/Scripts/python.exe",
+    "-m",
+    "pytest",
+    "tests/integration/test_operation_audit.py",
+    "tests/infrastructure/test_logging.py",
+    "-q",
+    "--tb=line",
+    "--assert=plain",
+    "--show-capture=no",
+    "-p",
+    "no:cacheprovider",
+    "--basetemp=.backend-setup/B01-audit-STREAM-VERIFICATION",
+    "--junitxml=logs/tdd/B01/audit/STREAM-VERIFICATION/junit.xml"
+  ],
+  "exit_code": 0,
+  "python": "3.14.0",
+  "pytest": "9.2.0",
+  "test_ids": [
+    {
+      "classname": "tests.integration.test_operation_audit",
+      "name": "test_committed_registration_emits_safe_operation_event",
+      "time": "0.707"
+    },
+    {
+      "classname": "tests.infrastructure.test_logging",
+      "name": "test_json_event_has_utc_time_type_result_and_request_id",
+      "time": "0.001"
+    },
+    {
+      "classname": "tests.infrastructure.test_logging",
+      "name": "test_event_allowlist_excludes_sensitive_fields_even_on_error[success]",
+      "time": "0.001"
+    },
+    {
+      "classname": "tests.infrastructure.test_logging",
+      "name": "test_event_allowlist_excludes_sensitive_fields_even_on_error[error]",
+      "time": "0.001"
+    },
+    {
+      "classname": "tests.infrastructure.test_logging",
+      "name": "test_http_start_end_status_duration_and_correlation[success]",
+      "time": "0.004"
+    },
+    {
+      "classname": "tests.infrastructure.test_logging",
+      "name": "test_http_start_end_status_duration_and_correlation[error]",
+      "time": "0.004"
+    },
+    {
+      "classname": "tests.infrastructure.test_logging",
+      "name": "test_concurrent_requests_correlate_operation_events_without_context_leak",
+      "time": "0.005"
+    },
+    {
+      "classname": "tests.infrastructure.test_logging",
+      "name": "test_http_error_does_not_log_body_credentials_contacts_or_exception_text",
+      "time": "0.004"
+    },
+    {
+      "classname": "tests.infrastructure.test_logging",
+      "name": "test_test_run_journal_records_exact_command_exit_code_and_result[0-PASS]",
+      "time": "0.005"
+    },
+    {
+      "classname": "tests.infrastructure.test_logging",
+      "name": "test_test_run_journal_records_exact_command_exit_code_and_result[1-FAIL]",
+      "time": "0.003"
+    }
+  ]
+}

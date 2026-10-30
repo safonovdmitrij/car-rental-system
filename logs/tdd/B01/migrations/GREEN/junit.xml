@@ -1,0 +1,1 @@
+<testsuites name="pytest tests"><testsuite name="pytest" errors="0" failures="0" skipped="0" tests="1" time="0.293" timestamp="2026-10-30T14:07:15.851256+01:00" hostname="local"><testcase classname="tests.integration.test_migrations" name="test_empty_database_upgrade_is_repeatable_and_preserves_data" time="0.272" /></testsuite></testsuites>

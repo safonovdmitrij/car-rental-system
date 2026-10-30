@@ -1,0 +1,100 @@
+FFFFFFFFFFFFFFFF                                                         [100%]
+================================== FAILURES ===================================
+_____________________ test_public_catalog_without_period ______________________
+tests\integration\test_catalog.py:51: in test_public_catalog_without_period
+    assert r.status_code==200
+           ^^^^^^^^^^^^^^^^^^
+E   AssertionError
+___________________ test_public_details_hidden_and_unknown ____________________
+tests\integration\test_catalog.py:57: in test_public_details_hidden_and_unknown
+    assert request(engine,"/cars/free").json()=={"id":"free","characteristics":{"model":"Sport"},"dailyRate":"1500.00","currency":"UAH"}
+           ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+E   AssertionError
+______ test_every_blocking_kind_and_cancelled_exclusion[confirmed-False] ______
+tests\integration\test_catalog.py:70: in test_every_blocking_kind_and_cancelled_exclusion
+    assert r.status_code==200 and r.json()['available'] is available
+           ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+E   AssertionError
+_______ test_every_blocking_kind_and_cancelled_exclusion[active-False] ________
+tests\integration\test_catalog.py:70: in test_every_blocking_kind_and_cancelled_exclusion
+    assert r.status_code==200 and r.json()['available'] is available
+           ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+E   AssertionError
+_______ test_every_blocking_kind_and_cancelled_exclusion[service-False] _______
+tests\integration\test_catalog.py:70: in test_every_blocking_kind_and_cancelled_exclusion
+    assert r.status_code==200 and r.json()['available'] is available
+           ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+E   AssertionError
+______ test_every_blocking_kind_and_cancelled_exclusion[cancelled-True] _______
+tests\integration\test_catalog.py:70: in test_every_blocking_kind_and_cancelled_exclusion
+    assert r.status_code==200 and r.json()['available'] is available
+           ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+E   AssertionError
+______ test_every_blocking_kind_and_cancelled_exclusion[completed-True] _______
+tests\integration\test_catalog.py:70: in test_every_blocking_kind_and_cancelled_exclusion
+    assert r.status_code==200 and r.json()['available'] is available
+           ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+E   AssertionError
+___________________ test_adjacent_interval_and_hidden_false ___________________
+tests\integration\test_catalog.py:79: in test_adjacent_interval_and_hidden_false
+    assert request(engine,"/cars/free/availability"+query).json()['available'] is True
+           ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+E   KeyError: 'available'
+_______________ test_invalid_query_422[?startsAt=2026-11-12T09] _______________
+tests\integration\test_catalog.py:86: in test_invalid_query_422
+    assert r.status_code==422 and r.json()['error']['code']=="VALIDATION_ERROR"
+           ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+E   AssertionError
+____ test_invalid_query_422[?startsAt=2026-02-30T09&endsAt=2026-03-01T09] _____
+tests\integration\test_catalog.py:86: in test_invalid_query_422
+    assert r.status_code==422 and r.json()['error']['code']=="VALIDATION_ERROR"
+           ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+E   AssertionError
+____ test_invalid_query_422[?startsAt=2026-03-29T03&endsAt=2026-03-30T09] _____
+tests\integration\test_catalog.py:86: in test_invalid_query_422
+    assert r.status_code==422 and r.json()['error']['code']=="VALIDATION_ERROR"
+           ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+E   AssertionError
+____ test_invalid_query_422[?startsAt=2026-10-25T03&endsAt=2026-10-26T09] _____
+tests\integration\test_catalog.py:86: in test_invalid_query_422
+    assert r.status_code==422 and r.json()['error']['code']=="VALIDATION_ERROR"
+           ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+E   AssertionError
+____ test_invalid_query_422[?startsAt=2026-11-12T09&endsAt=2026-11-12T09] _____
+tests\integration\test_catalog.py:86: in test_invalid_query_422
+    assert r.status_code==422 and r.json()['error']['code']=="VALIDATION_ERROR"
+           ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+E   AssertionError
+_____________________ test_invalid_query_422[?unknown=1] ______________________
+tests\integration\test_catalog.py:86: in test_invalid_query_422
+    assert r.status_code==422 and r.json()['error']['code']=="VALIDATION_ERROR"
+           ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+E   AssertionError
+_ test_search_does_not_inherit_rental_limits[?startsAt=2020-01-01T09&endsAt=2020-01-01T10] _
+tests\integration\test_catalog.py:92: in test_search_does_not_inherit_rental_limits
+    assert request(engine,"/cars"+query).status_code==200
+           ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+E   AssertionError
+_ test_search_does_not_inherit_rental_limits[?startsAt=2030-01-01T09&endsAt=2031-01-01T09] _
+tests\integration\test_catalog.py:92: in test_search_does_not_inherit_rental_limits
+    assert request(engine,"/cars"+query).status_code==200
+           ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+E   AssertionError
+=========================== short test summary info ===========================
+FAILED tests/integration/test_catalog.py::test_public_catalog_without_period
+FAILED tests/integration/test_catalog.py::test_public_details_hidden_and_unknown
+FAILED tests/integration/test_catalog.py::test_every_blocking_kind_and_cancelled_exclusion[confirmed-False]
+FAILED tests/integration/test_catalog.py::test_every_blocking_kind_and_cancelled_exclusion[active-False]
+FAILED tests/integration/test_catalog.py::test_every_blocking_kind_and_cancelled_exclusion[service-False]
+FAILED tests/integration/test_catalog.py::test_every_blocking_kind_and_cancelled_exclusion[cancelled-True]
+FAILED tests/integration/test_catalog.py::test_every_blocking_kind_and_cancelled_exclusion[completed-True]
+FAILED tests/integration/test_catalog.py::test_adjacent_interval_and_hidden_false
+FAILED tests/integration/test_catalog.py::test_invalid_query_422[?startsAt=2026-11-12T09]
+FAILED tests/integration/test_catalog.py::test_invalid_query_422[?startsAt=2026-02-30T09&endsAt=2026-03-01T09]
+FAILED tests/integration/test_catalog.py::test_invalid_query_422[?startsAt=2026-03-29T03&endsAt=2026-03-30T09]
+FAILED tests/integration/test_catalog.py::test_invalid_query_422[?startsAt=2026-10-25T03&endsAt=2026-10-26T09]
+FAILED tests/integration/test_catalog.py::test_invalid_query_422[?startsAt=2026-11-12T09&endsAt=2026-11-12T09]
+FAILED tests/integration/test_catalog.py::test_invalid_query_422[?unknown=1]
+FAILED tests/integration/test_catalog.py::test_search_does_not_inherit_rental_limits[?startsAt=2020-01-01T09&endsAt=2020-01-01T10]
+FAILED tests/integration/test_catalog.py::test_search_does_not_inherit_rental_limits[?startsAt=2030-01-01T09&endsAt=2031-01-01T09]
+16 failed in 3.98s

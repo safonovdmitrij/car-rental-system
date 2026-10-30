@@ -1,0 +1,7 @@
+F                                                                        [100%]
+================================== FAILURES ===================================
+E   AssertionError
+D:\LABY\Course4\car-rental-system\tests\integration\test_operation_audit.py:10: AssertionError
+=========================== short test summary info ===========================
+FAILED tests/integration/test_operation_audit.py::test_committed_registration_emits_safe_operation_event
+1 failed in 0.83s

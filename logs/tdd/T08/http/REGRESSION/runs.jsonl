@@ -1,0 +1,1 @@
+{"time": "2026-10-30T12:56:50.913547+00:00", "run_id": "REGRESSION", "command": [".venv-backend/Scripts/python.exe", "-m", "pytest", "tests", "-q", "--tb=line", "--assert=plain", "--show-capture=no", "-p", "no:cacheprovider", "--basetemp=.backend-setup/T08-http-REGRESSION", "--junitxml=logs/tdd/T08/http/REGRESSION/junit.xml"], "exit_code": 0, "result": "PASS"}

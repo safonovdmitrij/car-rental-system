@@ -1,0 +1,78 @@
+{
+  "started_at": "2026-10-30T12:40:59.324965+00:00",
+  "finished_at": "2026-10-30T12:41:00.439620+00:00",
+  "command": [
+    ".venv-backend/Scripts/python.exe",
+    "-m",
+    "pytest",
+    "tests/unit/test_pricing.py",
+    "-q",
+    "--tb=short",
+    "--assert=plain",
+    "--show-capture=no",
+    "-p",
+    "no:cacheprovider",
+    "--basetemp=.backend-setup/T08-calendar-GREEN",
+    "--junitxml=logs/tdd/T08/calendar/GREEN/junit.xml"
+  ],
+  "exit_code": 0,
+  "python": "3.14.0",
+  "pytest": "9.2.0",
+  "test_ids": [
+    {
+      "classname": "tests.unit.test_pricing",
+      "name": "test_calendar_billable_days[2026-11-12T09:00+02:00-2026-11-13T09:00+02:00-1]",
+      "time": "0.001"
+    },
+    {
+      "classname": "tests.unit.test_pricing",
+      "name": "test_calendar_billable_days[2026-11-12T09:00+02:00-2026-11-13T10:00+02:00-2]",
+      "time": "0.001"
+    },
+    {
+      "classname": "tests.unit.test_pricing",
+      "name": "test_calendar_billable_days[2026-03-28T03:00+02:00-2026-03-29T04:00+03:00-1]",
+      "time": "0.001"
+    },
+    {
+      "classname": "tests.unit.test_pricing",
+      "name": "test_calendar_billable_days[2026-03-28T03:00+02:00-2026-03-29T05:00+03:00-2]",
+      "time": "0.001"
+    },
+    {
+      "classname": "tests.unit.test_pricing",
+      "name": "test_calendar_billable_days[2026-03-28T03:00+02:00-2026-03-30T03:00+03:00-2]",
+      "time": "0.001"
+    },
+    {
+      "classname": "tests.unit.test_pricing",
+      "name": "test_calendar_billable_days[2026-10-24T03:00+03:00-2026-10-25T04:00+02:00-2]",
+      "time": "0.001"
+    },
+    {
+      "classname": "tests.unit.test_pricing",
+      "name": "test_calendar_billable_days[2026-02-27T03:00+02:00-2026-03-29T04:00+03:00-30]",
+      "time": "0.001"
+    },
+    {
+      "classname": "tests.unit.test_pricing",
+      "name": "test_decimal_price_no_float_or_arbitrary_upper_limit[1500.00-1-1500.00]",
+      "time": "0.008"
+    },
+    {
+      "classname": "tests.unit.test_pricing",
+      "name": "test_decimal_price_no_float_or_arbitrary_upper_limit[0.01-30-0.30]",
+      "time": "0.001"
+    },
+    {
+      "classname": "tests.unit.test_pricing",
+      "name": "test_decimal_price_no_float_or_arbitrary_upper_limit[1500.00-2-3000.00]",
+      "time": "0.001"
+    },
+    {
+      "classname": "tests.unit.test_pricing",
+      "name": "test_decimal_price_no_float_or_arbitrary_upper_limit[100000000000000000000000000000.01-30-3000000000000000000000000000000.30]",
+      "time": "0.001"
+    }
+  ]
+}

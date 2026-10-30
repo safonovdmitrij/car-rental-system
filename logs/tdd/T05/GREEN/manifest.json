@@ -1,0 +1,43 @@
+{
+  "started_at": "2026-10-30T12:53:53.608656+00:00",
+  "finished_at": "2026-10-30T12:53:56.382320+00:00",
+  "command": [
+    ".venv-backend/Scripts/python.exe",
+    "-m",
+    "pytest",
+    "tests/integration/test_profile.py",
+    "-q",
+    "--tb=line",
+    "--assert=plain",
+    "--show-capture=no",
+    "-p",
+    "no:cacheprovider",
+    "--basetemp=.backend-setup/T05-GREEN",
+    "--junitxml=logs/tdd/T05/GREEN/junit.xml"
+  ],
+  "exit_code": 0,
+  "python": "3.14.0",
+  "pytest": "9.2.0",
+  "test_ids": [
+    {
+      "classname": "tests.integration.test_profile",
+      "name": "test_profile_patch_persisted_and_email_immutable",
+      "time": "0.422"
+    },
+    {
+      "classname": "tests.integration.test_profile",
+      "name": "test_successful_password_change_revokes_all_sessions",
+      "time": "0.413"
+    },
+    {
+      "classname": "tests.integration.test_profile",
+      "name": "test_failed_password_change_keeps_both_sessions_and_password[wrong-current]",
+      "time": "0.252"
+    },
+    {
+      "classname": "tests.integration.test_profile",
+      "name": "test_failed_password_change_keeps_both_sessions_and_password[short-new]",
+      "time": "0.225"
+    }
+  ]
+}

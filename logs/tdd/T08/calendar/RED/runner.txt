@@ -1,0 +1,92 @@
+FFFFFFFFFFF                                                              [100%]
+================================== FAILURES ===================================
+_ test_calendar_billable_days[2026-11-12T09:00+02:00-2026-11-13T09:00+02:00-1] _
+tests\unit\test_pricing.py:21: in test_calendar_billable_days
+    assert billable_days(datetime.fromisoformat(start), datetime.fromisoformat(end)) == days
+           ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+src\car_rental\pricing.py:8: in billable_days
+    raise NotImplementedError("Calendar billing is not implemented")
+E   NotImplementedError: Calendar billing is not implemented
+_ test_calendar_billable_days[2026-11-12T09:00+02:00-2026-11-13T10:00+02:00-2] _
+tests\unit\test_pricing.py:21: in test_calendar_billable_days
+    assert billable_days(datetime.fromisoformat(start), datetime.fromisoformat(end)) == days
+           ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+src\car_rental\pricing.py:8: in billable_days
+    raise NotImplementedError("Calendar billing is not implemented")
+E   NotImplementedError: Calendar billing is not implemented
+_ test_calendar_billable_days[2026-03-28T03:00+02:00-2026-03-29T04:00+03:00-1] _
+tests\unit\test_pricing.py:21: in test_calendar_billable_days
+    assert billable_days(datetime.fromisoformat(start), datetime.fromisoformat(end)) == days
+           ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+src\car_rental\pricing.py:8: in billable_days
+    raise NotImplementedError("Calendar billing is not implemented")
+E   NotImplementedError: Calendar billing is not implemented
+_ test_calendar_billable_days[2026-03-28T03:00+02:00-2026-03-29T05:00+03:00-2] _
+tests\unit\test_pricing.py:21: in test_calendar_billable_days
+    assert billable_days(datetime.fromisoformat(start), datetime.fromisoformat(end)) == days
+           ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+src\car_rental\pricing.py:8: in billable_days
+    raise NotImplementedError("Calendar billing is not implemented")
+E   NotImplementedError: Calendar billing is not implemented
+_ test_calendar_billable_days[2026-03-28T03:00+02:00-2026-03-30T03:00+03:00-2] _
+tests\unit\test_pricing.py:21: in test_calendar_billable_days
+    assert billable_days(datetime.fromisoformat(start), datetime.fromisoformat(end)) == days
+           ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+src\car_rental\pricing.py:8: in billable_days
+    raise NotImplementedError("Calendar billing is not implemented")
+E   NotImplementedError: Calendar billing is not implemented
+_ test_calendar_billable_days[2026-10-24T03:00+03:00-2026-10-25T04:00+02:00-2] _
+tests\unit\test_pricing.py:21: in test_calendar_billable_days
+    assert billable_days(datetime.fromisoformat(start), datetime.fromisoformat(end)) == days
+           ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+src\car_rental\pricing.py:8: in billable_days
+    raise NotImplementedError("Calendar billing is not implemented")
+E   NotImplementedError: Calendar billing is not implemented
+_ test_calendar_billable_days[2026-02-27T03:00+02:00-2026-03-29T04:00+03:00-30] _
+tests\unit\test_pricing.py:21: in test_calendar_billable_days
+    assert billable_days(datetime.fromisoformat(start), datetime.fromisoformat(end)) == days
+           ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+src\car_rental\pricing.py:8: in billable_days
+    raise NotImplementedError("Calendar billing is not implemented")
+E   NotImplementedError: Calendar billing is not implemented
+___ test_decimal_price_no_float_or_arbitrary_upper_limit[1500.00-1-1500.00] ___
+tests\unit\test_pricing.py:26: in test_decimal_price_no_float_or_arbitrary_upper_limit
+    assert total_price(rate, days) == expected
+           ^^^^^^^^^^^^^^^^^^^^^^^
+src\car_rental\pricing.py:12: in total_price
+    raise NotImplementedError("Exact decimal pricing is not implemented")
+E   NotImplementedError: Exact decimal pricing is not implemented
+_____ test_decimal_price_no_float_or_arbitrary_upper_limit[0.01-30-0.30] ______
+tests\unit\test_pricing.py:26: in test_decimal_price_no_float_or_arbitrary_upper_limit
+    assert total_price(rate, days) == expected
+           ^^^^^^^^^^^^^^^^^^^^^^^
+src\car_rental\pricing.py:12: in total_price
+    raise NotImplementedError("Exact decimal pricing is not implemented")
+E   NotImplementedError: Exact decimal pricing is not implemented
+___ test_decimal_price_no_float_or_arbitrary_upper_limit[1500.00-2-3000.00] ___
+tests\unit\test_pricing.py:26: in test_decimal_price_no_float_or_arbitrary_upper_limit
+    assert total_price(rate, days) == expected
+           ^^^^^^^^^^^^^^^^^^^^^^^
+src\car_rental\pricing.py:12: in total_price
+    raise NotImplementedError("Exact decimal pricing is not implemented")
+E   NotImplementedError: Exact decimal pricing is not implemented
+_ test_decimal_price_no_float_or_arbitrary_upper_limit[100000000000000000000000000000.01-30-3000000000000000000000000000000.30] _
+tests\unit\test_pricing.py:26: in test_decimal_price_no_float_or_arbitrary_upper_limit
+    assert total_price(rate, days) == expected
+           ^^^^^^^^^^^^^^^^^^^^^^^
+src\car_rental\pricing.py:12: in total_price
+    raise NotImplementedError("Exact decimal pricing is not implemented")
+E   NotImplementedError: Exact decimal pricing is not implemented
+=========================== short test summary info ===========================
+FAILED tests/unit/test_pricing.py::test_calendar_billable_days[2026-11-12T09:00+02:00-2026-11-13T09:00+02:00-1]
+FAILED tests/unit/test_pricing.py::test_calendar_billable_days[2026-11-12T09:00+02:00-2026-11-13T10:00+02:00-2]
+FAILED tests/unit/test_pricing.py::test_calendar_billable_days[2026-03-28T03:00+02:00-2026-03-29T04:00+03:00-1]
+FAILED tests/unit/test_pricing.py::test_calendar_billable_days[2026-03-28T03:00+02:00-2026-03-29T05:00+03:00-2]
+FAILED tests/unit/test_pricing.py::test_calendar_billable_days[2026-03-28T03:00+02:00-2026-03-30T03:00+03:00-2]
+FAILED tests/unit/test_pricing.py::test_calendar_billable_days[2026-10-24T03:00+03:00-2026-10-25T04:00+02:00-2]
+FAILED tests/unit/test_pricing.py::test_calendar_billable_days[2026-02-27T03:00+02:00-2026-03-29T04:00+03:00-30]
+FAILED tests/unit/test_pricing.py::test_decimal_price_no_float_or_arbitrary_upper_limit[1500.00-1-1500.00]
+FAILED tests/unit/test_pricing.py::test_decimal_price_no_float_or_arbitrary_upper_limit[0.01-30-0.30]
+FAILED tests/unit/test_pricing.py::test_decimal_price_no_float_or_arbitrary_upper_limit[1500.00-2-3000.00]
+FAILED tests/unit/test_pricing.py::test_decimal_price_no_float_or_arbitrary_upper_limit[100000000000000000000000000000.01-30-3000000000000000000000000000000.30]
+11 failed in 0.24s

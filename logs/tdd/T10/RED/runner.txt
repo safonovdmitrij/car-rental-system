@@ -1,0 +1,13 @@
+FFF                                                                      [100%]
+================================== FAILURES ===================================
+E   AssertionError
+D:\LABY\Course4\car-rental-system\tests\integration\test_booking_read.py:9: AssertionError
+E   KeyError: 'items'
+D:\LABY\Course4\car-rental-system\tests\integration\test_booking_read.py:28: KeyError: 'items'
+E   AssertionError
+D:\LABY\Course4\car-rental-system\tests\integration\test_booking_read.py:39: AssertionError
+=========================== short test summary info ===========================
+FAILED tests/integration/test_booking_read.py::test_list_details_owner_and_current_contacts
+FAILED tests/integration/test_booking_read.py::test_foreign_and_missing_same_404_and_patch_forbidden
+FAILED tests/integration/test_booking_read.py::test_states_follow_clock_and_price_stays_fixed
+3 failed in 0.90s

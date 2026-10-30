@@ -1,0 +1,10 @@
+FF                                                                       [100%]
+================================== FAILURES ===================================
+E   NotImplementedError: Automatic daily backup checkpoint is not implemented
+D:\LABY\Course4\car-rental-system\src\car_rental\backups.py:5: NotImplementedError: Automatic daily backup checkpoint is not implemented
+E   NotImplementedError: Automatic daily backup checkpoint is not implemented
+D:\LABY\Course4\car-rental-system\src\car_rental\backups.py:5: NotImplementedError: Automatic daily backup checkpoint is not implemented
+=========================== short test summary info ===========================
+FAILED tests/unit/test_backups.py::test_once_per_utc_day_and_restart_checkpoint
+FAILED tests/unit/test_backups.py::test_failed_backup_can_retry_without_marking_success
+2 failed in 0.09s

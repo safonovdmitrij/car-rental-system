@@ -1,0 +1,2 @@
+﻿# T04 technical TEST-GATE
+REQ-F-015–020, corresponding AC, BDD-004; OP-05. GO technical: 3 multi-step scenarios, attempts 1–4/fifth, original 900s deadline, ceil Retry-After, expiry resets without successful login, success resets, distinct account, concurrent failures with real PostgreSQL connections. Expected RED absent counter/blocking (all bad attempts currently401). No environment fault counts as RED.

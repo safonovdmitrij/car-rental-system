@@ -1,0 +1,58 @@
+{
+  "started_at": "2026-10-30T12:57:34.261009+00:00",
+  "finished_at": "2026-10-30T12:57:37.144077+00:00",
+  "command": [
+    ".venv-backend/Scripts/python.exe",
+    "-m",
+    "pytest",
+    "tests/integration/test_booking_create.py",
+    "-q",
+    "--tb=line",
+    "--assert=plain",
+    "--show-capture=no",
+    "-p",
+    "no:cacheprovider",
+    "--basetemp=.backend-setup/T09-RED",
+    "--junitxml=logs/tdd/T09/RED/junit.xml"
+  ],
+  "exit_code": 1,
+  "python": "3.14.0",
+  "pytest": "9.2.0",
+  "test_ids": [
+    {
+      "classname": "tests.integration.test_booking_create",
+      "name": "test_booking_created_with_frozen_price_and_location",
+      "time": "0.277"
+    },
+    {
+      "classname": "tests.integration.test_booking_create",
+      "name": "test_two_competing_requests_one_saved_booking",
+      "time": "0.249"
+    },
+    {
+      "classname": "tests.integration.test_booking_create",
+      "name": "test_quote_context_and_owner_not_forged[patch0]",
+      "time": "0.136"
+    },
+    {
+      "classname": "tests.integration.test_booking_create",
+      "name": "test_quote_context_and_owner_not_forged[patch1]",
+      "time": "0.146"
+    },
+    {
+      "classname": "tests.integration.test_booking_create",
+      "name": "test_quote_context_and_owner_not_forged[patch2]",
+      "time": "0.149"
+    },
+    {
+      "classname": "tests.integration.test_booking_create",
+      "name": "test_rate_change_and_return_requires_reconfirmation",
+      "time": "0.242"
+    },
+    {
+      "classname": "tests.integration.test_booking_create",
+      "name": "test_lost_availability_after_quote",
+      "time": "0.162"
+    }
+  ]
+}

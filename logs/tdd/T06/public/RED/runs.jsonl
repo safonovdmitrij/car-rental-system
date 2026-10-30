@@ -1,0 +1,1 @@
+{"time": "2026-10-30T12:42:06.291416+00:00", "run_id": "RED", "command": [".venv-backend/Scripts/python.exe", "-m", "pytest", "tests/integration/test_catalog.py", "-q", "--tb=short", "--assert=plain", "--show-capture=no", "-p", "no:cacheprovider", "--basetemp=.backend-setup/T06-public-RED", "--junitxml=logs/tdd/T06/public/RED/junit.xml"], "exit_code": 1, "result": "FAIL"}

@@ -1,0 +1,2 @@
+﻿# T12 technical TEST-GATE
+REQ-F-051–064/085/091, matching AC including052/053; BDD-011/012/013/016; OP-13 and read/availability integration. Technical GO: 7 cases, ordinary deadline inclusive/one second late, release + history, repeat cancellation, admin reason, identity projections, real HTTP gap/fold cases exact/one second after. Expected RED missing cancellation endpoint. Domain checks already GREEN. No new POS/NEG IDs invented and contract unchanged.

@@ -1,0 +1,1 @@
+First RED run was substantive but export guard detected a synthetic credential in an auto-generated parameter test ID. Added explicit safe test IDs; no expected behavior changed. JUnit sanitized; RED-2 is canonical evidence.

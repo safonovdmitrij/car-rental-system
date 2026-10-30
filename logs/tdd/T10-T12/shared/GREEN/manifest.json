@@ -1,0 +1,143 @@
+{
+  "started_at": "2026-10-30T12:46:00.982978+00:00",
+  "finished_at": "2026-10-30T12:46:02.284062+00:00",
+  "command": [
+    ".venv-backend/Scripts/python.exe",
+    "-m",
+    "pytest",
+    "tests/unit/test_booking_rules.py",
+    "-q",
+    "--tb=short",
+    "--assert=plain",
+    "--show-capture=no",
+    "-p",
+    "no:cacheprovider",
+    "--basetemp=.backend-setup/T10-T12-shared-GREEN",
+    "--junitxml=logs/tdd/T10-T12/shared/GREEN/junit.xml"
+  ],
+  "exit_code": 0,
+  "python": "3.14.0",
+  "pytest": "9.2.0",
+  "test_ids": [
+    {
+      "classname": "tests.unit.test_booking_rules",
+      "name": "test_automatic_state_exact_boundaries[2026-11-12T08:59:59+02:00-confirmed]",
+      "time": "0.002"
+    },
+    {
+      "classname": "tests.unit.test_booking_rules",
+      "name": "test_automatic_state_exact_boundaries[2026-11-12T09:00:00+02:00-active]",
+      "time": "0.001"
+    },
+    {
+      "classname": "tests.unit.test_booking_rules",
+      "name": "test_automatic_state_exact_boundaries[2026-11-13T08:59:59+02:00-active]",
+      "time": "0.001"
+    },
+    {
+      "classname": "tests.unit.test_booking_rules",
+      "name": "test_automatic_state_exact_boundaries[2026-11-13T09:00:00+02:00-completed]",
+      "time": "0.001"
+    },
+    {
+      "classname": "tests.unit.test_booking_rules",
+      "name": "test_automatic_state_exact_boundaries[2026-11-14T09:00:00+02:00-completed]",
+      "time": "0.001"
+    },
+    {
+      "classname": "tests.unit.test_booking_rules",
+      "name": "test_role_and_deadline_policy[client-True-2026-11-11T09:00:00+02:00-None-True]",
+      "time": "0.002"
+    },
+    {
+      "classname": "tests.unit.test_booking_rules",
+      "name": "test_role_and_deadline_policy[client-True-2026-11-11T09:00:01+02:00-None-False]",
+      "time": "0.001"
+    },
+    {
+      "classname": "tests.unit.test_booking_rules",
+      "name": "test_role_and_deadline_policy[client-False-2026-11-10T09:00:00+02:00-None-False]",
+      "time": "0.001"
+    },
+    {
+      "classname": "tests.unit.test_booking_rules",
+      "name": "test_role_and_deadline_policy[administrator-False-2026-11-12T08:59:59+02:00-Maintenance-True]",
+      "time": "0.001"
+    },
+    {
+      "classname": "tests.unit.test_booking_rules",
+      "name": "test_role_and_deadline_policy[administrator-False-2026-11-12T09:00:00+02:00-Maintenance-False]",
+      "time": "0.002"
+    },
+    {
+      "classname": "tests.unit.test_booking_rules",
+      "name": "test_role_and_deadline_policy[administrator-False-2026-11-10T09:00:00+02:00-None-False]",
+      "time": "0.001"
+    },
+    {
+      "classname": "tests.unit.test_booking_rules",
+      "name": "test_role_and_deadline_policy[administrator-False-2026-11-10T09:00:00+02:00-   -False]",
+      "time": "0.002"
+    },
+    {
+      "classname": "tests.unit.test_booking_rules",
+      "name": "test_role_and_deadline_policy[client-True-2026-11-10T09:00:00+02:00-Admin field-False]",
+      "time": "0.001"
+    },
+    {
+      "classname": "tests.unit.test_booking_rules",
+      "name": "test_role_and_deadline_policy[guest-True-2026-11-10T09:00:00+02:00-None-False]",
+      "time": "0.001"
+    },
+    {
+      "classname": "tests.unit.test_booking_rules",
+      "name": "test_dst_client_cancellation_inclusive_and_one_second_late[2026-03-30T03:00:00+03:00-2026-03-29T04:00:00+03:00]",
+      "time": "0.001"
+    },
+    {
+      "classname": "tests.unit.test_booking_rules",
+      "name": "test_dst_client_cancellation_inclusive_and_one_second_late[2026-10-26T03:00:00+02:00-2026-10-25T03:00:00+02:00]",
+      "time": "0.001"
+    },
+    {
+      "classname": "tests.unit.test_booking_rules",
+      "name": "test_already_cancelled_cannot_cancel_again",
+      "time": "0.001"
+    },
+    {
+      "classname": "tests.unit.test_booking_rules",
+      "name": "test_service_period_does_not_inherit_rental_duration[2026-11-12T09-2026-11-12T10-None-True]",
+      "time": "0.019"
+    },
+    {
+      "classname": "tests.unit.test_booking_rules",
+      "name": "test_service_period_does_not_inherit_rental_duration[2026-11-12T09-2027-11-12T09-None-True]",
+      "time": "0.002"
+    },
+    {
+      "classname": "tests.unit.test_booking_rules",
+      "name": "test_service_period_does_not_inherit_rental_duration[2026-11-10T09-2026-11-12T09-None-False]",
+      "time": "0.001"
+    },
+    {
+      "classname": "tests.unit.test_booking_rules",
+      "name": "test_service_period_does_not_inherit_rental_duration[2026-11-12T09-2026-11-12T09-None-False]",
+      "time": "0.001"
+    },
+    {
+      "classname": "tests.unit.test_booking_rules",
+      "name": "test_service_period_does_not_inherit_rental_duration[2026-11-12T09-2026-11-11T09-None-False]",
+      "time": "0.001"
+    },
+    {
+      "classname": "tests.unit.test_booking_rules",
+      "name": "test_service_period_does_not_inherit_rental_duration[2026-11-12T09-2026-11-13T09-2026-11-10T09:00:00+02:00-False]",
+      "time": "0.001"
+    },
+    {
+      "classname": "tests.unit.test_booking_rules",
+      "name": "test_service_period_does_not_inherit_rental_duration[2026-11-12T09-2026-11-13T09-2026-11-11T09:00:00+02:00-True]",
+      "time": "0.001"
+    }
+  ]
+}

@@ -1,0 +1,116 @@
+<testsuites name="pytest tests"><testsuite name="pytest" errors="0" failures="24" skipped="0" tests="24" time="0.398" timestamp="2026-10-30T13:45:21.096888+01:00" hostname="local"><testcase classname="tests.unit.test_booking_rules" name="test_automatic_state_exact_boundaries[2026-11-12T08:59:59+02:00-confirmed]" time="0.002"><failure message="NotImplementedError: Booking state calculation is not implemented">tests\unit\test_booking_rules.py:20: in test_automatic_state_exact_boundaries
+    assert booking_status(START,END,cancelled=False,now=dt(now))==expected
+           ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+src\car_rental\booking_rules.py:6: in booking_status
+    raise NotImplementedError("Booking state calculation is not implemented")
+E   NotImplementedError: Booking state calculation is not implemented</failure></testcase><testcase classname="tests.unit.test_booking_rules" name="test_automatic_state_exact_boundaries[2026-11-12T09:00:00+02:00-active]" time="0.001"><failure message="NotImplementedError: Booking state calculation is not implemented">tests\unit\test_booking_rules.py:20: in test_automatic_state_exact_boundaries
+    assert booking_status(START,END,cancelled=False,now=dt(now))==expected
+           ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+src\car_rental\booking_rules.py:6: in booking_status
+    raise NotImplementedError("Booking state calculation is not implemented")
+E   NotImplementedError: Booking state calculation is not implemented</failure></testcase><testcase classname="tests.unit.test_booking_rules" name="test_automatic_state_exact_boundaries[2026-11-13T08:59:59+02:00-active]" time="0.001"><failure message="NotImplementedError: Booking state calculation is not implemented">tests\unit\test_booking_rules.py:20: in test_automatic_state_exact_boundaries
+    assert booking_status(START,END,cancelled=False,now=dt(now))==expected
+           ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+src\car_rental\booking_rules.py:6: in booking_status
+    raise NotImplementedError("Booking state calculation is not implemented")
+E   NotImplementedError: Booking state calculation is not implemented</failure></testcase><testcase classname="tests.unit.test_booking_rules" name="test_automatic_state_exact_boundaries[2026-11-13T09:00:00+02:00-completed]" time="0.001"><failure message="NotImplementedError: Booking state calculation is not implemented">tests\unit\test_booking_rules.py:20: in test_automatic_state_exact_boundaries
+    assert booking_status(START,END,cancelled=False,now=dt(now))==expected
+           ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+src\car_rental\booking_rules.py:6: in booking_status
+    raise NotImplementedError("Booking state calculation is not implemented")
+E   NotImplementedError: Booking state calculation is not implemented</failure></testcase><testcase classname="tests.unit.test_booking_rules" name="test_automatic_state_exact_boundaries[2026-11-14T09:00:00+02:00-completed]" time="0.001"><failure message="NotImplementedError: Booking state calculation is not implemented">tests\unit\test_booking_rules.py:20: in test_automatic_state_exact_boundaries
+    assert booking_status(START,END,cancelled=False,now=dt(now))==expected
+           ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+src\car_rental\booking_rules.py:6: in booking_status
+    raise NotImplementedError("Booking state calculation is not implemented")
+E   NotImplementedError: Booking state calculation is not implemented</failure></testcase><testcase classname="tests.unit.test_booking_rules" name="test_role_and_deadline_policy[client-True-2026-11-11T09:00:00+02:00-None-True]" time="0.001"><failure message="NotImplementedError: Cancellation policy is not implemented">tests\unit\test_booking_rules.py:38: in test_role_and_deadline_policy
+    check_cancellation(role,**args)
+src\car_rental\booking_rules.py:10: in check_cancellation
+    raise NotImplementedError("Cancellation policy is not implemented")
+E   NotImplementedError: Cancellation policy is not implemented</failure></testcase><testcase classname="tests.unit.test_booking_rules" name="test_role_and_deadline_policy[client-True-2026-11-11T09:00:01+02:00-None-False]" time="0.002"><failure message="NotImplementedError: Cancellation policy is not implemented">tests\unit\test_booking_rules.py:40: in test_role_and_deadline_policy
+    with pytest.raises(ValueError):check_cancellation(role,**args)
+                                   ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+src\car_rental\booking_rules.py:10: in check_cancellation
+    raise NotImplementedError("Cancellation policy is not implemented")
+E   NotImplementedError: Cancellation policy is not implemented</failure></testcase><testcase classname="tests.unit.test_booking_rules" name="test_role_and_deadline_policy[client-False-2026-11-10T09:00:00+02:00-None-False]" time="0.001"><failure message="NotImplementedError: Cancellation policy is not implemented">tests\unit\test_booking_rules.py:40: in test_role_and_deadline_policy
+    with pytest.raises(ValueError):check_cancellation(role,**args)
+                                   ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+src\car_rental\booking_rules.py:10: in check_cancellation
+    raise NotImplementedError("Cancellation policy is not implemented")
+E   NotImplementedError: Cancellation policy is not implemented</failure></testcase><testcase classname="tests.unit.test_booking_rules" name="test_role_and_deadline_policy[administrator-False-2026-11-12T08:59:59+02:00-Maintenance-True]" time="0.001"><failure message="NotImplementedError: Cancellation policy is not implemented">tests\unit\test_booking_rules.py:38: in test_role_and_deadline_policy
+    check_cancellation(role,**args)
+src\car_rental\booking_rules.py:10: in check_cancellation
+    raise NotImplementedError("Cancellation policy is not implemented")
+E   NotImplementedError: Cancellation policy is not implemented</failure></testcase><testcase classname="tests.unit.test_booking_rules" name="test_role_and_deadline_policy[administrator-False-2026-11-12T09:00:00+02:00-Maintenance-False]" time="0.001"><failure message="NotImplementedError: Cancellation policy is not implemented">tests\unit\test_booking_rules.py:40: in test_role_and_deadline_policy
+    with pytest.raises(ValueError):check_cancellation(role,**args)
+                                   ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+src\car_rental\booking_rules.py:10: in check_cancellation
+    raise NotImplementedError("Cancellation policy is not implemented")
+E   NotImplementedError: Cancellation policy is not implemented</failure></testcase><testcase classname="tests.unit.test_booking_rules" name="test_role_and_deadline_policy[administrator-False-2026-11-10T09:00:00+02:00-None-False]" time="0.001"><failure message="NotImplementedError: Cancellation policy is not implemented">tests\unit\test_booking_rules.py:40: in test_role_and_deadline_policy
+    with pytest.raises(ValueError):check_cancellation(role,**args)
+                                   ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+src\car_rental\booking_rules.py:10: in check_cancellation
+    raise NotImplementedError("Cancellation policy is not implemented")
+E   NotImplementedError: Cancellation policy is not implemented</failure></testcase><testcase classname="tests.unit.test_booking_rules" name="test_role_and_deadline_policy[administrator-False-2026-11-10T09:00:00+02:00-   -False]" time="0.001"><failure message="NotImplementedError: Cancellation policy is not implemented">tests\unit\test_booking_rules.py:40: in test_role_and_deadline_policy
+    with pytest.raises(ValueError):check_cancellation(role,**args)
+                                   ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+src\car_rental\booking_rules.py:10: in check_cancellation
+    raise NotImplementedError("Cancellation policy is not implemented")
+E   NotImplementedError: Cancellation policy is not implemented</failure></testcase><testcase classname="tests.unit.test_booking_rules" name="test_role_and_deadline_policy[client-True-2026-11-10T09:00:00+02:00-Admin field-False]" time="0.001"><failure message="NotImplementedError: Cancellation policy is not implemented">tests\unit\test_booking_rules.py:40: in test_role_and_deadline_policy
+    with pytest.raises(ValueError):check_cancellation(role,**args)
+                                   ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+src\car_rental\booking_rules.py:10: in check_cancellation
+    raise NotImplementedError("Cancellation policy is not implemented")
+E   NotImplementedError: Cancellation policy is not implemented</failure></testcase><testcase classname="tests.unit.test_booking_rules" name="test_role_and_deadline_policy[guest-True-2026-11-10T09:00:00+02:00-None-False]" time="0.002"><failure message="NotImplementedError: Cancellation policy is not implemented">tests\unit\test_booking_rules.py:40: in test_role_and_deadline_policy
+    with pytest.raises(ValueError):check_cancellation(role,**args)
+                                   ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+src\car_rental\booking_rules.py:10: in check_cancellation
+    raise NotImplementedError("Cancellation policy is not implemented")
+E   NotImplementedError: Cancellation policy is not implemented</failure></testcase><testcase classname="tests.unit.test_booking_rules" name="test_dst_client_cancellation_inclusive_and_one_second_late[2026-03-30T03:00:00+03:00-2026-03-29T04:00:00+03:00]" time="0.001"><failure message="NotImplementedError: Cancellation policy is not implemented">tests\unit\test_booking_rules.py:47: in test_dst_client_cancellation_inclusive_and_one_second_late
+    check_cancellation('client',owns=True,start=a,end=a+timedelta(days=2),cancelled=False,now=b)
+src\car_rental\booking_rules.py:10: in check_cancellation
+    raise NotImplementedError("Cancellation policy is not implemented")
+E   NotImplementedError: Cancellation policy is not implemented</failure></testcase><testcase classname="tests.unit.test_booking_rules" name="test_dst_client_cancellation_inclusive_and_one_second_late[2026-10-26T03:00:00+02:00-2026-10-25T03:00:00+02:00]" time="0.001"><failure message="NotImplementedError: Cancellation policy is not implemented">tests\unit\test_booking_rules.py:47: in test_dst_client_cancellation_inclusive_and_one_second_late
+    check_cancellation('client',owns=True,start=a,end=a+timedelta(days=2),cancelled=False,now=b)
+src\car_rental\booking_rules.py:10: in check_cancellation
+    raise NotImplementedError("Cancellation policy is not implemented")
+E   NotImplementedError: Cancellation policy is not implemented</failure></testcase><testcase classname="tests.unit.test_booking_rules" name="test_already_cancelled_cannot_cancel_again" time="0.001"><failure message="NotImplementedError: Cancellation policy is not implemented">tests\unit\test_booking_rules.py:54: in test_already_cancelled_cannot_cancel_again
+    check_cancellation('client',owns=True,start=START,end=END,cancelled=True,now=dt('2026-11-10T09:00:00+02:00'))
+src\car_rental\booking_rules.py:10: in check_cancellation
+    raise NotImplementedError("Cancellation policy is not implemented")
+E   NotImplementedError: Cancellation policy is not implemented</failure></testcase><testcase classname="tests.unit.test_booking_rules" name="test_service_period_does_not_inherit_rental_duration[2026-11-12T09-2026-11-12T10-None-True]" time="0.001"><failure message="NotImplementedError: Service period validation is not implemented">tests\unit\test_booking_rules.py:69: in test_service_period_does_not_inherit_rental_duration
+    a,b=check_service_period(start,end,**args);assert a&lt;b
+        ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+src\car_rental\booking_rules.py:14: in check_service_period
+    raise NotImplementedError("Service period validation is not implemented")
+E   NotImplementedError: Service period validation is not implemented</failure></testcase><testcase classname="tests.unit.test_booking_rules" name="test_service_period_does_not_inherit_rental_duration[2026-11-12T09-2027-11-12T09-None-True]" time="0.002"><failure message="NotImplementedError: Service period validation is not implemented">tests\unit\test_booking_rules.py:69: in test_service_period_does_not_inherit_rental_duration
+    a,b=check_service_period(start,end,**args);assert a&lt;b
+        ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+src\car_rental\booking_rules.py:14: in check_service_period
+    raise NotImplementedError("Service period validation is not implemented")
+E   NotImplementedError: Service period validation is not implemented</failure></testcase><testcase classname="tests.unit.test_booking_rules" name="test_service_period_does_not_inherit_rental_duration[2026-11-10T09-2026-11-12T09-None-False]" time="0.002"><failure message="NotImplementedError: Service period validation is not implemented">tests\unit\test_booking_rules.py:71: in test_service_period_does_not_inherit_rental_duration
+    with pytest.raises(ValueError):check_service_period(start,end,**args)
+                                   ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+src\car_rental\booking_rules.py:14: in check_service_period
+    raise NotImplementedError("Service period validation is not implemented")
+E   NotImplementedError: Service period validation is not implemented</failure></testcase><testcase classname="tests.unit.test_booking_rules" name="test_service_period_does_not_inherit_rental_duration[2026-11-12T09-2026-11-12T09-None-False]" time="0.002"><failure message="NotImplementedError: Service period validation is not implemented">tests\unit\test_booking_rules.py:71: in test_service_period_does_not_inherit_rental_duration
+    with pytest.raises(ValueError):check_service_period(start,end,**args)
+                                   ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+src\car_rental\booking_rules.py:14: in check_service_period
+    raise NotImplementedError("Service period validation is not implemented")
+E   NotImplementedError: Service period validation is not implemented</failure></testcase><testcase classname="tests.unit.test_booking_rules" name="test_service_period_does_not_inherit_rental_duration[2026-11-12T09-2026-11-11T09-None-False]" time="0.002"><failure message="NotImplementedError: Service period validation is not implemented">tests\unit\test_booking_rules.py:71: in test_service_period_does_not_inherit_rental_duration
+    with pytest.raises(ValueError):check_service_period(start,end,**args)
+                                   ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+src\car_rental\booking_rules.py:14: in check_service_period
+    raise NotImplementedError("Service period validation is not implemented")
+E   NotImplementedError: Service period validation is not implemented</failure></testcase><testcase classname="tests.unit.test_booking_rules" name="test_service_period_does_not_inherit_rental_duration[2026-11-12T09-2026-11-13T09-2026-11-10T09:00:00+02:00-False]" time="0.001"><failure message="NotImplementedError: Service period validation is not implemented">tests\unit\test_booking_rules.py:71: in test_service_period_does_not_inherit_rental_duration
+    with pytest.raises(ValueError):check_service_period(start,end,**args)
+                                   ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+src\car_rental\booking_rules.py:14: in check_service_period
+    raise NotImplementedError("Service period validation is not implemented")
+E   NotImplementedError: Service period validation is not implemented</failure></testcase><testcase classname="tests.unit.test_booking_rules" name="test_service_period_does_not_inherit_rental_duration[2026-11-12T09-2026-11-13T09-2026-11-11T09:00:00+02:00-True]" time="0.001"><failure message="NotImplementedError: Service period validation is not implemented">tests\unit\test_booking_rules.py:69: in test_service_period_does_not_inherit_rental_duration
+    a,b=check_service_period(start,end,**args);assert a&lt;b
+        ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+src\car_rental\booking_rules.py:14: in check_service_period
+    raise NotImplementedError("Service period validation is not implemented")
+E   NotImplementedError: Service period validation is not implemented</failure></testcase></testsuite></testsuites>

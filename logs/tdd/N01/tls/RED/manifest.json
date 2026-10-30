@@ -1,0 +1,28 @@
+{
+  "started_at": "2026-10-30T13:18:14.532365+00:00",
+  "finished_at": "2026-10-30T13:18:17.495119+00:00",
+  "command": [
+    ".venv-backend/Scripts/python.exe",
+    "-m",
+    "pytest",
+    "tests/integration/test_https.py",
+    "-q",
+    "--tb=line",
+    "--assert=plain",
+    "--show-capture=no",
+    "-p",
+    "no:cacheprovider",
+    "--basetemp=.backend-setup/N01-tls-RED",
+    "--junitxml=logs/tdd/N01/tls/RED/junit.xml"
+  ],
+  "exit_code": 1,
+  "python": "3.14.0",
+  "pytest": "9.2.0",
+  "test_ids": [
+    {
+      "classname": "tests.integration.test_https",
+      "name": "test_real_https_proxy_and_verified_local_certificate",
+      "time": "0.005"
+    }
+  ]
+}

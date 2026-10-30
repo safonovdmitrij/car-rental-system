@@ -1,0 +1,191 @@
+FFFFFFFFFFFFFFFFFFFFFFFF                                                 [100%]
+================================== FAILURES ===================================
+_ test_automatic_state_exact_boundaries[2026-11-12T08:59:59+02:00-confirmed] __
+tests\unit\test_booking_rules.py:20: in test_automatic_state_exact_boundaries
+    assert booking_status(START,END,cancelled=False,now=dt(now))==expected
+           ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+src\car_rental\booking_rules.py:6: in booking_status
+    raise NotImplementedError("Booking state calculation is not implemented")
+E   NotImplementedError: Booking state calculation is not implemented
+___ test_automatic_state_exact_boundaries[2026-11-12T09:00:00+02:00-active] ___
+tests\unit\test_booking_rules.py:20: in test_automatic_state_exact_boundaries
+    assert booking_status(START,END,cancelled=False,now=dt(now))==expected
+           ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+src\car_rental\booking_rules.py:6: in booking_status
+    raise NotImplementedError("Booking state calculation is not implemented")
+E   NotImplementedError: Booking state calculation is not implemented
+___ test_automatic_state_exact_boundaries[2026-11-13T08:59:59+02:00-active] ___
+tests\unit\test_booking_rules.py:20: in test_automatic_state_exact_boundaries
+    assert booking_status(START,END,cancelled=False,now=dt(now))==expected
+           ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+src\car_rental\booking_rules.py:6: in booking_status
+    raise NotImplementedError("Booking state calculation is not implemented")
+E   NotImplementedError: Booking state calculation is not implemented
+_ test_automatic_state_exact_boundaries[2026-11-13T09:00:00+02:00-completed] __
+tests\unit\test_booking_rules.py:20: in test_automatic_state_exact_boundaries
+    assert booking_status(START,END,cancelled=False,now=dt(now))==expected
+           ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+src\car_rental\booking_rules.py:6: in booking_status
+    raise NotImplementedError("Booking state calculation is not implemented")
+E   NotImplementedError: Booking state calculation is not implemented
+_ test_automatic_state_exact_boundaries[2026-11-14T09:00:00+02:00-completed] __
+tests\unit\test_booking_rules.py:20: in test_automatic_state_exact_boundaries
+    assert booking_status(START,END,cancelled=False,now=dt(now))==expected
+           ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+src\car_rental\booking_rules.py:6: in booking_status
+    raise NotImplementedError("Booking state calculation is not implemented")
+E   NotImplementedError: Booking state calculation is not implemented
+_ test_role_and_deadline_policy[client-True-2026-11-11T09:00:00+02:00-None-True] _
+tests\unit\test_booking_rules.py:38: in test_role_and_deadline_policy
+    check_cancellation(role,**args)
+src\car_rental\booking_rules.py:10: in check_cancellation
+    raise NotImplementedError("Cancellation policy is not implemented")
+E   NotImplementedError: Cancellation policy is not implemented
+_ test_role_and_deadline_policy[client-True-2026-11-11T09:00:01+02:00-None-False] _
+tests\unit\test_booking_rules.py:40: in test_role_and_deadline_policy
+    with pytest.raises(ValueError):check_cancellation(role,**args)
+                                   ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+src\car_rental\booking_rules.py:10: in check_cancellation
+    raise NotImplementedError("Cancellation policy is not implemented")
+E   NotImplementedError: Cancellation policy is not implemented
+_ test_role_and_deadline_policy[client-False-2026-11-10T09:00:00+02:00-None-False] _
+tests\unit\test_booking_rules.py:40: in test_role_and_deadline_policy
+    with pytest.raises(ValueError):check_cancellation(role,**args)
+                                   ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+src\car_rental\booking_rules.py:10: in check_cancellation
+    raise NotImplementedError("Cancellation policy is not implemented")
+E   NotImplementedError: Cancellation policy is not implemented
+_ test_role_and_deadline_policy[administrator-False-2026-11-12T08:59:59+02:00-Maintenance-True] _
+tests\unit\test_booking_rules.py:38: in test_role_and_deadline_policy
+    check_cancellation(role,**args)
+src\car_rental\booking_rules.py:10: in check_cancellation
+    raise NotImplementedError("Cancellation policy is not implemented")
+E   NotImplementedError: Cancellation policy is not implemented
+_ test_role_and_deadline_policy[administrator-False-2026-11-12T09:00:00+02:00-Maintenance-False] _
+tests\unit\test_booking_rules.py:40: in test_role_and_deadline_policy
+    with pytest.raises(ValueError):check_cancellation(role,**args)
+                                   ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+src\car_rental\booking_rules.py:10: in check_cancellation
+    raise NotImplementedError("Cancellation policy is not implemented")
+E   NotImplementedError: Cancellation policy is not implemented
+_ test_role_and_deadline_policy[administrator-False-2026-11-10T09:00:00+02:00-None-False] _
+tests\unit\test_booking_rules.py:40: in test_role_and_deadline_policy
+    with pytest.raises(ValueError):check_cancellation(role,**args)
+                                   ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+src\car_rental\booking_rules.py:10: in check_cancellation
+    raise NotImplementedError("Cancellation policy is not implemented")
+E   NotImplementedError: Cancellation policy is not implemented
+_ test_role_and_deadline_policy[administrator-False-2026-11-10T09:00:00+02:00-   -False] _
+tests\unit\test_booking_rules.py:40: in test_role_and_deadline_policy
+    with pytest.raises(ValueError):check_cancellation(role,**args)
+                                   ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+src\car_rental\booking_rules.py:10: in check_cancellation
+    raise NotImplementedError("Cancellation policy is not implemented")
+E   NotImplementedError: Cancellation policy is not implemented
+_ test_role_and_deadline_policy[client-True-2026-11-10T09:00:00+02:00-Admin field-False] _
+tests\unit\test_booking_rules.py:40: in test_role_and_deadline_policy
+    with pytest.raises(ValueError):check_cancellation(role,**args)
+                                   ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+src\car_rental\booking_rules.py:10: in check_cancellation
+    raise NotImplementedError("Cancellation policy is not implemented")
+E   NotImplementedError: Cancellation policy is not implemented
+_ test_role_and_deadline_policy[guest-True-2026-11-10T09:00:00+02:00-None-False] _
+tests\unit\test_booking_rules.py:40: in test_role_and_deadline_policy
+    with pytest.raises(ValueError):check_cancellation(role,**args)
+                                   ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+src\car_rental\booking_rules.py:10: in check_cancellation
+    raise NotImplementedError("Cancellation policy is not implemented")
+E   NotImplementedError: Cancellation policy is not implemented
+_ test_dst_client_cancellation_inclusive_and_one_second_late[2026-03-30T03:00:00+03:00-2026-03-29T04:00:00+03:00] _
+tests\unit\test_booking_rules.py:47: in test_dst_client_cancellation_inclusive_and_one_second_late
+    check_cancellation('client',owns=True,start=a,end=a+timedelta(days=2),cancelled=False,now=b)
+src\car_rental\booking_rules.py:10: in check_cancellation
+    raise NotImplementedError("Cancellation policy is not implemented")
+E   NotImplementedError: Cancellation policy is not implemented
+_ test_dst_client_cancellation_inclusive_and_one_second_late[2026-10-26T03:00:00+02:00-2026-10-25T03:00:00+02:00] _
+tests\unit\test_booking_rules.py:47: in test_dst_client_cancellation_inclusive_and_one_second_late
+    check_cancellation('client',owns=True,start=a,end=a+timedelta(days=2),cancelled=False,now=b)
+src\car_rental\booking_rules.py:10: in check_cancellation
+    raise NotImplementedError("Cancellation policy is not implemented")
+E   NotImplementedError: Cancellation policy is not implemented
+_________________ test_already_cancelled_cannot_cancel_again __________________
+tests\unit\test_booking_rules.py:54: in test_already_cancelled_cannot_cancel_again
+    check_cancellation('client',owns=True,start=START,end=END,cancelled=True,now=dt('2026-11-10T09:00:00+02:00'))
+src\car_rental\booking_rules.py:10: in check_cancellation
+    raise NotImplementedError("Cancellation policy is not implemented")
+E   NotImplementedError: Cancellation policy is not implemented
+_ test_service_period_does_not_inherit_rental_duration[2026-11-12T09-2026-11-12T10-None-True] _
+tests\unit\test_booking_rules.py:69: in test_service_period_does_not_inherit_rental_duration
+    a,b=check_service_period(start,end,**args);assert a<b
+        ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+src\car_rental\booking_rules.py:14: in check_service_period
+    raise NotImplementedError("Service period validation is not implemented")
+E   NotImplementedError: Service period validation is not implemented
+_ test_service_period_does_not_inherit_rental_duration[2026-11-12T09-2027-11-12T09-None-True] _
+tests\unit\test_booking_rules.py:69: in test_service_period_does_not_inherit_rental_duration
+    a,b=check_service_period(start,end,**args);assert a<b
+        ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+src\car_rental\booking_rules.py:14: in check_service_period
+    raise NotImplementedError("Service period validation is not implemented")
+E   NotImplementedError: Service period validation is not implemented
+_ test_service_period_does_not_inherit_rental_duration[2026-11-10T09-2026-11-12T09-None-False] _
+tests\unit\test_booking_rules.py:71: in test_service_period_does_not_inherit_rental_duration
+    with pytest.raises(ValueError):check_service_period(start,end,**args)
+                                   ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+src\car_rental\booking_rules.py:14: in check_service_period
+    raise NotImplementedError("Service period validation is not implemented")
+E   NotImplementedError: Service period validation is not implemented
+_ test_service_period_does_not_inherit_rental_duration[2026-11-12T09-2026-11-12T09-None-False] _
+tests\unit\test_booking_rules.py:71: in test_service_period_does_not_inherit_rental_duration
+    with pytest.raises(ValueError):check_service_period(start,end,**args)
+                                   ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+src\car_rental\booking_rules.py:14: in check_service_period
+    raise NotImplementedError("Service period validation is not implemented")
+E   NotImplementedError: Service period validation is not implemented
+_ test_service_period_does_not_inherit_rental_duration[2026-11-12T09-2026-11-11T09-None-False] _
+tests\unit\test_booking_rules.py:71: in test_service_period_does_not_inherit_rental_duration
+    with pytest.raises(ValueError):check_service_period(start,end,**args)
+                                   ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+src\car_rental\booking_rules.py:14: in check_service_period
+    raise NotImplementedError("Service period validation is not implemented")
+E   NotImplementedError: Service period validation is not implemented
+_ test_service_period_does_not_inherit_rental_duration[2026-11-12T09-2026-11-13T09-2026-11-10T09:00:00+02:00-False] _
+tests\unit\test_booking_rules.py:71: in test_service_period_does_not_inherit_rental_duration
+    with pytest.raises(ValueError):check_service_period(start,end,**args)
+                                   ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+src\car_rental\booking_rules.py:14: in check_service_period
+    raise NotImplementedError("Service period validation is not implemented")
+E   NotImplementedError: Service period validation is not implemented
+_ test_service_period_does_not_inherit_rental_duration[2026-11-12T09-2026-11-13T09-2026-11-11T09:00:00+02:00-True] _
+tests\unit\test_booking_rules.py:69: in test_service_period_does_not_inherit_rental_duration
+    a,b=check_service_period(start,end,**args);assert a<b
+        ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+src\car_rental\booking_rules.py:14: in check_service_period
+    raise NotImplementedError("Service period validation is not implemented")
+E   NotImplementedError: Service period validation is not implemented
+=========================== short test summary info ===========================
+FAILED tests/unit/test_booking_rules.py::test_automatic_state_exact_boundaries[2026-11-12T08:59:59+02:00-confirmed]
+FAILED tests/unit/test_booking_rules.py::test_automatic_state_exact_boundaries[2026-11-12T09:00:00+02:00-active]
+FAILED tests/unit/test_booking_rules.py::test_automatic_state_exact_boundaries[2026-11-13T08:59:59+02:00-active]
+FAILED tests/unit/test_booking_rules.py::test_automatic_state_exact_boundaries[2026-11-13T09:00:00+02:00-completed]
+FAILED tests/unit/test_booking_rules.py::test_automatic_state_exact_boundaries[2026-11-14T09:00:00+02:00-completed]
+FAILED tests/unit/test_booking_rules.py::test_role_and_deadline_policy[client-True-2026-11-11T09:00:00+02:00-None-True]
+FAILED tests/unit/test_booking_rules.py::test_role_and_deadline_policy[client-True-2026-11-11T09:00:01+02:00-None-False]
+FAILED tests/unit/test_booking_rules.py::test_role_and_deadline_policy[client-False-2026-11-10T09:00:00+02:00-None-False]
+FAILED tests/unit/test_booking_rules.py::test_role_and_deadline_policy[administrator-False-2026-11-12T08:59:59+02:00-Maintenance-True]
+FAILED tests/unit/test_booking_rules.py::test_role_and_deadline_policy[administrator-False-2026-11-12T09:00:00+02:00-Maintenance-False]
+FAILED tests/unit/test_booking_rules.py::test_role_and_deadline_policy[administrator-False-2026-11-10T09:00:00+02:00-None-False]
+FAILED tests/unit/test_booking_rules.py::test_role_and_deadline_policy[administrator-False-2026-11-10T09:00:00+02:00-   -False]
+FAILED tests/unit/test_booking_rules.py::test_role_and_deadline_policy[client-True-2026-11-10T09:00:00+02:00-Admin field-False]
+FAILED tests/unit/test_booking_rules.py::test_role_and_deadline_policy[guest-True-2026-11-10T09:00:00+02:00-None-False]
+FAILED tests/unit/test_booking_rules.py::test_dst_client_cancellation_inclusive_and_one_second_late[2026-03-30T03:00:00+03:00-2026-03-29T04:00:00+03:00]
+FAILED tests/unit/test_booking_rules.py::test_dst_client_cancellation_inclusive_and_one_second_late[2026-10-26T03:00:00+02:00-2026-10-25T03:00:00+02:00]
+FAILED tests/unit/test_booking_rules.py::test_already_cancelled_cannot_cancel_again
+FAILED tests/unit/test_booking_rules.py::test_service_period_does_not_inherit_rental_duration[2026-11-12T09-2026-11-12T10-None-True]
+FAILED tests/unit/test_booking_rules.py::test_service_period_does_not_inherit_rental_duration[2026-11-12T09-2027-11-12T09-None-True]
+FAILED tests/unit/test_booking_rules.py::test_service_period_does_not_inherit_rental_duration[2026-11-10T09-2026-11-12T09-None-False]
+FAILED tests/unit/test_booking_rules.py::test_service_period_does_not_inherit_rental_duration[2026-11-12T09-2026-11-12T09-None-False]
+FAILED tests/unit/test_booking_rules.py::test_service_period_does_not_inherit_rental_duration[2026-11-12T09-2026-11-11T09-None-False]
+FAILED tests/unit/test_booking_rules.py::test_service_period_does_not_inherit_rental_duration[2026-11-12T09-2026-11-13T09-2026-11-10T09:00:00+02:00-False]
+FAILED tests/unit/test_booking_rules.py::test_service_period_does_not_inherit_rental_duration[2026-11-12T09-2026-11-13T09-2026-11-11T09:00:00+02:00-True]
+24 failed in 0.41s

@@ -1,0 +1,2 @@
+﻿# T11 technical TEST-GATE
+REQ-F-073–081/087–089/092, corresponding AC, BDD-015/016; OP-18–22. GO technical: 4 actual-PostgreSQL scenarios covering CRUD/history, adjacency, booking conflict, immutable at exact start with renewed sessions, missing/blank reason/future time, forbidden client, and simultaneous booking vs service with invariant one saved occupation. Expected RED absent service routes; no chosen winner. Q06 uses approved contract LocalHour/future edit rules.

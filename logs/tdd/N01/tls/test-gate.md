@@ -1,0 +1,2 @@
+﻿# N01 TLS technical TEST-GATE
+REQ-NF-005/AC-NF-005-01. Technical GO: actual HTTPS reverse proxy, verified local CA certificate, real API200 and protected401/challenge, no global trust installation. Existing Caddy2.11.7, ignored key storage, two temporary loopback processes terminated by test. Expected RED explicit missing transport configuration before any external startup. Browser/production trust and deployment remain separate acceptance work.

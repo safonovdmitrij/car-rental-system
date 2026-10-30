@@ -1,0 +1,25 @@
+FFFFFFF                                                                  [100%]
+================================== FAILURES ===================================
+E   AssertionError
+D:\LABY\Course4\car-rental-system\tests\integration\test_fleet.py:12: AssertionError
+E   AssertionError
+D:\LABY\Course4\car-rental-system\tests\integration\test_fleet.py:33: AssertionError
+E   AssertionError
+D:\LABY\Course4\car-rental-system\tests\integration\test_fleet.py:33: AssertionError
+E   AssertionError
+D:\LABY\Course4\car-rental-system\tests\integration\test_fleet.py:33: AssertionError
+E   AssertionError
+D:\LABY\Course4\car-rental-system\tests\integration\test_fleet.py:33: AssertionError
+E   AssertionError
+D:\LABY\Course4\car-rental-system\tests\integration\test_fleet.py:12: AssertionError
+E   AssertionError
+D:\LABY\Course4\car-rental-system\tests\integration\test_fleet.py:50: AssertionError
+=========================== short test summary info ===========================
+FAILED tests/integration/test_fleet.py::test_create_patch_hide_show_projections_and_delete
+FAILED tests/integration/test_fleet.py::test_bad_tariff_rejected[0] - Asserti...
+FAILED tests/integration/test_fleet.py::test_bad_tariff_rejected[0.00] - Asse...
+FAILED tests/integration/test_fleet.py::test_bad_tariff_rejected[-1.00] - Ass...
+FAILED tests/integration/test_fleet.py::test_bad_tariff_rejected[1.001] - Ass...
+FAILED tests/integration/test_fleet.py::test_related_history_blocks_delete_and_future_warning
+FAILED tests/integration/test_fleet.py::test_client_and_guest_cannot_manage_fleet
+7 failed in 1.39s

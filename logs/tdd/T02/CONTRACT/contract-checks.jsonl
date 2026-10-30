@@ -1,0 +1,8 @@
+{"method": "POST", "path": "/clients", "status": 201, "conforms": false}
+{"method": "POST", "path": "/clients", "status": 422, "conforms": false}
+{"method": "POST", "path": "/clients", "status": 422, "conforms": false}
+{"method": "POST", "path": "/clients", "status": 422, "conforms": false}
+{"method": "POST", "path": "/clients", "status": 422, "conforms": false}
+{"method": "POST", "path": "/clients", "status": 422, "conforms": false}
+{"method": "POST", "path": "/clients", "status": 201, "conforms": false}
+{"method": "POST", "path": "/sessions", "status": 401, "conforms": false}

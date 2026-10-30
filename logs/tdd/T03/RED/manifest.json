@@ -1,0 +1,43 @@
+{
+  "started_at": "2026-10-30T12:51:51.115733+00:00",
+  "finished_at": "2026-10-30T12:51:53.333993+00:00",
+  "command": [
+    ".venv-backend/Scripts/python.exe",
+    "-m",
+    "pytest",
+    "tests/integration/test_sessions.py",
+    "-q",
+    "--tb=line",
+    "--assert=plain",
+    "--show-capture=no",
+    "-p",
+    "no:cacheprovider",
+    "--basetemp=.backend-setup/T03-RED",
+    "--junitxml=logs/tdd/T03/RED/junit.xml"
+  ],
+  "exit_code": 1,
+  "python": "3.14.0",
+  "pytest": "9.2.0",
+  "test_ids": [
+    {
+      "classname": "tests.integration.test_sessions",
+      "name": "test_exact_fixed_session_ttl_both_roles[client]",
+      "time": "0.386"
+    },
+    {
+      "classname": "tests.integration.test_sessions",
+      "name": "test_exact_fixed_session_ttl_both_roles[administrator]",
+      "time": "0.143"
+    },
+    {
+      "classname": "tests.integration.test_sessions",
+      "name": "test_missing_invalid_bearer[None]",
+      "time": "0.055"
+    },
+    {
+      "classname": "tests.integration.test_sessions",
+      "name": "test_missing_invalid_bearer[invalid-opaque-value]",
+      "time": "0.179"
+    }
+  ]
+}

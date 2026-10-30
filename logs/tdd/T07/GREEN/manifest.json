@@ -1,0 +1,58 @@
+{
+  "started_at": "2026-10-30T12:55:30.977860+00:00",
+  "finished_at": "2026-10-30T12:55:33.963981+00:00",
+  "command": [
+    ".venv-backend/Scripts/python.exe",
+    "-m",
+    "pytest",
+    "tests/integration/test_fleet.py",
+    "-q",
+    "--tb=line",
+    "--assert=plain",
+    "--show-capture=no",
+    "-p",
+    "no:cacheprovider",
+    "--basetemp=.backend-setup/T07-GREEN",
+    "--junitxml=logs/tdd/T07/GREEN/junit.xml"
+  ],
+  "exit_code": 0,
+  "python": "3.14.0",
+  "pytest": "9.2.0",
+  "test_ids": [
+    {
+      "classname": "tests.integration.test_fleet",
+      "name": "test_create_patch_hide_show_projections_and_delete",
+      "time": "0.318"
+    },
+    {
+      "classname": "tests.integration.test_fleet",
+      "name": "test_bad_tariff_rejected[0]",
+      "time": "0.247"
+    },
+    {
+      "classname": "tests.integration.test_fleet",
+      "name": "test_bad_tariff_rejected[0.00]",
+      "time": "0.152"
+    },
+    {
+      "classname": "tests.integration.test_fleet",
+      "name": "test_bad_tariff_rejected[-1.00]",
+      "time": "0.241"
+    },
+    {
+      "classname": "tests.integration.test_fleet",
+      "name": "test_bad_tariff_rejected[1.001]",
+      "time": "0.122"
+    },
+    {
+      "classname": "tests.integration.test_fleet",
+      "name": "test_related_history_blocks_delete_and_future_warning",
+      "time": "0.164"
+    },
+    {
+      "classname": "tests.integration.test_fleet",
+      "name": "test_client_and_guest_cannot_manage_fleet",
+      "time": "0.246"
+    }
+  ]
+}

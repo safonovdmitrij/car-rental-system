@@ -1,0 +1,28 @@
+{
+  "started_at": "2026-10-30T13:13:28.270114+00:00",
+  "finished_at": "2026-10-30T13:13:32.234067+00:00",
+  "command": [
+    ".venv-backend/Scripts/python.exe",
+    "-m",
+    "pytest",
+    "tests/integration/test_operation_audit.py",
+    "-q",
+    "--tb=line",
+    "--assert=plain",
+    "--show-capture=no",
+    "-p",
+    "no:cacheprovider",
+    "--basetemp=.backend-setup/B01-audit-RED",
+    "--junitxml=logs/tdd/B01/audit/RED/junit.xml"
+  ],
+  "exit_code": 1,
+  "python": "3.14.0",
+  "pytest": "9.2.0",
+  "test_ids": [
+    {
+      "classname": "tests.integration.test_operation_audit",
+      "name": "test_committed_registration_emits_safe_operation_event",
+      "time": "0.792"
+    }
+  ]
+}

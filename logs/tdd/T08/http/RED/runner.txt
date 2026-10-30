@@ -1,0 +1,25 @@
+FFFFFFF                                                                  [100%]
+================================== FAILURES ===================================
+E   AssertionError
+D:\LABY\Course4\car-rental-system\tests\integration\test_quotes.py:18: AssertionError
+E   AssertionError
+D:\LABY\Course4\car-rental-system\tests\integration\test_quotes.py:27: AssertionError
+E   AssertionError
+D:\LABY\Course4\car-rental-system\tests\integration\test_quotes.py:27: AssertionError
+E   AssertionError
+D:\LABY\Course4\car-rental-system\tests\integration\test_quotes.py:27: AssertionError
+E   AssertionError
+D:\LABY\Course4\car-rental-system\tests\integration\test_quotes.py:27: AssertionError
+E   AssertionError
+D:\LABY\Course4\car-rental-system\tests\integration\test_quotes.py:33: AssertionError
+E   AssertionError
+D:\LABY\Course4\car-rental-system\tests\integration\test_quotes.py:37: AssertionError
+=========================== short test summary info ===========================
+FAILED tests/integration/test_quotes.py::test_quote_prices_and_does_not_reserve
+FAILED tests/integration/test_quotes.py::test_quote_rental_limits_422[patch0]
+FAILED tests/integration/test_quotes.py::test_quote_rental_limits_422[patch1]
+FAILED tests/integration/test_quotes.py::test_quote_rental_limits_422[patch2]
+FAILED tests/integration/test_quotes.py::test_quote_rental_limits_422[patch3]
+FAILED tests/integration/test_quotes.py::test_hidden_quote_rejected - Asserti...
+FAILED tests/integration/test_quotes.py::test_quote_roles - AssertionError
+7 failed in 1.50s
