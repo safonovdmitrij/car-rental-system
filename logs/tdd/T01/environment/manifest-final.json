@@ -1,0 +1,31 @@
+{
+  "purpose": "environment_bootstrap_final_after_deprecation_fix_not_business_tests",
+  "environment": {
+    "PYTEST_DISABLE_PLUGIN_AUTOLOAD": "1",
+    "PYTHONUTF8": "1"
+  },
+  "source_sha256": {
+    "requirements/backend.lock": "4bc5958aa89cf5955f583db70da3a407ff286631fc7e689fa3e11100f4a4e8c7",
+    "tests/infrastructure/test_environment.py": "7321259113a56eaf4f407913e734dce682891a8e7767fc4d10687ee65f9febbf",
+    "src/car_rental/main.py": "0844314144d9b2dbd756f2d7a860d0375fd8e93d56a4ef62db3be9b1278e01ae",
+    "api/openapi.yaml": "88989941676702ee28c13d5a16a1320d3636f97b100958cee48021a59be8282e"
+  },
+  "runs": [
+    {
+      "id": "collect-final",
+      "command": ".venv-backend\\Scripts\\python.exe -m pytest tests/infrastructure --collect-only -q",
+      "started_at": "2026-10-30T08:11:06.751801+00:00",
+      "finished_at": "2026-10-30T08:11:08.544763+00:00",
+      "exit_code": 0,
+      "output": "collect-final.txt"
+    },
+    {
+      "id": "smoke-final",
+      "command": ".venv-backend\\Scripts\\python.exe -m pytest tests/infrastructure -q --junitxml=logs/tdd/T01/environment/smoke-final.xml",
+      "started_at": "2026-10-30T08:11:08.544821+00:00",
+      "finished_at": "2026-10-30T08:11:11.150249+00:00",
+      "exit_code": 0,
+      "output": "smoke-final.txt"
+    }
+  ]
+}

@@ -1,0 +1,20 @@
+{
+  "installed_versions_match_lock": 30,
+  "python": "3.14.0",
+  "isolated_venv": true,
+  "system_site_packages": false,
+  "final_source_hashes": "PASS",
+  "approved_openapi_hash": "PASS",
+  "final_junit": {
+    "tests": 3,
+    "passed": 3,
+    "failures": 0,
+    "errors": 0,
+    "skipped": 0
+  },
+  "local_links": 20,
+  "artifact_sensitive_data_scan": "PASS; reviewed synthetic outputs and sanitized JUnit hostname",
+  "git_index": "unchanged; empty",
+  "git_diff_check_exit_code": 0,
+  "checked_at": "2026-10-30T08:14:13.465528+00:00"
+}

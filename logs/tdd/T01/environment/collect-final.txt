@@ -1,0 +1,5 @@
+tests/infrastructure/test_environment.py::test_dependency_stack_imports
+tests/infrastructure/test_environment.py::test_minimal_asgi_app_accepts_http
+tests/infrastructure/test_environment.py::test_kyiv_timezone_data_is_available
+
+3 tests collected in 0.60s

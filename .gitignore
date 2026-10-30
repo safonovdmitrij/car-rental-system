@@ -2,3 +2,10 @@
 /.mock-runtime/
 /api/mock-tools/node_modules/
 /api/mock-tools/runtime/
+/.venv-backend/
+/.backend-setup/
+/.pytest_cache/
+__pycache__/
+*.py[cod]
+/.env.test
+/logs/runtime/

@@ -1,0 +1,7 @@
+[tool.pytest.ini_options]
+testpaths = ["tests"]
+pythonpath = ["src"]
+addopts = "--strict-config --strict-markers"
+markers = [
+    "infrastructure: environment and application bootstrap checks, not business tests",
+]
