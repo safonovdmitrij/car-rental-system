@@ -1,0 +1,87 @@
+{
+  "purpose": "logging_GREEN_not_business_gate",
+  "base_commit": "2ea840f4f5fbda178dff19e0793946cea6aa98c0",
+  "python": "3.14.0",
+  "versions": {
+    "pytest": "9.2.0",
+    "fastapi": "0.162.0",
+    "httpx": "0.28.1",
+    "starlette": "1.10.0",
+    "anyio": "4.15.1"
+  },
+  "environment": {
+    "PYTHONUTF8": "1",
+    "PYTEST_DISABLE_PLUGIN_AUTOLOAD": "1",
+    "PYTHONPATH": "src"
+  },
+  "source_sha256": {
+    "src/car_rental/observability.py": "6096cda310f13345bb03bfae14364f8bf5ecc9e518feab40331b7fb0572f0523",
+    "src/car_rental/main.py": "4a6944678b71a78db8442c5b970e3e3b3ce053a76a30ca605409b4d15ed665dc",
+    "tests/infrastructure/test_logging.py": "948c1037eba7dda3bdc2cb09fe0ab6cab94981c7d97e238da9412b8b79c94a26",
+    "tests/infrastructure/test_environment.py": "7321259113a56eaf4f407913e734dce682891a8e7767fc4d10687ee65f9febbf",
+    "requirements/backend.lock": "4bc5958aa89cf5955f583db70da3a407ff286631fc7e689fa3e11100f4a4e8c7",
+    "api/openapi.yaml": "88989941676702ee28c13d5a16a1320d3636f97b100958cee48021a59be8282e",
+    "docs/backend-setup.md": "58e8989319206aae01b9517cb4cdef610a309d78bae161824ed2782ce9d65c01",
+    "logs/tdd/T01/logging-green/probe.py": "4e055ab2b2df1805645a68f2777af2a254c1510701680c82488fc740f7937da1"
+  },
+  "runs": [
+    {
+      "id": "logging",
+      "command": [
+        ".venv-backend/Scripts/python.exe",
+        "-m",
+        "pytest",
+        "tests/infrastructure/test_logging.py",
+        "-q",
+        "--tb=short",
+        "--assert=plain",
+        "--show-capture=no",
+        "-p",
+        "no:cacheprovider",
+        "--basetemp=.backend-setup/logging-green-temp",
+        "--junitxml=logs/tdd/T01/logging-green/logging.xml"
+      ],
+      "exit_code": 0,
+      "result": "PASS",
+      "started_at": "2026-10-30T12:05:28.490658+00:00",
+      "finished_at": "2026-10-30T12:05:29.691748+00:00",
+      "output": "logging.txt"
+    },
+    {
+      "id": "smoke",
+      "command": [
+        ".venv-backend/Scripts/python.exe",
+        "-m",
+        "pytest",
+        "tests/infrastructure/test_environment.py",
+        "-q",
+        "--tb=short",
+        "--assert=plain",
+        "--show-capture=no",
+        "-p",
+        "no:cacheprovider",
+        "--basetemp=.backend-setup/logging-green-temp",
+        "--junitxml=logs/tdd/T01/logging-green/smoke.xml"
+      ],
+      "exit_code": 0,
+      "result": "PASS",
+      "started_at": "2026-10-30T12:05:29.699773+00:00",
+      "finished_at": "2026-10-30T12:05:32.324037+00:00",
+      "output": "smoke.txt"
+    },
+    {
+      "id": "error-probe",
+      "command": [
+        ".venv-backend/Scripts/python.exe",
+        "-X",
+        "utf8",
+        "logs/tdd/T01/logging-green/probe.py"
+      ],
+      "exit_code": 0,
+      "result": "PASS",
+      "started_at": "2026-10-30T12:06:44.770914+00:00",
+      "finished_at": "2026-10-30T12:06:45.362542+00:00",
+      "output": "probe.txt"
+    }
+  ]
+}

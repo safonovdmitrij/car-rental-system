@@ -1,0 +1,33 @@
+{
+  "checked_at": "2026-10-30T12:09:01.589410+00:00",
+  "red_commit": "2ea840f4f5fbda178dff19e0793946cea6aa98c0",
+  "total_passed": 12,
+  "logging_passed": 9,
+  "smoke_passed": 3,
+  "failures": 0,
+  "errors": 0,
+  "skipped": 0,
+  "test_ids": [
+    "tests.infrastructure.test_logging::test_json_event_has_utc_time_type_result_and_request_id",
+    "tests.infrastructure.test_logging::test_event_allowlist_excludes_sensitive_fields_even_on_error[success]",
+    "tests.infrastructure.test_logging::test_event_allowlist_excludes_sensitive_fields_even_on_error[error]",
+    "tests.infrastructure.test_logging::test_http_start_end_status_duration_and_correlation[success]",
+    "tests.infrastructure.test_logging::test_http_start_end_status_duration_and_correlation[error]",
+    "tests.infrastructure.test_logging::test_concurrent_requests_correlate_operation_events_without_context_leak",
+    "tests.infrastructure.test_logging::test_http_error_does_not_log_body_credentials_contacts_or_exception_text",
+    "tests.infrastructure.test_logging::test_test_run_journal_records_exact_command_exit_code_and_result[0-PASS]",
+    "tests.infrastructure.test_logging::test_test_run_journal_records_exact_command_exit_code_and_result[1-FAIL]",
+    "tests.infrastructure.test_environment::test_dependency_stack_imports",
+    "tests.infrastructure.test_environment::test_minimal_asgi_app_accepts_http",
+    "tests.infrastructure.test_environment::test_kyiv_timezone_data_is_available"
+  ],
+  "source_hashes": "PASS",
+  "tests_and_red_history": "unchanged",
+  "openapi_sha256": "88989941676702ee28c13d5a16a1320d3636f97b100958cee48021a59be8282e",
+  "run_journal": "3 exact command/exit/result entries verified",
+  "error_probe": "500; three safe correlated events; context reset",
+  "git_diff_check_exit_code": 0,
+  "git_index": "unchanged; empty",
+  "local_links": 24,
+  "artifact_sensitive_data_scan": "PASS; synthetic probe source contains only artificial canaries"
+}
