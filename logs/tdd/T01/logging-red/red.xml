@@ -1,0 +1,64 @@
+<testsuites name="pytest tests"><testsuite name="pytest" errors="0" failures="9" skipped="0" tests="9" time="0.479" timestamp="2026-10-30T12:55:26.889774+01:00" hostname="local"><testcase classname="tests.infrastructure.test_logging" name="test_json_event_has_utc_time_type_result_and_request_id" time="0.001"><failure message="NotImplementedError: Structured JSON event logging is not implemented">tests\infrastructure\test_logging.py:38: in test_json_event_has_utc_time_type_result_and_request_id
+    JsonEventLogger(stream).emit("operation.complete", "success", request_id="request-test")
+src\car_rental\observability.py:16: in emit
+    raise NotImplementedError("Structured JSON event logging is not implemented")
+E   NotImplementedError: Structured JSON event logging is not implemented</failure></testcase><testcase classname="tests.infrastructure.test_logging" name="test_event_allowlist_excludes_sensitive_fields_even_on_error[success]" time="0.001"><failure message="NotImplementedError: Structured JSON event logging is not implemented">tests\infrastructure\test_logging.py:57: in test_event_allowlist_excludes_sensitive_fields_even_on_error
+    JsonEventLogger(stream).emit(
+src\car_rental\observability.py:16: in emit
+    raise NotImplementedError("Structured JSON event logging is not implemented")
+E   NotImplementedError: Structured JSON event logging is not implemented</failure></testcase><testcase classname="tests.infrastructure.test_logging" name="test_event_allowlist_excludes_sensitive_fields_even_on_error[error]" time="0.001"><failure message="NotImplementedError: Structured JSON event logging is not implemented">tests\infrastructure\test_logging.py:57: in test_event_allowlist_excludes_sensitive_fields_even_on_error
+    JsonEventLogger(stream).emit(
+src\car_rental\observability.py:16: in emit
+    raise NotImplementedError("Structured JSON event logging is not implemented")
+E   NotImplementedError: Structured JSON event logging is not implemented</failure></testcase><testcase classname="tests.infrastructure.test_logging" name="test_http_start_end_status_duration_and_correlation[success]" time="0.005"><failure message="AssertionError">tests\infrastructure\test_logging.py:91: in test_http_start_end_status_duration_and_correlation
+    assert response.status_code == expected_status
+           ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+E   AssertionError</failure></testcase><testcase classname="tests.infrastructure.test_logging" name="test_http_start_end_status_duration_and_correlation[error]" time="0.004"><failure message="AssertionError">tests\infrastructure\test_logging.py:93: in test_http_start_end_status_duration_and_correlation
+    assert [record["event"] for record in records] == ["request.start", "request.end"]
+           ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+E   AssertionError</failure></testcase><testcase classname="tests.infrastructure.test_logging" name="test_concurrent_requests_correlate_operation_events_without_context_leak" time="0.004"><failure message="NotImplementedError: HTTP request logging is not implemented">tests\infrastructure\test_logging.py:118: in test_concurrent_requests_correlate_operation_events_without_context_leak
+    responses = asyncio.run(requests())
+                ^^^^^^^^^^^^^^^^^^^^^^^
+C:\Python314\Lib\asyncio\runners.py:204: in run
+    return runner.run(main)
+           ^^^^^^^^^^^^^^^^
+C:\Python314\Lib\asyncio\runners.py:127: in run
+    return self._loop.run_until_complete(task)
+           ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+C:\Python314\Lib\asyncio\base_events.py:719: in run_until_complete
+    return future.result()
+           ^^^^^^^^^^^^^^^
+tests\infrastructure\test_logging.py:116: in requests
+    return await asyncio.gather(client.get("/"), client.get("/"))
+           ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+.venv-backend\Lib\site-packages\httpx\_client.py:1768: in get
+    return await self.request(
+.venv-backend\Lib\site-packages\httpx\_client.py:1540: in request
+    return await self.send(request, auth=auth, follow_redirects=follow_redirects)
+           ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+.venv-backend\Lib\site-packages\httpx\_client.py:1629: in send
+    response = await self._send_handling_auth(
+.venv-backend\Lib\site-packages\httpx\_client.py:1657: in _send_handling_auth
+    response = await self._send_handling_redirects(
+.venv-backend\Lib\site-packages\httpx\_client.py:1694: in _send_handling_redirects
+    response = await self._send_single_request(request)
+               ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+.venv-backend\Lib\site-packages\httpx\_client.py:1730: in _send_single_request
+    response = await transport.handle_async_request(request)
+               ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+.venv-backend\Lib\site-packages\httpx\_transports\asgi.py:170: in handle_async_request
+    await self.app(scope, receive, send)
+src\car_rental\observability.py:29: in __call__
+    raise NotImplementedError("HTTP request logging is not implemented")
+E   NotImplementedError: HTTP request logging is not implemented</failure></testcase><testcase classname="tests.infrastructure.test_logging" name="test_http_error_does_not_log_body_credentials_contacts_or_exception_text" time="0.003"><failure message="AssertionError">tests\infrastructure\test_logging.py:162: in test_http_error_does_not_log_body_credentials_contacts_or_exception_text
+    assert [record["event"] for record in records] == ["request.start", "request.end"]
+           ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+E   AssertionError</failure></testcase><testcase classname="tests.infrastructure.test_logging" name="test_test_run_journal_records_exact_command_exit_code_and_result[0-PASS]" time="0.004"><failure message="NotImplementedError: Test execution journal is not implemented">tests\infrastructure\test_logging.py:177: in test_test_run_journal_records_exact_command_exit_code_and_result
+    record_test_run(
+src\car_rental\observability.py:36: in record_test_run
+    raise NotImplementedError("Test execution journal is not implemented")
+E   NotImplementedError: Test execution journal is not implemented</failure></testcase><testcase classname="tests.infrastructure.test_logging" name="test_test_run_journal_records_exact_command_exit_code_and_result[1-FAIL]" time="0.003"><failure message="NotImplementedError: Test execution journal is not implemented">tests\infrastructure\test_logging.py:177: in test_test_run_journal_records_exact_command_exit_code_and_result
+    record_test_run(
+src\car_rental\observability.py:36: in record_test_run
+    raise NotImplementedError("Test execution journal is not implemented")
+E   NotImplementedError: Test execution journal is not implemented</failure></testcase></testsuite></testsuites>

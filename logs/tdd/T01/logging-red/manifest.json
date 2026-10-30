@@ -1,0 +1,123 @@
+{
+  "purpose": "infrastructure_logging_RED_only_no_implementation",
+  "base_commit": "f807c66ca4834b100fc9d2d47a7635634fee9e7e",
+  "python": "3.14.0",
+  "versions": {
+    "pip": "25.2",
+    "pytest": "9.2.0",
+    "fastapi": "0.162.0",
+    "httpx": "0.28.1",
+    "starlette": "1.10.0",
+    "anyio": "4.15.1"
+  },
+  "environment": {
+    "PYTHONUTF8": "1",
+    "PYTEST_DISABLE_PLUGIN_AUTOLOAD": "1",
+    "PYTHONPATH": "src"
+  },
+  "source_sha256": {
+    "src/car_rental/observability.py": "fb6a2daf736b6cc82d208798601340c4536bdc39639a7b0412c575b314b43870",
+    "tests/infrastructure/test_logging.py": "948c1037eba7dda3bdc2cb09fe0ab6cab94981c7d97e238da9412b8b79c94a26",
+    "src/car_rental/main.py": "0844314144d9b2dbd756f2d7a860d0375fd8e93d56a4ef62db3be9b1278e01ae",
+    "requirements/backend.lock": "4bc5958aa89cf5955f583db70da3a407ff286631fc7e689fa3e11100f4a4e8c7",
+    "api/openapi.yaml": "88989941676702ee28c13d5a16a1320d3636f97b100958cee48021a59be8282e",
+    "logs/tdd/T01/preparation-decisions.md": "dbc697eea96054766cec0f1ebc7968285e46e92a3343c48834d727cd28383789",
+    "planning/tdd-implementation-plan.md": "ce6d009eead5cc95d0de954fe71768b379d3cf5a05174e623ede7de9b08fff52",
+    "docs/backend-setup.md": "2e71a9e9ab33c814826554fbdf19a314636841ced717015482478bd8556f160a"
+  },
+  "runs": [
+    {
+      "id": "dependencies",
+      "command": [
+        ".venv-backend/Scripts/python.exe",
+        "-m",
+        "pip",
+        "check"
+      ],
+      "started_at": "2026-10-30T11:55:20.800243+00:00",
+      "finished_at": "2026-10-30T11:55:21.667313+00:00",
+      "exit_code": 0,
+      "expected_exit_code": 0,
+      "output": "dependencies.txt"
+    },
+    {
+      "id": "imports",
+      "command": [
+        ".venv-backend/Scripts/python.exe",
+        "-c",
+        "from car_rental.observability import JsonEventLogger, RequestLoggingMiddleware, current_request_id, record_test_run; print(\"Logging interfaces import: PASS\")"
+      ],
+      "started_at": "2026-10-30T11:55:21.667356+00:00",
+      "finished_at": "2026-10-30T11:55:21.759732+00:00",
+      "exit_code": 0,
+      "expected_exit_code": 0,
+      "output": "imports.txt"
+    },
+    {
+      "id": "runner",
+      "command": [
+        ".venv-backend/Scripts/python.exe",
+        "-m",
+        "pytest",
+        "tests/infrastructure/test_environment.py",
+        "-q",
+        "-p",
+        "no:cacheprovider",
+        "--basetemp=.backend-setup/logging-pytest-temp"
+      ],
+      "started_at": "2026-10-30T11:55:21.759765+00:00",
+      "finished_at": "2026-10-30T11:55:24.840922+00:00",
+      "exit_code": 0,
+      "expected_exit_code": 0,
+      "output": "runner.txt"
+    },
+    {
+      "id": "collect",
+      "command": [
+        ".venv-backend/Scripts/python.exe",
+        "-m",
+        "pytest",
+        "tests/infrastructure/test_logging.py",
+        "--collect-only",
+        "-q",
+        "-p",
+        "no:cacheprovider",
+        "--basetemp=.backend-setup/logging-pytest-temp"
+      ],
+      "started_at": "2026-10-30T11:55:24.840962+00:00",
+      "finished_at": "2026-10-30T11:55:26.015744+00:00",
+      "exit_code": 0,
+      "expected_exit_code": 0,
+      "output": "collect.txt"
+    },
+    {
+      "id": "red",
+      "command": [
+        ".venv-backend/Scripts/python.exe",
+        "-m",
+        "pytest",
+        "tests/infrastructure/test_logging.py",
+        "-q",
+        "--tb=short",
+        "--assert=plain",
+        "--show-capture=no",
+        "--junitxml=logs/tdd/T01/logging-red/red.xml",
+        "-p",
+        "no:cacheprovider",
+        "--basetemp=.backend-setup/logging-pytest-temp"
+      ],
+      "started_at": "2026-10-30T11:55:26.015790+00:00",
+      "finished_at": "2026-10-30T11:55:27.500919+00:00",
+      "exit_code": 1,
+      "expected_exit_code": 1,
+      "output": "red.txt"
+    }
+  ],
+  "junit": {
+    "tests": 9,
+    "failures": 9,
+    "errors": 0,
+    "skipped": 0,
+    "hostname": "sanitized to local"
+  }
+}

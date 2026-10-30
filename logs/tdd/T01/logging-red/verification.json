@@ -1,0 +1,18 @@
+{
+  "checked_at": "2026-10-30T11:57:43.350242+00:00",
+  "new_tests": 9,
+  "red_exit_code": 1,
+  "failures": 9,
+  "errors": 0,
+  "skipped": 0,
+  "baseline_passed": 3,
+  "imports_exit_code": 0,
+  "dependencies_exit_code": 0,
+  "collect_exit_code": 0,
+  "source_hashes": "PASS",
+  "tracked_api_bootstrap_and_dependencies": "unchanged (Git newline normalization considered)",
+  "target_behavior": "only NotImplementedError stubs",
+  "artifact_scan": "PASS",
+  "local_links": 13,
+  "git_index": "unchanged; empty"
+}
